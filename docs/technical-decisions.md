@@ -72,3 +72,23 @@ This document outlines the major architectural and design decisions made in the 
 - **Why**: 
   - Directs any future AI agent editing the JSON file on the precise grammar rules, casing, and style boundaries for extensions.
   - Dynamically filtered out during rules loading by the Python runtime (`rules.py`), keeping the engine's configurations clean.
+
+---
+
+## 8. Decoupled Hierarchical Discipline Taxonomy (`rules/academic/taxonomy/*`)
+**Context**: Flat keyword lists limit citation accuracy across distinct academic disciplines (e.g., Computer Science vs. Quantitative Finance).
+
+**Decision**: Re-organize topic rules into subfolder taxonomy directories (`rules/academic/taxonomy/<discipline>/<subfield>.json`).
+- **Why**:
+  - Allows Computer Science papers to pull top CS venues (*NeurIPS*, *IEEE TPAMI*) and authors (*Vaswani*, *Devlin*), while Finance papers pull Finance venues (*Journal of Finance*) and authors (*Black*, *Scholes*).
+  - Keeps taxonomy extensible without modifying core Python code.
+
+---
+
+## 9. In-App Feedback Routing & Gate Bypass
+**Context**: Users encountering API rate limits or missing discipline fields need a 1-click path to report issues without being blocked by unlock gates.
+
+**Decision**: Implement a dedicated `feedback_ui.py` page in sidebar navigation and allow it to render even when the application is locked.
+- **Why**:
+  - Eliminates user friction by providing direct in-app submission forms and GitHub Issue templates.
+  - Guarantees immediate access to support regardless of unlock status.

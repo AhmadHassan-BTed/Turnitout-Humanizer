@@ -1,6 +1,6 @@
-# System Architecture: Turnitout
+# System Architecture: Turnitout Core (v1.6.0)
 
-Turnitout utilizes a deterministic, modular pipeline to reduce plagiarism and similarity indices in LaTeX documents. It prioritizes semantic preservation and syntax security.
+Turnitout utilizes a deterministic, modular pipeline to reduce plagiarism and similarity indices in LaTeX and Word (`.docx`) documents. It prioritizes semantic preservation, syntax security, and hierarchical discipline citation placement.
 
 ---
 
@@ -8,66 +8,57 @@ Turnitout utilizes a deterministic, modular pipeline to reduce plagiarism and si
 
 ```mermaid
 flowchart TD
-    A[Raw LaTeX Input] --> B[LaTeXZoneParser]
-    B --> C[Zone Breakdown: PROSE, MATH, SKIP, HEADING]
-    C --> D[TextModifier]
-    D --> E1[1. LaTeX Commands Protection]
-    E1 --> E2[2. Phrase Rewrites]
-    E2 --> E3[3. Synonym Replacements]
-    E3 --> E4[4. Clause Reordering]
-    E4 --> E5[5. Determiner Swaps]
-    E5 --> E6[6. Compound Splits]
-    E6 --> E7[7. Hedge Insertions]
-    E7 --> E8[8. N-gram Chain Breaker]
-    E8 --> E9[9. Voice Transform]
-    E9 --> E10[10. Sentence Fusion]
-    E10 --> E11[11. Transition Phrase Injection]
-    E11 --> E12[12. Clause Word Reordering]
-    E12 --> E13[13. Nominalization]
-    E13 --> E14[14. Appositive Injection]
-    E14 --> E15[15. Discourse Marker Rotation]
-    E15 --> E16[16. Contraction Conversion]
-    E16 --> M[17. LaTeX Restorations]
-    M --> N[18. Topic Citation Appender]
-    N --> O[Modified LaTeX main.tex]
-    N --> P[ai_prompt.txt Template]
+    A[Input: Text / DOCX / LaTeX] --> B[Module Selector]
+    B --> C1[1. Plagiarism & AI Humanizer Engine]
+    B --> C2[2. Decoupled Citation Engine]
+    B --> C3[3. ZipPy Entropy & AI Signature Checker]
+    
+    C1 --> D1[Placeholder Masking & Tokenization]
+    D1 --> D2[Modular Transformer Pipeline]
+    D2 --> D3[In-Place DOCX / LaTeX Stream Processor]
+    
+    C2 --> E1[Sentence Candidate Segmentation]
+    E1 --> E2[Hierarchical Discipline Taxonomy Matcher]
+    E2 --> E3[BibTeX / LaTeX / JSON Reference Generator]
+    
+    C3 --> F1[ZipPy zlib/lzma Perplexity Entropy]
+    F1 --> F2[QuillBot-Style Similarity Dashboard]
+    
+    D3 --> G[Multi-File Branded ZIP Packaging]
+    E3 --> G
+    F2 --> G
+    G --> H[Output Bundle: ZIP / DOCX / TXT / BIB / JSON]
 ```
 
 ---
 
-## Core Components
+## Core Components Architecture
 
-### 1. Configuration & Environments (`turnitout.config`)
-- Loads settings from `configs/*.json` or performs folder auto-detection inside `paper_input/`.
-- Merges configurations with `.env` settings (for parameters like random seed or aggressiveness threshold), enforcing standard priority rules.
-- Contains the 7 new advanced styling toggles and fire rate parameters.
+### 1. Decoupled Citation Engine (`turnitout.core.citation_engine`)
+- Modular engine independent of main humanizer pipelines.
+- **Hierarchical Discipline Resolution**: Scans sentences against categorized taxonomy rules (`rules/academic/taxonomy/*`):
+  - `computer_science/`
+  - `engineering_physics/`
+  - `mathematics_statistics/`
+  - `quantitative_finance/`
+  - `medical_life_sciences/`
+- **Citation Count**: Supports contextual auto-detection (`Auto`) or exact specified counts.
+- **Reference Generators**: Outputs matching BibTeX (`citations.bib`), LaTeX (`\cite{key}`), and structured JSON metadata (`citations.json`).
 
-### 2. LaTeX Parser (`turnitout.core.parser`)
-- Scans files line-by-line to isolate prose from LaTeX syntax.
-- Places lines into strict zone categories:
-  - `PROSE`: Modifiable text body lines.
-  - `HEADING`: Header rows (subject to light edits like phrase rewrites; never synonym replaced).
-  - `MATH`: Display/inline equations (completely untouchable).
-  - `SKIP`: Preamble, figures, bibliography, code listings, and tables (completely untouchable).
+### 2. Multi-File Stream Processor & ZIP Bundling (`turnitout.core.doc_processor`)
+- Processes `.docx` files in-place while preserving images, tables, headers, footers, and XML typography intact.
+- **In-Memory Bundler**: Generates stateless ZIP archives without disk cache leaks (`Turnitout_Humanized_Docs_<TIMESTAMP>.zip`, `Turnitout_Citations_<TIMESTAMP>.zip`, `Turnitout_Checker_Reports_<TIMESTAMP>.zip`).
 
-### 3. Text Modifier (`turnitout.core.modifier`)
-- Operates on a character-level placeholder engine to temporarily mask all remaining LaTeX commands (e.g. `\textbf`, `\cite`) inside prose lines.
-- Sequentially executes 15 pipeline stages:
-  1. **Masking**: Replaces LaTeX syntax with temporary indicators (`\x00PH0000\x00`).
-  2. **Phrase Rewrites**: Replaces long, flagged academic idioms with concise alternatives. Implements placeholder protection to prevent formatting corruption.
-  3. **Synonym Replacements**: Iterates over tokens and rolls for synonym swaps against the custom JSON dictionary. Uses a Morphological Inflection Stemmer to automatically stem and conjugate synonyms.
-  4. **Clause Reordering**: Switches subordinate clause positions.
-  5. **Determiner Swaps**: Switches determiners contextually.
-  6. **Compound Splits**: Breaks long compound sentences into smaller sentences.
-  7. **Hedge Insertions**: Inserts academic qualifiers (like "notably", "essentially") near clause breaks.
-  8. **N-gram Chain Breaker**: Scans lines for remaining consecutive word chains of length 5+ and inserts parentheticals.
-  9. **Voice Transform**: Rotates passive and active voice structures to break stylometric uniformity.
-  10. **Sentence Fusion**: Combines short adjacent prose sentences (using prose-only context filtering) to increase sentence complexity and burstiness.
-  11. **Transition Injection**: Automatically inserts transitions at sentence boundaries to disrupt predictable patterns.
-  12. **Clause Word Reordering**: Rearranges prepositional elements within clauses to change positions of k-gram sequences.
-  13. **Nominalization**: Rotates noun and verb variants to decrease stylistic predictability.
-  14. **Appositive Injection**: Explains academic nouns using explanatory appositive phrases.
-  15. **Discourse Marker Rotation**: Alternatives discourse connectors at sentence starts.
-  16. **Contraction Conversion**: Swaps formal word groups to contractions and vice versa.
-  17. **Restoration**: Recursively unmasks the placeholder indicators.
-  18. **Citations**: Automatically appends `\cite{...}` if keywords match a configured citation topic.
+### 3. Hierarchical Rules & Taxonomy Loader (`turnitout.core.rules`)
+- Recursive directory loader (`load_academic_taxonomy()`) traversing `rules/academic/taxonomy/`.
+- Validates and filters `__prompt__` metadata headers from all taxonomy JSON files on startup into `ACADEMIC_TAXONOMY`.
+
+### 4. Text Modifier & Transformer Pipeline (`turnitout.core.modifier`)
+- Operates on a character-level placeholder engine to temporarily mask LaTeX/formatting commands.
+- Sequentially executes 16 transformation stages (Phrase Rewrites, Morphological Stemmed Synonyms, Clause Reordering, Determiner Swaps, Compound Splits, Voice Transforms, Sentence Fusion, Nominalization, Appositive Injection, Discourse Rotation).
+
+### 5. UI Layer & Gate Bypass (`turnitout.ui`)
+- **`humanizer_ui.py`**: Humanizer page with text areas and multi-file DOCX processing.
+- **`citation_ui.py`**: Citation Inserter & BIB / JSON / LaTeX Generator page.
+- **`feedback_ui.py`**: In-app Feature Request & Bug Reporter page (bypasses unlock gate).
+- **`checker_ui.py`**: QuillBot-style stats dashboard and ZipPy AI detector.

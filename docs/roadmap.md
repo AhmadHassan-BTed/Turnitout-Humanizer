@@ -1,16 +1,24 @@
-# Project Roadmap
+# Project Roadmap: Turnitout Core
 
-This roadmap lists features and milestones planned for the future development of Turnitout.
+This roadmap lists completed milestones and upcoming planned features for Turnitout.
 
-## Q3 2026 - CLI Refinement & Diagnostics
-- [ ] Add diagnostic checks for LaTeX environment compatibility.
-- [ ] Implement verbose logging and debugging modes.
-- [ ] Add customizable output reporting formats (e.g. JSON/HTML change logs).
+## Completed Milestones (v1.6.0)
 
-## Q4 2026 - Desktop GUI & Visualizer
-- [ ] Build a simple desktop GUI using Tkinter or Electron for non-technical users.
-- [ ] Create a visual side-by-side LaTeX source diff comparison.
+- [x] **Citation Inserter & BIB / JSON / LaTeX Generator**: Multi-format reference package generator.
+- [x] **Hierarchical Academic Discipline Taxonomy**: Categorized rules under `rules/academic/taxonomy/*` with prompt engineering metadata headers.
+- [x] **Unified Citation Count Input**: Auto-detect (`Auto`) or exact numeric entry.
+- [x] **Multi-File Batch Processing & ZIP Packaging**: In-memory stateless `.zip` archive bundling for `.docx` and reports.
+- [x] **In-App Feature Request & Bug Reporter Hub**: Dedicated page (`feedback_ui.py`) with unlock gate bypass.
+- [x] **ZipPy Compression Perplexity & 5-Signal AI Detector**: High-speed local AI pattern detection.
 
-## Q1 2027 - Advanced Natural Language Enhancements
-- [ ] Add grammar-check validation after paraphrasing to improve text flow.
-- [ ] Provide dictionary expansions for non-mathematics disciplines (e.g. biology, chemistry, social sciences).
+---
+
+## Upcoming Milestones
+
+### Q3 2026 - Additional Discipline Taxonomies & Language Support
+- [ ] Add Quantum Mechanics, Nanotechnology, and Social Sciences subfolder taxonomies.
+- [ ] Provide dictionary expansions for non-English academic prose (e.g. Spanish, German).
+
+### Q4 2026 - Desktop GUI & Visualizer
+- [ ] Desktop GUI updates using native Tkinter.
+- [ ] Side-by-side visual diff viewer for `.docx` and LaTeX files.

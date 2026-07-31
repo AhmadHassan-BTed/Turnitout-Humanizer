@@ -2,149 +2,138 @@
   <img src="docs/assets/logo-banner.svg" alt="Turnitout Logo" width="100%"/>
 </p>
 
-<h1 align="center">Turnitout</h1>
+<h1 align="center">Turnitout Core</h1>
 
 <p align="center">
-  <img src="https://img.shields.io/badge/License-Proprietary%20Hosted%20Application-red.svg" alt="License: Proprietary Hosted Application"/>
-  <img src="https://img.shields.io/badge/Distribution-Closed%20Source-orange.svg" alt="Distribution: Closed Source"/>
   <a href="https://turnitout.streamlit.app/"><img src="https://img.shields.io/badge/Deployment-Hosted%20App-blue.svg" alt="Deployment: Hosted App"/></a>
+  <img src="https://img.shields.io/badge/Version-v1.6.0-green.svg" alt="Version: v1.6.0"/>
+  <img src="https://img.shields.io/badge/Python-3.9%2B-brightgreen.svg" alt="Python 3.9+"/>
+  <a href="https://github.com/AhmadHassan-BTed/Turnitout-Humanizer/issues"><img src="https://img.shields.io/badge/Community-GitHub%20Issues-orange.svg" alt="GitHub Issues"/></a>
 </p>
 
 <p align="center">
-  <strong>An intelligent LaTeX plagiarism and similarity reduction engine designed to preserve the academic voice and document formatting.</strong>
-  
-  *The core linguistic mutation rules, placeholder encoders, and file parsing structures of Turnitout are closed-source. This repository serves as the public documentation landing page and release reference hub.*
+  <strong>An intelligent LaTeX & Word document plagiarism, similarity, and AI-detection removal engine with hierarchical academic discipline taxonomy, multi-file batch processing, and automatic BibTeX / JSON / LaTeX reference generation.</strong>
 </p>
 
-<hr />
+---
 
-## The Philosophy
+## 💡 The Philosophy
 
-Academic writing is a personal, human craft. Yet under the rigid rules of automated similarity checkers like Turnitin, researchers are often forced to rewrite their natural voice, break sentence flow, or compromise document layouts simply to clear string-matching thresholds.
+Academic and technical writing is a personal, human craft. Under the rigid rules of automated similarity checkers (like **Turnitin**) and AI pattern detectors (like **GPTZero**, **Turnitin AI**, and **CopyLeaks**), researchers and students are often forced to rewrite their natural voice or break document layouts simply to clear string-matching thresholds.
 
-Turnitout resolves this constraint. By automating the disruption of contiguous word sequences while leaving mathematical expressions, matrices, figures, and citation indexes completely untouched, Turnitout protects the formatting of academic work, allowing researchers to write naturally and submit safely.
+Other tools use generative AI to rewrite text (which ironically leaves new AI footprints and compromises your privacy). **Turnitout does NOT use AI to eliminate AI.** It is **100% programmatic and deterministic**, mathematically disrupting contiguous word sequences while leaving equations, matrices, figures, formatting macros, and citation indexes completely untouched.
 
 ---
 
-## Technical Architecture
+## 🚀 Key Modules & Capabilities
 
-Turnitout runs a multi-pass text processing and transformation pipeline. It isolates LaTeX macros and formatting codes before applying linguistic mutations to prose segments.
+### 1. ⚡ Plagiarism & AI Remover (Humanizer)
+- **Multi-File & Single-File Word (.docx) Processing**: Humanizes `.docx` files paragraph-by-paragraph in-place, preserving all images, tables, headers, footers, and XML typography intact.
+- **Section-Aware Protection**: Abstract, Introduction, Conclusion, Title, Declarations, and Appendices are 100% humanized, but shielded from citation insertions.
+- **BERT & LLM Pattern Evader**: Automatically neutralizes AI signature triggers (`"delve into"`, `"plays a pivotal role"`, `"provides a robust framework"`, `"the interplay between"`) and cleans em-dashes (`—`).
 
-### 1. Structural LaTeX Zoning & Masking
+### 2. 📜 Citation Inserter & BIB / JSON / LaTeX Generator
+- **Multi-Format Export**: Inserts contextual citations into text and exports matching **BibTeX (`citations.bib`)**, **LaTeX (`\cite{key}`)**, and **Structured JSON (`citations.json`)** reference packages.
+- **Contextual & Manual Controls**: Single unified **Citation Count** field supports contextual auto-detection (`Auto`) or exact user-specified counts (e.g. `5`).
+- **Hierarchical Discipline Taxonomy**: Matches research claim sentences against a categorized subfolder taxonomy (`rules/academic/taxonomy/*`) spanning:
+  - `computer_science/` (Artificial Intelligence, Cybersecurity, Systems)
+  - `engineering_physics/` (Fluid Dynamics, Heat Transfer, Signal Processing)
+  - `mathematics_statistics/` (Differential Equations, Numerical Analysis)
+  - `quantitative_finance/` (Option Pricing, Risk Modeling)
+  - `medical_life_sciences/` (Bioinformatics, Genomics)
 
-The engine reads the source document and divides it into strict structural zones. Non-prose elements (such as equations, preambles, and code blocks) are placed into bypass zones. Prose elements are passed through a character-level placeholder engine that masks remaining inline LaTeX commands.
+### 3. 📦 Multi-File Branded ZIP Packaging
+- **Stateless In-Memory Bundling**: Automatically packages multiple processed files, cited documents, and reference bibliographies into branded ZIP archives:
+  - `Turnitout_Humanized_Docs_<YYYYMMDD_HHMMSS>.zip`
+  - `Turnitout_Citations_<YYYYMMDD_HHMMSS>.zip`
+  - `Turnitout_Checker_Reports_<YYYYMMDD_HHMMSS>.zip`
 
-```mermaid
-flowchart TD
-    Raw[Raw LaTeX Document] --> Scan[Line-by-Line Structural Scanner]
-    Scan --> SKIP[SKIP Zone: Preamble, Tables, Bibliographies]
-    Scan --> MATH[MATH Zone: Equations & Matrices]
-    Scan --> PROSE[PROSE Zone: Body Sentences]
-    PROSE --> Mask[Placeholder Engine: Mask Inline Commands]
-    Mask --> Ready[Normalized Prose Ready for Mutation]
-```
+### 4. 🔍 AI Pattern & Signature Checker
+- **ZipPy Compression Perplexity Engine**: Combines native `zlib`/`lzma` dictionary entropy signals alongside phrase matching, burstiness variance, and discourse markers for 100% local, ultra-fast AI detection.
+- **QuillBot-Style Stats Dashboard**: Side-by-side similarity scores and highlighted text passage marks.
 
-### 2. Multi-Pass Mutation Engine
-
-Once commands are masked, the system executes sequential linguistic modifications. The engine processes text through lexical, structural, and semantic stages to alter both vocabulary and sentence topology:
-
-```mermaid
-flowchart TD
-    Ready[Normalized Prose] --> Lexical[1. Lexical: Synonym & Determiner Swapping]
-    Lexical --> Struct[2. Structural: Voice Inversion & Clause Splits]
-    Struct --> Semantic[3. Semantic: Clause Reordering & Information Shifts]
-    Semantic --> Output[Mutated Normalized Prose]
-```
-
-### 3. Source-Aware N-gram Audit & Citation Shielding
-
-In the final phase, the engine unmasks the formatting placeholders and performs a post-pass verification. It cross-references the mutated document directly against the source text. 
-
-```mermaid
-sequenceDiagram
-    participant E as Post-Pass Auditor
-    participant S as Source Document Fingerprints
-    participant O as Mutated Document Output
-
-    E->>O: Scan output for contiguous matching 5-grams
-    E->>S: Compare hash values
-    alt Matching 5-gram detected
-        E->>O: Forcefully disrupt (insert adverb or rotate words)
-        E->>O: Inject citation tag (\cite) at high-risk boundary
-    else No matches found
-        Note over O: Output verified clean
-    end
-```
+### 5. 💬 In-App Feature Request & Bug Reporter Hub
+- **Dedicated Navigation Page**: Users can submit feature requests, bug reports, or suggest new academic discipline fields directly inside the app without needing to navigate away.
+- **Pre-Filled GitHub Issue Templates**: Integrates with [GitHub Issues](https://github.com/AhmadHassan-BTed/Turnitout-Humanizer/issues/new) for community feature tracking.
 
 ---
 
-## Key Features
+## ⚡ Quick Start & Deployment Options
 
-* **Zero-Formatting Disruption**: Structural parsers guarantee that Overleaf projects compile with zero formatting bugs.
-* **Morphological Synonym Alignment**: Inflection stemmers conjugate synonyms to match pluralization, tense, and adverbial form.
-* **Linguistic Burstiness Control**: Alternates sentence fusions and splits to randomize sentence length and perplexity.
-* **Granular Intensity Adjustments**: Exponential sliders offer precise control over word replacement rates and transformation fire rates.
+### 🌐 Option A: Streamlit Web Interface (Recommended)
+- **Hosted Live App**: Access instantly at **[turnitout.streamlit.app](https://turnitout.streamlit.app/)**
+- **Local Run**:
+  ```bash
+  streamlit run streamlit_app.py
+  ```
+
+### 🖥️ Option B: Tkinter Desktop GUI
+- **Windows / macOS / Linux**:
+  ```bash
+  python src/turnitout/ui_launcher.py
+  ```
+
+### 💻 Option C: CLI / Batch Directory Pipeline
+1. Place target files in `paper_input/`.
+2. Run the pipeline:
+   ```bash
+   python -m turnitout.cli --input paper_input/ --output paper_output/
+   ```
 
 ---
 
-## Directory Structure (Private Repository)
-
-*The following outlines the internal directory layout of the closed-source Turnitout engine:*
+## 🛠️ Architecture & Codebase Map
 
 ```
-Turnitout/
-├── configs/                  # Paper-specific configurations
-├── docs/                     # Documentation and user manuals
-├── paper_input/              # Raw LaTeX project folders
-├── paper_output/             # Modified output document folders
-├── rules/                    # Structured rule dictionary catalogs
-│   ├── academic/             # Formal rules and parentheticals
-│   └── conversational/       # Casual rules and markers
-├── src/                      # Core runtime packages
-│   └── turnitout/
-│       ├── cli.py            # CLI pipeline entry point
-│       ├── config.py         # Config and environment loader
-│       ├── ui_launcher.py    # Desktop Tkinter GUI controller
-│       └── core/
-│           ├── parser.py     # Structural LaTeX tokenizer
-│           ├── modifier.py   # Text mutation engine
-│           ├── rules.py      # Rules manager and JSON importer
-│           └── generator.py  # Report and templates builder
-├── tests/                    # Vitest and Pytest runner suites
-├── LICENSE                   # Proprietary License
-├── pyproject.toml            # Build tool configurations
-└── streamlit_app.py          # Hosted web application interface
+Turnitout-core/
+├── rules/
+│   ├── academic/
+│   │   ├── taxonomy/                     # Hierarchical Discipline Rules
+│   │   │   ├── computer_science/         # AI, Cybersecurity, Systems
+│   │   │   ├── engineering_physics/      # Fluid Dynamics, Transport
+│   │   │   ├── mathematics_statistics/   # PDEs, Numerical Analysis
+│   │   │   ├── quantitative_finance/     # Option Pricing, Risk
+│   │   │   └── medical_life_sciences/    # Bioinformatics, Genomics
+│   │   ├── general_academic_topics.json
+│   │   ├── phrases.json
+│   │   └── synonyms.json
+│   └── global_config.json
+├── src/turnitout/
+│   ├── core/
+│   │   ├── citation_engine.py            # Decoupled Rules-Driven Citation Engine
+│   │   ├── doc_processor.py              # In-Place DOCX Stream & ZIP Generator
+│   │   ├── modifier.py                   # Rule Transformer Coordinator
+│   │   ├── rules.py                      # Recursive Rules & Taxonomy Loader
+│   │   └── transformers/                 # AI & Similarity Evader Transformers
+│   ├── ui/
+│   │   ├── citation_ui.py                # Citation & BIB/JSON/LaTeX UI Page
+│   │   ├── feedback_ui.py                # Dedicated Feature & Bug Reporter Page
+│   │   ├── humanizer_ui.py               # Plagiarism & AI Remover UI Page
+│   │   ├── checker_ui.py                 # Multi-Pass Checker UI Page
+│   │   └── common.py                     # Global Styling & Banner Headers
+│   └── ai_detector.py                    # ZipPy Entropy & Signature Detector
+├── tests/                                # Comprehensive Pytest Test Suite
+│   ├── test_academic_taxonomy.py
+│   ├── test_citation_engine.py
+│   ├── test_doc_processor.py
+│   ├── test_modifier.py
+│   └── test_rules.py
+└── streamlit_app.py                      # Multi-Page Navigation Entrypoint
 ```
 
 ---
 
-## AI-Driven Rules Expansion
+## 🧪 Testing & Verification
 
-Turnitout separates linguistic data from execution code. Developers and AI agents can expand dictionary files directly under the `rules/` directory. Each JSON file contains an embedded `__prompt__` tag, allowing AI systems to securely add data without affecting the codebase logic:
-
-* **[synonyms.json](rules/academic/synonyms.json)**: Academic terms and context-mapped alternatives.
-* **[phrases.json](rules/academic/phrases.json)**: Complex word replacements and academic idioms.
-* **[transition_phrases.json](rules/academic/transition_phrases.json)**: Logical connectors to vary paragraph rhythm.
-* **[qualifiers.json](rules/academic/qualifiers.json)**: Safe adverbs inserted to break contiguous word strings.
+Run the complete automated unit test suite:
+```bash
+PYTHONPATH=src python3 -m pytest -v tests/
+```
 
 ---
 
-## Access and Hosting
+## 🤝 Community, Support & Feature Requests
 
-The production interface of Turnitout is hosted and managed as a web application:
-
-**[Deploy and Access Turnitout](https://turnitout.streamlit.app/)**
-
----
-
-## Roadmap
-
-* **Q3 2026**: Interactive visual diff parser showing exact word-level alterations.
-* **Q4 2026**: Pre-compile validation tests to catch broken syntax before output generation.
-* **Q1 2027**: Expanded synonym mappings for specialized scientific disciplines.
-
----
-
-## License
-
-The code and linguistic engine of Turnitout are Proprietary and closed-source. The documentation and display guidelines in this repository are available under the project's Proprietary License.
+- **GitHub Issues**: Submit feature requests, bug reports, or request new academic discipline fields at **[Turnitout Issues](https://github.com/AhmadHassan-BTed/Turnitout-Humanizer/issues/new)**.
+- **WhatsApp Support**: Chat directly with developer **Ahmad Hassan** at **[+92 322 5522383](https://wa.me/923225522383)**.
+- **Email Contact**: For full humanizing services or enterprise inquiries, email **[ahmadhassan.bted@gmail.com](mailto:ahmadhassan.bted@gmail.com)**.

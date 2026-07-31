@@ -5,6 +5,30 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [1.6.0] - 2026-07-31
+
+### Added
+- **Citation Inserter & BIB / JSON / LaTeX Generator**: Introduced dedicated Citation Inserter module capable of placing academic citations in text or `.docx` documents and exporting matching BibTeX (`citations.bib`), LaTeX (`\cite{key}`), and structured JSON (`citations.json`) packages.
+- **Hierarchical Discipline Taxonomy (`rules/academic/taxonomy/*`)**: Created subfolder-structured taxonomy covering Computer Science & AI, Engineering & Physics, Mathematics & Statistics, Quantitative Finance, and Medical & Life Sciences. Each JSON file contains expert `__prompt__` metadata incorporating prompt engineering and negative prompting rules.
+- **Unified `Citation Count` Control**: Merged mode selectboxes and count sliders into a single `Citation Count` field supporting contextual auto-detection (`Auto`) or exact integer inputs.
+- **Multi-File Branded ZIP Packaging**: Implemented stateless in-memory ZIP archiving (`Turnitout_Humanized_Docs_<TIMESTAMP>.zip`, `Turnitout_Citations_<TIMESTAMP>.zip`, `Turnitout_Checker_Reports_<TIMESTAMP>.zip`).
+- **Dedicated Feature Request & Bug Reporter Page (`feedback_ui.py`)**: Added top-level navigation page allowing users to submit feature requests, bug reports, or request new academic discipline fields directly inside the app, with unlock gate bypass.
+- **In-App Discipline Request Redirect**: Clicking "Don't see your Field of Study?" automatically redirects users to the in-app feedback page with pre-selected category.
+
+## [1.5.0] - 2026-07-20
+
+### Added
+- **ZipPy Compression Perplexity Engine**: Integrated native `zlib`/`lzma` dictionary compression entropy evaluation (`compression_perplexity`) into `turnitout.ai_detector`, evaluating text predictability in ~0.001s without external dependencies.
+- **BERT Academic Pattern Signature Evader**: Expanded JSON pattern catalogs (`keywords.json`, `patterns.json`, `phrases.json`) with hallmark BERT triggers (`"delve into"`, `"plays a pivotal role"`, `"provides a robust framework"`, `"the interplay between"`) to neutralize BERT-based AI classifiers (such as `followsci/bert-ai-text-detector`).
+- **Section-Aware Citation Shielding**: Abstract, Introduction, Conclusion, Title, Declarations, and Appendices sections are 100% humanized and evaded, but strictly shielded from receiving citation insertions (`\cite{...}`) even when citation insertion is enabled.
+- **Centralized Global Configuration**: Created `rules/global_config.json` and loader module `turnitout.core.config` to dynamically configure transformation multipliers, structural guarantee thresholds, detector signal weights, and UI feature flags without modifying Python source code.
+- **UI Feature Flags**: Added `ui_flags` configuration (`show_ai_detection_in_remover`, `show_ai_checker_tab`) to hide/show AI pattern scores and sidebar checker tabs on demand.
+- **Header Top-Right Clipboard Copy Action**: Integrated browser-native `📋 Copy` button in the header of symmetric, fully editable input and output `st.text_area` fields.
+
+### Changed
+- **Non-Linear Intensity Power Curve**: Replaced linear intensity scaling with a non-linear power curve `(effective_intensity / 100.0) ** 0.75`, boosting 75% intensity preset to an effective 80.5% internal transformation rate.
+- **LaTeX Parser Frontmatter Preservation**: Fixed legacy `in_frontmatter` skip block in `parser.py` so standard Markdown and paper sections (`Abstract`, `Introduction`, `Methodology`, `Observations`, `Conclusion`) are 100% processed and humanized.
+
 ## [1.4.0] - 2026-07-08
 
 ### Added
