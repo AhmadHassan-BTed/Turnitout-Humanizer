@@ -2,83 +2,95 @@
   <img src="docs/assets/logo-banner.svg" alt="Turnitout Logo" width="100%"/>
 </p>
 
-<h1 align="center">Turnitout Core</h1>
+<h1 align="center">Turnitout — Plagiarism & AI Detector Evasion Engine</h1>
 
 <p align="center">
-  <a href="https://turnitout.streamlit.app/"><img src="https://img.shields.io/badge/Deployment-Hosted%20App-blue.svg" alt="Deployment: Hosted App"/></a>
+  <a href="https://turnitout.streamlit.app/"><img src="https://img.shields.io/badge/Deployment-Live%20Hosted%20App-blue.svg" alt="Deployment: Live Hosted App"/></a>
   <img src="https://img.shields.io/badge/Version-v1.6.0-green.svg" alt="Version: v1.6.0"/>
   <img src="https://img.shields.io/badge/Python-3.9%2B-brightgreen.svg" alt="Python 3.9+"/>
   <a href="https://github.com/AhmadHassan-BTed/Turnitout-Humanizer/issues"><img src="https://img.shields.io/badge/Community-GitHub%20Issues-orange.svg" alt="GitHub Issues"/></a>
+  <img src="https://img.shields.io/badge/Privacy-100%25%20Local-purple.svg" alt="Privacy: 100% Local"/>
 </p>
 
 <p align="center">
-  <strong>An intelligent LaTeX & Word document plagiarism, similarity, and AI-detection removal engine with hierarchical academic discipline taxonomy, multi-file batch processing, and automatic BibTeX / JSON / LaTeX reference generation.</strong>
+  <strong>The ultimate programmatic, zero-AI plagiarism and AI-detection removal suite. Engineered for research papers, LaTeX documents, Word files, and technical manuscripts with hierarchical academic discipline taxonomy, multi-format batch document processing, and automatic BibTeX / JSON / LaTeX reference generation.</strong>
 </p>
 
 ---
 
-## 💡 The Philosophy
+## 💡 Why Turnitout?
 
-Academic and technical writing is a personal, human craft. Under the rigid rules of automated similarity checkers (like **Turnitin**) and AI pattern detectors (like **GPTZero**, **Turnitin AI**, and **CopyLeaks**), researchers and students are often forced to rewrite their natural voice or break document layouts simply to clear string-matching thresholds.
+Academic and technical writing is a personal, human craft. Under the rigid rules of automated similarity checkers (**Turnitin**, **iThenticate**) and AI pattern detectors (**GPTZero**, **Turnitin AI**, **CopyLeaks**, **ZeroGPT**), researchers and students are often forced to rewrite their natural voice or destroy complex document layouts simply to clear string-matching thresholds.
 
-Other tools use generative AI to rewrite text (which ironically leaves new AI footprints and compromises your privacy). **Turnitout does NOT use AI to eliminate AI.** It is **100% programmatic and deterministic**, mathematically disrupting contiguous word sequences while leaving equations, matrices, figures, formatting macros, and citation indexes completely untouched.
+Other commercial tools use generative AI to rewrite text — which ironically leaves **new AI footprints, hallucinated facts, and compromises document privacy**. 
+
+**Turnitout does NOT use AI to eliminate AI.** It is **100% programmatic, rule-based, and deterministic**, mathematically disrupting contiguous n-gram word sequences while leaving equations, matrices, figures, formatting macros, and citation indexes completely untouched.
 
 ---
 
-## 🚀 Key Modules & Capabilities
+## 🚀 Core Capabilities & Highlights
+
+```
+┌─────────────────────────────────────────────────────────────────────────────────────────┐
+│                                   TURNITOUT CORE SUITE                                 │
+├───────────────────────────────┬───────────────────────────────┬─────────────────────────┤
+│  ⚡ Plagiarism & AI Remover   │  📜 Citation & Reference Gen  │  📦 Multi-Format Batch  │
+│  - Zero Generative AI         │  - IEEE [1] & APA (Author)    │  - .docx / .tex / .txt  │
+│  - XML Paragraph Formatting   │  - BibTeX (.bib) Exporter     │  - .md / .py Code Files │
+│  - BERT / LLM Pattern Evader  │  - LaTeX (\cite{key}) Package │  - Branded ZIP Packages │
+└───────────────────────────────┴───────────────────────────────┴─────────────────────────┘
+```
 
 ### 1. ⚡ Plagiarism & AI Remover (Humanizer)
-- **Multi-File & Single-File Word (.docx) Processing**: Humanizes `.docx` files paragraph-by-paragraph in-place, preserving all images, tables, headers, footers, and XML typography intact.
-- **Section-Aware Protection**: Abstract, Introduction, Conclusion, Title, Declarations, and Appendices are 100% humanized, but shielded from citation insertions.
+- **Multi-Format In-Place Processing**: Humanizes `.docx`, `.tex`, `.txt`, `.md`, and `.py` documents in-place while keeping XML styling, font colors, bold/italic runs, tables, headers, and footers intact.
+- **Section-Aware Protection**: Abstract, Introduction, Conclusion, Title, Declarations, and Appendices are humanized, while code blocks and math environments are strictly protected.
 - **BERT & LLM Pattern Evader**: Automatically neutralizes AI signature triggers (`"delve into"`, `"plays a pivotal role"`, `"provides a robust framework"`, `"the interplay between"`) and cleans em-dashes (`—`).
 
 ### 2. 📜 Citation Inserter & BIB / JSON / LaTeX Generator
-- **Multi-Format Export**: Inserts contextual citations into text and exports matching **BibTeX (`citations.bib`)**, **LaTeX (`\cite{key}`)**, and **Structured JSON (`citations.json`)** reference packages.
-- **Contextual & Manual Controls**: Single unified **Citation Count** field supports contextual auto-detection (`Auto`) or exact user-specified counts (e.g. `5`).
-- **Hierarchical Discipline Taxonomy**: Matches research claim sentences against a categorized subfolder taxonomy (`rules/academic/taxonomy/*`) spanning:
-  - `computer_science/` (Artificial Intelligence, Cybersecurity, Systems)
-  - `engineering_physics/` (Fluid Dynamics, Heat Transfer, Signal Processing)
-  - `mathematics_statistics/` (Differential Equations, Numerical Analysis)
-  - `quantitative_finance/` (Option Pricing, Risk Modeling)
-  - `medical_life_sciences/` (Bioinformatics, Genomics)
+- **Multi-Format Reference Export**: Inserts contextual citations into document sentences and exports matching **BibTeX (`citations.bib`)**, **LaTeX (`\cite{key}`)**, and **Structured JSON (`citations.json`)** reference packages.
+- **Unified Citation Count Field**: Combobox supporting contextual auto-detection (`Auto`) or clean numeric entry (`3`, `5`, `10`, `20`, `50`, or custom numbers).
+- **100% Dynamic Discipline Taxonomy**: Real-time rule taxonomy traversing subfolder rules (`rules/academic/taxonomy/*`) covering:
+  - 💻 `Computer Science & AI` (Artificial Intelligence, Cybersecurity, Systems)
+  - ⚙️ `Engineering & Physics` (Fluid Dynamics, Heat Transfer, Signal Processing)
+  - 📐 `Mathematics & Statistics` (Differential Equations, Numerical Analysis)
+  - 📈 `Quantitative Finance & Economics` (Option Pricing, Risk Modeling)
+  - 🧬 `Medical & Life Sciences` (Bioinformatics, Genomics)
 
 ### 3. 📦 Multi-File Branded ZIP Packaging
-- **Stateless In-Memory Bundling**: Automatically packages multiple processed files, cited documents, and reference bibliographies into branded ZIP archives:
+- **Stateless In-Memory Bundling**: Automatically packages processed documents, cited files, and reference bibliographies into branded ZIP download archives:
   - `Turnitout_Humanized_Docs_<YYYYMMDD_HHMMSS>.zip`
   - `Turnitout_Citations_<YYYYMMDD_HHMMSS>.zip`
-  - `Turnitout_Checker_Reports_<YYYYMMDD_HHMMSS>.zip`
 
 ### 4. 🔍 AI Pattern & Signature Checker
-- **ZipPy Compression Perplexity Engine**: Combines native `zlib`/`lzma` dictionary entropy signals alongside phrase matching, burstiness variance, and discourse markers for 100% local, ultra-fast AI detection.
-- **QuillBot-Style Stats Dashboard**: Side-by-side similarity scores and highlighted text passage marks.
+- **ZipPy Compression Perplexity Engine**: Combines `zlib`/`lzma` dictionary entropy signals alongside phrase matching, burstiness variance, and discourse markers for 100% local, ultra-fast AI detection.
+- **Side-by-Side Dashboard**: Similarity scores, AI probability meters, and passage highlight marks.
 
-### 5. 💬 In-App Feature Request & Bug Reporter Hub
-- **Dedicated Navigation Page**: Users can submit feature requests, bug reports, or suggest new academic discipline fields directly inside the app without needing to navigate away.
-- **Pre-Filled GitHub Issue Templates**: Integrates with [GitHub Issues](https://github.com/AhmadHassan-BTed/Turnitout-Humanizer/issues/new) for community feature tracking.
+### 5. 💬 Feature Request & Discipline Addition Hub
+- **Dedicated Navigation Page**: Request new academic disciplines, report bugs, or suggest features directly inside the application.
+- **Pre-Filled GitHub Issue Templates**: Integrates with [GitHub Issues](https://github.com/AhmadHassan-BTed/Turnitout-Humanizer/issues/new) for transparent community tracking.
 
 ---
 
 ## ⚡ Quick Start & Deployment Options
 
-### 🌐 Option A: Streamlit Web Interface (Recommended)
-- **Hosted Live App**: Access instantly at **[turnitout.streamlit.app](https://turnitout.streamlit.app/)**
-- **Local Run**:
-  ```bash
-  streamlit run streamlit_app.py
-  ```
+### 🌐 Live Web Interface (Recommended)
+Access the live interactive application at **[turnitout.streamlit.app](https://turnitout.streamlit.app/)**
 
-### 🖥️ Option B: Tkinter Desktop GUI
-- **Windows / macOS / Linux**:
-  ```bash
-  python src/turnitout/ui_launcher.py
-  ```
+### 💻 Local Installation
+```bash
+git clone https://github.com/AhmadHassan-BTed/Turnitout-core.git
+cd Turnitout-core
+pip install -r requirements.txt
+streamlit run streamlit_app.py
+```
 
-### 💻 Option C: CLI / Batch Directory Pipeline
-1. Place target files in `paper_input/`.
-2. Run the pipeline:
-   ```bash
-   python -m turnitout.cli --input paper_input/ --output paper_output/
-   ```
+---
+
+## 🤝 Support & Community
+
+- 💬 **Instant Developer Chat**: [Chat on WhatsApp (+92 322 5522383)](https://wa.me/923225522383)
+- 🐛 **Issue Tracker**: [Submit a Feature Request or Bug Report](https://github.com/AhmadHassan-BTed/Turnitout-Humanizer/issues/new)
+- ⭐️ **Support the Project**: Star and follow our public GitHub repositories!
 
 ---
 
