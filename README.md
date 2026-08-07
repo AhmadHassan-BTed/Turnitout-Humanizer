@@ -2,150 +2,105 @@
   <img src="docs/assets/logo-banner.svg" alt="Turnitout Logo" width="100%"/>
 </p>
 
-<h1 align="center">Turnitout — Plagiarism & AI Detector Evasion Engine</h1>
+<h1 align="center">Turnitout — Intelligent Plagiarism & AI Detector Evasion Suite</h1>
 
 <p align="center">
-  <a href="https://turnitout.streamlit.app/"><img src="https://img.shields.io/badge/Deployment-Live%20Hosted%20App-blue.svg" alt="Deployment: Live Hosted App"/></a>
-  <img src="https://img.shields.io/badge/Version-v1.6.0-green.svg" alt="Version: v1.6.0"/>
-  <img src="https://img.shields.io/badge/Python-3.9%2B-brightgreen.svg" alt="Python 3.9+"/>
-  <a href="https://github.com/AhmadHassan-BTed/Turnitout-Humanizer/issues"><img src="https://img.shields.io/badge/Community-GitHub%20Issues-orange.svg" alt="GitHub Issues"/></a>
-  <img src="https://img.shields.io/badge/Privacy-100%25%20Local-purple.svg" alt="Privacy: 100% Local"/>
+  <a href="https://turnitout.streamlit.app/"><img src="https://img.shields.io/badge/Live%20App-Launch%20Turnitout-blue.svg?style=for-the-badge&logo=streamlit" alt="Launch Live App"/></a>
+  <img src="https://img.shields.io/badge/Engine-v1.9.2-green.svg?style=for-the-badge" alt="Engine: v1.9.2"/>
+  <img src="https://img.shields.io/badge/Safety-100%25%20Zero%20AI-purple.svg?style=for-the-badge" alt="Safety: 100% Zero AI"/>
+  <a href="https://wa.me/923225522383"><img src="https://img.shields.io/badge/WhatsApp-Developer%20Support-25D366.svg?style=for-the-badge&logo=whatsapp" alt="WhatsApp Support"/></a>
 </p>
 
 <p align="center">
-  <strong>The ultimate programmatic, zero-AI plagiarism and AI-detection removal suite. Engineered for research papers, LaTeX documents, Word files, and technical manuscripts with hierarchical academic discipline taxonomy, multi-format batch document processing, and automatic BibTeX / JSON / LaTeX reference generation.</strong>
+  <strong>The world's first 100% programmatic, zero-generative-AI humanizer & similarity evader. Bypass Turnitin, iThenticate, GPTZero, CopyLeaks, and ZeroGPT on academic papers, LaTeX manuscripts, Word documents, and multi-language source code files without altering facts, document layout, equations, or executable code logic.</strong>
 </p>
 
 ---
 
-## 💡 Why Turnitout?
+## 🌟 Try Turnitout Live Now!
 
-Academic and technical writing is a personal, human craft. Under the rigid rules of automated similarity checkers (**Turnitin**, **iThenticate**) and AI pattern detectors (**GPTZero**, **Turnitin AI**, **CopyLeaks**, **ZeroGPT**), researchers and students are often forced to rewrite their natural voice or destroy complex document layouts simply to clear string-matching thresholds.
+### 🚀 Access Hosted Web App: **[turnitout.streamlit.app](https://turnitout.streamlit.app/)**
 
-Other commercial tools use generative AI to rewrite text — which ironically leaves **new AI footprints, hallucinated facts, and compromises document privacy**. 
-
-**Turnitout does NOT use AI to eliminate AI.** It is **100% programmatic, rule-based, and deterministic**, mathematically disrupting contiguous n-gram word sequences while leaving equations, matrices, figures, formatting macros, and citation indexes completely untouched.
+> 🔒 **100% Privacy Guarantee**: Your documents and code are processed in-memory. Zero document logging, zero server storage, zero data selling.
 
 ---
 
-## 🚀 Core Capabilities & Highlights
+## ⚡ Why Turnitout Beats Generative AI Tools
+
+Traditional AI humanizers (like QuillBot or Undetectable.ai) use **generative LLMs** to rephrase content. This creates **massive risks**:
+
+| Feature / Guarantee | 🤖 Commercial AI Humanizers | 🛡️ **Turnitout Engine** |
+| :--- | :---: | :---: |
+| **New AI Footprint Risk** | ❌ High (Generates new AI patterns) | ✅ **0% (100% Rule-Based & Deterministic)** |
+| **Fact Hallucination** | ❌ Frequent (Changes numbers & facts) | ✅ **Zero (Facts & Data Stay 100% Exact)** |
+| **Document Layout Preservation** | ❌ Destroys tables, XML & formatting | ✅ **Preserves XML, Fonts, Bold/Italic & Headers** |
+| **Source Code Execution Safety** | ❌ Breaks code syntax & logic | ✅ **100% Executable Code Safety Guarantee** |
+| **LaTeX & Math Protection** | ❌ Destroys `\cite{}`, `$x^2$`, equations | ✅ **Keeps LaTeX & Equations 100% Untouched** |
+| **Reference Generation** | ❌ None | ✅ **BibTeX (.bib), LaTeX & JSON Generator** |
+
+---
+
+## 🎯 Key Features & Capabilities
 
 ```
-┌─────────────────────────────────────────────────────────────────────────────────────────┐
-│                                   TURNITOUT CORE SUITE                                 │
-├───────────────────────────────┬───────────────────────────────┬─────────────────────────┤
-│  ⚡ Plagiarism & AI Remover   │  📜 Citation & Reference Gen  │  📦 Multi-Format Batch  │
-│  - Zero Generative AI         │  - IEEE [1] & APA (Author)    │  - .docx / .tex / .txt  │
-│  - XML Paragraph Formatting   │  - BibTeX (.bib) Exporter     │  - .md / .py Code Files │
-│  - BERT / LLM Pattern Evader  │  - LaTeX (\cite{key}) Package │  - Branded ZIP Packages │
-└───────────────────────────────┴───────────────────────────────┴─────────────────────────┘
+┌────────────────────────────────────────────────────────────────────────────────────────────────────────┐
+│                                       TURNITOUT PRODUCT CAPABILITIES                                   │
+├───────────────────────────────┬───────────────────────────────┬───────────────────────────────┬────────┤
+│  📝 Document & Text Evader    │  💻 Code Comment Humanizer    │  📜 Citation & Reference Gen  │  📦 ZIP│
+│  - Bypass Turnitin & GPTZero  │  - Python, C++, Java, JS, SQL │  - IEEE [1] & APA (Author)    │  - DOCX│
+│  - Preserve Word & LaTeX XML  │  - Developer Skill Personas   │  - BibTeX (.bib) Generator    │  - TEX │
+│  - 4,068+ Rule Transformers   │  - Single-Line Comment Safety │  - 5 Academic Taxonomies      │  - Code│
+└───────────────────────────────┴───────────────────────────────┴───────────────────────────────┴────────┘
 ```
 
-### 1. ⚡ Plagiarism & AI Remover (Humanizer)
-- **Multi-Format In-Place Processing**: Humanizes `.docx`, `.tex`, `.txt`, `.md`, and `.py` documents in-place while keeping XML styling, font colors, bold/italic runs, tables, headers, and footers intact.
+### 1. ⚡ Plagiarism & AI Detector Evader (Documents & Text)
+- **In-Place DOCX & LaTeX Processing**: Humanizes `.docx`, `.tex`, `.txt`, and `.md` files in-place while keeping XML styling, font colors, bold/italic runs, tables, headers, and footers intact.
 - **Section-Aware Protection**: Abstract, Introduction, Conclusion, Title, Declarations, and Appendices are humanized, while code blocks and math environments are strictly protected.
-- **BERT & LLM Pattern Evader**: Automatically neutralizes AI signature triggers (`"delve into"`, `"plays a pivotal role"`, `"provides a robust framework"`, `"the interplay between"`) and cleans em-dashes (`—`).
+- **BERT & LLM Signature Evader**: Automatically neutralizes AI signature triggers (`"delve into"`, `"plays a pivotal role"`, `"provides a robust framework"`, `"the interplay between"`) and cleans em-dashes (`—`).
 
-### 2. 📜 Citation Inserter & BIB / JSON / LaTeX Generator
+### 2. 💻 Code Comment & Docstring Humanizer (100% Executable Code Guarantee)
+- **Executable Code Safety**: Only natural language comments (`#`, `//`, `/* ... */`, `""" ... """`, `<!-- ... -->`) are humanized. Code statements, logic, variables, functions, syntax, and indentation remain **100% untouched and runnable**.
+- **Developer Skill Personas**:
+  - 🐣 **Beginner Developer**: Simple everyday conversational words (`"finds"`, `"sets up"`, `"breakdown"`).
+  - ⚙️ **Intermediate Developer**: Standard working software engineering English.
+  - 👨‍💻 **Senior Architect / Expert**: Formal technical jargon (`"evaluates"`, `"initializes"`, `"spectral decomposition"`).
+- **Multi-File Batch & ZIP Upload**: Upload multiple code files or `.zip` code archives for in-memory extraction, comment humanization, folder hierarchy preservation, and 1-click downloadable ZIP export.
+- **Supported Languages**: Python (`.py`), C/C++ (`.c`, `.cpp`), Java/C# (`.java`, `.cs`), JavaScript/TypeScript (`.js`, `.ts`), Go/Rust (`.go`, `.rs`), Shell/Bash (`.sh`), SQL (`.sql`), HTML/CSS (`.html`, `.css`).
+
+### 3. 📜 Citation Inserter & BIB / JSON / LaTeX Generator
 - **Multi-Format Reference Export**: Inserts contextual citations into document sentences and exports matching **BibTeX (`citations.bib`)**, **LaTeX (`\cite{key}`)**, and **Structured JSON (`citations.json`)** reference packages.
-- **Unified Citation Count Field**: Combobox supporting contextual auto-detection (`Auto`) or clean numeric entry (`3`, `5`, `10`, `20`, `50`, or custom numbers).
-- **100% Dynamic Discipline Taxonomy**: Real-time rule taxonomy traversing subfolder rules (`rules/academic/taxonomy/*`) covering:
-  - 💻 `Computer Science & AI` (Artificial Intelligence, Cybersecurity, Systems)
-  - ⚙️ `Engineering & Physics` (Fluid Dynamics, Heat Transfer, Signal Processing)
-  - 📐 `Mathematics & Statistics` (Differential Equations, Numerical Analysis)
-  - 📈 `Quantitative Finance & Economics` (Option Pricing, Risk Modeling)
-  - 🧬 `Medical & Life Sciences` (Bioinformatics, Genomics)
+- **5 Academic Taxonomies**: Real-time rule taxonomy covering:
+  - 💻 `Computer Science & AI`
+  - ⚙️ `Engineering & Physics`
+  - 📐 `Mathematics & Statistics`
+  - 📈 `Quantitative Finance & Economics`
+  - 🧬 `Medical & Life Sciences`
 
-### 3. 📦 Multi-File Branded ZIP Packaging
-- **Stateless In-Memory Bundling**: Automatically packages processed documents, cited files, and reference bibliographies into branded ZIP download archives:
-  - `Turnitout_Humanized_Docs_<YYYYMMDD_HHMMSS>.zip`
-  - `Turnitout_Citations_<YYYYMMDD_HHMMSS>.zip`
-
-### 4. 🔍 AI Pattern & Signature Checker
-- **ZipPy Compression Perplexity Engine**: Combines `zlib`/`lzma` dictionary entropy signals alongside phrase matching, burstiness variance, and discourse markers for 100% local, ultra-fast AI detection.
-- **Side-by-Side Dashboard**: Similarity scores, AI probability meters, and passage highlight marks.
-
-### 5. 💬 Feature Request & Discipline Addition Hub
-- **Dedicated Navigation Page**: Request new academic disciplines, report bugs, or suggest features directly inside the application.
-- **Pre-Filled GitHub Issue Templates**: Integrates with [GitHub Issues](https://github.com/AhmadHassan-BTed/Turnitout-Humanizer/issues/new) for transparent community tracking.
+### 4. 🔍 Multi-Algorithm Real-Time AI Detector
+- **ZipPy Compression Perplexity Engine**: Local entropy analyzer combining `zlib`/`lzma` dictionary perplexity with phrase matching, burstiness variance, and discourse markers for instant local AI scoring.
 
 ---
 
-## ⚡ Quick Start & Deployment Options
+## 📁 Supported File Formats
 
-### 🌐 Live Web Interface (Recommended)
-Access the live interactive application at **[turnitout.streamlit.app](https://turnitout.streamlit.app/)**
-
-### 💻 Local Installation
-```bash
-git clone https://github.com/AhmadHassan-BTed/Turnitout-core.git
-cd Turnitout-core
-pip install -r requirements.txt
-streamlit run streamlit_app.py
-```
+- 📄 **Microsoft Word**: `.docx`
+- 📑 **LaTeX Manuscripts**: `.tex`
+- 📝 **Plain Text & Markdown**: `.txt`, `.md`
+- 💻 **Source Code Files**: `.py`, `.cpp`, `.c`, `.java`, `.cs`, `.js`, `.ts`, `.go`, `.rs`, `.sh`, `.sql`, `.html`, `.css`
+- 📦 **Compressed Archives**: `.zip`
 
 ---
 
-## 🤝 Support & Community
+## 🤝 Community, Enterprise & Custom Discipline Support
 
-- 💬 **Instant Developer Chat**: [Chat on WhatsApp (+92 322 5522383)](https://wa.me/923225522383)
-- 🐛 **Issue Tracker**: [Submit a Feature Request or Bug Report](https://github.com/AhmadHassan-BTed/Turnitout-Humanizer/issues/new)
-- ⭐️ **Support the Project**: Star and follow our public GitHub repositories!
+Need custom rule integration, enterprise deployment, or academic discipline expansion?
 
----
-
-## 🛠️ Architecture & Codebase Map
-
-```
-Turnitout-core/
-├── rules/
-│   ├── academic/
-│   │   ├── taxonomy/                     # Hierarchical Discipline Rules
-│   │   │   ├── computer_science/         # AI, Cybersecurity, Systems
-│   │   │   ├── engineering_physics/      # Fluid Dynamics, Transport
-│   │   │   ├── mathematics_statistics/   # PDEs, Numerical Analysis
-│   │   │   ├── quantitative_finance/     # Option Pricing, Risk
-│   │   │   └── medical_life_sciences/    # Bioinformatics, Genomics
-│   │   ├── general_academic_topics.json
-│   │   ├── phrases.json
-│   │   └── synonyms.json
-│   └── global_config.json
-├── src/turnitout/
-│   ├── core/
-│   │   ├── citation_engine.py            # Decoupled Rules-Driven Citation Engine
-│   │   ├── doc_processor.py              # In-Place DOCX Stream & ZIP Generator
-│   │   ├── modifier.py                   # Rule Transformer Coordinator
-│   │   ├── rules.py                      # Recursive Rules & Taxonomy Loader
-│   │   └── transformers/                 # AI & Similarity Evader Transformers
-│   ├── ui/
-│   │   ├── citation_ui.py                # Citation & BIB/JSON/LaTeX UI Page
-│   │   ├── feedback_ui.py                # Dedicated Feature & Bug Reporter Page
-│   │   ├── humanizer_ui.py               # Plagiarism & AI Remover UI Page
-│   │   ├── checker_ui.py                 # Multi-Pass Checker UI Page
-│   │   └── common.py                     # Global Styling & Banner Headers
-│   └── ai_detector.py                    # ZipPy Entropy & Signature Detector
-├── tests/                                # Comprehensive Pytest Test Suite
-│   ├── test_academic_taxonomy.py
-│   ├── test_citation_engine.py
-│   ├── test_doc_processor.py
-│   ├── test_modifier.py
-│   └── test_rules.py
-└── streamlit_app.py                      # Multi-Page Navigation Entrypoint
-```
+- 💬 **WhatsApp Direct Chat**: [Chat on WhatsApp (+92 322 5522383)](https://wa.me/923225522383)
+- 🐛 **Feature Requests & Issues**: [Submit a GitHub Issue](https://github.com/AhmadHassan-BTed/Turnitout-Humanizer/issues/new)
+- 📧 **Email**: [ahmadhassan.bted@gmail.com](mailto:ahmadhassan.bted@gmail.com)
 
 ---
 
-## 🧪 Testing & Verification
-
-Run the complete automated unit test suite:
-```bash
-PYTHONPATH=src python3 -m pytest -v tests/
-```
-
----
-
-## 🤝 Community, Support & Feature Requests
-
-- **GitHub Issues**: Submit feature requests, bug reports, or request new academic discipline fields at **[Turnitout Issues](https://github.com/AhmadHassan-BTed/Turnitout-Humanizer/issues/new)**.
-- **WhatsApp Support**: Chat directly with developer **Ahmad Hassan** at **[+92 322 5522383](https://wa.me/923225522383)**.
-- **Email Contact**: For full humanizing services or enterprise inquiries, email **[ahmadhassan.bted@gmail.com](mailto:ahmadhassan.bted@gmail.com)**.
+<p align="center">
+  <sub>Built with ❤️ by Ahmad Hassan for researchers, developers, students, and academics worldwide.</sub>
+</p>
