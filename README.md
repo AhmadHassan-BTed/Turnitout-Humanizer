@@ -19,9 +19,13 @@
 
 ## 🌟 Access Turnitout Live Now
 
-### 🚀 Hosted Web Application: **[turnitout.streamlit.app](https://turnitout.streamlit.app/)**
+<p align="center">
+  <img src="docs/assets/turnitout_UI.png" alt="Turnitout Logo" width="100%"/>
+</p>
 
-> 🔒 **100% Privacy Guarantee**: All documents and source code files are processed transiently in-memory. Zero document logging, zero server storage, zero data retention.
+### Hosted Web Application: **[turnitout.streamlit.app](https://turnitout.streamlit.app/)**
+
+> **100% Privacy Guarantee**: All documents and source code files are processed transiently in-memory. Zero document logging, zero server storage, zero data retention.
 
 ---
 
@@ -54,39 +58,45 @@ Other commercial tools use generative AI to rewrite text — which ironically le
 ┌────────────────────────────────────────────────────────────────────────────────────────────────────────┐
 │                                       TURNITOUT PRODUCT CAPABILITIES                                   │
 ├───────────────────────────────┬───────────────────────────────┬───────────────────────────────┬────────┤
-│  ⚡ Plagiarism & AI Remover   │  💻 Code Comment Humanizer    │  📜 Citation & Reference Gen  │  📦 ZIP│
+│   Plagiarism & AI Remover     │  Code Comment Humanizer       │   Citation & Reference Gen    │     ZIP│
 │  - Zero Generative AI         │  - Python, C++, Java, JS, SQL │  - IEEE [1] & APA (Author)    │  - DOCX│
 │  - XML Paragraph Formatting   │  - Developer Skill Personas   │  - BibTeX (.bib) Generator    │  - TEX │
 │  - BERT / LLM Pattern Evader  │  - Single-Line Comment Safety │  - 5 Academic Taxonomies      │  - Code│
 └───────────────────────────────┴───────────────────────────────┴───────────────────────────────┴────────┘
 ```
 
-### 1. ⚡ Plagiarism & AI Detector Evader (Documents & Text)
-- **In-Place DOCX & LaTeX Processing**: Humanizes `.docx`, `.tex`, `.txt`, and `.md` files in-place while keeping XML styling, font colors, bold/italic runs, tables, headers, and footers intact.
-- **Section-Aware Protection**: Abstract, Introduction, Conclusion, Title, Declarations, and Appendices are humanized, while code blocks and math environments are strictly protected.
-- **BERT & LLM Signature Evader**: Automatically neutralizes AI signature triggers (`"delve into"`, `"plays a pivotal role"`, `"provides a robust framework"`, `"the interplay between"`) and cleans em-dashes (`—`).
+### ⚡ 1. The Core Engine: Zero-AI & Mathematically Ruthless
 
-### 2. 💻 Code Comment & Docstring Humanizer (100% Executable Code Guarantee)
-- **Executable Code Safety**: Only natural language comments (`#`, `//`, `/* ... */`, `""" ... """`, `<!-- ... -->`) are humanized. Code statements, logic, variables, functions, syntax, and indentation remain **100% untouched and runnable**.
-- **Developer Skill Personas**:
-  - 🐣 **Beginner Developer**: Simple everyday conversational words (`"finds"`, `"sets up"`, `"breakdown"`).
-  - ⚙️ **Intermediate Developer**: Standard working software engineering English.
-  - 👨‍💻 **Senior Architect / Expert**: Formal technical jargon (`"evaluates"`, `"initializes"`, `"spectral decomposition"`).
-- **Multi-File Batch & ZIP Upload**: Upload multiple code files or `.zip` code archives for in-memory extraction, comment humanization, folder hierarchy preservation, and 1-click downloadable ZIP export.
-- **Supported Languages**: Python (`.py`), C/C++ (`.c`, `.cpp`), Java/C# (`.java`, `.cs`), JavaScript/TypeScript (`.js`, `.ts`), Go/Rust (`.go`, `.rs`), Shell/Bash (`.sh`), SQL (`.sql`), HTML/CSS (`.html`, `.css`).
+* **No Generative AI:** 100% hard-coded math and rule engines. Zero API wrappers, zero hallucinations. Leaves absolutely no AI footprint.
+* **Unlimited Everything:** No word limits, no paywalls, infinite tries (I love hurting billion-dollar companies, hehehe).
+* **LaTeX & DOCX Safe:** Rewrites `.docx`, `.tex`, and `.md` files *in-place*. Your XML styling, fonts, tables, matrices, equations, and `\cite{}` tags are strictly protected.
+* **Section-Aware:** Humanizes your Abstract and Conclusion, but mathematically locks down your code blocks, data, and declarations.
+* **LLM Signature Assassin:** Deterministically wipes out AI triggers (`"delve into"`, `"pivotal role"`) and cleans em-dashes (`—`).
 
-### 3. 📜 Citation Inserter & BIB / JSON / LaTeX Generator
-- **Multi-Format Reference Export**: Inserts contextual citations into document sentences and exports matching **BibTeX (`citations.bib`)**, **LaTeX (`\cite{key}`)**, and **Structured JSON (`citations.json`)** reference packages.
-- **5 Academic Taxonomies**: Real-time rule taxonomy covering:
-  - 💻 `Computer Science & AI`
-  - ⚙️ `Engineering & Physics`
-  - 📐 `Mathematics & Statistics`
-  - 📈 `Quantitative Finance & Economics`
-  - 🧬 `Medical & Life Sciences`
+### 💻 2. Code Comment & Docstring Humanizer
 
-### 4. 🔍 Multi-Algorithm Real-Time AI Detector
-- **ZipPy Compression Perplexity Engine**: Local entropy analyzer combining `zlib`/`lzma` dictionary perplexity with phrase matching, burstiness variance, and discourse markers for instant local AI scoring.
+* **Never Breaks Code:** Mathematically guarantees your logic, syntax, and variables stay completely untouched. Only natural language comments (`#`, `//`, `/*`, `"""`) get rewritten.
+* **Developer Personas:** Dial in your exact comment tone:
+* 🐣 **Beginner:** Casual ("finds", "sets up").
+* ⚙️ **Intermediate:** Standard dev English.
+* 👨‍💻 **Senior/Expert:** Heavy technical jargon ("evaluates", "spectral decomposition").
 
+
+* **Language Agnostic:** Supports Python, C/C++, Java/C#, JS/TS, Go/Rust, SQL, Bash, and HTML/CSS.
+
+### 📚 3. Auto-Citation & Reference Generator
+
+* **FREE Contextual Citations:** Tell it your major, input how many references you need, and it drops them directly into your text.
+* **Multi-Format Export:** Auto-generates matching **BibTeX (`.bib`)**, **LaTeX (`\cite{key}`)**, and **Structured JSON** reference packages.
+* **5 Academic Taxonomies:** Real-time databases optimized for CS & AI, Engineering, Math, Finance, and Medical Sciences.
+
+### 🔒 4. Total Privacy, Bulk Workflows & Real-Time Detection
+
+* **100% Private (No BS):** Runs transiently in-memory in your browser. No logs, no databases, zero tracking. I don't want your data.
+* **Bulk & ZIP Support:** Drop in multiple files or a whole `.zip` repo. It processes instantly, keeps your folder hierarchy intact, and spits out a 1-click ZIP export.
+* **Granular Controls:** Dial in the exact rewrite intensity percentages and tweak the knobs yourself.
+* **Built-in AI Detector:** ZipPy compression perplexity engine instantly scores your text locally so you know you're safe before submitting.
+* **Lightning Fast Unofficial Support:** Need a feature? Open an issue or hit my WhatsApp, and I'll literally build and ship it in a day.
 ---
 
 ## 🛠️ High-Level Engine Architecture Overview
@@ -114,19 +124,19 @@ The platform is designed around strict **asset decoupling** and **modular langua
 
 ## 📁 Supported File Formats
 
-- 📄 **Microsoft Word**: `.docx`
-- 📑 **LaTeX Manuscripts**: `.tex`
-- 📝 **Plain Text & Markdown**: `.txt`, `.md`
-- 💻 **Source Code Files**: `.py`, `.cpp`, `.c`, `.java`, `.cs`, `.js`, `.ts`, `.go`, `.rs`, `.sh`, `.sql`, `.html`, `.css`
-- 📦 **Compressed Archives**: `.zip`
+- **Microsoft Word**: `.docx`
+- **LaTeX Manuscripts**: `.tex`
+- **Plain Text & Markdown**: `.txt`, `.md`
+- **Source Code Files**: `.py`, `.cpp`, `.c`, `.java`, `.cs`, `.js`, `.ts`, `.go`, `.rs`, `.sh`, `.sql`, `.html`, `.css`
+- **Compressed Archives**: `.zip`
 
 ---
 
 ## 🤝 Support, Enterprise Deployment & Custom Disciplines
 
-- 💬 **WhatsApp Direct Developer Support**: [Chat on WhatsApp (+92 322 5522383)](https://wa.me/923225522383)
-- 🐛 **Feature Requests & Bug Reporting**: [Submit a GitHub Issue](https://github.com/AhmadHassan-BTed/Turnitout-Humanizer/issues/new)
-- 📧 **Enterprise Inquiries**: [ahmadhassan.bted@gmail.com](mailto:ahmadhassan.bted@gmail.com)
+- **WhatsApp Direct Developer Support**: [Chat on WhatsApp (+92 322 5522383)](https://wa.me/923225522383)
+- **Feature Requests & Bug Reporting**: [Submit a GitHub Issue](https://github.com/AhmadHassan-BTed/Turnitout-Humanizer/issues/new)
+- **Enterprise Inquiries**: [ahmadhassan.bted@gmail.com](mailto:ahmadhassan.bted@gmail.com)
 
 ---
 
