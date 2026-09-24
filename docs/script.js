@@ -18,6 +18,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
   const focusVitalsBtn = document.getElementById("focusVitalsBtn");
   const focusThesisBtn = document.getElementById("focusThesisBtn");
+  const focusArchiveBtn = document.getElementById("focusArchiveBtn");
   const focusDeskBtn = document.getElementById("focusDeskBtn");
 
   const mainPrintedSheet = document.getElementById("mainPrintedSheet");
@@ -244,6 +245,14 @@ document.addEventListener("DOMContentLoaded", () => {
       document.querySelectorAll(".spatial-jump-btn").forEach(b => b.classList.remove("active"));
       focusDeskBtn.classList.add("active");
       glideTo(1350, 950, 0.52);
+    });
+  }
+
+  if (focusArchiveBtn) {
+    focusArchiveBtn.addEventListener("click", () => {
+      document.querySelectorAll(".spatial-jump-btn").forEach(b => b.classList.remove("active"));
+      focusArchiveBtn.classList.add("active");
+      glideTo(1680, 2540, 0.72);
     });
   }
 
