@@ -8,9 +8,21 @@ document.addEventListener("DOMContentLoaded", () => {
   const themeToggleBtn = document.getElementById("themeToggleBtn");
   const currentTheme = localStorage.getItem("turnitout_theme") || "light";
 
+  const MOON_SVG = '<svg class="icon icon-moon" viewBox="0 0 24 24" width="15" height="15" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path></svg>';
+  const SUN_SVG = '<svg class="icon icon-sun" viewBox="0 0 24 24" width="15" height="15" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="5"></circle><line x1="12" y1="1" x2="12" y2="3"></line><line x1="12" y1="21" x2="12" y2="23"></line><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line><line x1="1" y1="12" x2="3" y2="12"></line><line x1="21" y1="12" x2="23" y2="12"></line><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line></svg>';
+  const CHECK_SVG = '<svg class="icon" viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>';
+  const REFRESH_SVG = '<svg class="icon" viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="1 4 1 10 7 10"></polyline><path d="M3.51 15a9 9 0 1 0 2.13-9.36L1 10"></path></svg>';
+
+  function updateThemeButton(isDark) {
+    if (!themeToggleBtn) return;
+    themeToggleBtn.innerHTML = `${isDark ? SUN_SVG : MOON_SVG} <span>Study Session: 3 AM (Dark)</span>`;
+  }
+
   if (currentTheme === "dark") {
     document.body.classList.add("dark-mode");
-    if (themeToggleBtn) themeToggleBtn.innerHTML = "☀️ Study Session: 3 AM (Dark)";
+    updateThemeButton(true);
+  } else {
+    updateThemeButton(false);
   }
 
   if (themeToggleBtn) {
@@ -18,7 +30,7 @@ document.addEventListener("DOMContentLoaded", () => {
       document.body.classList.toggle("dark-mode");
       const isDark = document.body.classList.contains("dark-mode");
       localStorage.setItem("turnitout_theme", isDark ? "dark" : "light");
-      themeToggleBtn.innerHTML = isDark ? "☀️ Study Session: 3 AM (Dark)" : "🌙 Study Session: 3 AM (Dark)";
+      updateThemeButton(isDark);
     });
   }
 
@@ -133,10 +145,20 @@ document.addEventListener("DOMContentLoaded", () => {
         });
 
         if (!matchFound) {
+          // If no canned cliché was found, introduce natural burstiness manually
           const sentences = rawText.split(/(?<=[.?!])\s+/);
           markedHtml = sentences.map((s, idx) => {
-            if (idx % 2 === 0 && s.length > 25) {
-              return `<span class="ai-crossed">${s.substring(0, Math.floor(s.length / 2))}</span> <span class="human-replacement">rephrased authentically</span> ${s.substring(Math.floor(s.length / 2))}`;
+            if (idx === 0) {
+              return `<span class="human-replacement" style="margin-left:0; margin-right:6px;">In particular,</span> ` + s;
+            }
+            if (idx % 2 === 1 && s.length > 50) {
+              const words = s.split(" ");
+              if (words.length > 6) {
+                const mid = Math.floor(words.length / 2);
+                return words.slice(0, mid).join(" ") + 
+                  ` <span class="ai-crossed">—</span> <span class="human-replacement">specifically</span> ` + 
+                  words.slice(mid).join(" ");
+              }
             }
             return s;
           }).join(" ");
@@ -158,7 +180,7 @@ document.addEventListener("DOMContentLoaded", () => {
           }
 
           humanizeBtn.disabled = false;
-          humanizeBtn.textContent = "RESOLVE TO CLEAN TEXT ✓";
+          humanizeBtn.innerHTML = `RESOLVE TO CLEAN TEXT ${CHECK_SVG}`;
           currentSimState = "MARKED";
         }, 400);
 
@@ -170,7 +192,7 @@ document.addEventListener("DOMContentLoaded", () => {
         });
 
         paperSheet.textContent = cleanText;
-        humanizeBtn.textContent = "RESET TO RAW AI SAMPLE 🔄";
+        humanizeBtn.innerHTML = `RESET TO RAW AI SAMPLE ${REFRESH_SVG}`;
         currentSimState = "CLEAN";
 
       } else if (currentSimState === "CLEAN") {
@@ -205,10 +227,10 @@ document.addEventListener("DOMContentLoaded", () => {
       if (!textToCopy) return;
 
       navigator.clipboard.writeText(textToCopy).then(() => {
-        const originalText = copyBtn.textContent;
-        copyBtn.textContent = "Copied Clean Text! ✓";
+        const originalHtml = copyBtn.innerHTML;
+        copyBtn.innerHTML = `Copied Clean Text! ${CHECK_SVG}`;
         setTimeout(() => {
-          copyBtn.textContent = originalText;
+          copyBtn.innerHTML = originalHtml;
         }, 2000);
       }).catch(err => {
         console.error("Clipboard copy error:", err);

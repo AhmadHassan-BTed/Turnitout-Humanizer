@@ -800,9 +800,54 @@ body.dark-mode .copy-btn {
   z-index: 5;
 }
 
+/* Specialized Vector Icons */
+.icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  vertical-align: -0.15em;
+  width: 1em;
+  height: 1em;
+  flex-shrink: 0;
+}
+
+.icon svg {
+  width: 100%;
+  height: 100%;
+}
+
+.section-icon {
+  display: inline-block;
+  vertical-align: -0.18em;
+  width: 25px;
+  height: 25px;
+  margin-right: 8px;
+  color: var(--ballpoint-blue);
+  flex-shrink: 0;
+}
+
+body.dark-mode .section-icon {
+  color: var(--highlighter);
+}
+
 .feature-icon {
-  font-size: 32px;
-  margin-bottom: 14px;
+  display: flex;
+  align-items: center;
+  margin-bottom: 16px;
+}
+
+.feature-icon-svg {
+  width: 36px;
+  height: 36px;
+  stroke: var(--ballpoint-blue);
+  fill: none;
+  stroke-width: 1.85;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+body.dark-mode .feature-icon-svg {
+  stroke: var(--highlighter);
 }
 
 .feature-title {
