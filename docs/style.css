@@ -3,7 +3,7 @@
    Inspired by Architectural Skeuomorphic Desk Photo & Spatial Infinite Canvas
    ========================================================================== */
 
-@import url('https://fonts.googleapis.com/css2?family=Caveat:wght@600;700&family=EB+Garamond:ital,wght@0,400;0,600;1,400&family=Inter:wght@400;500;600;700;800&family=Space+Mono:ital,wght@0,400;0,700;1,400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Caveat:wght@600;700&family=Courier+Prime:ital,wght@0,400;0,700;1,400&family=EB+Garamond:ital,wght@0,400;0,600;0,700;1,400;1,600&family=Inter:wght@400;500;600;700&family=Space+Mono:ital,wght@0,400;0,700;1,400&family=Special+Elite&display=swap');
 
 :root {
   /* Dark Charcoal Wood Desk Palette (Matching Reference Photo) */
@@ -49,10 +49,11 @@
     0 10px 24px rgba(0, 0, 0, 0.55),
     0 24px 44px rgba(0, 0, 0, 0.6);
 
-  /* Fonts */
-  --font-ui: 'Inter', -apple-system, sans-serif;
-  --font-academic: 'EB Garamond', Georgia, serif;
-  --font-mono: 'Space Mono', monospace;
+  /* Contextual Fonts Hierarchy */
+  --font-ui: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  --font-academic: 'EB Garamond', Georgia, 'Times New Roman', serif;
+  --font-typewriter: 'Special Elite', 'Courier Prime', monospace;
+  --font-mono: 'Space Mono', 'Courier Prime', Consolas, monospace;
   --font-handwriting: 'Caveat', cursive;
 }
 
@@ -82,7 +83,7 @@ body:not(.spatial-desk-page) {
   overflow-x: hidden;
   overflow-y: auto;
   background-color: #F4EFE6;
-  font-family: 'EB Garamond', Georgia, serif;
+  font-family: var(--font-academic);
   color: #2C2621;
   user-select: text;
   -webkit-user-select: text;
@@ -306,17 +307,16 @@ body:not(.spatial-desk-page) {
 
 .metric-ring-num {
   font-family: var(--font-handwriting);
-  font-size: 19px;
+  font-size: 21px;
   font-weight: 700;
   color: var(--ink-primary);
   line-height: 1;
 }
 
 .metric-ring-label {
-  font-family: var(--font-ui);
-  font-size: 9px;
-  text-transform: uppercase;
-  letter-spacing: 0.8px;
+  font-family: var(--font-handwriting);
+  font-size: 13.5px;
+  letter-spacing: 0.2px;
   color: var(--ink-muted);
 }
 
@@ -387,13 +387,11 @@ body:not(.spatial-desk-page) {
 }
 
 .dial-center-label {
-  font-family: var(--font-ui);
-  font-size: 10px;
+  font-family: var(--font-handwriting);
+  font-size: 17px;
   font-weight: 600;
-  text-transform: uppercase;
-  letter-spacing: 1px;
   color: var(--ink-muted);
-  margin-top: 2px;
+  margin-top: 1px;
 }
 
 .dial-action-arrow {
@@ -485,10 +483,10 @@ body:not(.spatial-desk-page) {
   flex: 1;
   background: transparent;
   border: none;
-  font-family: var(--font-ui);
-  font-size: 11.5px;
+  font-family: var(--font-handwriting);
+  font-size: 17px;
   font-weight: 600;
-  padding: 6px 10px;
+  padding: 4px 10px;
   border-radius: 16px;
   color: var(--ink-muted);
   cursor: pointer;
@@ -550,8 +548,8 @@ body:not(.spatial-desk-page) {
 .battery-labels {
   display: flex;
   justify-content: space-between;
-  font-family: var(--font-ui);
-  font-size: 10px;
+  font-family: var(--font-handwriting);
+  font-size: 14px;
   color: var(--ink-muted);
   margin-bottom: 22px;
 }
@@ -622,10 +620,10 @@ body:not(.spatial-desk-page) {
 }
 
 .submetric-label {
-  font-family: var(--font-ui);
-  font-size: 10px;
+  font-family: var(--font-handwriting);
+  font-size: 15px;
   color: var(--ink-muted);
-  margin-bottom: 4px;
+  margin-bottom: 2px;
 }
 
 .submetric-value {
@@ -641,10 +639,10 @@ body:not(.spatial-desk-page) {
   background: var(--ink-primary);
   color: #FFF;
   border: none;
-  font-family: var(--font-mono);
-  font-size: 11px;
+  font-family: var(--font-ui);
+  font-size: 11.5px;
   font-weight: 700;
-  letter-spacing: 1px;
+  letter-spacing: 0.8px;
   text-transform: uppercase;
   padding: 10px 16px;
   border-radius: 6px;
@@ -653,6 +651,10 @@ body:not(.spatial-desk-page) {
   display: flex;
   align-items: center;
   justify-content: center;
+  gap: 8px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+  transition: transform 0.15s ease, background 0.15s ease;
+}
   gap: 8px;
   transition: all 0.15s ease;
   box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
@@ -725,8 +727,9 @@ body:not(.spatial-desk-page) {
 }
 
 .task-label-text {
-  font-family: var(--font-academic);
-  font-size: 15.5px;
+  font-family: var(--font-handwriting);
+  font-size: 21px;
+  font-weight: 600;
   color: var(--ink-primary);
   line-height: 1.35;
   position: relative;
@@ -1027,6 +1030,50 @@ body:not(.spatial-desk-page) {
   z-index: 25;
 }
 
+.postit-heading {
+  font-family: var(--font-handwriting);
+  font-size: 25px;
+  font-weight: 700;
+  margin-bottom: 6px;
+  color: #121214;
+}
+
+.postit-text {
+  font-family: var(--font-handwriting);
+  font-size: 21px;
+  line-height: 1.35;
+  margin: 0;
+  color: #121214;
+}
+
+.postit-signature {
+  font-family: var(--font-handwriting);
+  font-size: 22px;
+  font-weight: 700;
+  text-align: right;
+  margin-top: 10px;
+  color: #121214;
+}
+
+.thesis-author-text {
+  font-family: var(--font-academic);
+  font-size: 16px;
+  font-style: italic;
+  color: var(--ink-muted);
+  margin-top: 8px;
+}
+
+.thesis-formula-box {
+  text-align: center;
+  margin: 12px 0;
+  font-family: var(--font-academic);
+  font-size: 17px;
+  font-style: italic;
+  background: rgba(0, 0, 0, 0.02);
+  padding: 8px;
+  border-radius: 4px;
+}
+
 /* ==========================================================================
    Academic Archive Sheet: Benchmark Matrix, Stanford Study & SEO Knowledge Base
    ========================================================================== */
@@ -1066,6 +1113,14 @@ body:not(.spatial-desk-page) {
   margin-bottom: 24px;
 }
 
+.archive-intro-desc {
+  font-family: var(--font-academic);
+  font-size: 17px;
+  color: var(--ink-secondary);
+  line-height: 1.6;
+  max-width: 1200px;
+}
+
 /* Comparison Table on Printed Sheet */
 .archive-table-container {
   overflow-x: auto;
@@ -1077,8 +1132,9 @@ body:not(.spatial-desk-page) {
 .archive-matrix-table {
   width: 100%;
   border-collapse: collapse;
-  font-family: var(--font-mono);
-  font-size: 13.5px;
+  font-family: var(--font-academic);
+  font-size: 15px;
+  line-height: 1.5;
   text-align: left;
 }
 
@@ -1090,14 +1146,20 @@ body:not(.spatial-desk-page) {
 
 .archive-matrix-table th {
   background: rgba(0, 0, 0, 0.03);
-  font-size: 11px;
+  font-family: var(--font-mono);
+  font-size: 11.5px;
+  font-weight: 700;
   letter-spacing: 1px;
   text-transform: uppercase;
   color: var(--ink-secondary);
 }
 
 .archive-matrix-table td strong {
-  font-family: var(--font-academic);
+  font-family: var(--font-ui);
+  font-size: 14px;
+  font-weight: 700;
+  color: var(--ink-primary);
+}
   font-size: 15px;
   color: var(--ink-primary);
 }
@@ -1239,8 +1301,9 @@ body:not(.spatial-desk-page) {
   background: transparent;
   border: 1px solid rgba(255, 255, 255, 0.16);
   color: #D6D6DC;
-  font-family: var(--font-mono);
+  font-family: var(--font-ui);
   font-size: 11.5px;
+  font-weight: 500;
   padding: 6px 12px;
   border-radius: 4px;
   cursor: pointer;
@@ -1270,8 +1333,9 @@ body:not(.spatial-desk-page) {
 
 .hud-doc-link {
   color: #A0A0A8;
-  font-family: var(--font-mono);
+  font-family: var(--font-ui);
   font-size: 12px;
+  font-weight: 500;
   text-decoration: none;
   transition: color 0.15s ease;
 }
@@ -1285,7 +1349,7 @@ body:not(.spatial-desk-page) {
   background: var(--accent-crimson);
   color: #FFF !important;
   text-decoration: none;
-  font-family: var(--font-mono);
+  font-family: var(--font-ui);
   font-size: 12px;
   font-weight: 700;
   padding: 7px 14px;
@@ -1327,8 +1391,8 @@ body:not(.spatial-desk-page) {
   width: 32px;
   height: 32px;
   border-radius: 4px;
-  font-family: var(--font-mono);
-  font-size: 16px;
+  font-family: var(--font-ui);
+  font-size: 15px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -1360,8 +1424,8 @@ body:not(.spatial-desk-page) {
   border: 1px solid rgba(255, 255, 255, 0.12);
   padding: 8px 16px;
   border-radius: 6px;
-  font-family: var(--font-mono);
-  font-size: 11.5px;
+  font-family: var(--font-ui);
+  font-size: 12px;
   color: #D6D6DC;
   display: flex;
   align-items: center;
@@ -1443,10 +1507,9 @@ body:not(.spatial-desk-page) {
 }
 
 .brand-tagline {
-  font-family: var(--font-mono);
-  font-size: 11.5px;
-  color: #D8B4B8;
-  letter-spacing: 0.5px;
+  font-family: var(--font-handwriting);
+  font-size: 17px;
+  color: #F6D86B;
 }
 
 .nav-actions {
@@ -1460,8 +1523,9 @@ body:not(.spatial-desk-page) {
   border: 1px dashed rgba(255, 255, 255, 0.4);
   color: #FAF6EE;
   padding: 6px 12px;
-  font-family: var(--font-mono);
-  font-size: 11.5px;
+  font-family: var(--font-ui);
+  font-size: 12px;
+  font-weight: 500;
   border-radius: 4px;
   cursor: pointer;
   text-decoration: none;
@@ -1476,7 +1540,7 @@ body:not(.spatial-desk-page) {
 .app-launch-btn {
   background-color: #E63946;
   color: #FFFFFF !important;
-  font-family: var(--font-mono);
+  font-family: var(--font-ui);
   font-size: 12px;
   font-weight: 700;
   padding: 7px 15px;
@@ -1534,8 +1598,8 @@ body:not(.spatial-desk-page) {
 
 .stamp {
   display: inline-block;
-  font-family: var(--font-mono);
-  font-size: 11px;
+  font-family: var(--font-typewriter);
+  font-size: 11.5px;
   font-weight: 700;
   letter-spacing: 1.5px;
   text-transform: uppercase;
@@ -1584,7 +1648,7 @@ body:not(.spatial-desk-page) {
 }
 
 .manifesto-title {
-  font-family: 'EB Garamond', Georgia, serif;
+  font-family: var(--font-typewriter);
   font-size: 32px;
   font-weight: 700;
   line-height: 1.28;
@@ -1598,8 +1662,8 @@ body:not(.spatial-desk-page) {
 }
 
 .manifesto-story {
-  font-family: 'EB Garamond', Georgia, serif;
-  font-size: 19px;
+  font-family: var(--font-academic);
+  font-size: 18.5px;
   line-height: 1.8;
   color: #2C2621;
   margin-bottom: 24px;
@@ -1618,7 +1682,7 @@ body:not(.spatial-desk-page) {
 }
 
 .section-heading {
-  font-family: 'EB Garamond', Georgia, serif;
+  font-family: var(--font-typewriter);
   font-size: 26px;
   font-weight: 700;
   color: #2C2621;
@@ -1638,12 +1702,20 @@ body:not(.spatial-desk-page) {
 .xerox-table {
   width: 100%;
   border-collapse: collapse;
-  font-family: var(--font-mono);
-  font-size: 14px;
+  font-family: var(--font-academic);
+  font-size: 15px;
   text-align: left;
 }
 
-.xerox-table th, .xerox-table td {
+.xerox-table th {
+  font-family: var(--font-typewriter);
+  font-size: 13.5px;
+  letter-spacing: 0.5px;
+  padding: 12px 14px;
+  border-bottom: 2px solid rgba(60, 48, 38, 0.2);
+}
+
+.xerox-table td {
   padding: 12px 14px;
   border-bottom: 1px solid rgba(60, 48, 38, 0.12);
 }
@@ -1658,17 +1730,17 @@ body:not(.spatial-desk-page) {
 }
 
 .faq-question {
-  font-family: 'EB Garamond', Georgia, serif;
-  font-size: 21px;
+  font-family: var(--font-typewriter);
+  font-size: 19px;
   font-weight: 700;
   color: #2C2621;
   margin-bottom: 10px;
 }
 
 .faq-answer {
-  font-family: 'EB Garamond', Georgia, serif;
+  font-family: var(--font-academic);
   font-size: 17px;
-  line-height: 1.7;
+  line-height: 1.72;
   color: #554D45;
 }
 
@@ -1680,4 +1752,22 @@ body:not(.spatial-desk-page) {
   padding: 38px 34px;
   margin-bottom: 48px;
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.06);
+}
+
+.pledge-card .pledge-title {
+  font-family: var(--font-typewriter);
+  font-size: 24px;
+  font-weight: 700;
+  color: #2C2621;
+  margin-bottom: 12px;
+}
+
+.pledge-card .check-item {
+  font-family: var(--font-academic);
+  font-size: 16.5px;
+}
+
+.pledge-card .cta-button {
+  font-family: var(--font-ui);
+  font-weight: 700;
 }
