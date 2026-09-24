@@ -154,10 +154,11 @@
     </nav>
     <div class="nav-actions">
       <button id="themeToggleBtn" class="theme-toggle-btn" aria-label="Toggle 3 AM Dark Mode">
-        🌙 Study Session: 3 AM (Dark)
+        <svg class="icon icon-moon" viewBox="0 0 24 24" width="15" height="15" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path></svg>
+        <span>Study Session: 3 AM (Dark)</span>
       </button>
       <a href="https://turnitout.streamlit.app/" target="_blank" rel="noopener noreferrer" class="app-launch-btn">
-        Launch Live App ⚡
+        Launch Live App <svg class="icon" viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"></polygon></svg>
       </a>
     </div>
   </header>
@@ -186,7 +187,7 @@
 
       <div class="manifesto-story">
         <p>
-          I just graduated, and honestly? <strong>It was absolute HELL. 💔</strong>
+          I just graduated, and honestly? <strong>It was absolute hell.</strong>
         </p>
         <p style="margin-top: 12px;">
           AI-assisted drafting is the modern reality of university life, but humanizing it was pure psychological exhaustion: word count limits, aggressive paywalls, $20/month subscription traps, and Turnitin STILL flagged false positives on honest students.
@@ -198,7 +199,7 @@
       </div>
 
       <div class="handwritten-aside">
-        "A revenge to the university system and corporate squeezing of students 🙂 and a gift to upcoming students ✌🏻"
+        "A revenge to the university system and corporate squeezing of students — and an enduring gift to upcoming students."
       </div>
 
       <p style="font-size: 17px; margin-top: 14px;">
@@ -207,7 +208,7 @@
       </p>
 
       <div class="manifesto-badges">
-        <span class="stamp stamp-yellow">FIRST PROGRAMMATIC OF ITS KIND 🥇</span>
+        <span class="stamp stamp-yellow">FIRST PROGRAMMATIC OF ITS KIND</span>
         <span class="stamp stamp-red">PRESERVES .DOCX & .TEX</span>
         <span class="stamp stamp-blue">100% LOCAL PRIVACY</span>
       </div>
@@ -224,8 +225,12 @@
 
       <div class="preset-buttons">
         <span style="font-family: var(--font-typewriter); font-size: 13px; align-self: center; margin-right: 4px;">Load Sample:</span>
-        <button id="sampleAcademicBtn" class="preset-btn">📄 Academic Abstract Cliché</button>
-        <button id="sampleEssayBtn" class="preset-btn">📝 College Essay Cliché</button>
+        <button id="sampleAcademicBtn" class="preset-btn">
+          <svg class="icon" viewBox="0 0 24 24" width="13" height="13" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" y1="13" x2="8" y2="13"></line><line x1="16" y1="17" x2="8" y2="17"></line></svg> Academic Abstract Cliché
+        </button>
+        <button id="sampleEssayBtn" class="preset-btn">
+          <svg class="icon" viewBox="0 0 24 24" width="13" height="13" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M11 4H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7"></path><path d="M18.5 2.5a2.121 2.121 0 0 1 3 3L12 15l-4 1 1-4 9.5-9.5z"></path></svg> College Essay Cliché
+        </button>
       </div>
 
       <!-- Notebook Sheet: Blue Ruled Lines with Red Margin Line -->
@@ -247,24 +252,30 @@
         <div class="action-buttons-group">
           <button id="humanizeBtn" class="humanize-btn">HUMANIZE THIS PAPER →</button>
           <button id="copyBtn" class="copy-btn">Copy Clean Text</button>
-          <span id="statusStamp" class="stamp stamp-red" style="display: none; transform: rotate(-5deg); margin-left: 6px;">HUMANIZED ✓</span>
+          <span id="statusStamp" class="stamp stamp-red" style="display: none; transform: rotate(-5deg); margin-left: 6px;">HUMANIZED</span>
         </div>
       </div>
 
       <!-- Callout to launch full app for full documents -->
-      <div style="margin-top: 25px; padding: 14px; background: rgba(0,0,0,0.03); border-left: 3px solid var(--ballpoint-blue); font-size: 15px;">
-        💡 <em>Working with full files?</em> The live application handles full <strong>.docx</strong> Word files, <strong>LaTeX .tex</strong> packages, multi-file <strong>source code ZIPs</strong>, and generates <strong>BibTeX citations</strong>.
+      <div style="margin-top: 25px; padding: 14px; background: rgba(60, 48, 38, 0.04); border-left: 3px solid var(--ballpoint-blue); font-size: 15px; border-radius: 0 4px 4px 0;">
+        <svg class="icon" viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="color: var(--ballpoint-blue); margin-right: 4px;"><circle cx="12" cy="12" r="10"></circle><line x1="12" y1="16" x2="12" y2="12"></line><line x1="12" y1="8" x2="12.01" y2="8"></line></svg>
+        <em>Working with full files?</em> The live application handles full <strong>.docx</strong> Word files, <strong>LaTeX .tex</strong> packages, multi-file <strong>source code ZIPs</strong>, and generates <strong>BibTeX citations</strong>.
         <a href="https://turnitout.streamlit.app/" target="_blank" rel="noopener noreferrer" style="color: var(--ballpoint-blue); font-weight: bold; margin-left: 6px;">Launch full app on Streamlit →</a>
       </div>
     </section>
 
     <!-- Section: The 4 Core Superpowers (Collage Grid) -->
-    <h2 class="section-heading">🛠️ What the Engine Actually Does</h2>
+    <h2 class="section-heading">
+      <svg class="section-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="3"></circle><path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1 0 2.83 2 2 0 0 1-2.83 0l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83 0 2 2 0 0 1 0-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1-2-2 2 2 0 0 1 2-2h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 0-2.83 2 2 0 0 1 2.83 0l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 2-2 2 2 0 0 1 2 2v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 0 2 2 0 0 1 0 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 2 2 2 2 0 0 1-2 2h-.09a1.65 1.65 0 0 0-1.51 1z"></path></svg>
+      What the Engine Actually Does
+    </h2>
     
     <div class="features-grid">
       <div class="feature-box">
         <div class="tape top-left"></div>
-        <div class="feature-icon">⚡</div>
+        <div class="feature-icon">
+          <svg class="feature-icon-svg" viewBox="0 0 24 24"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"></polygon></svg>
+        </div>
         <h3 class="feature-title">Zero-Generative-AI Rule Engine</h3>
         <p class="feature-desc">
           Over 4,068+ deterministic JSON rules across conversational, academic, and technical registers. Mathematically disrupts 3-gram and 4-gram contiguous sequences and PDTB discourse markers without introducing hallucinations.
@@ -273,7 +284,9 @@
 
       <div class="feature-box">
         <div class="tape top-right"></div>
-        <div class="feature-icon">📑</div>
+        <div class="feature-icon">
+          <svg class="feature-icon-svg" viewBox="0 0 24 24"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" y1="13" x2="8" y2="13"></line><line x1="16" y1="17" x2="8" y2="17"></line></svg>
+        </div>
         <h3 class="feature-title">In-Place .docx & .tex Formatting</h3>
         <p class="feature-desc">
           No more manually re-bolding headings or rebuilding tables. Turnitout humanizes your text directly inside the XML run tree—keeping math equations (<code style="font-size: 13px;">$...$</code>), citations, footnotes, and headers 100% intact.
@@ -282,7 +295,9 @@
 
       <div class="feature-box">
         <div class="tape top-left"></div>
-        <div class="feature-icon">💻</div>
+        <div class="feature-icon">
+          <svg class="feature-icon-svg" viewBox="0 0 24 24"><polyline points="16 18 22 12 16 6"></polyline><polyline points="8 6 2 12 8 18"></polyline></svg>
+        </div>
         <h3 class="feature-title">100% Executable Code Safety</h3>
         <p class="feature-desc">
           Comment & docstring humanizer for Python, C/C++, Java, JS/TS, Go/Rust, Shell, and SQL. Code statements, logic, variables, and indentation remain 100% untouched and runnable. Includes Beginner, Intermediate, and Architect personas.
@@ -291,7 +306,9 @@
 
       <div class="feature-box">
         <div class="tape top-right"></div>
-        <div class="feature-icon">📜</div>
+        <div class="feature-icon">
+          <svg class="feature-icon-svg" viewBox="0 0 24 24"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"></path><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"></path></svg>
+        </div>
         <h3 class="feature-title">Dynamic Reference & BibTeX Generator</h3>
         <p class="feature-desc">
           Inserts contextual IEEE numeric (<code style="font-size: 13px;">[1]</code>) or APA author-date (<code style="font-size: 13px;">(Author, 2026)</code>) in-text citations and exports companion <code style="font-size: 13px;">citations.bib</code> and JSON bibliography packages across 5 academic taxonomies.
@@ -301,7 +318,7 @@
 
     <div style="text-align: center; margin: -30px 0 50px 0; font-family: var(--font-typewriter);">
       <a href="how-it-works.html" style="color: var(--ballpoint-blue); font-size: 16px; text-decoration: underline; font-weight: bold;">
-        📖 Read the full mathematical breakdown of n-gram disruption & AST parsing →
+        <svg class="icon" viewBox="0 0 24 24" width="15" height="15" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="margin-right: 4px;"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"></path><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"></path></svg> Read the full mathematical breakdown of n-gram disruption & AST parsing →
       </a>
     </div>
 
@@ -324,7 +341,10 @@
     </section>
 
     <!-- Section: Comparison Matrix (Xerox Style) -->
-    <h2 class="section-heading">⚖️ Turnitout vs. Commercial Paywalls</h2>
+    <h2 class="section-heading">
+      <svg class="section-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="3" x2="12" y2="21"></line><path d="M5 21h14"></path><path d="M4 7l8-4 8 4"></path><path d="M1 11l3-4 3 4a3 3 0 0 1-6 0z"></path><path d="M17 11l3-4 3 4a3 3 0 0 1-6 0z"></path></svg>
+      Turnitout vs. Commercial Paywalls
+    </h2>
 
     <div class="table-wrapper">
       <table class="xerox-table">
@@ -384,7 +404,9 @@
     </div>
 
     <div style="margin: -40px 0 50px 10px; font-family: var(--font-typewriter); font-size: 14.5px; display: flex; gap: 20px; flex-wrap: wrap;">
-      <span>🔍 In-Depth Head-to-Head:</span>
+      <span>
+        <svg class="icon" viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg> In-Depth Head-to-Head:
+      </span>
       <a href="compare/quillbot-alternative.html" style="color: var(--ballpoint-blue); text-decoration: underline; font-weight: bold;">Turnitout vs QuillBot Full Analysis →</a>
       <a href="compare/stealthgpt-alternative.html" style="color: var(--ballpoint-blue); text-decoration: underline; font-weight: bold;">Turnitout vs StealthGPT & Undetectable AI →</a>
     </div>
@@ -411,28 +433,31 @@
 
       <div class="checklist-group">
         <div class="check-item">
-          <div class="hand-box">✓</div>
+          <div class="hand-box"><svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg></div>
           <div>Follow developer account: <a href="https://github.com/AhmadHassan-BTed" target="_blank" rel="noopener noreferrer">@AhmadHassan-BTed</a></div>
         </div>
         <div class="check-item">
-          <div class="hand-box">✓</div>
+          <div class="hand-box"><svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg></div>
           <div>Follow organization workspace: <a href="https://github.com/Fractal-Compute-Orchestrations" target="_blank" rel="noopener noreferrer">@Fractal-Compute-Orchestrations</a></div>
         </div>
         <div class="check-item">
-          <div class="hand-box">✓</div>
+          <div class="hand-box"><svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg></div>
           <div>Star public project pages: <a href="https://github.com/AhmadHassan-BTed?tab=repositories" target="_blank" rel="noopener noreferrer">Developer Repos</a> & <a href="https://github.com/orgs/Fractal-Compute-Orchestrations/repositories" target="_blank" rel="noopener noreferrer">Fractal Repos</a></div>
         </div>
       </div>
 
       <div style="margin-top: 25px; text-align: center;">
         <a href="https://turnitout.streamlit.app/" target="_blank" rel="noopener noreferrer" class="app-launch-btn" style="font-size: 16px; padding: 12px 28px;">
-          Open Live App & Verify Stars 🔓
+          Open Live App & Verify Stars <svg class="icon" viewBox="0 0 24 24" width="15" height="15" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"></rect><path d="M7 11V7a5 5 0 0 1 9.9-1"></path></svg>
         </a>
       </div>
     </section>
 
     <!-- Section: FAQ -->
-    <h2 class="section-heading">❓ Frequently Asked Questions</h2>
+    <h2 class="section-heading">
+      <svg class="section-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3"></path><line x1="12" y1="17" x2="12.01" y2="17"></line></svg>
+      Frequently Asked Questions
+    </h2>
 
     <div class="faq-list">
       <div class="faq-item">
@@ -486,7 +511,8 @@
         <a href="sitemap.xml" style="color: var(--text-ink); text-decoration: underline;">sitemap.xml</a>
       </div>
       <div class="footer-hotline">
-        💬 <strong>Facing verification or API issues?</strong><br>
+        <svg class="icon" viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="color: var(--red-pen); margin-right: 4px;"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"></path></svg>
+        <strong>Facing verification or API issues?</strong><br>
         Message Ahmad directly on WhatsApp: 
         <a href="https://wa.me/923225522383" target="_blank" rel="noopener noreferrer">+92 322 5522383</a>
       </div>
