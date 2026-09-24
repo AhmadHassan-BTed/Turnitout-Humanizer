@@ -27,7 +27,10 @@
   <meta property="twitter:description" content="Free, unlimited, browser-based AI humanizer. Removes AI detection patterns without using AI. Built by Ahmad Hassan.">
   <meta property="twitter:image" content="assets/logo-banner.svg">
 
-  <!-- Favicon & Stylesheet -->
+    <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
+  <link rel="alternate icon" href="favicon.svg">
+  <!-- Stylesheet -->
   <link rel="stylesheet" href="style.css">
 
   <!-- Schema.org Structured Data (JSON-LD) -->
@@ -569,52 +572,48 @@
        ========================================================================== -->
   <div id="spatialDeskView" class="spatial-desk-view" style="display: none;" aria-hidden="true">
 <header class="spatial-top-hud">
-    <div class="hud-brand">
-      <a href="index.html" class="hud-brand-link" style="text-decoration: none; color: inherit;">
+    <div class="hud-left-group">
+      <a href="index.html" class="hud-brand-link">
         <span class="hud-brand-title">TURN<span>IT</span>OUT</span>
-        <span class="hud-brand-tagline"># Free AI Humanizer & Detection Evader</span>
       </a>
-      <h1 class="visually-hidden-seo-h1">TURNITOUT: Free AI Humanizer & Turnitin Detection Evader (No Signup, Unlimited)</h1>
+      <button id="lookUpBtn" class="hud-look-up-btn" title="Look back up at Manifesto Reading Paper">
+        <svg class="icon" viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+          <polyline points="18 15 12 9 6 15"></polyline>
+          <line x1="12" y1="9" x2="12" y2="21"></line>
+        </svg>
+        <span>Look Up at Paper ↑</span>
+      </button>
     </div>
 
     <!-- Quick Spatial Jump Bookmarks -->
-    
-    <!-- Look Up at Manifesto Paper Button -->
-    <button id="lookUpBtn" class="hud-look-up-btn" title="Look back up at the student manifesto & interactive notebook">
-      <svg class="icon" viewBox="0 0 24 24" width="15" height="15" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round">
-        <polyline points="18 15 12 9 6 15"></polyline>
-        <line x1="12" y1="9" x2="12" y2="21"></line>
-      </svg>
-      <span>Look Up at Manifesto Paper ↑</span>
-    </button>
-
     <div class="spatial-focus-group">
-      <button id="focusVitalsBtn" class="spatial-jump-btn active" title="Focus on Vitals & Detector Wireframe Sheet">
-        <svg class="icon" viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="2"></rect><circle cx="8.5" cy="8.5" r="1.5"></circle><polyline points="21 15 16 10 5 21"></polyline></svg>
-        <span>Vitals Sheet</span>
+      <button id="focusVitalsBtn" class="spatial-jump-btn active" title="Focus on Vitals Sheet">
+        <svg class="icon" viewBox="0 0 24 24" width="13" height="13" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="2"></rect><circle cx="8.5" cy="8.5" r="1.5"></circle><polyline points="21 15 16 10 5 21"></polyline></svg>
+        <span>Vitals</span>
       </button>
       <button id="focusThesisBtn" class="spatial-jump-btn" title="Focus on Research Thesis Manuscript">
-        <svg class="icon" viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" y1="13" x2="8" y2="13"></line><line x1="16" y1="17" x2="8" y2="17"></line></svg>
-        <span>Thesis Manuscript</span>
+        <svg class="icon" viewBox="0 0 24 24" width="13" height="13" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" y1="13" x2="8" y2="13"></line><line x1="16" y1="17" x2="8" y2="17"></line></svg>
+        <span>Thesis</span>
       </button>
       <button id="focusArchiveBtn" class="spatial-jump-btn" title="Focus on Academic Benchmark & FAQ Archive">
-        <svg class="icon" viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"></path><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"></path></svg>
-        <span>Benchmark & FAQ</span>
+        <svg class="icon" viewBox="0 0 24 24" width="13" height="13" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"></path><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"></path></svg>
+        <span>Archive</span>
       </button>
       <button id="focusDeskBtn" class="spatial-jump-btn" title="Reset Camera to Full Desk View">
-        <svg class="icon" viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2"><polyline points="15 3 21 3 21 9"></polyline><polyline points="9 21 3 21 3 15"></polyline><line x1="21" y1="3" x2="14" y2="10"></line><line x1="3" y1="21" x2="10" y2="14"></line></svg>
-        <span>Full Desk Overview</span>
+        <svg class="icon" viewBox="0 0 24 24" width="13" height="13" fill="none" stroke="currentColor" stroke-width="2"><polyline points="15 3 21 3 21 9"></polyline><polyline points="9 21 3 21 3 15"></polyline><line x1="21" y1="3" x2="14" y2="10"></line><line x1="3" y1="21" x2="10" y2="14"></line></svg>
+        <span>Full Desk</span>
       </button>
     </div>
 
-    <!-- Documentation & Comparison Links -->
-    <div class="hud-doc-links">
-      <a href="how-it-works.html" class="hud-doc-link">How It Works</a>
-      <a href="compare/quillbot-alternative.html" class="hud-doc-link">vs QuillBot</a>
-      <a href="compare/stealthgpt-alternative.html" class="hud-doc-link">vs StealthGPT</a>
-      <a href="faq.html" class="hud-doc-link">FAQ</a>
+    <!-- Right Side: Links & Live App CTA -->
+    <div class="hud-right-group">
+      <div class="hud-doc-links">
+        <a href="how-it-works.html" class="hud-doc-link">How It Works</a>
+        <a href="compare/quillbot-alternative.html" class="hud-doc-link">vs QuillBot</a>
+        <a href="faq.html" class="hud-doc-link">FAQ</a>
+      </div>
       <a href="https://turnitout.streamlit.app/" target="_blank" rel="noopener noreferrer" class="hud-cta-app-btn">
-        Launch Live App <svg class="icon" viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2.2"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"></polygon></svg>
+        Launch Live App <svg class="icon" viewBox="0 0 24 24" width="13" height="13" fill="none" stroke="currentColor" stroke-width="2.2"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"></polygon></svg>
       </a>
     </div>
   </header>

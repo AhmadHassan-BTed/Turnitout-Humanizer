@@ -1140,30 +1140,40 @@ body.dark-mode .meter-track {
   top: 0;
   left: 0;
   right: 0;
-  height: 52px;
-  background: rgba(14, 14, 18, 0.94);
-  backdrop-filter: blur(12px);
-  -webkit-backdrop-filter: blur(12px);
-  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+  height: 54px;
+  background: rgba(14, 14, 18, 0.96);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 0 20px;
+  padding: 0 18px;
   z-index: 1000;
   color: #ECEFF4;
+  gap: 16px;
+  box-sizing: border-box;
 }
 
-.hud-brand {
+.hud-left-group {
   display: flex;
   align-items: center;
-  gap: 12px;
+  gap: 14px;
+  flex-shrink: 0;
+}
+
+.hud-brand-link {
+  display: flex;
+  align-items: baseline;
+  text-decoration: none;
+  color: inherit;
 }
 
 .hud-brand-title {
   font-family: 'Segoe UI', var(--font-typewriter), sans-serif;
   font-weight: 900;
   letter-spacing: 1.2px;
-  font-size: 19px;
+  font-size: 20px;
   color: #FFF;
 }
 
@@ -1171,20 +1181,14 @@ body.dark-mode .meter-track {
   color: var(--accent-crimson);
 }
 
-.hud-brand-tagline {
-  font-family: var(--font-handwriting);
-  font-size: 17px;
-  color: #FFE066;
-}
-
 .hud-look-up-btn {
   background: #FAF6EE;
   color: #2C2621;
   font-family: var(--font-typewriter);
   font-weight: bold;
-  font-size: 13px;
+  font-size: 12.5px;
   padding: 6px 14px;
-  border: 1px solid rgba(44, 38, 33, 0.2);
+  border: 1px solid rgba(44, 38, 33, 0.25);
   border-radius: 4px;
   cursor: pointer;
   display: inline-flex;
@@ -1192,6 +1196,7 @@ body.dark-mode .meter-track {
   gap: 7px;
   box-shadow: 0 2px 6px rgba(0, 0, 0, 0.25);
   transition: all 0.18s ease;
+  white-space: nowrap;
 }
 
 .hud-look-up-btn:hover {
@@ -1205,10 +1210,12 @@ body.dark-mode .meter-track {
 .spatial-focus-group {
   display: flex;
   align-items: center;
-  gap: 6px;
+  gap: 4px;
   background: rgba(255, 255, 255, 0.06);
-  padding: 3px;
-  border-radius: 5px;
+  padding: 3px 4px;
+  border-radius: 6px;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  flex-shrink: 0;
 }
 
 .spatial-jump-btn {
@@ -1216,20 +1223,28 @@ body.dark-mode .meter-track {
   border: none;
   color: #D8DEE9;
   font-family: var(--font-mono);
-  font-size: 12px;
-  padding: 5px 10px;
-  border-radius: 3px;
+  font-size: 11.5px;
+  padding: 5px 11px;
+  border-radius: 4px;
   cursor: pointer;
   display: inline-flex;
   align-items: center;
   gap: 6px;
   transition: all 0.15s ease;
+  white-space: nowrap;
 }
 
 .spatial-jump-btn:hover,
 .spatial-jump-btn.active {
   background: rgba(255, 255, 255, 0.14);
   color: #FFF;
+}
+
+.hud-right-group {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  flex-shrink: 0;
 }
 
 .hud-doc-links {
@@ -1244,6 +1259,7 @@ body.dark-mode .meter-track {
   font-size: 12.5px;
   text-decoration: none;
   transition: color 0.15s ease;
+  white-space: nowrap;
 }
 
 .hud-doc-link:hover {
@@ -1258,19 +1274,20 @@ body.dark-mode .meter-track {
   font-weight: bold;
   font-size: 12.5px;
   padding: 6px 14px;
-  border-radius: 3px;
+  border-radius: 4px;
   text-decoration: none;
   display: inline-flex;
   align-items: center;
   gap: 6px;
-  transition: background-color 0.15s ease;
+  white-space: nowrap;
+  transition: background-color 0.15s ease, transform 0.15s ease;
 }
 
 .hud-cta-app-btn:hover {
   background-color: #FF2E42;
+  transform: translateY(-1px);
 }
 
-/* Infinite Desk Viewport */
 .desk-viewport {
   position: absolute;
   top: 52px;
@@ -2092,18 +2109,32 @@ body.dark-mode .meter-track {
 }
 
 /* ==========================================================================
-   Mobile Responsive Rules
+   Mobile & Tablet Responsive Rules
    ========================================================================== */
-@media (max-width: 860px) {
+@media (max-width: 1200px) {
+  .brand-tagline {
+    display: none;
+  }
+  .hud-doc-links {
+    display: none;
+  }
+}
+
+@media (max-width: 960px) {
   .top-nav {
-    flex-direction: column;
-    gap: 12px;
-    align-items: flex-start;
+    flex-wrap: wrap;
+    gap: 10px;
+    padding: 10px 16px;
   }
-  .nav-actions {
-    width: 100%;
-    justify-content: space-between;
+  .nav-links {
+    display: none;
   }
+  .spatial-focus-group {
+    display: none;
+  }
+}
+
+@media (max-width: 860px) {
   .container {
     padding: 20px 14px 60px 14px;
   }
@@ -2128,5 +2159,21 @@ body.dark-mode .meter-track {
   .desk-perspective-banner {
     flex-direction: column;
     align-items: flex-start;
+  }
+}
+
+@media (max-width: 600px) {
+  .nav-actions {
+    flex-wrap: wrap;
+    gap: 8px;
+  }
+  .theme-toggle-btn span {
+    display: none;
+  }
+  .nav-perspective-btn span {
+    font-size: 11.5px;
+  }
+  .hud-look-up-btn span {
+    font-size: 11px;
   }
 }
