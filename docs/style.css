@@ -236,6 +236,23 @@ body.is-desk-mode .spatial-desk-view {
   box-shadow: 0 4px 14px rgba(0, 0, 0, 0.32);
 }
 
+
+.brand-logo-img {
+  height: 32px;
+  width: auto;
+  max-width: 145px;
+  display: block;
+  object-fit: contain;
+}
+
+.hud-logo-img {
+  height: 28px;
+  width: auto;
+  max-width: 130px;
+  display: block;
+  object-fit: contain;
+}
+
 .brand-wrapper {
   display: flex;
   align-items: baseline;
@@ -2176,4 +2193,216 @@ body.dark-mode .meter-track {
   .hud-look-up-btn span {
     font-size: 11px;
   }
+}
+
+/* ==========================================================================
+   3D PERSPECTIVE SCENE MORPHING KEYFRAMES
+   ========================================================================== */
+body.morphing-to-desk .manifesto-view {
+  display: block !important;
+  animation: tiltDownPaper 0.45s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+  pointer-events: none;
+}
+
+body.morphing-to-desk .spatial-desk-view {
+  display: flex !important;
+  animation: swoopDownToDesk 0.45s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+  pointer-events: none;
+}
+
+body.morphing-to-paper .spatial-desk-view {
+  display: flex !important;
+  animation: riseFromDesk 0.45s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+  pointer-events: none;
+}
+
+body.morphing-to-paper .manifesto-view {
+  display: block !important;
+  animation: riseUpPaper 0.45s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+  pointer-events: none;
+}
+
+@keyframes tiltDownPaper {
+  0% {
+    opacity: 1;
+    transform: perspective(1200px) rotateX(0deg) translateY(0) scale(1);
+    filter: blur(0px);
+  }
+  100% {
+    opacity: 0;
+    transform: perspective(1200px) rotateX(32deg) translateY(-70px) scale(0.92);
+    filter: blur(3px);
+  }
+}
+
+@keyframes swoopDownToDesk {
+  0% {
+    opacity: 0;
+    transform: scale(0.82) translateY(50px);
+    filter: brightness(1.2);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1) translateY(0);
+    filter: brightness(1);
+  }
+}
+
+@keyframes riseFromDesk {
+  0% {
+    opacity: 1;
+    transform: scale(1) translateY(0);
+  }
+  100% {
+    opacity: 0;
+    transform: scale(0.88) translateY(40px);
+  }
+}
+
+@keyframes riseUpPaper {
+  0% {
+    opacity: 0;
+    transform: perspective(1200px) rotateX(32deg) translateY(-70px) scale(0.92);
+    filter: blur(3px);
+  }
+  100% {
+    opacity: 1;
+    transform: perspective(1200px) rotateX(0deg) translateY(0) scale(1);
+    filter: blur(0px);
+  }
+}
+
+/* ==========================================================================
+   COMPREHENSIVE DARK MODE: SPATIAL DESK & READING VIEW
+   ========================================================================== */
+body.dark-mode {
+  --desk-wood-base: #0B0B0D;
+  --desk-wood-fiber: #121215;
+  --desk-wood-highlight: #1B1B20;
+  --paper-white: #1C1C20;
+  --paper-white-pure: #24242A;
+  --ink-primary: #ECEFF4;
+  --ink-secondary: #B0B5C0;
+  --ink-muted: #7E8592;
+  --ink-faint: rgba(255, 255, 255, 0.12);
+  --postit-yellow: #2E270A;
+  --paper-grid-mat: #0F1712;
+}
+
+body.dark-mode .main-printed-sheet {
+  background-color: #1A1A1E;
+  border-color: rgba(255, 255, 255, 0.1);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.6);
+}
+
+body.dark-mode .printed-card {
+  border-right-color: rgba(255, 255, 255, 0.08);
+  color: #ECEFF4;
+}
+
+body.dark-mode .card-header-handwriting {
+  color: #FFFFFF;
+}
+
+body.dark-mode .metric-ring-num {
+  color: #FFFFFF;
+}
+
+body.dark-mode .metric-row-title,
+body.dark-mode .metric-row-score {
+  color: #ECEFF4;
+}
+
+body.dark-mode .dial-center-hub {
+  background: #18181C;
+  border-color: rgba(255, 255, 255, 0.12);
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.45);
+}
+
+body.dark-mode .panel-interactive-box {
+  background: #151518;
+  border-color: rgba(255, 255, 255, 0.12);
+}
+
+body.dark-mode .interactive-editable-sheet {
+  color: #ECEFF4;
+}
+
+body.dark-mode .toggle-segment-btn {
+  color: #8E95A5;
+}
+
+body.dark-mode .toggle-segment-btn.active {
+  background: #2D2D35;
+  color: #FFFFFF;
+}
+
+body.dark-mode .postit-note-prop {
+  background: #2E270A;
+  color: #FFE066;
+  border: 1px solid rgba(255, 224, 102, 0.2);
+}
+
+body.dark-mode .postit-text {
+  color: #FFE066;
+}
+
+body.dark-mode .postit-heading,
+body.dark-mode .postit-signature {
+  color: #FFD13B;
+}
+
+body.dark-mode .academic-archive-sheet {
+  background-color: #18181C;
+  color: #ECEFF4;
+  border-color: rgba(255, 255, 255, 0.12);
+}
+
+body.dark-mode .archive-main-title {
+  color: #FFFFFF;
+}
+
+body.dark-mode .archive-faq-card {
+  background: #1F1F24;
+  border-color: rgba(255, 255, 255, 0.1);
+}
+
+body.dark-mode .archive-faq-question {
+  color: #FFFFFF;
+}
+
+body.dark-mode .archive-matrix-table th {
+  border-bottom-color: rgba(255, 255, 255, 0.25);
+  color: #FFFFFF;
+}
+
+body.dark-mode .archive-matrix-table td {
+  border-bottom-color: rgba(255, 255, 255, 0.08);
+  color: #ECEFF4;
+}
+
+body.dark-mode .submetric-box {
+  background: rgba(255, 255, 255, 0.05);
+}
+
+body.dark-mode .submetric-value {
+  color: #FFFFFF;
+}
+
+body.dark-mode .hud-look-up-btn {
+  background: #1E1E24;
+  color: #ECEFF4;
+  border-color: rgba(255, 255, 255, 0.18);
+}
+
+body.dark-mode .hud-look-up-btn:hover {
+  background: #282832;
+  color: #FF6B7A;
+  border-color: #FF6B7A;
+}
+
+body.dark-mode .floating-look-up-btn {
+  background: #1E1E24;
+  color: #ECEFF4;
+  border-color: rgba(255, 255, 255, 0.18);
 }

@@ -21,94 +21,124 @@ document.addEventListener("DOMContentLoaded", () => {
   const lookUpFloatingBtn = document.getElementById("lookUpFloatingBtn");
 
   let isDeskMode = false;
+  let isTransitioning = false;
 
-  function showDeskMode() {
+  function showDeskMode(instant = false) {
+    if (isDeskMode || isTransitioning) return;
     isDeskMode = true;
-    document.body.classList.add("is-desk-mode");
-    if (manifestoView) {
-      manifestoView.style.display = "none";
-      manifestoView.setAttribute("aria-hidden", "true");
-    }
-    if (spatialDeskView) {
-      spatialDeskView.style.display = "flex";
-      spatialDeskView.removeAttribute("aria-hidden");
-    }
-
     if (window.location.hash !== "#desk") {
       history.pushState(null, "", "#desk");
     }
 
-    // Initialize or re-center spatial desk world
+    if (instant) {
+      document.body.classList.add("is-desk-mode");
+      if (manifestoView) manifestoView.style.display = "none";
+      if (spatialDeskView) spatialDeskView.style.display = "flex";
+      initSpatialDeskCanvas();
+      return;
+    }
+
+    isTransitioning = true;
+    document.body.classList.add("morphing-to-desk");
+
+    if (spatialDeskView) {
+      spatialDeskView.style.display = "flex";
+      spatialDeskView.style.opacity = "0";
+    }
     initSpatialDeskCanvas();
+
+    setTimeout(() => {
+      document.body.classList.add("is-desk-mode");
+      document.body.classList.remove("morphing-to-desk");
+      if (manifestoView) manifestoView.style.display = "none";
+      if (spatialDeskView) spatialDeskView.style.opacity = "";
+      isTransitioning = false;
+    }, 450);
   }
 
-  function showManifestoMode() {
+  function showManifestoMode(instant = false) {
+    if (!isDeskMode || isTransitioning) return;
     isDeskMode = false;
-    document.body.classList.remove("is-desk-mode");
-    if (spatialDeskView) {
-      spatialDeskView.style.display = "none";
-      spatialDeskView.setAttribute("aria-hidden", "true");
-    }
-    if (manifestoView) {
-      manifestoView.style.display = "block";
-      manifestoView.removeAttribute("aria-hidden");
-    }
-
     if (window.location.hash === "#desk") {
       history.pushState(null, "", window.location.pathname + window.location.search);
     }
+
+    if (instant) {
+      document.body.classList.remove("is-desk-mode");
+      if (spatialDeskView) spatialDeskView.style.display = "none";
+      if (manifestoView) manifestoView.style.display = "block";
+      return;
+    }
+
+    isTransitioning = true;
+    document.body.classList.add("morphing-to-paper");
+    if (manifestoView) {
+      manifestoView.style.display = "block";
+      manifestoView.style.opacity = "0";
+    }
+
+    setTimeout(() => {
+      document.body.classList.remove("is-desk-mode");
+      document.body.classList.remove("morphing-to-paper");
+      if (spatialDeskView) spatialDeskView.style.display = "none";
+      if (manifestoView) manifestoView.style.opacity = "";
+      isTransitioning = false;
+    }, 450);
   }
 
-  if (toggleDeskModeBtn) toggleDeskModeBtn.addEventListener("click", showDeskMode);
-  if (lookDownBannerBtn) lookDownBannerBtn.addEventListener("click", showDeskMode);
-  if (lookUpBtn) lookUpBtn.addEventListener("click", showManifestoMode);
-  if (lookUpFloatingBtn) lookUpFloatingBtn.addEventListener("click", showManifestoMode);
+  if (toggleDeskModeBtn) toggleDeskModeBtn.addEventListener("click", () => showDeskMode(false));
+  if (lookDownBannerBtn) lookDownBannerBtn.addEventListener("click", () => showDeskMode(false));
+  if (lookUpBtn) lookUpBtn.addEventListener("click", () => showManifestoMode(false));
+  if (lookUpFloatingBtn) lookUpFloatingBtn.addEventListener("click", () => showManifestoMode(false));
 
   window.addEventListener("hashchange", () => {
     if (window.location.hash === "#desk") {
-      showDeskMode();
+      showDeskMode(false);
     } else {
-      showManifestoMode();
+      showManifestoMode(false);
     }
   });
 
   window.addEventListener("keydown", (e) => {
     if (e.key === "Escape" && isDeskMode) {
-      showManifestoMode();
+      showManifestoMode(false);
     }
   });
 
-  // Check initial hash on load
+  // Check initial hash on load (instant, no delay on page entrance)
   if (window.location.hash === "#desk") {
-    showDeskMode();
+    showDeskMode(true);
   }
 
   // ==========================================================================
-  // 2. GLOBAL THEME (DARK / LIGHT MODE)
+  // 2. GLOBAL THEME (DARK / LIGHT MODE - SYNCHRONIZED ACROSS BOTH VIEWS)
   // ==========================================================================
   const themeToggleBtn = document.getElementById("themeToggleBtn");
+  const hudThemeToggleBtn = document.getElementById("hudThemeToggleBtn");
+
+  function updateThemeUI(isDark) {
+    const sunIcon = '<svg class="icon icon-sun" viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="5"></circle><line x1="12" y1="1" x2="12" y2="3"></line><line x1="12" y1="21" x2="12" y2="23"></line><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line><line x1="1" y1="12" x2="3" y2="12"></line><line x1="21" y1="12" x2="23" y2="12"></line><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line></svg><span>Normal Light</span>';
+    const moonIcon = '<svg class="icon icon-moon" viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path></svg><span>3 AM (Dark)</span>';
+    
+    if (themeToggleBtn) themeToggleBtn.innerHTML = isDark ? sunIcon : moonIcon;
+    if (hudThemeToggleBtn) hudThemeToggleBtn.innerHTML = isDark ? sunIcon : moonIcon;
+  }
+
+  function toggleGlobalTheme() {
+    document.body.classList.toggle("dark-mode");
+    const isDark = document.body.classList.contains("dark-mode");
+    localStorage.setItem("turnitout_theme", isDark ? "dark" : "light");
+    updateThemeUI(isDark);
+  }
+
   const savedTheme = localStorage.getItem("turnitout_theme");
-  
   if (savedTheme === "dark") {
     document.body.classList.add("dark-mode");
-    if (themeToggleBtn) {
-      themeToggleBtn.innerHTML = '<svg class="icon icon-sun" viewBox="0 0 24 24" width="15" height="15" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="5"></circle><line x1="12" y1="1" x2="12" y2="3"></line><line x1="12" y1="21" x2="12" y2="23"></line><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line><line x1="1" y1="12" x2="3" y2="12"></line><line x1="21" y1="12" x2="23" y2="12"></line><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line></svg><span>Normal Light</span>';
-    }
+    updateThemeUI(true);
   }
 
-  if (themeToggleBtn) {
-    themeToggleBtn.addEventListener("click", () => {
-      document.body.classList.toggle("dark-mode");
-      const isDark = document.body.classList.contains("dark-mode");
-      localStorage.setItem("turnitout_theme", isDark ? "dark" : "light");
-
-      if (isDark) {
-        themeToggleBtn.innerHTML = '<svg class="icon icon-sun" viewBox="0 0 24 24" width="15" height="15" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="5"></circle><line x1="12" y1="1" x2="12" y2="3"></line><line x1="12" y1="21" x2="12" y2="23"></line><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line><line x1="1" y1="12" x2="3" y2="12"></line><line x1="21" y1="12" x2="23" y2="12"></line><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line></svg><span>Normal Light</span>';
-      } else {
-        themeToggleBtn.innerHTML = '<svg class="icon icon-moon" viewBox="0 0 24 24" width="15" height="15" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path></svg><span>Study Session: 3 AM (Dark)</span>';
-      }
-    });
-  }
+  if (themeToggleBtn) themeToggleBtn.addEventListener("click", toggleGlobalTheme);
+  if (hudThemeToggleBtn) hudThemeToggleBtn.addEventListener("click", toggleGlobalTheme);
 
   // ==========================================================================
   // 3. SCRAPBOOK NOTEBOOK SIMULATOR ENGINE (The Student's Revenge)
