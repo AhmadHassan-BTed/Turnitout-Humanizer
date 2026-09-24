@@ -65,7 +65,8 @@
   padding: 0;
 }
 
-html, body {
+body.spatial-desk-page,
+html:has(body.spatial-desk-page) {
   width: 100vw;
   height: 100vh;
   overflow: hidden;
@@ -74,6 +75,29 @@ html, body {
   color: var(--ink-primary);
   user-select: none;
   -webkit-user-select: none;
+}
+
+body:not(.spatial-desk-page) {
+  min-height: 100vh;
+  overflow-x: hidden;
+  overflow-y: auto;
+  background-color: #F4EFE6;
+  font-family: 'EB Garamond', Georgia, serif;
+  color: #2C2621;
+  user-select: text;
+  -webkit-user-select: text;
+}
+
+.visually-hidden-seo-h1 {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
 }
 
 .desk-viewport {
@@ -139,7 +163,7 @@ html, body {
   top: 0;
   left: 0;
   width: 4000px;
-  height: 2800px;
+  height: 3800px;
   transform-origin: 0 0;
   will-change: transform;
 }
@@ -1004,6 +1028,161 @@ html, body {
 }
 
 /* ==========================================================================
+   Academic Archive Sheet: Benchmark Matrix, Stanford Study & SEO Knowledge Base
+   ========================================================================== */
+.academic-archive-sheet {
+  position: absolute;
+  top: 1840px;
+  left: 820px;
+  width: 1720px;
+  background: var(--paper-white);
+  padding: 56px 64px 64px 64px;
+  border-radius: 4px;
+  box-shadow: var(--shadow-main-paper);
+  transform: rotate(-0.4deg);
+  z-index: 10;
+  transition: box-shadow 0.25s ease;
+}
+
+.academic-archive-sheet:hover {
+  box-shadow: var(--shadow-grid-mat);
+}
+
+.archive-header-tag {
+  font-family: var(--font-mono);
+  font-size: 11px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: var(--ink-muted);
+  margin-bottom: 8px;
+}
+
+.archive-main-title {
+  font-family: var(--font-academic);
+  font-size: 32px;
+  font-weight: 700;
+  color: var(--ink-primary);
+  line-height: 1.25;
+  margin-bottom: 24px;
+}
+
+/* Comparison Table on Printed Sheet */
+.archive-table-container {
+  overflow-x: auto;
+  margin: 28px 0 44px 0;
+  border-top: 2px solid var(--ink-primary);
+  border-bottom: 2px solid var(--ink-primary);
+}
+
+.archive-matrix-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-family: var(--font-mono);
+  font-size: 13.5px;
+  text-align: left;
+}
+
+.archive-matrix-table th, 
+.archive-matrix-table td {
+  padding: 14px 16px;
+  border-bottom: 1px solid rgba(20, 20, 24, 0.12);
+}
+
+.archive-matrix-table th {
+  background: rgba(0, 0, 0, 0.03);
+  font-size: 11px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  color: var(--ink-secondary);
+}
+
+.archive-matrix-table td strong {
+  font-family: var(--font-academic);
+  font-size: 15px;
+  color: var(--ink-primary);
+}
+
+.archive-matrix-table .col-turnitout {
+  background: rgba(246, 216, 107, 0.22);
+  font-weight: 700;
+  color: var(--ink-red-pen);
+}
+
+/* Stanford Study Narrative */
+.archive-study-block {
+  background: rgba(20, 20, 24, 0.025);
+  border-left: 3px solid var(--ink-blue-ballpoint);
+  padding: 20px 24px;
+  margin: 32px 0;
+}
+
+.archive-study-block h3 {
+  font-family: var(--font-academic);
+  font-size: 22px;
+  font-weight: 700;
+  margin-bottom: 8px;
+  color: var(--ink-primary);
+}
+
+.archive-study-block p {
+  font-family: var(--font-academic);
+  font-size: 16.5px;
+  line-height: 1.72;
+  color: var(--ink-secondary);
+}
+
+/* 2-Column FAQ Layout */
+.archive-faq-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 28px 36px;
+  margin-top: 24px;
+}
+
+.archive-faq-card {
+  border-bottom: 1px dashed rgba(20, 20, 24, 0.2);
+  padding-bottom: 18px;
+}
+
+.archive-faq-question {
+  font-family: var(--font-academic);
+  font-size: 18.5px;
+  font-weight: 700;
+  color: var(--ink-primary);
+  margin-bottom: 8px;
+}
+
+.archive-faq-answer {
+  font-family: var(--font-academic);
+  font-size: 15.5px;
+  line-height: 1.68;
+  color: var(--ink-secondary);
+}
+
+/* Footer Section inside Archive Sheet */
+.archive-footer-row {
+  margin-top: 48px;
+  padding-top: 24px;
+  border-top: 1px solid rgba(20, 20, 24, 0.15);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-family: var(--font-mono);
+  font-size: 12px;
+  color: var(--ink-muted);
+}
+
+.archive-footer-links {
+  display: flex;
+  gap: 16px;
+}
+
+.archive-footer-links a {
+  color: var(--ink-primary);
+  text-decoration: underline;
+}
+
+/* ==========================================================================
    Persistent Top Floating Navigation Bar (Spatial HUD)
    ========================================================================== */
 .spatial-top-hud {
@@ -1226,4 +1405,279 @@ html, body {
   .spatial-toast-hint {
     display: none;
   }
+}
+
+/* ==========================================================================
+   Documentation & Subpage Styles (how-it-works, faq, compare/*)
+   ========================================================================== */
+.top-nav {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  background-color: #400609;
+  border-bottom: 2px solid rgba(0, 0, 0, 0.25);
+  padding: 11px 24px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.32);
+}
+
+.brand-wrapper {
+  display: flex;
+  align-items: baseline;
+  text-decoration: none;
+  gap: 12px;
+}
+
+.brand-title {
+  font-family: var(--font-mono);
+  font-size: 21px;
+  font-weight: 700;
+  color: #FAF6EE;
+  letter-spacing: 1.5px;
+}
+
+.brand-title span {
+  color: #E63946;
+}
+
+.brand-tagline {
+  font-family: var(--font-mono);
+  font-size: 11.5px;
+  color: #D8B4B8;
+  letter-spacing: 0.5px;
+}
+
+.nav-actions {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+
+.theme-toggle-btn {
+  background: transparent;
+  border: 1px dashed rgba(255, 255, 255, 0.4);
+  color: #FAF6EE;
+  padding: 6px 12px;
+  font-family: var(--font-mono);
+  font-size: 11.5px;
+  border-radius: 4px;
+  cursor: pointer;
+  text-decoration: none;
+  transition: all 0.15s ease;
+}
+
+.theme-toggle-btn:hover {
+  background-color: rgba(255, 255, 255, 0.12);
+  border-color: #FFF;
+}
+
+.app-launch-btn {
+  background-color: #E63946;
+  color: #FFFFFF !important;
+  font-family: var(--font-mono);
+  font-size: 12px;
+  font-weight: 700;
+  padding: 7px 15px;
+  border-radius: 4px;
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  box-shadow: 0 2px 8px rgba(230, 57, 70, 0.4);
+  transition: all 0.2s ease;
+}
+
+.app-launch-btn:hover {
+  background-color: #FF2E42;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 14px rgba(230, 57, 70, 0.55);
+}
+
+.container {
+  max-width: 1040px;
+  margin: 0 auto;
+  padding: 44px 24px 90px 24px;
+  position: relative;
+}
+
+.tape {
+  position: absolute;
+  height: 28px;
+  width: 105px;
+  background-color: rgba(244, 235, 204, 0.88);
+  border-left: 1px dashed rgba(180, 162, 122, 0.45);
+  border-right: 1px dashed rgba(180, 162, 122, 0.45);
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12);
+  z-index: 10;
+  pointer-events: none;
+}
+
+.tape.top-left {
+  top: -14px;
+  left: 24px;
+  transform: rotate(3.8deg);
+}
+
+.tape.top-right {
+  top: -14px;
+  right: 24px;
+  transform: rotate(-4.5deg);
+}
+
+.tape.center {
+  top: -14px;
+  left: 50%;
+  transform: translateX(-50%) rotate(-3.5deg);
+}
+
+.stamp {
+  display: inline-block;
+  font-family: var(--font-mono);
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  padding: 4px 10px;
+  border: 2px dashed;
+  border-radius: 3px;
+  transform: rotate(-1.5deg);
+}
+
+.stamp.stamp-red {
+  color: #BA1A32;
+  border-color: #BA1A32;
+  background-color: rgba(186, 26, 50, 0.05);
+}
+
+.stamp.stamp-blue {
+  color: #234873;
+  border-color: #234873;
+  background-color: rgba(35, 72, 115, 0.05);
+}
+
+.stamp.stamp-yellow {
+  background-color: #F6D86B;
+  color: #26211C;
+  border-color: #26211C;
+}
+
+.manifesto-card {
+  position: relative;
+  background-color: #FAF6EE;
+  border: 1px solid rgba(68, 54, 42, 0.12);
+  border-radius: 5px;
+  padding: 42px 38px 38px 38px;
+  transform: rotate(-0.5deg);
+  margin-bottom: 48px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.06);
+}
+
+.manifesto-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 24px;
+  flex-wrap: wrap;
+  gap: 16px;
+}
+
+.manifesto-title {
+  font-family: 'EB Garamond', Georgia, serif;
+  font-size: 32px;
+  font-weight: 700;
+  line-height: 1.28;
+  color: #2C2621;
+}
+
+.manifesto-title .highlight {
+  background: rgba(246, 216, 107, 0.45);
+  padding: 1px 6px;
+  border-radius: 2px;
+}
+
+.manifesto-story {
+  font-family: 'EB Garamond', Georgia, serif;
+  font-size: 19px;
+  line-height: 1.8;
+  color: #2C2621;
+  margin-bottom: 24px;
+}
+
+.handwritten-aside {
+  font-family: var(--font-handwriting);
+  font-size: 25px;
+  color: #BA1A32;
+  line-height: 1.55;
+  margin: 26px 0;
+  padding: 8px 18px;
+  border-left: 3px solid #BA1A32;
+  background-color: rgba(186, 26, 50, 0.04);
+  border-radius: 0 4px 4px 0;
+}
+
+.section-heading {
+  font-family: 'EB Garamond', Georgia, serif;
+  font-size: 26px;
+  font-weight: 700;
+  color: #2C2621;
+  margin-bottom: 14px;
+}
+
+.table-wrapper {
+  background-color: #FAF6EE;
+  border: 1px solid rgba(68, 54, 42, 0.12);
+  border-radius: 5px;
+  padding: 28px 24px;
+  margin-bottom: 48px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.06);
+  overflow-x: auto;
+}
+
+.xerox-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-family: var(--font-mono);
+  font-size: 14px;
+  text-align: left;
+}
+
+.xerox-table th, .xerox-table td {
+  padding: 12px 14px;
+  border-bottom: 1px solid rgba(60, 48, 38, 0.12);
+}
+
+.faq-item {
+  background-color: #FAF6EE;
+  border: 1px solid rgba(68, 54, 42, 0.12);
+  border-radius: 4px;
+  padding: 24px 28px;
+  margin-bottom: 24px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+}
+
+.faq-question {
+  font-family: 'EB Garamond', Georgia, serif;
+  font-size: 21px;
+  font-weight: 700;
+  color: #2C2621;
+  margin-bottom: 10px;
+}
+
+.faq-answer {
+  font-family: 'EB Garamond', Georgia, serif;
+  font-size: 17px;
+  line-height: 1.7;
+  color: #554D45;
+}
+
+.pledge-card {
+  position: relative;
+  background-color: #FAF6EE;
+  border: 1px solid rgba(68, 54, 42, 0.12);
+  border-radius: 5px;
+  padding: 38px 34px;
+  margin-bottom: 48px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.06);
 }
