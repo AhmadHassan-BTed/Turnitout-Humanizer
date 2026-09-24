@@ -1,59 +1,73 @@
 /* ==========================================================================
-   TURNITOUT: Xerox Punk Meets Notebook Paper Design System
-   "The Student's Revenge" — Handcrafted, Asymmetric, Tactile, Anti-Corporate
+   TURNITOUT: Living Academic Artifact Design System
+   "A real document that happens to be an exceptionally good website."
+   Controlled Asymmetry • Dual Typography • Subconscious Paper • Meaningful Interventions
    ========================================================================== */
 
-@import url('https://fonts.googleapis.com/css2?family=Caveat:wght@600;700&family=IBM+Plex+Serif:ital,wght@0,400;0,600;0,700;1,400&family=Special+Elite&family=Courier+Prime:ital,wght@0,400;0,700;1,400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Caveat:wght@600;700&family=IBM+Plex+Serif:ital,wght@0,400;0,600;0,700;1,400&family=Special+Elite&display=swap');
 
 :root {
-  /* Xerox / Aged Paper Palette (Default Light) */
-  --bg-paper: #F5F0E8;
-  --bg-card: #FAF6EE;
-  --bg-notebook: #FFFDF9;
-  --text-ink: #1A1A1A;
-  --text-muted: #55524B;
-  --crimson-banner: #460000;
-  --red-pen: #C41E3A;
-  --red-pen-dark: #8F1026;
-  --highlighter: #FFE066;
-  --highlighter-subtle: rgba(255, 224, 102, 0.45);
-  --ballpoint-blue: #2B4C7E;
-  --coffee-stain: rgba(139, 111, 71, 0.12);
-  --masking-tape: rgba(230, 220, 184, 0.75);
-  --tape-border: rgba(190, 175, 135, 0.4);
-  --border-rough: #2B2825;
-  --line-blue: #D6E4F0;
-  --margin-red: #F0A0A8;
-  --shadow-paper: 0 4px 15px rgba(0, 0, 0, 0.08), 0 1px 3px rgba(0, 0, 0, 0.12);
-  --font-typewriter: 'Special Elite', 'Courier Prime', monospace;
-  --font-handwriting: 'Caveat', cursive;
+  /* Canvas & Ink */
+  --bg-canvas: #F8F5EE;
+  --bg-surface: #FFFFFF;
+  --bg-ruled: #FFFDF9;
+  --text-primary: #1C1917;
+  --text-secondary: #57534E;
+  --text-tertiary: #857F77;
+  --border-subtle: #E2DDD5;
+  --border-strong: #292524;
+  
+  /* Meaningful Interventions (Reserved, not decorative) */
+  --crimson-header: #380808;
+  --red-intervention: #C92A2A;
+  --red-subtle: rgba(201, 42, 42, 0.08);
+  --blue-annotation: #1E40AF;
+  --blue-subtle: rgba(30, 64, 175, 0.08);
+  --highlighter-ink: #FEF08A;
+  --highlighter-faint: rgba(254, 240, 138, 0.5);
+  
+  /* Physical Artifacts */
+  --masking-tape: rgba(235, 226, 196, 0.82);
+  --tape-edge: rgba(200, 190, 155, 0.45);
+  --shadow-artifact: 0 4px 16px rgba(0, 0, 0, 0.06), 0 1px 3px rgba(0, 0, 0, 0.08);
+  --ruled-line: #E2E8F0;
+  --margin-line: #FCA5A5;
+
+  /* Typography System (Dual Personality) */
+  --font-display: 'Special Elite', monospace;
   --font-body: 'IBM Plex Serif', Georgia, serif;
+  --font-ui: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  --font-hand: 'Caveat', cursive;
 }
 
 /* 3 AM Study Session (Dark Mode) */
 body.dark-mode {
-  --bg-paper: #0D0D12;
-  --bg-card: #15151C;
-  --bg-notebook: #181822;
-  --text-ink: #ECEFF4;
-  --text-muted: #9E9EA8;
-  --crimson-banner: #2A0000;
-  --red-pen: #FF3B3B;
-  --red-pen-dark: #C41E3A;
-  --highlighter: #FFB347;
-  --highlighter-subtle: rgba(255, 179, 71, 0.35);
-  --ballpoint-blue: #64B5F6;
-  --coffee-stain: rgba(255, 255, 255, 0.04);
-  --masking-tape: rgba(50, 50, 65, 0.8);
-  --tape-border: rgba(80, 80, 105, 0.5);
-  --border-rough: #404050;
-  --line-blue: #222230;
-  --margin-red: #5C222E;
-  --shadow-paper: 0 6px 20px rgba(0, 0, 0, 0.6);
+  --bg-canvas: #121217;
+  --bg-surface: #1A1A22;
+  --bg-ruled: #161620;
+  --text-primary: #ECEEF2;
+  --text-secondary: #A1A1AA;
+  --text-tertiary: #71717A;
+  --border-subtle: #272732;
+  --border-strong: #3F3F4E;
+  
+  --crimson-header: #200404;
+  --red-intervention: #F87171;
+  --red-subtle: rgba(248, 113, 113, 0.12);
+  --blue-annotation: #60A5FA;
+  --blue-subtle: rgba(96, 165, 250, 0.12);
+  --highlighter-ink: #FBBF24;
+  --highlighter-faint: rgba(251, 191, 36, 0.25);
+  
+  --masking-tape: rgba(45, 45, 58, 0.85);
+  --tape-edge: rgba(70, 70, 90, 0.5);
+  --shadow-artifact: 0 8px 24px rgba(0, 0, 0, 0.55);
+  --ruled-line: #222230;
+  --margin-line: #502026;
 }
 
 /* ==========================================================================
-   Base & Noise Texture
+   Subconscious Background & Base
    ========================================================================== */
 * {
   box-sizing: border-box;
@@ -62,17 +76,18 @@ body.dark-mode {
 }
 
 body {
-  background-color: var(--bg-paper);
-  color: var(--text-ink);
+  background-color: var(--bg-canvas);
+  color: var(--text-primary);
   font-family: var(--font-body);
-  font-size: 17.5px;
-  line-height: 1.68;
+  font-size: 18px;
+  line-height: 1.72;
   position: relative;
   overflow-x: hidden;
-  transition: background-color 0.25s ease, color 0.25s ease;
+  transition: background-color 0.2s ease, color 0.2s ease;
+  -webkit-font-smoothing: antialiased;
 }
 
-/* Subtle photocopy grain / paper noise */
+/* Barely perceptible paper texture */
 body::before {
   content: "";
   position: fixed;
@@ -81,254 +96,927 @@ body::before {
   width: 100vw;
   height: 100vh;
   pointer-events: none;
-  opacity: 0.035;
+  opacity: 0.022;
   z-index: 9999;
-  background-image: radial-gradient(#000 1px, transparent 1px);
-  background-size: 3px 3px;
+  background-image: radial-gradient(#000 0.75px, transparent 0.75px);
+  background-size: 4px 4px;
 }
 
-/* Dark mode noise adjustments */
 body.dark-mode::before {
-  opacity: 0.05;
-  background-image: radial-gradient(#FFF 1px, transparent 1px);
+  opacity: 0.035;
+  background-image: radial-gradient(#FFF 0.75px, transparent 0.75px);
 }
 
 /* ==========================================================================
-   Header & Streamlit Banner Heritage
+   Top Header Navigation
    ========================================================================== */
 .top-nav {
   position: sticky;
   top: 0;
   z-index: 100;
-  background-color: var(--crimson-banner);
-  border-bottom: 2px solid var(--border-rough);
-  padding: 10px 24px;
+  background-color: var(--crimson-header);
+  border-bottom: 1px solid rgba(0,0,0,0.3);
+  padding: 12px 32px;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.35);
+  box-shadow: 0 2px 10px rgba(0,0,0,0.2);
 }
 
 .brand-wrapper {
   display: flex;
   align-items: baseline;
-  gap: 14px;
+  gap: 12px;
   text-decoration: none;
 }
 
 .brand-title {
-  font-family: 'Segoe UI', var(--font-typewriter), sans-serif;
-  font-size: 26px;
-  font-weight: 900;
-  letter-spacing: 1.5px;
+  font-family: var(--font-display);
+  font-size: 24px;
+  font-weight: 700;
+  letter-spacing: 2px;
   color: #FFFFFF;
 }
 
 .brand-title span {
-  color: #E63946;
+  color: #FF5A5F;
 }
 
 .brand-tagline {
-  font-family: var(--font-handwriting);
-  font-size: 19px;
-  color: #FFE066;
-  font-weight: 600;
+  font-family: var(--font-ui);
+  font-size: 12.5px;
+  color: #D1D5DB;
+  font-weight: 500;
+  letter-spacing: 0.3px;
+  opacity: 0.85;
 }
 
 .nav-links {
   display: flex;
   align-items: center;
-  gap: 16px;
+  gap: 22px;
   list-style: none;
 }
 
 .nav-link {
-  color: #ECEFF4;
+  color: #E5E7EB;
   text-decoration: none;
-  font-family: var(--font-typewriter);
+  font-family: var(--font-ui);
   font-size: 13.5px;
+  font-weight: 500;
   transition: color 0.15s ease;
 }
 
 .nav-link:hover {
-  color: #FFE066;
-  text-decoration: underline;
+  color: #FEF08A;
 }
 
 .nav-actions {
   display: flex;
   align-items: center;
-  gap: 16px;
+  gap: 14px;
 }
 
 .theme-toggle-btn {
   background: transparent;
-  border: 1px dashed rgba(255, 255, 255, 0.4);
-  color: #ECEFF4;
-  font-family: var(--font-typewriter);
-  font-size: 13px;
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  color: #E5E7EB;
+  font-family: var(--font-ui);
+  font-size: 12px;
+  font-weight: 500;
   padding: 6px 12px;
   cursor: pointer;
   border-radius: 3px;
-  display: flex;
-  align-items: center;
-  gap: 6px;
+  transition: all 0.15s ease;
 }
 
 .theme-toggle-btn:hover {
-  background-color: rgba(255, 255, 255, 0.1);
+  background: rgba(255, 255, 255, 0.1);
   border-color: #FFF;
 }
 
 .app-launch-btn {
-  background-color: #E63946;
+  background-color: var(--red-intervention);
   color: #FFFFFF !important;
-  font-family: var(--font-typewriter);
-  font-weight: bold;
-  font-size: 14px;
+  font-family: var(--font-ui);
+  font-weight: 600;
+  font-size: 13.5px;
   padding: 8px 16px;
   border-radius: 4px;
   text-decoration: none;
   display: inline-flex;
   align-items: center;
-  gap: 8px;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
-  transition: transform 0.15s ease, background-color 0.15s ease;
+  gap: 6px;
+  transition: opacity 0.15s ease, transform 0.15s ease;
 }
 
 .app-launch-btn:hover {
-  background-color: #FF2E42;
-  transform: translateY(-2px);
+  opacity: 0.92;
+  transform: translateY(-1px);
 }
 
 /* ==========================================================================
-   Collage & Anti-Grid Layout Container
+   Controlled Asymmetric Layout Containers
+   (Variable widths giving each chapter its own natural boundary)
    ========================================================================== */
-.container {
-  max-width: 1040px;
-  margin: 0 auto;
-  padding: 40px 20px 80px 20px;
+.site-canvas {
+  width: 100%;
+  padding: 60px 20px 100px 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.chapter-hero       { width: 100%; max-width: 780px; margin-bottom: 70px; }
+.chapter-demo       { width: 100%; max-width: 920px; margin-bottom: 90px; }
+.chapter-engine     { width: 100%; max-width: 980px; margin-bottom: 90px; }
+.chapter-research   { width: 100%; max-width: 740px; margin-bottom: 85px; }
+.chapter-comparison { width: 100%; max-width: 940px; margin-bottom: 90px; }
+.chapter-pact       { width: 100%; max-width: 760px; margin-bottom: 85px; }
+.chapter-faq        { width: 100%; max-width: 820px; margin-bottom: 70px; }
+
+/* Chapter Spine Landmark Header */
+.chapter-spine {
+  font-family: var(--font-ui);
+  font-size: 11.5px;
+  font-weight: 700;
+  letter-spacing: 2px;
+  color: var(--text-tertiary);
+  text-transform: uppercase;
+  margin-bottom: 14px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.chapter-spine::after {
+  content: "";
+  flex: 1;
+  height: 1px;
+  background-color: var(--border-subtle);
+  max-width: 120px;
+}
+
+/* Handcrafted Art-Directed Tape */
+.art-tape {
+  position: absolute;
+  height: 22px;
+  background-color: var(--masking-tape);
+  border-left: 2px dashed var(--tape-edge);
+  border-right: 2px dashed var(--tape-edge);
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.08);
+  pointer-events: none;
+  z-index: 10;
+}
+
+/* The only 3 intentional pieces of tape on the whole page */
+.tape-demo {
+  top: -11px;
+  left: 36px;
+  width: 95px;
+  transform: rotate(-1.4deg);
+}
+
+.tape-engine-sample {
+  top: -10px;
+  right: 28px;
+  width: 80px;
+  transform: rotate(0.8deg);
+}
+
+.tape-pact {
+  top: -10px;
+  right: 44px;
+  width: 90px;
+  transform: rotate(-0.6deg);
+}
+
+/* ==========================================================================
+   Chapter 01: Hero Section (Lives directly on canvas!)
+   ========================================================================== */
+.hero-headline {
+  font-family: var(--font-display);
+  font-size: 34px;
+  line-height: 1.25;
+  color: var(--text-primary);
+  margin-bottom: 22px;
+  letter-spacing: -0.5px;
+}
+
+.hero-badges {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 26px;
+}
+
+.badge-tag {
+  font-family: var(--font-ui);
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 1.2px;
+  text-transform: uppercase;
+  padding: 4px 8px;
+  border-radius: 2px;
+}
+
+.badge-red {
+  background-color: var(--red-intervention);
+  color: #FFFFFF;
+}
+
+.badge-outline {
+  border: 1px solid var(--border-strong);
+  color: var(--text-primary);
+}
+
+.hero-story-lead {
+  font-size: 21px;
+  line-height: 1.6;
+  color: var(--text-primary);
+  margin-bottom: 18px;
+  font-weight: 600;
+}
+
+.hero-body {
+  font-size: 18px;
+  color: var(--text-secondary);
+  line-height: 1.75;
+  margin-bottom: 24px;
+}
+
+.hero-author-note {
+  font-family: var(--font-hand);
+  font-size: 24px;
+  color: var(--red-intervention);
+  line-height: 1.45;
+  padding: 12px 18px;
+  background-color: var(--red-subtle);
+  border-left: 3px solid var(--red-intervention);
+  margin: 28px 0;
+  border-radius: 0 4px 4px 0;
+}
+
+.hero-actions {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+  margin-top: 25px;
+  flex-wrap: wrap;
+}
+
+.btn-primary-action {
+  background-color: var(--red-intervention);
+  color: #FFF !important;
+  font-family: var(--font-ui);
+  font-weight: 600;
+  font-size: 15px;
+  padding: 11px 24px;
+  border-radius: 4px;
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.15);
+  transition: transform 0.15s ease;
+}
+
+.btn-primary-action:hover {
+  transform: translateY(-1px);
+}
+
+.hero-jump-demo {
+  font-family: var(--font-ui);
+  font-size: 14px;
+  color: var(--blue-annotation);
+  text-decoration: underline;
+  font-weight: 500;
+}
+
+/* ==========================================================================
+   Chapter 02: The Real Product Hero (Desk Artifact)
+   ========================================================================== */
+.demo-artifact-container {
+  position: relative;
+  background: var(--bg-surface);
+  border: 1px solid var(--border-strong);
+  border-radius: 4px;
+  box-shadow: var(--shadow-artifact);
+  padding: 36px 36px 32px 36px;
+}
+
+.demo-title-group {
+  margin-bottom: 20px;
+}
+
+.demo-headline {
+  font-family: var(--font-display);
+  font-size: 26px;
+  color: var(--text-primary);
+  line-height: 1.3;
+}
+
+.demo-annotation {
+  font-family: var(--font-hand);
+  font-size: 22px;
+  color: var(--blue-annotation);
+  margin-top: 4px;
+}
+
+.demo-preset-bar {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin: 18px 0 20px 0;
+  flex-wrap: wrap;
+}
+
+.preset-label {
+  font-family: var(--font-ui);
+  font-size: 12.5px;
+  font-weight: 600;
+  color: var(--text-tertiary);
+  text-transform: uppercase;
+}
+
+.preset-btn {
+  background: transparent;
+  border: 1px solid var(--border-subtle);
+  font-family: var(--font-ui);
+  font-size: 13px;
+  padding: 5px 12px;
+  border-radius: 3px;
+  cursor: pointer;
+  color: var(--text-secondary);
+  transition: all 0.15s ease;
+}
+
+.preset-btn:hover {
+  background-color: var(--highlighter-faint);
+  color: var(--text-primary);
+  border-color: var(--text-tertiary);
+}
+
+/* Ruled notebook sheet inside the artifact */
+.ruled-sheet-wrapper {
+  background: var(--bg-ruled);
+  border: 1px solid var(--border-subtle);
+  border-radius: 3px;
+  padding: 24px 24px 24px 60px;
+  background-image: 
+    linear-gradient(90deg, transparent 48px, var(--margin-line) 48px, var(--margin-line) 50px, transparent 50px),
+    repeating-linear-gradient(transparent, transparent 31px, var(--ruled-line) 31px, var(--ruled-line) 32px);
+  background-size: 100% 100%, 100% 32px;
+  min-height: 190px;
   position: relative;
 }
 
-/* Masking Tape UI Element */
-.tape {
-  position: absolute;
-  height: 24px;
-  width: 90px;
-  background-color: var(--masking-tape);
-  border-left: 2px dashed var(--tape-border);
-  border-right: 2px dashed var(--tape-border);
-  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.15);
-  z-index: 10;
-  pointer-events: none;
+.paper-sheet-editable {
+  font-family: var(--font-body);
+  font-size: 18px;
+  line-height: 32px;
+  color: var(--text-primary);
+  outline: none;
+  white-space: pre-wrap;
+  word-break: break-word;
 }
 
-.tape.top-left {
-  top: -10px;
-  left: 30px;
-  transform: rotate(-3deg);
+.ai-crossed {
+  color: var(--red-intervention);
+  text-decoration: line-through 2px var(--red-intervention);
+  font-weight: 600;
+  background-color: var(--red-subtle);
+  padding: 0 2px;
 }
 
-.tape.top-right {
-  top: -10px;
-  right: 30px;
-  transform: rotate(4deg);
+.human-replacement {
+  font-family: var(--font-hand);
+  font-size: 23px;
+  color: var(--blue-annotation);
+  font-weight: 700;
+  margin-left: 6px;
+  display: inline-block;
 }
 
-.tape.center {
-  top: -12px;
-  left: 50%;
-  transform: translateX(-50%) rotate(-1deg);
+/* Demo Control Bar */
+.demo-control-bar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 16px;
+  margin-top: 24px;
+  padding-top: 18px;
+  border-top: 1px solid var(--border-subtle);
 }
 
-/* Coffee Stain Rings (SVG/CSS) */
-.coffee-ring {
-  position: absolute;
-  width: 140px;
-  height: 140px;
-  border-radius: 50%;
-  border: 4px solid var(--coffee-stain);
-  border-right-color: transparent;
-  pointer-events: none;
-  filter: blur(0.5px);
-  z-index: 0;
+.detector-metric-group {
+  display: flex;
+  align-items: center;
+  gap: 12px;
 }
 
-.coffee-ring::after {
-  content: "";
-  position: absolute;
-  inset: 6px;
-  border-radius: 50%;
-  border: 2px solid var(--coffee-stain);
-  border-bottom-color: transparent;
+.detector-caption {
+  font-family: var(--font-ui);
+  font-size: 12.5px;
+  font-weight: 600;
+  text-transform: uppercase;
+  color: var(--text-secondary);
 }
 
-/* Staples */
-.staple {
-  position: absolute;
-  width: 18px;
-  height: 4px;
-  background-color: #6C757D;
-  box-shadow: inset 0 1px 1px #000, 0 1px 2px rgba(0,0,0,0.4);
-  z-index: 11;
-  pointer-events: none;
+.meter-track-clean {
+  width: 130px;
+  height: 10px;
+  background-color: var(--border-subtle);
+  border-radius: 5px;
+  overflow: hidden;
 }
 
-.staple.top-left {
-  top: 12px;
-  left: 12px;
-  transform: rotate(-45deg);
+.meter-fill-bar {
+  height: 100%;
+  width: 96%;
+  background-color: var(--red-intervention);
+  transition: width 0.7s cubic-bezier(0.16, 1, 0.3, 1), background-color 0.7s ease;
+}
+
+.meter-number {
+  font-family: var(--font-ui);
+  font-size: 14.5px;
+  font-weight: 700;
+  color: var(--red-intervention);
+  min-width: 40px;
+}
+
+.demo-buttons {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.btn-humanize-action {
+  background-color: var(--red-intervention);
+  color: #FFF;
+  border: 1px solid #991B1B;
+  font-family: var(--font-ui);
+  font-size: 14px;
+  font-weight: 600;
+  padding: 9px 20px;
+  border-radius: 4px;
+  cursor: pointer;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.12);
+  transition: all 0.15s ease;
+}
+
+.btn-humanize-action:hover {
+  opacity: 0.92;
+}
+
+.btn-secondary-copy {
+  background: transparent;
+  border: 1px solid var(--border-subtle);
+  color: var(--text-primary);
+  font-family: var(--font-ui);
+  font-size: 13.5px;
+  font-weight: 500;
+  padding: 8px 16px;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.15s ease;
+}
+
+.btn-secondary-copy:hover {
+  background-color: var(--highlighter-faint);
+}
+
+.stamp-verified {
+  font-family: var(--font-display);
+  font-size: 13px;
+  font-weight: 700;
+  color: var(--red-intervention);
+  border: 2px solid var(--red-intervention);
+  padding: 3px 8px;
+  border-radius: 3px;
+  transform: rotate(-4deg);
+  letter-spacing: 1px;
+}
+
+.demo-app-callout {
+  margin-top: 20px;
+  font-family: var(--font-ui);
+  font-size: 13.5px;
+  color: var(--text-secondary);
+  background-color: rgba(0,0,0,0.02);
+  padding: 12px 16px;
+  border-radius: 4px;
+  border-left: 3px solid var(--blue-annotation);
+}
+
+.demo-app-callout a {
+  color: var(--blue-annotation);
+  font-weight: 600;
+  text-decoration: underline;
+  margin-left: 4px;
 }
 
 /* ==========================================================================
-   Rubber Stamp Aesthetic
+   Chapter 03: What the Engine Actually Does (Engineering Notebook)
    ========================================================================== */
-.stamp {
-  display: inline-block;
-  font-family: var(--font-typewriter);
+.engine-editorial-header {
+  margin-bottom: 35px;
+}
+
+.engine-headline {
+  font-family: var(--font-display);
+  font-size: 28px;
+  color: var(--text-primary);
+  margin-bottom: 8px;
+}
+
+.engine-lead {
+  font-size: 18px;
+  color: var(--text-secondary);
+}
+
+.engine-pipeline {
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+}
+
+.engine-spec-row {
+  display: grid;
+  grid-template-columns: 240px 1fr;
+  gap: 32px;
+  padding-bottom: 32px;
+  border-bottom: 1px dashed var(--border-subtle);
+  align-items: start;
+}
+
+.engine-spec-row:last-child {
+  border-bottom: none;
+}
+
+.spec-meta {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.spec-number {
+  font-family: var(--font-ui);
+  font-size: 13px;
+  font-weight: 800;
+  color: var(--red-intervention);
+  letter-spacing: 1.5px;
+}
+
+.spec-title {
+  font-family: var(--font-display);
+  font-size: 20px;
+  color: var(--text-primary);
+  line-height: 1.3;
+}
+
+.spec-content {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.spec-desc {
+  font-size: 17px;
+  color: var(--text-secondary);
+  line-height: 1.7;
+}
+
+/* Evidence Cards inside specs */
+.evidence-card {
+  position: relative;
+  background: var(--bg-surface);
+  border: 1px solid var(--border-subtle);
+  border-radius: 3px;
+  padding: 16px 20px;
+  font-family: var(--font-ui);
+  font-size: 13.5px;
+}
+
+.evidence-label {
+  font-size: 11px;
   font-weight: 700;
   text-transform: uppercase;
-  letter-spacing: 2px;
-  padding: 5px 12px;
-  border: 3px solid;
-  border-radius: 4px;
-  line-height: 1.1;
-  box-shadow: inset 0 0 0 1px rgba(0,0,0,0.1);
-  transform: rotate(-3deg);
-  user-select: none;
+  color: var(--text-tertiary);
+  letter-spacing: 1px;
+  margin-bottom: 8px;
 }
 
-.stamp.stamp-red {
-  color: var(--red-pen);
-  border-color: var(--red-pen);
+.code-evidence-block {
+  background: #181820;
+  color: #ECEFF4;
+  padding: 12px 16px;
+  border-radius: 3px;
+  font-family: 'Courier Prime', monospace;
+  font-size: 13.5px;
+  line-height: 1.6;
+  overflow-x: auto;
 }
 
-.stamp.stamp-blue {
-  color: var(--ballpoint-blue);
-  border-color: var(--ballpoint-blue);
-  transform: rotate(2deg);
+.code-evidence-block .comment {
+  color: #60A5FA;
+  font-style: italic;
 }
 
-.stamp.stamp-yellow {
-  background-color: var(--highlighter);
-  color: #1A1A1A;
-  border-color: #1A1A1A;
-  transform: rotate(-1.5deg);
+.code-evidence-block .keyword {
+  color: #F87171;
+  font-weight: 600;
 }
 
 /* ==========================================================================
-   Hero & Student Manifesto Section
+   Chapter 04: The ESL Injustice (Clean Editorial)
    ========================================================================== */
+.research-headline {
+  font-family: var(--font-display);
+  font-size: 26px;
+  color: var(--text-primary);
+  margin-bottom: 16px;
+}
+
+.stat-callout-strip {
+  display: flex;
+  align-items: baseline;
+  gap: 14px;
+  margin: 20px 0;
+  padding: 16px 20px;
+  background: var(--red-subtle);
+  border-left: 3px solid var(--red-intervention);
+  border-radius: 0 4px 4px 0;
+}
+
+.stat-big {
+  font-family: var(--font-ui);
+  font-size: 38px;
+  font-weight: 900;
+  color: var(--red-intervention);
+  line-height: 1;
+}
+
+.stat-desc {
+  font-family: var(--font-ui);
+  font-size: 14px;
+  font-weight: 500;
+  color: var(--text-primary);
+  line-height: 1.45;
+}
+
+/* ==========================================================================
+   Chapter 05: Comparison Table (Author Annotated Column)
+   ========================================================================== */
+.comparison-headline {
+  font-family: var(--font-display);
+  font-size: 28px;
+  color: var(--text-primary);
+  margin-bottom: 8px;
+}
+
+.table-scroller {
+  overflow-x: auto;
+  margin-top: 24px;
+}
+
+.comparison-grid-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-family: var(--font-ui);
+  font-size: 14px;
+  text-align: left;
+}
+
+.comparison-grid-table th {
+  padding: 14px 16px;
+  border-bottom: 2px solid var(--border-strong);
+  font-weight: 700;
+  font-size: 13px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  color: var(--text-secondary);
+}
+
+.comparison-grid-table td {
+  padding: 14px 16px;
+  border-bottom: 1px solid var(--border-subtle);
+  color: var(--text-secondary);
+}
+
+/* Author's Annotated Column */
+.col-author-annotated {
+  background-color: var(--highlighter-faint);
+  color: var(--text-primary) !important;
+  font-weight: 600;
+}
+
+.author-margin-note {
+  display: block;
+  font-family: var(--font-hand);
+  font-size: 16px;
+  color: var(--red-intervention);
+  font-weight: 700;
+  margin-top: 2px;
+}
+
+/* ==========================================================================
+   Chapter 06: The Community Pact (Genuine Exchange)
+   ========================================================================== */
+.pact-artifact {
+  position: relative;
+  background: var(--bg-surface);
+  border: 1px solid var(--border-strong);
+  border-radius: 4px;
+  padding: 36px 36px 32px 36px;
+  box-shadow: var(--shadow-artifact);
+}
+
+.pact-title {
+  font-family: var(--font-display);
+  font-size: 26px;
+  color: var(--text-primary);
+  margin-bottom: 16px;
+}
+
+.pact-body {
+  font-size: 17.5px;
+  color: var(--text-secondary);
+  line-height: 1.7;
+  margin-bottom: 22px;
+}
+
+.pact-checklist {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin: 20px 0;
+}
+
+.pact-step {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-family: var(--font-ui);
+  font-size: 15px;
+}
+
+.pact-box {
+  width: 20px;
+  height: 20px;
+  border: 2px solid var(--red-intervention);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: var(--font-hand);
+  font-size: 18px;
+  color: var(--red-intervention);
+  flex-shrink: 0;
+}
+
+.pact-step a {
+  color: var(--blue-annotation);
+  font-weight: 600;
+  text-decoration: underline;
+}
+
+/* ==========================================================================
+   Chapter 07: Frequently Asked Questions (Quiet & Clean)
+   ========================================================================== */
+.faq-headline {
+  font-family: var(--font-display);
+  font-size: 26px;
+  color: var(--text-primary);
+  margin-bottom: 24px;
+}
+
+.faq-quiet-list {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.faq-entry {
+  background: var(--bg-surface);
+  border: 1px solid var(--border-subtle);
+  border-radius: 4px;
+  padding: 18px 22px;
+}
+
+.faq-entry.featured {
+  border-left: 3px solid var(--red-intervention);
+}
+
+.faq-q {
+  font-family: var(--font-ui);
+  font-size: 16.5px;
+  font-weight: 700;
+  color: var(--text-primary);
+  margin-bottom: 8px;
+}
+
+.faq-a {
+  font-size: 16.5px;
+  color: var(--text-secondary);
+  line-height: 1.68;
+}
+
+/* ==========================================================================
+   Footer
+   ========================================================================== */
+.site-footer {
+  width: 100%;
+  max-width: 860px;
+  text-align: center;
+  padding-top: 40px;
+  border-top: 1px solid var(--border-subtle);
+  font-family: var(--font-ui);
+  font-size: 13.5px;
+  color: var(--text-tertiary);
+}
+
+.footer-directory {
+  display: flex;
+  justify-content: center;
+  gap: 16px;
+  flex-wrap: wrap;
+  margin-bottom: 20px;
+}
+
+.footer-directory a {
+  color: var(--text-secondary);
+  text-decoration: underline;
+}
+
+.footer-direct-help {
+  display: inline-block;
+  background: var(--highlighter-faint);
+  border: 1px solid var(--border-subtle);
+  padding: 8px 18px;
+  border-radius: 4px;
+  margin-bottom: 18px;
+  color: var(--text-primary);
+}
+
+.footer-direct-help a {
+  color: var(--red-intervention);
+  font-weight: 700;
+  text-decoration: underline;
+}
+
+/* ==========================================================================
+   Responsive Behavior
+   ========================================================================== */
+@media (max-width: 820px) {
+  .engine-spec-row {
+    grid-template-columns: 1fr;
+    gap: 12px;
+  }
+  .top-nav {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 12px;
+    padding: 12px 18px;
+  }
+  .nav-links {
+    flex-wrap: wrap;
+    gap: 12px;
+  }
+  .nav-actions {
+    width: 100%;
+    justify-content: space-between;
+  }
+  .ruled-sheet-wrapper {
+    padding: 18px 14px 18px 40px;
+    background-image: 
+      linear-gradient(90deg, transparent 30px, var(--margin-line) 30px, var(--margin-line) 32px, transparent 32px),
+      repeating-linear-gradient(transparent, transparent 31px, var(--ruled-line) 31px, var(--ruled-line) 32px);
+  }
+  .demo-control-bar {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}
+
+/* ==========================================================================
+   Subpage Compatibility & Editorial Artifacts
+   ========================================================================== */
+.container {
+  max-width: 860px;
+  margin: 0 auto;
+  padding: 50px 20px 80px 20px;
+  position: relative;
+}
+
 .manifesto-card {
   position: relative;
-  background-color: var(--bg-card);
-  border: 2px solid var(--border-rough);
+  background: var(--bg-surface);
+  border: 1px solid var(--border-strong);
   border-radius: 4px;
-  padding: 40px 36px 36px 36px;
-  margin-bottom: 50px;
-  box-shadow: var(--shadow-paper);
-  transform: rotate(-0.5deg);
+  padding: 36px 36px 32px 36px;
+  box-shadow: var(--shadow-artifact);
 }
 
 .manifesto-header {
@@ -337,465 +1025,89 @@ body.dark-mode::before {
   align-items: flex-start;
   margin-bottom: 20px;
   flex-wrap: wrap;
-  gap: 15px;
+  gap: 14px;
 }
 
 .manifesto-title {
-  font-family: var(--font-typewriter);
-  font-size: 32px;
-  font-weight: 700;
-  line-height: 1.25;
-  color: var(--text-ink);
-}
-
-.manifesto-title .highlight {
-  background: var(--highlighter-subtle);
-  padding: 0 4px;
-  box-decoration-break: clone;
-  -webkit-box-decoration-break: clone;
+  font-family: var(--font-display);
+  font-size: 30px;
+  line-height: 1.28;
+  color: var(--text-primary);
 }
 
 .manifesto-story {
-  font-size: 19px;
-  line-height: 1.7;
-  color: var(--text-ink);
-  margin-bottom: 24px;
+  font-size: 18px;
+  line-height: 1.72;
+  color: var(--text-secondary);
 }
 
 .handwritten-aside {
-  font-family: var(--font-handwriting);
-  font-size: 24px;
-  color: var(--red-pen);
-  line-height: 1.4;
-  margin: 15px 0;
-  padding-left: 12px;
-  border-left: 3px solid var(--red-pen);
+  font-family: var(--font-hand);
+  font-size: 22px;
+  color: var(--red-intervention);
+  line-height: 1.45;
+  padding: 10px 16px;
+  background-color: var(--red-subtle);
+  border-left: 3px solid var(--red-intervention);
+  margin: 22px 0;
+  border-radius: 0 4px 4px 0;
 }
 
-.manifesto-badges {
-  display: flex;
-  gap: 12px;
-  flex-wrap: wrap;
-  margin-top: 25px;
-  align-items: center;
-}
-
-/* ==========================================================================
-   Interactive Notebook Simulator ("Watch It Work")
-   ========================================================================== */
-.notebook-wrapper {
-  position: relative;
-  background: var(--bg-notebook);
-  /* Notebook horizontal ruling + vertical margin line */
-  background-image: 
-    linear-gradient(90deg, transparent 72px, var(--margin-red) 72px, var(--margin-red) 74px, transparent 74px),
-    repeating-linear-gradient(transparent, transparent 29px, var(--line-blue) 29px, var(--line-blue) 30px);
-  background-size: 100% 100%, 100% 30px;
-  border: 2px solid var(--border-rough);
-  border-radius: 3px;
-  padding: 40px 30px 40px 95px;
-  box-shadow: var(--shadow-paper);
-  margin-bottom: 60px;
-  transform: rotate(0.4deg);
-}
-
-.notebook-header {
-  margin-bottom: 20px;
-}
-
-.notebook-label {
-  font-family: var(--font-typewriter);
-  font-size: 13px;
-  text-transform: uppercase;
-  color: var(--text-muted);
-  letter-spacing: 1px;
-}
-
-.notebook-title {
-  font-family: var(--font-typewriter);
-  font-size: 24px;
-  color: var(--text-ink);
-  margin-top: 4px;
-}
-
-.preset-buttons {
-  display: flex;
-  gap: 10px;
-  margin: 15px 0 20px 0;
-  flex-wrap: wrap;
-}
-
-.preset-btn {
-  background-color: transparent;
-  border: 1px solid var(--border-rough);
-  font-family: var(--font-typewriter);
-  font-size: 13px;
-  padding: 5px 12px;
-  cursor: pointer;
-  color: var(--text-ink);
-  border-radius: 2px;
-  transition: all 0.15s ease;
-}
-
-.preset-btn:hover {
-  background-color: var(--highlighter-subtle);
-  border-color: var(--red-pen);
-}
-
-.paper-sheet {
-  font-family: var(--font-body);
-  font-size: 18px;
-  line-height: 30px; /* Align precisely with 30px lined rule */
-  color: var(--text-ink);
-  min-height: 180px;
-  outline: none;
-  white-space: pre-wrap;
-  word-break: break-word;
-  position: relative;
-}
-
-/* Strikethrough effect on AI phrases */
-.ai-crossed {
-  color: var(--red-pen);
-  text-decoration: line-through 2.5px var(--red-pen);
-  font-weight: 600;
-  background-color: rgba(196, 30, 58, 0.08);
-  padding: 0 2px;
-  border-radius: 2px;
-}
-
-/* Handwritten replacement in margin or above */
-.human-replacement {
-  font-family: var(--font-handwriting);
-  font-size: 23px;
-  color: var(--ballpoint-blue);
-  font-weight: 700;
-  margin-left: 6px;
-  display: inline-block;
-}
-
-/* Notebook control bar */
-.notebook-footer {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  flex-wrap: wrap;
-  gap: 16px;
-  margin-top: 30px;
-  padding-top: 15px;
-  border-top: 1px dashed var(--border-rough);
-}
-
-.detector-meter {
-  display: flex;
-  align-items: center;
-  gap: 12px;
-}
-
-.detector-label {
-  font-family: var(--font-typewriter);
-  font-size: 13px;
-  font-weight: bold;
-}
-
-.meter-track {
-  width: 140px;
-  height: 14px;
-  background-color: var(--border-rough);
-  border-radius: 10px;
-  overflow: hidden;
-  position: relative;
-}
-
-.meter-fill {
-  height: 100%;
-  width: 96%;
-  background-color: var(--red-pen);
-  transition: width 0.8s cubic-bezier(0.16, 1, 0.3, 1), background-color 0.8s ease;
-}
-
-.meter-score {
-  font-family: var(--font-typewriter);
-  font-size: 15px;
-  font-weight: bold;
-  color: var(--red-pen);
-  min-width: 45px;
-}
-
-.action-buttons-group {
-  display: flex;
-  gap: 12px;
-}
-
-.humanize-btn {
-  background-color: var(--red-pen);
-  color: #FFF;
-  border: 2px solid var(--red-pen-dark);
-  font-family: var(--font-typewriter);
-  font-size: 16px;
-  font-weight: bold;
-  padding: 10px 22px;
-  cursor: pointer;
-  border-radius: 3px;
-  box-shadow: 2px 3px 0 var(--border-rough);
-  transform: rotate(-1deg);
-  transition: transform 0.1s ease, box-shadow 0.1s ease;
-}
-
-.humanize-btn:hover {
-  transform: translate(-1px, -1px) rotate(-1deg);
-  box-shadow: 3px 4px 0 var(--border-rough);
-}
-
-.humanize-btn:active {
-  transform: translate(2px, 2px);
-  box-shadow: 0 0 0 var(--border-rough);
-}
-
-.copy-btn {
-  background-color: transparent;
-  border: 1px solid var(--border-rough);
-  font-family: var(--font-typewriter);
-  font-size: 14px;
-  padding: 8px 16px;
-  cursor: pointer;
-  color: var(--text-ink);
-  border-radius: 3px;
-}
-
-.copy-btn:hover {
-  background-color: var(--highlighter-subtle);
-}
-
-/* ==========================================================================
-   Feature Cards (The Collage Grid)
-   ========================================================================== */
 .section-heading {
-  font-family: var(--font-typewriter);
-  font-size: 28px;
-  margin-bottom: 25px;
-  color: var(--text-ink);
-  display: flex;
-  align-items: center;
-  gap: 12px;
+  font-family: var(--font-display);
+  font-size: 24px;
+  margin: 32px 0 16px 0;
+  color: var(--text-primary);
 }
 
-.features-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  gap: 25px;
-  margin-bottom: 60px;
-}
-
-.feature-box {
-  background-color: var(--bg-card);
-  border: 2px solid var(--border-rough);
-  padding: 28px 24px;
-  border-radius: 3px;
-  position: relative;
-  box-shadow: var(--shadow-paper);
-}
-
-.feature-box:nth-child(1) { transform: rotate(-0.7deg); }
-.feature-box:nth-child(2) { transform: rotate(0.8deg); }
-.feature-box:nth-child(3) { transform: rotate(-0.5deg); }
-
-.feature-icon {
-  font-size: 32px;
-  margin-bottom: 12px;
-}
-
-.feature-title {
-  font-family: var(--font-typewriter);
-  font-size: 20px;
-  margin-bottom: 10px;
-  color: var(--text-ink);
-}
-
-.feature-desc {
-  font-size: 16px;
-  color: var(--text-muted);
-  line-height: 1.6;
-}
-
-/* ==========================================================================
-   Comparison Table (Xerox Style)
-   ========================================================================== */
 .table-wrapper {
-  background-color: var(--bg-card);
-  border: 2px solid var(--border-rough);
-  padding: 24px;
-  margin-bottom: 60px;
-  box-shadow: var(--shadow-paper);
-  transform: rotate(0.3deg);
   overflow-x: auto;
+  margin: 20px 0;
 }
 
 .xerox-table {
   width: 100%;
   border-collapse: collapse;
-  font-family: var(--font-typewriter);
-  font-size: 15px;
+  font-family: var(--font-ui);
+  font-size: 14px;
   text-align: left;
 }
 
-.xerox-table th, .xerox-table td {
-  padding: 12px 14px;
-  border-bottom: 1px solid var(--border-rough);
-}
-
 .xerox-table th {
-  background-color: rgba(0, 0, 0, 0.04);
+  padding: 12px 14px;
+  border-bottom: 2px solid var(--border-strong);
   font-weight: 700;
-  border-bottom: 2px solid var(--border-rough);
+  color: var(--text-secondary);
 }
 
-body.dark-mode .xerox-table th {
-  background-color: rgba(255, 255, 255, 0.05);
+.xerox-table td {
+  padding: 12px 14px;
+  border-bottom: 1px solid var(--border-subtle);
+  color: var(--text-secondary);
 }
 
-.xerox-table tr:last-child td {
-  border-bottom: none;
-}
-
-.col-turnitout {
-  background-color: var(--highlighter-subtle);
+.stamp {
+  font-family: var(--font-ui);
   font-weight: 700;
-  color: var(--red-pen-dark);
-}
-
-body.dark-mode .col-turnitout {
-  color: #FFA500;
-}
-
-/* ==========================================================================
-   The Community Star-Gate Pledge
-   ========================================================================== */
-.pledge-card {
-  position: relative;
-  background-color: var(--bg-card);
-  border: 2px solid var(--border-rough);
-  border-radius: 4px;
-  padding: 35px 30px;
-  margin-bottom: 60px;
-  box-shadow: var(--shadow-paper);
-  transform: rotate(-0.4deg);
-}
-
-.checklist-group {
-  margin: 20px 0;
-  display: flex;
-  flex-direction: column;
-  gap: 12px;
-}
-
-.check-item {
-  display: flex;
-  align-items: center;
-  gap: 12px;
-  font-size: 17px;
-}
-
-.hand-box {
-  width: 22px;
-  height: 22px;
-  border: 2px solid var(--red-pen);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-family: var(--font-handwriting);
-  font-size: 20px;
-  color: var(--red-pen);
-  flex-shrink: 0;
-}
-
-.check-item a {
-  color: var(--ballpoint-blue);
-  font-weight: 600;
-  text-decoration: underline;
-}
-
-/* ==========================================================================
-   FAQ Section (Accordion / Clean Xerox)
-   ========================================================================== */
-.faq-list {
-  display: flex;
-  flex-direction: column;
-  gap: 16px;
-  margin-bottom: 60px;
-}
-
-.faq-item {
-  background-color: var(--bg-card);
-  border: 1px solid var(--border-rough);
-  border-radius: 3px;
-  padding: 18px 22px;
-}
-
-.faq-question {
-  font-family: var(--font-typewriter);
-  font-size: 18px;
-  font-weight: 700;
-  color: var(--text-ink);
-  margin-bottom: 8px;
-}
-
-.faq-answer {
-  font-size: 16.5px;
-  color: var(--text-muted);
-  line-height: 1.6;
-}
-
-/* ==========================================================================
-   Footer & Direct Developer Hotline
-   ========================================================================== */
-.footer-section {
-  text-align: center;
-  padding: 40px 20px 20px 20px;
-  border-top: 2px dashed var(--border-rough);
-  font-family: var(--font-typewriter);
-  font-size: 14.5px;
-  color: var(--text-muted);
-}
-
-.footer-hotline {
+  text-transform: uppercase;
+  font-size: 11px;
+  letter-spacing: 1px;
+  padding: 4px 8px;
+  border-radius: 2px;
   display: inline-block;
-  background-color: var(--highlighter-subtle);
-  border: 1px solid var(--border-rough);
-  padding: 10px 20px;
-  margin: 15px 0 25px 0;
-  border-radius: 4px;
 }
 
-.footer-hotline a {
-  color: var(--red-pen);
-  font-weight: bold;
-  text-decoration: underline;
+.stamp-red {
+  background: var(--red-intervention);
+  color: #FFF;
 }
 
-/* ==========================================================================
-   Responsive Adaptations
-   ========================================================================== */
-@media (max-width: 768px) {
-  .manifesto-title { font-size: 25px; }
-  .notebook-wrapper {
-    padding: 30px 18px 30px 50px;
-    background-image: 
-      linear-gradient(90deg, transparent 40px, var(--margin-red) 40px, var(--margin-red) 42px, transparent 42px),
-      repeating-linear-gradient(transparent, transparent 29px, var(--line-blue) 29px, var(--line-blue) 30px);
-  }
-  .top-nav {
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 10px;
-    padding: 12px 16px;
-  }
-  .nav-actions {
-    width: 100%;
-    justify-content: space-between;
-  }
-  .notebook-footer {
-    flex-direction: column;
-    align-items: flex-start;
-  }
+.stamp-blue {
+  background: var(--blue-annotation);
+  color: #FFF;
+}
+
+.stamp-yellow {
+  background: var(--highlighter-ink);
+  color: #1A1A1A;
 }
