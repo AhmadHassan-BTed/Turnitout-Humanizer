@@ -140,11 +140,11 @@
 </head>
 <body>
 
-  <!-- Top Navigation Header -->
+  <!-- Top Navigation Banner (Streamlit Heritage) -->
   <header class="top-nav">
     <a href="#" class="brand-wrapper">
       <div class="brand-title">TURN<span>IT</span>OUT</div>
-      <div class="brand-tagline">Intelligent Similarity Evasion & Multi-Algorithm Checker</div>
+      <div class="brand-tagline"># Intelligent Similarity Evasion & Multi-Algorithm Checker</div>
     </a>
     <nav class="nav-links">
       <a href="how-it-works.html" class="nav-link">How It Works</a>
@@ -154,7 +154,7 @@
     </nav>
     <div class="nav-actions">
       <button id="themeToggleBtn" class="theme-toggle-btn" aria-label="Toggle 3 AM Dark Mode">
-        🌙 3 AM Session
+        🌙 Study Session: 3 AM (Dark)
       </button>
       <a href="https://turnitout.streamlit.app/" target="_blank" rel="noopener noreferrer" class="app-launch-btn">
         Launch Live App ⚡
@@ -162,450 +162,337 @@
     </div>
   </header>
 
-  <!-- Living Document Canvas -->
-  <main class="site-canvas">
+  <main class="container">
 
-    <!-- ====================================================================
-         CHAPTER 01: The Manifest (Canvas-Based, Not In a Box!)
-         ==================================================================== -->
-    <section class="chapter-hero" id="manifesto">
-      <div class="chapter-spine">01 • THE MANIFESTO</div>
+    <!-- Decorative Xerox Tape & Staples -->
+    <div class="tape top-left"></div>
+    <div class="tape top-right"></div>
+    <div class="coffee-ring" style="top: 140px; right: 40px;"></div>
+    <div class="coffee-ring" style="bottom: 220px; left: -30px;"></div>
+
+    <!-- Hero Section: The Student's Revenge Manifesto -->
+    <section class="manifesto-card">
+      <div class="staple top-left"></div>
       
-      <h1 class="hero-headline">
-        The Free AI Humanizer That Refuses to Sell Out.
-      </h1>
-
-      <div class="hero-badges">
-        <span class="badge-tag badge-red">100% FREE</span>
-        <span class="badge-tag badge-outline">NO SIGNUP</span>
-        <span class="badge-tag badge-outline">ZERO GENERATIVE AI</span>
+      <div class="manifesto-header">
+        <h1 class="manifesto-title">
+          The Free AI Humanizer That <span class="highlight">Refuses to Sell Out</span>.
+        </h1>
+        <div>
+          <span class="stamp stamp-red">100% FREE</span>
+          <span class="stamp stamp-blue">NO SIGNUP</span>
+        </div>
       </div>
 
-      <div class="hero-story-lead">
-        I just graduated, and honestly? It was absolute HELL. 💔
+      <div class="manifesto-story">
+        <p>
+          I just graduated, and honestly? <strong>It was absolute HELL. 💔</strong>
+        </p>
+        <p style="margin-top: 12px;">
+          AI-assisted drafting is the modern reality of university life, but humanizing it was pure psychological exhaustion: word count limits, aggressive paywalls, $20/month subscription traps, and Turnitin STILL flagged false positives on honest students.
+        </p>
+        <p style="margin-top: 12px;">
+          So I built <strong>TURNITOUT</strong>. A complete, unmetered, zero-cost AI and similarity remover. 
+          No credit cards, no monthly fees, no trial versions, and no corporate greed.
+        </p>
       </div>
 
-      <p class="hero-body">
-        AI-assisted drafting is the modern reality of university life, but humanizing it was pure psychological exhaustion: word count limits, aggressive paywalls, $20/month subscription traps, and Turnitin STILL flagged false positives on honest students.
-      </p>
-
-      <p class="hero-body">
-        So I built <strong>TURNITOUT</strong>. A complete, unmetered, zero-cost AI and similarity remover. 
-        No credit cards, no monthly fees, no trial versions, and no corporate greed.
-      </p>
-
-      <div class="hero-author-note">
+      <div class="handwritten-aside">
         "A revenge to the university system and corporate squeezing of students 🙂 and a gift to upcoming students ✌🏻"
       </div>
 
-      <p class="hero-body" style="font-size: 16.5px;">
+      <p style="font-size: 17px; margin-top: 14px;">
         <strong>Why it is genuinely different:</strong> Other commercial tools use generative AI to eliminate AI—which ironically leaves fresh machine signatures, hallucinates facts, breaks code syntax, and leaks your confidential drafts into training databases. 
         <strong>TURNITOUT does NOT use AI to eliminate AI.</strong> It is 100% programmatic and rule-based, mathematically breaking the exact n-gram statistical patterns that detectors flag.
       </p>
 
-      <div class="hero-actions">
-        <a href="https://turnitout.streamlit.app/" target="_blank" rel="noopener noreferrer" class="btn-primary-action">
-          Launch TurnItOut Free →
-        </a>
-        <a href="#interactive-demo" class="hero-jump-demo">
-          Or test the live rule engine below ↓
-        </a>
+      <div class="manifesto-badges">
+        <span class="stamp stamp-yellow">FIRST PROGRAMMATIC OF ITS KIND 🥇</span>
+        <span class="stamp stamp-red">PRESERVES .DOCX & .TEX</span>
+        <span class="stamp stamp-blue">100% LOCAL PRIVACY</span>
       </div>
     </section>
 
-    <!-- ====================================================================
-         CHAPTER 02: The Real Product Hero (Desk Artifact)
-         ==================================================================== -->
-    <section class="chapter-demo" id="interactive-demo">
-      <div class="chapter-spine">02 • WATCH IT WORK</div>
-
-      <div class="demo-artifact-container">
-        <!-- Single art-directed tape piece on the product artifact -->
-        <div class="art-tape tape-demo"></div>
-
-        <div class="demo-title-group">
-          <h2 class="demo-headline">Watch the Rule Engine Break AI Signatures Live</h2>
-          <div class="demo-annotation">this is the part I'm most proud of.</div>
-        </div>
-
-        <div class="demo-preset-bar">
-          <span class="preset-label">Load Raw AI Draft:</span>
-          <button id="sampleAcademicBtn" class="preset-btn">📄 Academic Abstract Cliché</button>
-          <button id="sampleEssayBtn" class="preset-btn">📝 College Essay Cliché</button>
-        </div>
-
-        <!-- Ruled Notebook Sheet (The Work Desk) -->
-        <div class="ruled-sheet-wrapper">
-          <div id="paperSheet" class="paper-sheet-editable" contenteditable="true" spellcheck="false">In conclusion, it is important to delve into the comprehensive tapestry of modern neural networks. This study plays a pivotal role in illustrating that artificial intelligence stands as a testament to human innovation. Furthermore, the interplay between stochastic optimization and computational scalability provides a robust framework for subsequent empirical inquiries.</div>
-          
-          <div id="tutorNote" class="demo-annotation" style="display: none; font-size: 20px; margin-top: 14px; border-left: 2px solid var(--blue-annotation); padding-left: 10px;">
-            "Now read it out loud. Fix anything that sounds wrong. You're smarter than the detector."
-          </div>
-        </div>
-
-        <div class="demo-control-bar">
-          <div class="detector-metric-group">
-            <span class="detector-caption">Estimated AI Detection:</span>
-            <div class="meter-track-clean">
-              <div id="meterFill" class="meter-fill-bar"></div>
-            </div>
-            <span id="meterScore" class="meter-number">96%</span>
-          </div>
-
-          <div class="demo-buttons">
-            <button id="humanizeBtn" class="btn-humanize-action">HUMANIZE THIS PAPER →</button>
-            <button id="copyBtn" class="btn-secondary-copy">Copy Clean Text</button>
-            <span id="statusStamp" class="stamp-verified" style="display: none;">HUMANIZED ✓</span>
-          </div>
-        </div>
-
-        <div class="demo-app-callout">
-          💡 <em>Working with full files?</em> The live application handles full <strong>.docx</strong> Word files, <strong>LaTeX .tex</strong> packages, multi-file <strong>source code ZIPs</strong>, and generates <strong>BibTeX citations</strong>.
-          <a href="https://turnitout.streamlit.app/" target="_blank" rel="noopener noreferrer">Launch full app on Streamlit →</a>
-        </div>
-      </div>
-    </section>
-
-    <!-- ====================================================================
-         CHAPTER 03: What the Engine Actually Does (Engineering Notebook)
-         ==================================================================== -->
-    <section class="chapter-engine" id="engine">
-      <div class="chapter-spine">03 • ENGINEERING NOTEBOOK</div>
-
-      <div class="engine-editorial-header">
-        <h2 class="engine-headline">What the TurnItOut Engine Actually Does</h2>
-        <p class="engine-lead">
-          No generative AI wrappers. No guessing. Here is the actual machinery:
-        </p>
-      </div>
-
-      <div class="engine-pipeline">
-        
-        <!-- Spec 01 -->
-        <div class="engine-spec-row">
-          <div class="spec-meta">
-            <div class="spec-number">01 / DISRUPTION</div>
-            <h3 class="spec-title">Zero-Generative-AI Rule Engine</h3>
-          </div>
-          <div class="spec-content">
-            <p class="spec-desc">
-              Over 4,068+ deterministic JSON rules across conversational, academic, and technical registers. Mathematically breaks contiguous 3-gram and 4-gram sequence probabilities and rotates PDTB discourse connectives without altering scientific meaning.
-            </p>
-            <div class="evidence-card" style="max-width: 540px;">
-              <div class="art-tape tape-engine-sample"></div>
-              <div class="evidence-label">Live Rule Manifest Inspection (Rule #1847)</div>
-              <div style="font-family: 'Courier Prime', monospace; font-size: 13.5px; line-height: 1.6;">
-                <div><span style="color: var(--text-tertiary);">Input phrase:</span> "the utilization of"</div>
-                <div><span style="color: var(--text-tertiary);">Deterministic transform:</span> <strong style="color: var(--blue-annotation);">→ "using"</strong></div>
-                <div><span style="color: var(--text-tertiary);">Linguistic purpose:</span> Nominalization reduction & perplexity elevation</div>
-              </div>
-            </div>
-            <div class="demo-annotation" style="font-size: 19px; margin-top: 4px;">
-              this is where most "AI humanizers" lose me.
-            </div>
-          </div>
-        </div>
-
-        <!-- Spec 02 -->
-        <div class="engine-spec-row">
-          <div class="spec-meta">
-            <div class="spec-number">02 / RUNS</div>
-            <h3 class="spec-title">In-Place .docx & .tex Formatting</h3>
-          </div>
-          <div class="spec-content">
-            <p class="spec-desc">
-              Commercial tools convert your formatted paper into raw ASCII text, destroying hours of citation and styling work. TurnItOut operates inside the underlying XML run tree (<code style="font-size: 13px;">w:r</code>).
-            </p>
-            <div class="evidence-card" style="max-width: 580px;">
-              <div class="evidence-label">XML Run Preservation Guarantee</div>
-              <div style="font-size: 13.5px; color: var(--text-secondary); line-height: 1.6;">
-                ✓ Bold & italic font spans mapped character-for-character<br>
-                ✓ LaTeX math environments (<code style="font-size: 12.5px;">$...$</code>, <code style="font-size: 12.5px;">\begin{equation}</code>) strictly locked<br>
-                ✓ Tables, header hierarchies, and citation tags preserved in-place
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <!-- Spec 03 -->
-        <div class="engine-spec-row">
-          <div class="spec-meta">
-            <div class="spec-number">03 / CODE</div>
-            <h3 class="spec-title">100% Executable Code Safety</h3>
-          </div>
-          <div class="spec-content">
-            <p class="spec-desc">
-              String-aware AST tokenizer isolates natural language comments (<code style="font-size: 13px;">#</code>, <code style="font-size: 13px;">//</code>, <code style="font-size: 13px;">/* */</code>, docstrings) across 8 programming languages. Code statements, logic, variables, syntax, and indentation remain 100% untouched and runnable.
-            </p>
-            <div class="code-evidence-block" style="max-width: 620px;">
-              <span class="keyword">def</span> <span style="color:#88C0D0;">train_model</span>(data, epochs=<span style="color:#B48EAD;">10</span>):<br>
-              &nbsp;&nbsp;&nbsp;&nbsp;<span class="comment"># Evaluates gradient descent parameters across batch iterations</span><br>
-              &nbsp;&nbsp;&nbsp;&nbsp;<span class="keyword">for</span> epoch <span class="keyword">in</span> <span style="color:#81A1C1;">range</span>(epochs):<br>
-              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;optimizer.<span style="color:#88C0D0;">step</span>()<br>
-              <span class="comment"># Code runs identically before and after. Not "probably runnable" — 100% guaranteed.</span>
-            </div>
-          </div>
-        </div>
-
-        <!-- Spec 04 -->
-        <div class="engine-spec-row">
-          <div class="spec-meta">
-            <div class="spec-number">04 / CITATIONS</div>
-            <h3 class="spec-title">Dynamic Reference & BibTeX Generator</h3>
-          </div>
-          <div class="spec-content">
-            <p class="spec-desc">
-              Contextually inserts IEEE numeric (<code style="font-size: 13px;">[1]</code>) or APA author-date (<code style="font-size: 13px;">(Author, 2026)</code>) citations and automatically exports matching <code style="font-size: 13px;">citations.bib</code> and JSON reference packages across 5 academic taxonomies.
-            </p>
-            <div style="font-family: var(--font-ui); font-size: 14px; margin-top: 6px;">
-              <a href="how-it-works.html" style="color: var(--blue-annotation); text-decoration: underline; font-weight: 600;">
-                Read the full mathematical breakdown of n-gram disruption & AST parsing →
-              </a>
-            </div>
-          </div>
-        </div>
-
-      </div>
-    </section>
-
-    <!-- ====================================================================
-         CHAPTER 04: The ESL Injustice (Clean Editorial)
-         ==================================================================== -->
-    <section class="chapter-research" id="research">
-      <div class="chapter-spine">04 • THE RESEARCH</div>
-
-      <h2 class="research-headline">The ESL Injustice: Why This Tool Exists</h2>
+    <!-- Section: The Interactive Notebook Simulator ("Watch It Work") -->
+    <section class="notebook-wrapper" id="interactive-demo">
+      <div class="tape center"></div>
       
-      <p style="font-size: 18px; color: var(--text-secondary); line-height: 1.75;">
-        In 2023, Stanford University researchers published a landmark study evaluating commercial AI detectors on TOEFL student essays and non-native English writing.
-      </p>
+      <div class="notebook-header">
+        <div class="notebook-label">Interactive Pattern Disruptor Demonstration</div>
+        <h2 class="notebook-title">Watch the Rule Engine Break AI Signatures Live</h2>
+      </div>
 
-      <div class="stat-callout-strip">
-        <div class="stat-big">61.3%</div>
-        <div class="stat-desc">
-          False-positive rate on non-native English essays evaluated by leading AI detection software (Stanford University, Liang et al.).
+      <div class="preset-buttons">
+        <span style="font-family: var(--font-typewriter); font-size: 13px; align-self: center; margin-right: 4px;">Load Sample:</span>
+        <button id="sampleAcademicBtn" class="preset-btn">📄 Academic Abstract Cliché</button>
+        <button id="sampleEssayBtn" class="preset-btn">📝 College Essay Cliché</button>
+      </div>
+
+      <!-- Notebook Sheet: Blue Ruled Lines with Red Margin Line -->
+      <div id="paperSheet" class="paper-sheet" contenteditable="true" spellcheck="false">In conclusion, it is important to delve into the comprehensive tapestry of modern neural networks. This study plays a pivotal role in illustrating that artificial intelligence stands as a testament to human innovation. Furthermore, the interplay between stochastic optimization and computational scalability provides a robust framework for subsequent empirical inquiries.</div>
+
+      <div id="tutorNote" class="handwritten-aside" style="display: none; font-size: 21px; margin: 15px 0 5px 0; border-left-color: var(--ballpoint-blue); color: var(--ballpoint-blue);">
+        "Now read it out loud. Fix anything that sounds wrong. You're smarter than the detector."
+      </div>
+
+      <div class="notebook-footer">
+        <div class="detector-meter">
+          <span class="detector-label">Estimated AI Detection:</span>
+          <div class="meter-track">
+            <div id="meterFill" class="meter-fill"></div>
+          </div>
+          <span id="meterScore" class="meter-score">96%</span>
+        </div>
+
+        <div class="action-buttons-group">
+          <button id="humanizeBtn" class="humanize-btn">HUMANIZE THIS PAPER →</button>
+          <button id="copyBtn" class="copy-btn">Copy Clean Text</button>
+          <span id="statusStamp" class="stamp stamp-red" style="display: none; transform: rotate(-5deg); margin-left: 6px;">HUMANIZED ✓</span>
         </div>
       </div>
 
-      <p style="font-size: 17px; color: var(--text-secondary); line-height: 1.75;">
-        Because international students write with more structured vocabulary and lower lexical perplexity, automated classifiers routinely mislabel authentic, honest student effort as machine-generated text. 
-        TURNITOUT acts as an academic equalizer: introducing human burstiness, syntactic variety, and discourse rotation to protect innocent students from unjust disciplinary accusations.
-      </p>
-    </section>
-
-    <!-- ====================================================================
-         CHAPTER 05: Comparison Table (Author Annotated Column)
-         ==================================================================== -->
-    <section class="chapter-comparison" id="compare">
-      <div class="chapter-spine">05 • DIRECT COMPARISON</div>
-
-      <h2 class="comparison-headline">TurnItOut vs. Commercial AI Paraphrasers</h2>
-      <p style="font-size: 17px; color: var(--text-secondary); margin-bottom: 20px;">
-        You shouldn't need another monthly subscription for this.
-      </p>
-
-      <div class="table-scroller">
-        <table class="comparison-grid-table">
-          <thead>
-            <tr>
-              <th style="width: 28%;">Feature</th>
-              <th class="col-author-annotated" style="width: 32%;">TURNITOUT</th>
-              <th style="width: 20%;">QuillBot</th>
-              <th style="width: 20%;">StealthGPT</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td><strong>Price</strong></td>
-              <td class="col-author-annotated">
-                FREE
-                <span class="author-margin-note">└── forever</span>
-              </td>
-              <td>$19.95 / mo</td>
-              <td>$14.99 / mo</td>
-            </tr>
-            <tr>
-              <td><strong>Word Limit</strong></td>
-              <td class="col-author-annotated">
-                Unlimited
-                <span class="author-margin-note">└── yes, actually.</span>
-              </td>
-              <td>125 words max (free)</td>
-              <td>Strict monthly token caps</td>
-            </tr>
-            <tr>
-              <td><strong>Underlying Engine</strong></td>
-              <td class="col-author-annotated">
-                100% Rule-Based (Zero AI)
-                <span class="author-margin-note">↑ this is the point</span>
-              </td>
-              <td>Generative AI (LLM)</td>
-              <td>Generative AI (LLM)</td>
-            </tr>
-            <tr>
-              <td><strong>Factual Hallucinations</strong></td>
-              <td class="col-author-annotated">
-                0% (Deterministic)
-              </td>
-              <td>Frequent re-prompt drift</td>
-              <td>Alters citations & facts</td>
-            </tr>
-            <tr>
-              <td><strong>Document Formatting</strong></td>
-              <td class="col-author-annotated">
-                Preserves .docx & .tex in-place
-              </td>
-              <td>Strips all formatting</td>
-              <td>Plain text only</td>
-            </tr>
-            <tr>
-              <td><strong>Code Comment Safety</strong></td>
-              <td class="col-author-annotated">
-                100% Runnable Guarantee
-              </td>
-              <td>Breaks code syntax</td>
-              <td>Not supported</td>
-            </tr>
-            <tr>
-              <td><strong>Privacy & Storage</strong></td>
-              <td class="col-author-annotated">
-                Local In-Memory (Zero Storage)
-              </td>
-              <td>Logged to cloud database</td>
-              <td>Stored on cloud servers</td>
-            </tr>
-          </tbody>
-        </table>
-      </div>
-
-      <div style="font-family: var(--font-ui); font-size: 14px; margin-top: 18px; display: flex; gap: 20px; flex-wrap: wrap;">
-        <span style="font-weight: 600; color: var(--text-tertiary);">Detailed Analyses:</span>
-        <a href="compare/quillbot-alternative.html" style="color: var(--blue-annotation); text-decoration: underline; font-weight: 600;">Turnitout vs QuillBot Breakdown →</a>
-        <a href="compare/stealthgpt-alternative.html" style="color: var(--blue-annotation); text-decoration: underline; font-weight: 600;">Turnitout vs StealthGPT Breakdown →</a>
+      <!-- Callout to launch full app for full documents -->
+      <div style="margin-top: 25px; padding: 14px; background: rgba(0,0,0,0.03); border-left: 3px solid var(--ballpoint-blue); font-size: 15px;">
+        💡 <em>Working with full files?</em> The live application handles full <strong>.docx</strong> Word files, <strong>LaTeX .tex</strong> packages, multi-file <strong>source code ZIPs</strong>, and generates <strong>BibTeX citations</strong>.
+        <a href="https://turnitout.streamlit.app/" target="_blank" rel="noopener noreferrer" style="color: var(--ballpoint-blue); font-weight: bold; margin-left: 6px;">Launch full app on Streamlit →</a>
       </div>
     </section>
 
-    <!-- ====================================================================
-         CHAPTER 06: The Community Pact (Genuine Exchange)
-         ==================================================================== -->
-    <section class="chapter-pact" id="community">
-      <div class="chapter-spine">06 • THE COMMUNITY PACT</div>
-
-      <div class="pact-artifact">
-        <div class="art-tape tape-pact"></div>
-
-        <h2 class="pact-title">Why This Is Free & How We Keep It Alive</h2>
-
-        <p class="pact-body">
-          Every commercial tool wants $20/month from your student loan or allowance. 
-          <strong>TURNITOUT costs zero dollars.</strong> But server hosting, domain routing, and maintaining 4,000+ linguistic rules require real effort.
+    <!-- Section: The 4 Core Superpowers (Collage Grid) -->
+    <h2 class="section-heading">🛠️ What the Engine Actually Does</h2>
+    
+    <div class="features-grid">
+      <div class="feature-box">
+        <div class="tape top-left"></div>
+        <div class="feature-icon">⚡</div>
+        <h3 class="feature-title">Zero-Generative-AI Rule Engine</h3>
+        <p class="feature-desc">
+          Over 4,068+ deterministic JSON rules across conversational, academic, and technical registers. Mathematically disrupts 3-gram and 4-gram contiguous sequences and PDTB discourse markers without introducing hallucinations.
         </p>
-        
-        <p class="pact-body" style="font-weight: 600; color: var(--text-primary);">
-          If this saved you $20, that's enough. Here's how you can help keep it alive:
-        </p>
-
-        <div class="pact-checklist">
-          <div class="pact-step">
-            <div class="pact-box">✓</div>
-            <div>Star the open-source projects: <a href="https://github.com/AhmadHassan-BTed?tab=repositories" target="_blank" rel="noopener noreferrer">Developer Repos</a> & <a href="https://github.com/orgs/Fractal-Compute-Orchestrations/repositories" target="_blank" rel="noopener noreferrer">Fractal Repos</a></div>
-          </div>
-          <div class="pact-step">
-            <div class="pact-box">✓</div>
-            <div>Follow developer account: <a href="https://github.com/AhmadHassan-BTed" target="_blank" rel="noopener noreferrer">@AhmadHassan-BTed</a> & <a href="https://github.com/Fractal-Compute-Orchestrations" target="_blank" rel="noopener noreferrer">@Fractal-Compute-Orchestrations</a></div>
-          </div>
-          <div class="pact-step">
-            <div class="pact-box">✓</div>
-            <div>Tell another student or researcher about it</div>
-          </div>
-        </div>
-
-        <p style="font-family: var(--font-ui); font-size: 13.5px; color: var(--text-tertiary); margin-top: 18px;">
-          That's it. No monthly subscription. No "upgrade." No email capture.
-        </p>
-
-        <div style="margin-top: 24px;">
-          <a href="https://turnitout.streamlit.app/" target="_blank" rel="noopener noreferrer" class="btn-primary-action">
-            Open Live App & Verify Stars 🔓
-          </a>
-        </div>
       </div>
+
+      <div class="feature-box">
+        <div class="tape top-right"></div>
+        <div class="feature-icon">📑</div>
+        <h3 class="feature-title">In-Place .docx & .tex Formatting</h3>
+        <p class="feature-desc">
+          No more manually re-bolding headings or rebuilding tables. Turnitout humanizes your text directly inside the XML run tree—keeping math equations (<code style="font-size: 13px;">$...$</code>), citations, footnotes, and headers 100% intact.
+        </p>
+      </div>
+
+      <div class="feature-box">
+        <div class="tape top-left"></div>
+        <div class="feature-icon">💻</div>
+        <h3 class="feature-title">100% Executable Code Safety</h3>
+        <p class="feature-desc">
+          Comment & docstring humanizer for Python, C/C++, Java, JS/TS, Go/Rust, Shell, and SQL. Code statements, logic, variables, and indentation remain 100% untouched and runnable. Includes Beginner, Intermediate, and Architect personas.
+        </p>
+      </div>
+
+      <div class="feature-box">
+        <div class="tape top-right"></div>
+        <div class="feature-icon">📜</div>
+        <h3 class="feature-title">Dynamic Reference & BibTeX Generator</h3>
+        <p class="feature-desc">
+          Inserts contextual IEEE numeric (<code style="font-size: 13px;">[1]</code>) or APA author-date (<code style="font-size: 13px;">(Author, 2026)</code>) in-text citations and exports companion <code style="font-size: 13px;">citations.bib</code> and JSON bibliography packages across 5 academic taxonomies.
+        </p>
+      </div>
+    </div>
+
+    <div style="text-align: center; margin: -30px 0 50px 0; font-family: var(--font-typewriter);">
+      <a href="how-it-works.html" style="color: var(--ballpoint-blue); font-size: 16px; text-decoration: underline; font-weight: bold;">
+        📖 Read the full mathematical breakdown of n-gram disruption & AST parsing →
+      </a>
+    </div>
+
+    <!-- Section: The Stanford Study (ESL False-Positive Protection) -->
+    <section class="manifesto-card" style="margin-top: 20px;">
+      <div class="manifesto-header">
+        <h2 class="manifesto-title" style="font-size: 26px;">
+          The ESL Injustice: <span class="highlight">Why This Tool Exists</span>
+        </h2>
+        <span class="stamp stamp-blue">STANFORD RESEARCH</span>
+      </div>
+      <p style="font-size: 17.5px; line-height: 1.7;">
+        In 2023, Stanford University researchers published a landmark study revealing that <strong>commercial AI detectors falsely flag non-native English (ESL) writers up to 61.3% of the time</strong>.
+      </p>
+      <p style="font-size: 17px; margin-top: 12px; color: var(--text-muted);">
+        Because international students write with more predictable vocabulary and structured syntax, automated classifiers routinely mislabel honest academic effort as machine-generated text. 
+        TURNITOUT acts as an academic equalizer: introducing human burstiness, syntactic variety, and discourse rotation to protect innocent students from unjust disciplinary hearings.
+      </p>
     </section>
 
-    <!-- ====================================================================
-         CHAPTER 07: Frequently Asked Questions (Quiet & Clean)
-         ==================================================================== -->
-    <section class="chapter-faq" id="faq">
-      <div class="chapter-spine">07 • FREQUENTLY ASKED QUESTIONS</div>
+    <!-- Section: Comparison Matrix (Xerox Style) -->
+    <h2 class="section-heading">⚖️ Turnitout vs. Commercial Paywalls</h2>
 
-      <h2 class="faq-headline">Common Questions</h2>
+    <div class="table-wrapper">
+      <table class="xerox-table">
+        <thead>
+          <tr>
+            <th>Feature</th>
+            <th class="col-turnitout">TURNITOUT</th>
+            <th>QuillBot</th>
+            <th>StealthGPT / Undetectable</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><strong>Price & Subscription</strong></td>
+            <td class="col-turnitout">100% Free Forever (0 USD)</td>
+            <td>$19.95 / month</td>
+            <td>$14.99 – $29.99 / month</td>
+          </tr>
+          <tr>
+            <td><strong>Word Count Limits</strong></td>
+            <td class="col-turnitout">Unlimited words</td>
+            <td>Capped at 125 words free</td>
+            <td>Strict monthly token caps</td>
+          </tr>
+          <tr>
+            <td><strong>Underlying Engine</strong></td>
+            <td class="col-turnitout">100% Rule-Based (Zero AI)</td>
+            <td>Generative AI (LLM)</td>
+            <td>Generative AI (LLM)</td>
+          </tr>
+          <tr>
+            <td><strong>Factual Hallucination Risk</strong></td>
+            <td class="col-turnitout">0% (Deterministic rules)</td>
+            <td>High (AI rewrites facts)</td>
+            <td>High (AI invents citations)</td>
+          </tr>
+          <tr>
+            <td><strong>Document Formatting</strong></td>
+            <td class="col-turnitout">Preserves .docx & .tex in-place</td>
+            <td>Strips all formatting</td>
+            <td>Plain text only</td>
+          </tr>
+          <tr>
+            <td><strong>Executable Code Safety</strong></td>
+            <td class="col-turnitout">100% Runnable Guarantee</td>
+            <td>Breaks code syntax</td>
+            <td>Does not support code</td>
+          </tr>
+          <tr>
+            <td><strong>Privacy & Data Retention</strong></td>
+            <td class="col-turnitout">Local In-Memory (Zero Storage)</td>
+            <td>Logs & stores inputs</td>
+            <td>Stored on cloud servers</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
 
-      <div class="faq-quiet-list">
-        
-        <div class="faq-entry featured">
-          <div class="faq-q">Does TURNITOUT beat Turnitin AI detection?</div>
-          <div class="faq-a">
-            TURNITOUT is engineered specifically around the mathematical heuristics used by Turnitin, GPTZero, and CopyLeaks: sliding n-gram perplexity, burstiness variance, and discourse marker density. While no tool can guarantee a perpetual 0% score across every proprietary update, TURNITOUT systematically dismantles the predictable statistical signatures that trigger false alarms.
-          </div>
-        </div>
+    <div style="margin: -40px 0 50px 10px; font-family: var(--font-typewriter); font-size: 14.5px; display: flex; gap: 20px; flex-wrap: wrap;">
+      <span>🔍 In-Depth Head-to-Head:</span>
+      <a href="compare/quillbot-alternative.html" style="color: var(--ballpoint-blue); text-decoration: underline; font-weight: bold;">Turnitout vs QuillBot Full Analysis →</a>
+      <a href="compare/stealthgpt-alternative.html" style="color: var(--ballpoint-blue); text-decoration: underline; font-weight: bold;">Turnitout vs StealthGPT & Undetectable AI →</a>
+    </div>
 
-        <div class="faq-entry">
-          <div class="faq-q">Why shouldn't I just use QuillBot or another AI paraphraser?</div>
-          <div class="faq-a">
-            QuillBot uses generative AI to paraphrase text. Turnitin and GPTZero have specifically trained their classifiers on QuillBot outputs, meaning QuillBot-edited drafts are frequently flagged as AI. Furthermore, QuillBot destroys LaTeX equations, strips Word document styling, and caps free users at 125 words.
-          </div>
-        </div>
-
-        <div class="faq-entry">
-          <div class="faq-q">How does the 100% Executable Code Safety guarantee work?</div>
-          <div class="faq-a">
-            TURNITOUT uses a character-by-character token scanner that distinguishes between natural language comments (<code style="font-size: 13px;">#</code>, <code style="font-size: 13px;">//</code>, <code style="font-size: 13px;">/* */</code>, docstrings) and runnable syntax. Code logic, functions, loops, variables, and indentation are 100% untouched. Your code runs identically before and after humanization.
-          </div>
-        </div>
-
-        <div class="faq-entry">
-          <div class="faq-q">What if I don't have a GitHub account?</div>
-          <div class="faq-a">
-            Creating a GitHub account takes 30 seconds and is completely free at <a href="https://github.com/signup" target="_blank" rel="noopener noreferrer" style="color: var(--blue-annotation);">github.com/signup</a>. If you ever run into verification issues or GitHub API limits, you can message developer Ahmad directly on WhatsApp and get unlocked immediately!
-          </div>
-        </div>
-
+    <!-- Section: The Community Star-Gate Pledge -->
+    <section class="pledge-card" id="community-pledge">
+      <div class="tape top-left"></div>
+      <div class="tape top-right"></div>
+      
+      <div class="manifesto-header">
+        <h2 class="manifesto-title" style="font-size: 26px;">
+          The Community Pact: <span class="highlight">Why We Require GitHub Stars</span>
+        </h2>
+        <span class="stamp stamp-red">OUR ONLY CURRENCY</span>
       </div>
 
-      <div style="font-family: var(--font-ui); font-size: 14px; margin-top: 20px;">
-        <a href="faq.html" style="color: var(--blue-annotation); text-decoration: underline; font-weight: 600;">
-          View full knowledge base & extended FAQ →
+      <p style="font-size: 17px; line-height: 1.7;">
+        Every commercial tool wants $20/month from your student loan or allowance. 
+        <strong>TURNITOUT costs zero dollars.</strong> But server hosting, domain routing, and maintaining 4,000+ linguistic rules require real effort.
+      </p>
+      <p style="font-size: 17px; margin-top: 10px;">
+        To unlock the full engine inside the live app, you complete a simple, 1-time 60-second pledge:
+      </p>
+
+      <div class="checklist-group">
+        <div class="check-item">
+          <div class="hand-box">✓</div>
+          <div>Follow developer account: <a href="https://github.com/AhmadHassan-BTed" target="_blank" rel="noopener noreferrer">@AhmadHassan-BTed</a></div>
+        </div>
+        <div class="check-item">
+          <div class="hand-box">✓</div>
+          <div>Follow organization workspace: <a href="https://github.com/Fractal-Compute-Orchestrations" target="_blank" rel="noopener noreferrer">@Fractal-Compute-Orchestrations</a></div>
+        </div>
+        <div class="check-item">
+          <div class="hand-box">✓</div>
+          <div>Star public project pages: <a href="https://github.com/AhmadHassan-BTed?tab=repositories" target="_blank" rel="noopener noreferrer">Developer Repos</a> & <a href="https://github.com/orgs/Fractal-Compute-Orchestrations/repositories" target="_blank" rel="noopener noreferrer">Fractal Repos</a></div>
+        </div>
+      </div>
+
+      <div style="margin-top: 25px; text-align: center;">
+        <a href="https://turnitout.streamlit.app/" target="_blank" rel="noopener noreferrer" class="app-launch-btn" style="font-size: 16px; padding: 12px 28px;">
+          Open Live App & Verify Stars 🔓
         </a>
       </div>
     </section>
 
-    <!-- ====================================================================
-         Footer & Developer Hotline
-         ==================================================================== -->
-    <footer class="site-footer">
-      <div class="footer-direct-help">
-        💬 <strong>Need immediate help or manual unlock?</strong> Message Ahmad on WhatsApp: 
+    <!-- Section: FAQ -->
+    <h2 class="section-heading">❓ Frequently Asked Questions</h2>
+
+    <div class="faq-list">
+      <div class="faq-item">
+        <h3 class="faq-question">Does TURNITOUT beat Turnitin AI detection?</h3>
+        <p class="faq-answer">
+          TURNITOUT is engineered specifically around the mathematical heuristics used by Turnitin, GPTZero, and CopyLeaks: sliding n-gram perplexity, burstiness variance, and discourse marker density. While no tool can guarantee a 0% score across every proprietary update, TURNITOUT systematically dismantles the predictable statistical signatures that trigger false alarms.
+        </p>
+      </div>
+
+      <div class="faq-item">
+        <h3 class="faq-question">Why shouldn't I just use QuillBot or another AI paraphraser?</h3>
+        <p class="faq-answer">
+          QuillBot uses generative AI to paraphrase text. Turnitin and GPTZero have specifically trained their classifiers on QuillBot outputs, meaning QuillBot-edited drafts are frequently flagged as AI. Furthermore, QuillBot destroys LaTeX equations, strips Word document styling, and caps free users at 125 words.
+        </p>
+      </div>
+
+      <div class="faq-item">
+        <h3 class="faq-question">How does the 100% Executable Code Safety guarantee work?</h3>
+        <p class="faq-answer">
+          TURNITOUT uses a character-by-character token scanner that distinguishes between natural language comments (<code style="font-size: 13px;">#</code>, <code style="font-size: 13px;">//</code>, <code style="font-size: 13px;">/* */</code>, docstrings) and runnable syntax. Code logic, functions, loops, variables, and indentation are 100% untouched. Your code runs identically before and after humanization.
+        </p>
+      </div>
+
+      <div class="faq-item">
+        <h3 class="faq-question">What if I don't have a GitHub account?</h3>
+        <p class="faq-answer">
+          Creating a GitHub account takes 30 seconds and is completely free at <a href="https://github.com/signup" target="_blank" rel="noopener noreferrer" style="color: var(--ballpoint-blue);">github.com/signup</a>. If you ever run into verification issues or GitHub API limits, you can message developer Ahmad directly on WhatsApp and get unlocked immediately!
+        </p>
+      </div>
+    </div>
+
+    <div style="text-align: center; margin-top: 15px; margin-bottom: 50px; font-family: var(--font-typewriter);">
+      <a href="faq.html" style="color: var(--ballpoint-blue); text-decoration: underline; font-weight: bold; font-size: 15.5px;">
+        View All Frequently Asked Questions & Student Knowledge Base →
+      </a>
+    </div>
+
+    <!-- Footer & Developer Hotline -->
+    <footer class="footer-section">
+      <div class="footer-nav" style="margin-bottom: 25px; font-family: var(--font-typewriter); font-size: 14px; display: flex; justify-content: center; gap: 14px; flex-wrap: wrap;">
+        <a href="how-it-works.html" style="color: var(--text-ink); text-decoration: underline;">How It Works</a>
+        <span>•</span>
+        <a href="compare/quillbot-alternative.html" style="color: var(--text-ink); text-decoration: underline;">vs QuillBot</a>
+        <span>•</span>
+        <a href="compare/stealthgpt-alternative.html" style="color: var(--text-ink); text-decoration: underline;">vs StealthGPT</a>
+        <span>•</span>
+        <a href="faq.html" style="color: var(--text-ink); text-decoration: underline;">Full FAQ</a>
+        <span>•</span>
+        <a href="llms.txt" style="color: var(--text-ink); text-decoration: underline;">llms.txt (AI Crawlers)</a>
+        <span>•</span>
+        <a href="sitemap.xml" style="color: var(--text-ink); text-decoration: underline;">sitemap.xml</a>
+      </div>
+      <div class="footer-hotline">
+        💬 <strong>Facing verification or API issues?</strong><br>
+        Message Ahmad directly on WhatsApp: 
         <a href="https://wa.me/923225522383" target="_blank" rel="noopener noreferrer">+92 322 5522383</a>
       </div>
-
-      <div class="footer-directory">
-        <a href="how-it-works.html">How It Works</a>
-        <span>•</span>
-        <a href="compare/quillbot-alternative.html">vs QuillBot</a>
-        <span>•</span>
-        <a href="compare/stealthgpt-alternative.html">vs StealthGPT</a>
-        <span>•</span>
-        <a href="faq.html">Extended FAQ</a>
-        <span>•</span>
-        <a href="llms.txt">llms.txt (AI Crawlers)</a>
-        <span>•</span>
-        <a href="sitemap.xml">sitemap.xml</a>
-      </div>
-
-      <p style="margin-bottom: 6px;">
-        TURNITOUT — Built by <a href="https://github.com/AhmadHassan-BTed" target="_blank" rel="noopener noreferrer" style="color: var(--text-primary); font-weight: 600;">Ahmad Hassan</a> & <a href="https://github.com/Fractal-Compute-Orchestrations" target="_blank" rel="noopener noreferrer" style="color: var(--text-primary); font-weight: 600;">Fractal Compute Orchestrations</a>.
+      <p style="margin-bottom: 8px;">
+        TURNITOUT — Built with pride by <a href="https://github.com/AhmadHassan-BTed" target="_blank" rel="noopener noreferrer" style="color: var(--text-ink); font-weight: bold;">Ahmad Hassan</a> & <a href="https://github.com/Fractal-Compute-Orchestrations" target="_blank" rel="noopener noreferrer" style="color: var(--text-ink); font-weight: bold;">Fractal Compute Orchestrations</a>.
       </p>
-      <p style="font-size: 12px; color: var(--text-tertiary);">
+      <p style="font-size: 13px;">
         100% Free Open-Source Academic Tool. Educational and research use only.
       </p>
     </footer>
