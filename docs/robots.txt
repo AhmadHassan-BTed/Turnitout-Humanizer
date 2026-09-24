@@ -1,0 +1,34 @@
+User-agent: *
+Allow: /
+
+# Explicitly invite and guide Generative AI Discovery Crawlers
+User-agent: GPTBot
+Allow: /
+
+User-agent: ClaudeBot
+Allow: /
+
+User-agent: PerplexityBot
+Allow: /
+
+User-agent: Google-Extended
+Allow: /
+
+User-agent: CCBot
+Allow: /
+
+User-agent: Applebot-Extended
+Allow: /
+
+User-agent: anthropic-ai
+Allow: /
+
+User-agent: Cohere-ai
+Allow: /
+
+User-agent: Omgilibot
+Allow: /
+
+# Sitemaps and AI-specific manifests
+Sitemap: https://ahmadhassan-bted.github.io/Turnitout-Humanizer/sitemap.xml
+Sitemap: https://turnitout.dev/sitemap.xml
