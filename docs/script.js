@@ -1,6 +1,6 @@
 /**
  * TURNITOUT: Interactive Xerox Notebook & AI Pattern Evader Simulator
- * Real-time pattern disruption, handwritten margin markup, and theme toggling.
+ * Real-time pattern disruption, handwritten margin markup, state machine, and theme toggling.
  */
 
 document.addEventListener("DOMContentLoaded", () => {
@@ -37,117 +37,176 @@ document.addEventListener("DOMContentLoaded", () => {
   const sampleAcademicBtn = document.getElementById("sampleAcademicBtn");
   const sampleEssayBtn = document.getElementById("sampleEssayBtn");
   const statusStamp = document.getElementById("statusStamp");
+  const tutorNote = document.getElementById("tutorNote");
 
-  // Load sample texts
-  if (sampleAcademicBtn && paperSheet) {
-    sampleAcademicBtn.addEventListener("click", () => {
-      resetNotebook(SAMPLE_ACADEMIC, 96);
-    });
-  }
+  // State Machine: "RAW" -> "MARKED" -> "CLEAN"
+  let currentSimState = "RAW";
+  let cachedRawText = paperSheet ? paperSheet.textContent.trim() : SAMPLE_ACADEMIC;
 
-  if (sampleEssayBtn && paperSheet) {
-    sampleEssayBtn.addEventListener("click", () => {
-      resetNotebook(SAMPLE_ESSAY, 98);
-    });
-  }
+  // AI Cliché dictionary for live demo replacement
+  const replacements = [
+    { pattern: /\bIn conclusion,?\b/gi, replace: "To wrap up," },
+    { pattern: /\bit is important to delve into\b/gi, replace: "we look closely at" },
+    { pattern: /\bdelve into\b/gi, replace: "explore" },
+    { pattern: /\bcomprehensive tapestry\b/gi, replace: "broad range" },
+    { pattern: /\bplays a pivotal role in illustrating\b/gi, replace: "clearly shows" },
+    { pattern: /\bplays a pivotal role\b/gi, replace: "is essential" },
+    { pattern: /\bstands as a testament to\b/gi, replace: "reflects" },
+    { pattern: /\bFurthermore, the interplay between\b/gi, replace: "Also, balancing" },
+    { pattern: /\bFurthermore,?\b/gi, replace: "Also," },
+    { pattern: /\bprovides a robust framework\b/gi, replace: "gives a solid basis" },
+    { pattern: /\bMoreover, in today's fast-paced digital era,?\b/gi, replace: "Today," },
+    { pattern: /\bMoreover,?\b/gi, replace: "In addition," },
+    { pattern: /\bserves as a critical milestone\b/gi, replace: "is a major turning point" },
+    { pattern: /\bcannot be overlooked\b/gi, replace: "we must address" },
+    { pattern: /\bdelve deep into the multifaceted dimensions of\b/gi, replace: "examine the details of" },
+    { pattern: /\bUltimately, this paradigm shift\b/gi, replace: "In the end, this shift" }
+  ];
 
-  function resetNotebook(text, initialScore) {
+  function resetToRaw(text, initialScore = 96) {
+    cachedRawText = text;
+    currentSimState = "RAW";
     paperSheet.textContent = text;
     meterFill.style.width = `${initialScore}%`;
     meterFill.style.backgroundColor = "var(--red-pen)";
     meterScore.textContent = `${initialScore}%`;
     meterScore.style.color = "var(--red-pen)";
-    if (statusStamp) {
-      statusStamp.style.display = "none";
-    }
+    
+    if (statusStamp) statusStamp.style.display = "none";
+    if (tutorNote) tutorNote.style.display = "none";
+    if (humanizeBtn) humanizeBtn.textContent = "HUMANIZE THIS PAPER →";
   }
 
-  // AI Cliché dictionary for live demo replacement
-  const replacements = [
-    { pattern: /In conclusion,?/gi, replace: "To wrap up," },
-    { pattern: /it is important to delve into/gi, replace: "we look closely at" },
-    { pattern: /comprehensive tapestry/gi, replace: "broad range" },
-    { pattern: /plays a pivotal role in illustrating/gi, replace: "clearly shows" },
-    { pattern: /stands as a testament to/gi, replace: "reflects" },
-    { pattern: /Furthermore, the interplay between/gi, replace: "Also, balancing" },
-    { pattern: /provides a robust framework/gi, replace: "gives a solid basis" },
-    { pattern: /Moreover, in today's fast-paced digital era,/gi, replace: "Today," },
-    { pattern: /serves as a critical milestone/gi, replace: "is a major turning point" },
-    { pattern: /cannot be overlooked/gi, replace: "we must address" },
-    { pattern: /delve deep into the multifaceted dimensions of/gi, replace: "examine the details of" },
-    { pattern: /Ultimately, this paradigm shift/gi, replace: "In the end, this shift" }
-  ];
-
-  if (humanizeBtn && paperSheet) {
-    humanizeBtn.addEventListener("click", () => {
-      let rawText = paperSheet.textContent.trim();
-      if (!rawText) {
-        alert("Please paste some text or click one of the sample buttons first!");
-        return;
-      }
-
-      humanizeBtn.disabled = true;
-      humanizeBtn.textContent = "Marking Up Patterns...";
-
-      // Animate: mark up text with strikethroughs & handwritten margins
-      let markedHtml = rawText;
-      let matchFound = false;
-
-      replacements.forEach(item => {
-        if (item.pattern.test(markedHtml)) {
-          matchFound = true;
-          markedHtml = markedHtml.replace(item.pattern, (match) => {
-            return `<span class="ai-crossed">${match}</span><span class="human-replacement">${item.replace}</span>`;
-          });
-        }
-      });
-
-      if (!matchFound) {
-        // Fallback generic split & rewrite for custom input
-        const sentences = rawText.split(/(?<=[.?!])\s+/);
-        markedHtml = sentences.map((s, idx) => {
-          if (idx % 2 === 0 && s.length > 25) {
-            return `<span class="ai-crossed">${s.substring(0, Math.floor(s.length / 2))}</span> <span class="human-replacement">rephrased authentically</span> ${s.substring(Math.floor(s.length / 2))}`;
-          }
-          return s;
-        }).join(" ");
-      }
-
-      paperSheet.innerHTML = markedHtml;
-
-      // Drop AI detection score meter
-      setTimeout(() => {
-        meterFill.style.width = "4%";
-        meterFill.style.backgroundColor = "#2E7D32"; // calm green
-        meterScore.textContent = "4%";
-        meterScore.style.color = "#2E7D32";
-
-        // Display "HUMANIZED" Stamp with physical slam effect
-        if (statusStamp) {
-          statusStamp.style.display = "inline-block";
-          statusStamp.classList.add("stamp-slam");
-        }
-
-        humanizeBtn.disabled = false;
-        humanizeBtn.textContent = "HUMANIZE THIS PAPER →";
-      }, 450);
+  // Load sample texts
+  if (sampleAcademicBtn && paperSheet) {
+    sampleAcademicBtn.addEventListener("click", () => {
+      resetToRaw(SAMPLE_ACADEMIC, 96);
     });
   }
 
-  // Copy to clipboard
+  if (sampleEssayBtn && paperSheet) {
+    sampleEssayBtn.addEventListener("click", () => {
+      resetToRaw(SAMPLE_ESSAY, 98);
+    });
+  }
+
+  // Detect user typing / paste in the sheet
+  if (paperSheet) {
+    paperSheet.addEventListener("input", () => {
+      if (currentSimState !== "RAW") {
+        currentSimState = "RAW";
+        if (humanizeBtn) humanizeBtn.textContent = "HUMANIZE THIS PAPER →";
+        if (statusStamp) statusStamp.style.display = "none";
+        if (tutorNote) tutorNote.style.display = "none";
+        meterFill.style.width = "94%";
+        meterFill.style.backgroundColor = "var(--red-pen)";
+        meterScore.textContent = "94%";
+        meterScore.style.color = "var(--red-pen)";
+      }
+      cachedRawText = paperSheet.textContent.trim();
+    });
+  }
+
+  if (humanizeBtn && paperSheet) {
+    humanizeBtn.addEventListener("click", () => {
+      if (currentSimState === "RAW") {
+        // --- TRANSITION: RAW -> MARKED (Show Tutor Strikethrough & Handwriting) ---
+        let rawText = cachedRawText || paperSheet.textContent.trim();
+        if (!rawText) {
+          alert("Please paste some text or select a sample first!");
+          return;
+        }
+
+        humanizeBtn.disabled = true;
+        humanizeBtn.textContent = "Marking Up Patterns...";
+
+        let markedHtml = rawText;
+        let matchFound = false;
+
+        replacements.forEach(item => {
+          if (item.pattern.test(markedHtml)) {
+            matchFound = true;
+            markedHtml = markedHtml.replace(item.pattern, (match) => {
+              return `<span class="ai-crossed">${match}</span><span class="human-replacement">${item.replace}</span>`;
+            });
+          }
+        });
+
+        if (!matchFound) {
+          const sentences = rawText.split(/(?<=[.?!])\s+/);
+          markedHtml = sentences.map((s, idx) => {
+            if (idx % 2 === 0 && s.length > 25) {
+              return `<span class="ai-crossed">${s.substring(0, Math.floor(s.length / 2))}</span> <span class="human-replacement">rephrased authentically</span> ${s.substring(Math.floor(s.length / 2))}`;
+            }
+            return s;
+          }).join(" ");
+        }
+
+        paperSheet.innerHTML = markedHtml;
+
+        setTimeout(() => {
+          meterFill.style.width = "4%";
+          meterFill.style.backgroundColor = "#2E7D32"; // Green
+          meterScore.textContent = "4%";
+          meterScore.style.color = "#2E7D32";
+
+          if (statusStamp) {
+            statusStamp.style.display = "inline-block";
+          }
+          if (tutorNote) {
+            tutorNote.style.display = "block";
+          }
+
+          humanizeBtn.disabled = false;
+          humanizeBtn.textContent = "RESOLVE TO CLEAN TEXT ✓";
+          currentSimState = "MARKED";
+        }, 400);
+
+      } else if (currentSimState === "MARKED") {
+        // --- TRANSITION: MARKED -> CLEAN (Clean Final Paper Without Strikethroughs) ---
+        let cleanText = cachedRawText;
+        replacements.forEach(item => {
+          cleanText = cleanText.replace(item.pattern, item.replace);
+        });
+
+        paperSheet.textContent = cleanText;
+        humanizeBtn.textContent = "RESET TO RAW AI SAMPLE 🔄";
+        currentSimState = "CLEAN";
+
+      } else if (currentSimState === "CLEAN") {
+        // --- TRANSITION: CLEAN -> RAW (Cycle back for another demo) ---
+        resetToRaw(cachedRawText, 96);
+      }
+    });
+  }
+
+  // Copy Clean Text to Clipboard
   if (copyBtn && paperSheet) {
     copyBtn.addEventListener("click", () => {
-      // Extract text content excluding crossed-out text
-      const tempDiv = document.createElement("div");
-      tempDiv.innerHTML = paperSheet.innerHTML;
-      
-      const crossed = tempDiv.querySelectorAll(".ai-crossed");
-      crossed.forEach(el => el.remove());
+      let textToCopy = "";
+      if (currentSimState === "MARKED") {
+        // Extract text excluding the red crossed-out AI spans
+        const tempDiv = document.createElement("div");
+        tempDiv.innerHTML = paperSheet.innerHTML;
+        const crossed = tempDiv.querySelectorAll(".ai-crossed");
+        crossed.forEach(el => el.remove());
+        textToCopy = tempDiv.textContent.replace(/\s+/g, " ").trim();
+      } else if (currentSimState === "CLEAN") {
+        textToCopy = paperSheet.textContent.trim();
+      } else {
+        // If raw, humanize first before copying
+        let cleanText = cachedRawText || paperSheet.textContent.trim();
+        replacements.forEach(item => {
+          cleanText = cleanText.replace(item.pattern, item.replace);
+        });
+        textToCopy = cleanText;
+      }
 
-      const cleanText = tempDiv.textContent.replace(/\s+/g, " ").trim();
-      navigator.clipboard.writeText(cleanText).then(() => {
+      if (!textToCopy) return;
+
+      navigator.clipboard.writeText(textToCopy).then(() => {
         const originalText = copyBtn.textContent;
-        copyBtn.textContent = "Copied to Clipboard! ✓";
+        copyBtn.textContent = "Copied Clean Text! ✓";
         setTimeout(() => {
           copyBtn.textContent = originalText;
         }, 2000);
