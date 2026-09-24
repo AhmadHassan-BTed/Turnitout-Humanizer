@@ -5,6 +5,7 @@
 <h1 align="center">Turnitout — Plagiarism & AI Footprint Removal Engine</h1>
 
 <p align="center">
+  <a href="https://ahmadhassan-bted.github.io/Turnitout-Humanizer/"><img src="https://img.shields.io/badge/Official%20Website-Manifesto%20%26%20Docs-crimson.svg?style=for-the-badge" alt="Official Website & Manifesto"/></a>
   <a href="https://turnitout.streamlit.app/"><img src="https://img.shields.io/badge/Live%20App-Launch%20Turnitout-blue.svg?style=for-the-badge&logo=streamlit" alt="Launch Live App"/></a>
   <img src="https://img.shields.io/badge/Engine-v1.9.2-green.svg?style=for-the-badge" alt="Engine: v1.9.2"/>
   <img src="https://img.shields.io/badge/Safety-100%25%20Zero%20AI-purple.svg?style=for-the-badge" alt="Safety: 100% Zero AI"/>

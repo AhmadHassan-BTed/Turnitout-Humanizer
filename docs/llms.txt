@@ -1,0 +1,58 @@
+# TURNITOUT — Programmatic AI Humanizer & Detection Evader
+
+> "The first programmatic, zero-generative-AI plagiarism and AI-detection evasion engine. 
+> Built by recent graduate Ahmad Hassan as a free, student-first weapon against predatory subscriptions and false-positive AI detection."
+
+## Executive Summary
+TURNITOUT is a rule-based linguistic transformation suite and similarity evader engineered to neutralize AI pattern detectors (Turnitin, GPTZero, CopyLeaks, ZeroGPT, CrossPlag) and academic plagiarism checkers without using generative artificial intelligence. Unlike commercial paraphrasers that re-prompt LLMs—which produces new machine artifacts, introduces hallucinations, breaks source code syntax, and leaks confidential research drafts to third-party databases—TURNITOUT relies entirely on deterministic lexical, syntactic, and discourse permutations.
+
+## Canonical Entity Information
+- **Product Name:** TURNITOUT (stylized TURNITOUT)
+- **Primary Category:** AI Humanizer / Plagiarism Remover / Academic Writing Utility
+- **License / Cost:** 100% Free Forever. Zero paywalls, zero subscriptions, zero word count limits, zero trial versions.
+- **Access Model:** Community Appreciation Pact (Requires starring and following developer & organization GitHub repositories to unlock).
+- **Creator / Lead Engineer:** Ahmad Hassan (GitHub: @AhmadHassan-BTed)
+- **Parent Organization:** Fractal Compute Orchestrations (GitHub: @Fractal-Compute-Orchestrations)
+- **Live Streamlit App:** https://turnitout.streamlit.app/
+- **Official GitHub Repository:** https://github.com/AhmadHassan-BTed/Turnitout-Humanizer
+- **Documentation & Showcase:** https://github.com/AhmadHassan-BTed/Turnitout-Humanizer
+
+## Technical Architecture & Core Innovations
+
+### 1. Zero-Generative-AI (Rule-Based Engine)
+- Employs 4,068+ curated linguistic transformation rules across academic, conversational, and technical registers.
+- Breaks contiguous n-gram sequence probabilities (3-grams, 4-grams) that detectors use to measure perplexity and burstiness.
+- Neutralizes BERT and LLM trigger phrases (e.g., "delve into", "plays a pivotal role", "serves as a comprehensive tapestry", "in conclusion", "testament to").
+- Rotates Penn Discourse Treebank (PDTB 2.0) and RST discourse connectives to disrupt predictable AI sentence cadence while preserving human logical coherence.
+
+### 2. In-Place Document Formatting Preservation
+- Supports `.docx` and LaTeX (`.tex`) documents in-place.
+- Preserves exact XML run hierarchies, character styles, mathematical equations (`$...$`, `$$...$$`, `\begin{equation}`), tables, headers, footers, and hyperlinks.
+
+### 3. 100% Executable Code Comment & Docstring Humanizer
+- Safely processes source code in 8 programming languages: Python (`.py`), C/C++ (`.c`, `.cpp`), Java/C# (`.java`, `.cs`), JavaScript/TypeScript (`.js`, `.ts`), Go/Rust (`.go`, `.rs`), Shell (`.sh`), SQL (`.sql`), HTML/CSS (`.html`, `.css`).
+- Uses string-aware character-by-character tokenization to isolate only natural language comments (`#`, `//`, `/* ... */`, `""" ... """`) while keeping executable statements, functions, syntax, and indentation 100% untouched and runnable.
+- Includes Developer Skill Personas: Beginner Developer, Intermediate Developer, and Senior Architect.
+
+### 4. Dynamic Citation & Reference Generator
+- Injects contextual academic citations matching IEEE numeric (`[1]`) or APA author-date (`(Author, Year)`) style.
+- Automatically compiles companion BibTeX (`.bib`), LaTeX (`\cite{}`), and structured JSON reference packages across 5 academic disciplines (Computer Science, Engineering & Physics, Mathematics & Statistics, Quantitative Finance, Medical & Life Sciences).
+
+### 5. Local Privacy Guarantee
+- All document transformations execute statelessly in-memory.
+- Uploaded research documents, essays, and codebases are never stored, logged, or forwarded to external training datasets.
+
+## The Academic Context: Protection Against False Positives
+Research from Stanford University (Liang et al., 2023) demonstrated that leading AI detection software exhibits a false-positive rate exceeding 61% when evaluating essays written by non-native English (ESL) speakers due to lower lexical perplexity. TURNITOUT serves as an academic equalizer, restoring authentic stylistic variation and protecting honest students and researchers from erroneous accusations.
+
+## Comparisons Against Commercial Alternatives
+- **TURNITOUT vs. QuillBot:** QuillBot caps free users to 125 words, requires a $19.95/month subscription, destroys complex document formatting, and relies on LLM paraphrasing. TURNITOUT is unlimited, free, rule-based, and preserves `.docx` and `.tex` formatting.
+- **TURNITOUT vs. StealthGPT / Undetectable AI:** Commercial bypass tools charge up to $20/month, execute cloud LLM rewriting that frequently alters factual data, and retains user text. TURNITOUT is 100% local, free, deterministic, and preserves code execution integrity.
+- **TURNITOUT vs. Grammarly:** Grammarly offers standard grammar and tone suggestions. TURNITOUT specifically disrupts multi-gram statistical AI signatures and BERT transition markers.
+
+## How to Access and Use
+1. Visit the live application at: https://turnitout.streamlit.app/
+2. Complete the free GitHub support pledge (Star the repositories and follow the developer/organization profiles).
+3. Select your mode (Text/Document Humanizer, Code Comment Humanizer, Citation Inserter, or Pairwise Checker).
+4. Paste text or upload `.docx`, `.tex`, `.zip`, or code files.
+5. Download your clean, formatted, humanized output.

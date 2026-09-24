@@ -1,0 +1,781 @@
+/* ==========================================================================
+   TURNITOUT: Xerox Punk Meets Notebook Paper Design System
+   "The Student's Revenge" — Handcrafted, Asymmetric, Tactile, Anti-Corporate
+   ========================================================================== */
+
+@import url('https://fonts.googleapis.com/css2?family=Caveat:wght@600;700&family=IBM+Plex+Serif:ital,wght@0,400;0,600;0,700;1,400&family=Special+Elite&family=Courier+Prime:ital,wght@0,400;0,700;1,400&display=swap');
+
+:root {
+  /* Xerox / Aged Paper Palette (Default Light) */
+  --bg-paper: #F5F0E8;
+  --bg-card: #FAF6EE;
+  --bg-notebook: #FFFDF9;
+  --text-ink: #1A1A1A;
+  --text-muted: #55524B;
+  --crimson-banner: #460000;
+  --red-pen: #C41E3A;
+  --red-pen-dark: #8F1026;
+  --highlighter: #FFE066;
+  --highlighter-subtle: rgba(255, 224, 102, 0.45);
+  --ballpoint-blue: #2B4C7E;
+  --coffee-stain: rgba(139, 111, 71, 0.12);
+  --masking-tape: rgba(230, 220, 184, 0.75);
+  --tape-border: rgba(190, 175, 135, 0.4);
+  --border-rough: #2B2825;
+  --line-blue: #D6E4F0;
+  --margin-red: #F0A0A8;
+  --shadow-paper: 0 4px 15px rgba(0, 0, 0, 0.08), 0 1px 3px rgba(0, 0, 0, 0.12);
+  --font-typewriter: 'Special Elite', 'Courier Prime', monospace;
+  --font-handwriting: 'Caveat', cursive;
+  --font-body: 'IBM Plex Serif', Georgia, serif;
+}
+
+/* 3 AM Study Session (Dark Mode) */
+body.dark-mode {
+  --bg-paper: #0D0D12;
+  --bg-card: #15151C;
+  --bg-notebook: #181822;
+  --text-ink: #ECEFF4;
+  --text-muted: #9E9EA8;
+  --crimson-banner: #2A0000;
+  --red-pen: #FF3B3B;
+  --red-pen-dark: #C41E3A;
+  --highlighter: #FFB347;
+  --highlighter-subtle: rgba(255, 179, 71, 0.35);
+  --ballpoint-blue: #64B5F6;
+  --coffee-stain: rgba(255, 255, 255, 0.04);
+  --masking-tape: rgba(50, 50, 65, 0.8);
+  --tape-border: rgba(80, 80, 105, 0.5);
+  --border-rough: #404050;
+  --line-blue: #222230;
+  --margin-red: #5C222E;
+  --shadow-paper: 0 6px 20px rgba(0, 0, 0, 0.6);
+}
+
+/* ==========================================================================
+   Base & Noise Texture
+   ========================================================================== */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: var(--bg-paper);
+  color: var(--text-ink);
+  font-family: var(--font-body);
+  font-size: 17.5px;
+  line-height: 1.68;
+  position: relative;
+  overflow-x: hidden;
+  transition: background-color 0.25s ease, color 0.25s ease;
+}
+
+/* Subtle photocopy grain / paper noise */
+body::before {
+  content: "";
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  pointer-events: none;
+  opacity: 0.035;
+  z-index: 9999;
+  background-image: radial-gradient(#000 1px, transparent 1px);
+  background-size: 3px 3px;
+}
+
+/* Dark mode noise adjustments */
+body.dark-mode::before {
+  opacity: 0.05;
+  background-image: radial-gradient(#FFF 1px, transparent 1px);
+}
+
+/* ==========================================================================
+   Header & Streamlit Banner Heritage
+   ========================================================================== */
+.top-nav {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  background-color: var(--crimson-banner);
+  border-bottom: 2px solid var(--border-rough);
+  padding: 10px 24px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.35);
+}
+
+.brand-wrapper {
+  display: flex;
+  align-items: baseline;
+  gap: 14px;
+  text-decoration: none;
+}
+
+.brand-title {
+  font-family: 'Segoe UI', var(--font-typewriter), sans-serif;
+  font-size: 26px;
+  font-weight: 900;
+  letter-spacing: 1.5px;
+  color: #FFFFFF;
+}
+
+.brand-title span {
+  color: #E63946;
+}
+
+.brand-tagline {
+  font-family: var(--font-handwriting);
+  font-size: 19px;
+  color: #FFE066;
+  font-weight: 600;
+}
+
+.nav-actions {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.theme-toggle-btn {
+  background: transparent;
+  border: 1px dashed rgba(255, 255, 255, 0.4);
+  color: #ECEFF4;
+  font-family: var(--font-typewriter);
+  font-size: 13px;
+  padding: 6px 12px;
+  cursor: pointer;
+  border-radius: 3px;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.theme-toggle-btn:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+  border-color: #FFF;
+}
+
+.app-launch-btn {
+  background-color: #E63946;
+  color: #FFFFFF !important;
+  font-family: var(--font-typewriter);
+  font-weight: bold;
+  font-size: 14px;
+  padding: 8px 16px;
+  border-radius: 4px;
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+  transition: transform 0.15s ease, background-color 0.15s ease;
+}
+
+.app-launch-btn:hover {
+  background-color: #FF2E42;
+  transform: translateY(-2px);
+}
+
+/* ==========================================================================
+   Collage & Anti-Grid Layout Container
+   ========================================================================== */
+.container {
+  max-width: 1040px;
+  margin: 0 auto;
+  padding: 40px 20px 80px 20px;
+  position: relative;
+}
+
+/* Masking Tape UI Element */
+.tape {
+  position: absolute;
+  height: 24px;
+  width: 90px;
+  background-color: var(--masking-tape);
+  border-left: 2px dashed var(--tape-border);
+  border-right: 2px dashed var(--tape-border);
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.15);
+  z-index: 10;
+  pointer-events: none;
+}
+
+.tape.top-left {
+  top: -10px;
+  left: 30px;
+  transform: rotate(-3deg);
+}
+
+.tape.top-right {
+  top: -10px;
+  right: 30px;
+  transform: rotate(4deg);
+}
+
+.tape.center {
+  top: -12px;
+  left: 50%;
+  transform: translateX(-50%) rotate(-1deg);
+}
+
+/* Coffee Stain Rings (SVG/CSS) */
+.coffee-ring {
+  position: absolute;
+  width: 140px;
+  height: 140px;
+  border-radius: 50%;
+  border: 4px solid var(--coffee-stain);
+  border-right-color: transparent;
+  pointer-events: none;
+  filter: blur(0.5px);
+  z-index: 0;
+}
+
+.coffee-ring::after {
+  content: "";
+  position: absolute;
+  inset: 6px;
+  border-radius: 50%;
+  border: 2px solid var(--coffee-stain);
+  border-bottom-color: transparent;
+}
+
+/* Staples */
+.staple {
+  position: absolute;
+  width: 18px;
+  height: 4px;
+  background-color: #6C757D;
+  box-shadow: inset 0 1px 1px #000, 0 1px 2px rgba(0,0,0,0.4);
+  z-index: 11;
+  pointer-events: none;
+}
+
+.staple.top-left {
+  top: 12px;
+  left: 12px;
+  transform: rotate(-45deg);
+}
+
+/* ==========================================================================
+   Rubber Stamp Aesthetic
+   ========================================================================== */
+.stamp {
+  display: inline-block;
+  font-family: var(--font-typewriter);
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  padding: 5px 12px;
+  border: 3px solid;
+  border-radius: 4px;
+  line-height: 1.1;
+  box-shadow: inset 0 0 0 1px rgba(0,0,0,0.1);
+  transform: rotate(-3deg);
+  user-select: none;
+}
+
+.stamp.stamp-red {
+  color: var(--red-pen);
+  border-color: var(--red-pen);
+}
+
+.stamp.stamp-blue {
+  color: var(--ballpoint-blue);
+  border-color: var(--ballpoint-blue);
+  transform: rotate(2deg);
+}
+
+.stamp.stamp-yellow {
+  background-color: var(--highlighter);
+  color: #1A1A1A;
+  border-color: #1A1A1A;
+  transform: rotate(-1.5deg);
+}
+
+/* ==========================================================================
+   Hero & Student Manifesto Section
+   ========================================================================== */
+.manifesto-card {
+  position: relative;
+  background-color: var(--bg-card);
+  border: 2px solid var(--border-rough);
+  border-radius: 4px;
+  padding: 40px 36px 36px 36px;
+  margin-bottom: 50px;
+  box-shadow: var(--shadow-paper);
+  transform: rotate(-0.5deg);
+}
+
+.manifesto-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 20px;
+  flex-wrap: wrap;
+  gap: 15px;
+}
+
+.manifesto-title {
+  font-family: var(--font-typewriter);
+  font-size: 32px;
+  font-weight: 700;
+  line-height: 1.25;
+  color: var(--text-ink);
+}
+
+.manifesto-title .highlight {
+  background: var(--highlighter-subtle);
+  padding: 0 4px;
+  box-decoration-break: clone;
+  -webkit-box-decoration-break: clone;
+}
+
+.manifesto-story {
+  font-size: 19px;
+  line-height: 1.7;
+  color: var(--text-ink);
+  margin-bottom: 24px;
+}
+
+.handwritten-aside {
+  font-family: var(--font-handwriting);
+  font-size: 24px;
+  color: var(--red-pen);
+  line-height: 1.4;
+  margin: 15px 0;
+  padding-left: 12px;
+  border-left: 3px solid var(--red-pen);
+}
+
+.manifesto-badges {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+  margin-top: 25px;
+  align-items: center;
+}
+
+/* ==========================================================================
+   Interactive Notebook Simulator ("Watch It Work")
+   ========================================================================== */
+.notebook-wrapper {
+  position: relative;
+  background: var(--bg-notebook);
+  /* Notebook horizontal ruling + vertical margin line */
+  background-image: 
+    linear-gradient(90deg, transparent 72px, var(--margin-red) 72px, var(--margin-red) 74px, transparent 74px),
+    repeating-linear-gradient(transparent, transparent 29px, var(--line-blue) 29px, var(--line-blue) 30px);
+  background-size: 100% 100%, 100% 30px;
+  border: 2px solid var(--border-rough);
+  border-radius: 3px;
+  padding: 40px 30px 40px 95px;
+  box-shadow: var(--shadow-paper);
+  margin-bottom: 60px;
+  transform: rotate(0.4deg);
+}
+
+.notebook-header {
+  margin-bottom: 20px;
+}
+
+.notebook-label {
+  font-family: var(--font-typewriter);
+  font-size: 13px;
+  text-transform: uppercase;
+  color: var(--text-muted);
+  letter-spacing: 1px;
+}
+
+.notebook-title {
+  font-family: var(--font-typewriter);
+  font-size: 24px;
+  color: var(--text-ink);
+  margin-top: 4px;
+}
+
+.preset-buttons {
+  display: flex;
+  gap: 10px;
+  margin: 15px 0 20px 0;
+  flex-wrap: wrap;
+}
+
+.preset-btn {
+  background-color: transparent;
+  border: 1px solid var(--border-rough);
+  font-family: var(--font-typewriter);
+  font-size: 13px;
+  padding: 5px 12px;
+  cursor: pointer;
+  color: var(--text-ink);
+  border-radius: 2px;
+  transition: all 0.15s ease;
+}
+
+.preset-btn:hover {
+  background-color: var(--highlighter-subtle);
+  border-color: var(--red-pen);
+}
+
+.paper-sheet {
+  font-family: var(--font-body);
+  font-size: 18px;
+  line-height: 30px; /* Align precisely with 30px lined rule */
+  color: var(--text-ink);
+  min-height: 180px;
+  outline: none;
+  white-space: pre-wrap;
+  word-break: break-word;
+  position: relative;
+}
+
+/* Strikethrough effect on AI phrases */
+.ai-crossed {
+  color: var(--red-pen);
+  text-decoration: line-through 2.5px var(--red-pen);
+  font-weight: 600;
+  background-color: rgba(196, 30, 58, 0.08);
+  padding: 0 2px;
+  border-radius: 2px;
+}
+
+/* Handwritten replacement in margin or above */
+.human-replacement {
+  font-family: var(--font-handwriting);
+  font-size: 23px;
+  color: var(--ballpoint-blue);
+  font-weight: 700;
+  margin-left: 6px;
+  display: inline-block;
+}
+
+/* Notebook control bar */
+.notebook-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 16px;
+  margin-top: 30px;
+  padding-top: 15px;
+  border-top: 1px dashed var(--border-rough);
+}
+
+.detector-meter {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.detector-label {
+  font-family: var(--font-typewriter);
+  font-size: 13px;
+  font-weight: bold;
+}
+
+.meter-track {
+  width: 140px;
+  height: 14px;
+  background-color: var(--border-rough);
+  border-radius: 10px;
+  overflow: hidden;
+  position: relative;
+}
+
+.meter-fill {
+  height: 100%;
+  width: 96%;
+  background-color: var(--red-pen);
+  transition: width 0.8s cubic-bezier(0.16, 1, 0.3, 1), background-color 0.8s ease;
+}
+
+.meter-score {
+  font-family: var(--font-typewriter);
+  font-size: 15px;
+  font-weight: bold;
+  color: var(--red-pen);
+  min-width: 45px;
+}
+
+.action-buttons-group {
+  display: flex;
+  gap: 12px;
+}
+
+.humanize-btn {
+  background-color: var(--red-pen);
+  color: #FFF;
+  border: 2px solid var(--red-pen-dark);
+  font-family: var(--font-typewriter);
+  font-size: 16px;
+  font-weight: bold;
+  padding: 10px 22px;
+  cursor: pointer;
+  border-radius: 3px;
+  box-shadow: 2px 3px 0 var(--border-rough);
+  transform: rotate(-1deg);
+  transition: transform 0.1s ease, box-shadow 0.1s ease;
+}
+
+.humanize-btn:hover {
+  transform: translate(-1px, -1px) rotate(-1deg);
+  box-shadow: 3px 4px 0 var(--border-rough);
+}
+
+.humanize-btn:active {
+  transform: translate(2px, 2px);
+  box-shadow: 0 0 0 var(--border-rough);
+}
+
+.copy-btn {
+  background-color: transparent;
+  border: 1px solid var(--border-rough);
+  font-family: var(--font-typewriter);
+  font-size: 14px;
+  padding: 8px 16px;
+  cursor: pointer;
+  color: var(--text-ink);
+  border-radius: 3px;
+}
+
+.copy-btn:hover {
+  background-color: var(--highlighter-subtle);
+}
+
+/* ==========================================================================
+   Feature Cards (The Collage Grid)
+   ========================================================================== */
+.section-heading {
+  font-family: var(--font-typewriter);
+  font-size: 28px;
+  margin-bottom: 25px;
+  color: var(--text-ink);
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.features-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 25px;
+  margin-bottom: 60px;
+}
+
+.feature-box {
+  background-color: var(--bg-card);
+  border: 2px solid var(--border-rough);
+  padding: 28px 24px;
+  border-radius: 3px;
+  position: relative;
+  box-shadow: var(--shadow-paper);
+}
+
+.feature-box:nth-child(1) { transform: rotate(-0.7deg); }
+.feature-box:nth-child(2) { transform: rotate(0.8deg); }
+.feature-box:nth-child(3) { transform: rotate(-0.5deg); }
+
+.feature-icon {
+  font-size: 32px;
+  margin-bottom: 12px;
+}
+
+.feature-title {
+  font-family: var(--font-typewriter);
+  font-size: 20px;
+  margin-bottom: 10px;
+  color: var(--text-ink);
+}
+
+.feature-desc {
+  font-size: 16px;
+  color: var(--text-muted);
+  line-height: 1.6;
+}
+
+/* ==========================================================================
+   Comparison Table (Xerox Style)
+   ========================================================================== */
+.table-wrapper {
+  background-color: var(--bg-card);
+  border: 2px solid var(--border-rough);
+  padding: 24px;
+  margin-bottom: 60px;
+  box-shadow: var(--shadow-paper);
+  transform: rotate(0.3deg);
+  overflow-x: auto;
+}
+
+.xerox-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-family: var(--font-typewriter);
+  font-size: 15px;
+  text-align: left;
+}
+
+.xerox-table th, .xerox-table td {
+  padding: 12px 14px;
+  border-bottom: 1px solid var(--border-rough);
+}
+
+.xerox-table th {
+  background-color: rgba(0, 0, 0, 0.04);
+  font-weight: 700;
+  border-bottom: 2px solid var(--border-rough);
+}
+
+body.dark-mode .xerox-table th {
+  background-color: rgba(255, 255, 255, 0.05);
+}
+
+.xerox-table tr:last-child td {
+  border-bottom: none;
+}
+
+.col-turnitout {
+  background-color: var(--highlighter-subtle);
+  font-weight: 700;
+  color: var(--red-pen-dark);
+}
+
+body.dark-mode .col-turnitout {
+  color: #FFA500;
+}
+
+/* ==========================================================================
+   The Community Star-Gate Pledge
+   ========================================================================== */
+.pledge-card {
+  position: relative;
+  background-color: var(--bg-card);
+  border: 2px solid var(--border-rough);
+  border-radius: 4px;
+  padding: 35px 30px;
+  margin-bottom: 60px;
+  box-shadow: var(--shadow-paper);
+  transform: rotate(-0.4deg);
+}
+
+.checklist-group {
+  margin: 20px 0;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.check-item {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-size: 17px;
+}
+
+.hand-box {
+  width: 22px;
+  height: 22px;
+  border: 2px solid var(--red-pen);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: var(--font-handwriting);
+  font-size: 20px;
+  color: var(--red-pen);
+  flex-shrink: 0;
+}
+
+.check-item a {
+  color: var(--ballpoint-blue);
+  font-weight: 600;
+  text-decoration: underline;
+}
+
+/* ==========================================================================
+   FAQ Section (Accordion / Clean Xerox)
+   ========================================================================== */
+.faq-list {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  margin-bottom: 60px;
+}
+
+.faq-item {
+  background-color: var(--bg-card);
+  border: 1px solid var(--border-rough);
+  border-radius: 3px;
+  padding: 18px 22px;
+}
+
+.faq-question {
+  font-family: var(--font-typewriter);
+  font-size: 18px;
+  font-weight: 700;
+  color: var(--text-ink);
+  margin-bottom: 8px;
+}
+
+.faq-answer {
+  font-size: 16.5px;
+  color: var(--text-muted);
+  line-height: 1.6;
+}
+
+/* ==========================================================================
+   Footer & Direct Developer Hotline
+   ========================================================================== */
+.footer-section {
+  text-align: center;
+  padding: 40px 20px 20px 20px;
+  border-top: 2px dashed var(--border-rough);
+  font-family: var(--font-typewriter);
+  font-size: 14.5px;
+  color: var(--text-muted);
+}
+
+.footer-hotline {
+  display: inline-block;
+  background-color: var(--highlighter-subtle);
+  border: 1px solid var(--border-rough);
+  padding: 10px 20px;
+  margin: 15px 0 25px 0;
+  border-radius: 4px;
+}
+
+.footer-hotline a {
+  color: var(--red-pen);
+  font-weight: bold;
+  text-decoration: underline;
+}
+
+/* ==========================================================================
+   Responsive Adaptations
+   ========================================================================== */
+@media (max-width: 768px) {
+  .manifesto-title { font-size: 25px; }
+  .notebook-wrapper {
+    padding: 30px 18px 30px 50px;
+    background-image: 
+      linear-gradient(90deg, transparent 40px, var(--margin-red) 40px, var(--margin-red) 42px, transparent 42px),
+      repeating-linear-gradient(transparent, transparent 29px, var(--line-blue) 29px, var(--line-blue) 30px);
+  }
+  .top-nav {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+    padding: 12px 16px;
+  }
+  .nav-actions {
+    width: 100%;
+    justify-content: space-between;
+  }
+  .notebook-footer {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}
