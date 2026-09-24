@@ -135,6 +135,26 @@ body.dark-mode::before {
   font-weight: 600;
 }
 
+.nav-links {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  list-style: none;
+}
+
+.nav-link {
+  color: #ECEFF4;
+  text-decoration: none;
+  font-family: var(--font-typewriter);
+  font-size: 13.5px;
+  transition: color 0.15s ease;
+}
+
+.nav-link:hover {
+  color: #FFE066;
+  text-decoration: underline;
+}
+
 .nav-actions {
   display: flex;
   align-items: center;
