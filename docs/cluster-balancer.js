@@ -1,16 +1,18 @@
 /**
  * Turnitout Cluster Traffic Dispatcher
  * Automatically load-balances traffic across active high-speed cluster mirrors:
- *   1. https://turnitout1.streamlit.app/ (30% weight)
- *   2. https://turnitout2.streamlit.app/ (30% weight)
- *   3. https://turnitout3.streamlit.app/ (30% weight)
- *   4. https://turnitout.streamlit.app/  (10% weight - active heart anchor)
+ *   1. https://turnitout1.streamlit.app/ (22.5% weight)
+ *   2. https://turnitout2.streamlit.app/ (22.5% weight)
+ *   3. https://turnitout3.streamlit.app/ (22.5% weight)
+ *   4. https://turnitout4.streamlit.app/ (22.5% weight)
+ *   5. https://turnitout.streamlit.app/  (10% weight - active heart anchor)
  */
 (function() {
   const CLUSTER_NODES = [
-    { url: "https://turnitout1.streamlit.app/", weight: 30 },
-    { url: "https://turnitout2.streamlit.app/", weight: 30 },
-    { url: "https://turnitout3.streamlit.app/", weight: 30 },
+    { url: "https://turnitout1.streamlit.app/", weight: 22.5 },
+    { url: "https://turnitout2.streamlit.app/", weight: 22.5 },
+    { url: "https://turnitout3.streamlit.app/", weight: 22.5 },
+    { url: "https://turnitout4.streamlit.app/", weight: 22.5 },
     { url: "https://turnitout.streamlit.app/",  weight: 10 }
   ];
 
