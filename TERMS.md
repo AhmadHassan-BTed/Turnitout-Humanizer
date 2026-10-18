@@ -9,7 +9,7 @@ Welcome to **Turnitout Core**. By accessing or using our application, website, o
 
 ## 1. Description of Service
 
-Turnitout Core provides open-source academic writing refinement, AI humanization, reference generation (BibTeX, LaTeX, JSON), and document processing tools.
+Turnitout Core provides academic writing refinement, AI humanization, reference generation (BibTeX, LaTeX, JSON), and document processing tools.
 
 ---
 
@@ -23,7 +23,7 @@ Turnitout Core provides open-source academic writing refinement, AI humanization
 
 ## 3. Access & Authentication
 
-- Access to the application is provided free of charge under open-source terms.
+- Access to the application is provided free of charge under our Open Community Mission terms.
 - No mandatory subscriptions, fees, or gated paywalls are required.
 
 ---
