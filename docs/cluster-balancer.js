@@ -1,19 +1,29 @@
 /**
  * Turnitout Cluster Traffic Dispatcher
  * Automatically load-balances traffic across active high-speed cluster mirrors:
- *   1. https://turnitout1.streamlit.app/
- *   2. https://turnitout2.streamlit.app/
- *   3. https://turnitout.streamlit.app/
+ *   1. https://turnitout1.streamlit.app/ (30% weight)
+ *   2. https://turnitout2.streamlit.app/ (30% weight)
+ *   3. https://turnitout3.streamlit.app/ (30% weight)
+ *   4. https://turnitout.streamlit.app/  (10% weight - active heart anchor)
  */
 (function() {
   const CLUSTER_NODES = [
-    "https://turnitout1.streamlit.app/",
-    "https://turnitout2.streamlit.app/",
-    "https://turnitout.streamlit.app/"
+    { url: "https://turnitout1.streamlit.app/", weight: 30 },
+    { url: "https://turnitout2.streamlit.app/", weight: 30 },
+    { url: "https://turnitout3.streamlit.app/", weight: 30 },
+    { url: "https://turnitout.streamlit.app/",  weight: 10 }
   ];
 
   function getRandomClusterNode() {
-    return CLUSTER_NODES[Math.floor(Math.random() * CLUSTER_NODES.length)];
+    const totalWeight = CLUSTER_NODES.reduce(function(acc, n) { return acc + n.weight; }, 0);
+    let rand = Math.random() * totalWeight;
+    for (let i = 0; i < CLUSTER_NODES.length; i++) {
+      if (rand < CLUSTER_NODES[i].weight) {
+        return CLUSTER_NODES[i].url;
+      }
+      rand -= CLUSTER_NODES[i].weight;
+    }
+    return CLUSTER_NODES[0].url;
   }
 
   function randomizeAllClusterLinks() {

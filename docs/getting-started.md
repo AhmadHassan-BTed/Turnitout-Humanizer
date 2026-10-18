@@ -9,7 +9,8 @@ This guide outlines how to use the Turnitout application to process single and b
 Access Turnitout instantly at any of the active cluster mirrors:
 - **Mirror 1 (Dedicated Fast):** [https://turnitout1.streamlit.app/](https://turnitout1.streamlit.app/)
 - **Mirror 2 (Dedicated Fast):** [https://turnitout2.streamlit.app/](https://turnitout2.streamlit.app/)
-- **Main Server:** [https://turnitout.streamlit.app/](https://turnitout.streamlit.app/)
+- **Mirror 3 (Dedicated Fast):** [https://turnitout3.streamlit.app/](https://turnitout3.streamlit.app/)
+- **Main Server (Active Heart):** [https://turnitout.streamlit.app/](https://turnitout.streamlit.app/)
 
 Or run locally:
 ```bash
