@@ -555,12 +555,13 @@ document.addEventListener("DOMContentLoaded", () => {
   }
 
   // ==========================================================================
-  // CLUSTER TRAFFIC DISPATCHER: Load-balance across 4 nodes (90% workers, 10% main heart)
+  // CLUSTER TRAFFIC DISPATCHER: Load-balance across 5 nodes (90% workers, 10% main heart)
   // ==========================================================================
   const CLUSTER_NODES = [
-    { url: "https://turnitout1.streamlit.app/", weight: 30 },
-    { url: "https://turnitout2.streamlit.app/", weight: 30 },
-    { url: "https://turnitout3.streamlit.app/", weight: 30 },
+    { url: "https://turnitout1.streamlit.app/", weight: 22.5 },
+    { url: "https://turnitout2.streamlit.app/", weight: 22.5 },
+    { url: "https://turnitout3.streamlit.app/", weight: 22.5 },
+    { url: "https://turnitout4.streamlit.app/", weight: 22.5 },
     { url: "https://turnitout.streamlit.app/",  weight: 10 }
   ];
 
