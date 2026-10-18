@@ -8,22 +8,23 @@
 
 Turnitout-core is a deterministic, privacy-first document humanization and AI-detection evasion engine supporting in-place processing of LaTeX (`.tex`), Word (`.docx`), Markdown (`.md`), Code (`.py`), and Plain Text.
 
-To guarantee high availability and bypass Streamlit Cloud CPU/RAM throttling during viral spikes, the application is deployed across a **3-node cluster** spanning three separate GitHub accounts and Streamlit Cloud instances:
+To guarantee high availability and bypass Streamlit Cloud CPU/RAM throttling during viral spikes, the application is deployed across a **4-node cluster** spanning four separate GitHub accounts and Streamlit Cloud instances:
 
 | Node | GitHub Repository Remote | Live URL | Purpose |
 | :--- | :--- | :--- | :--- |
-| **Main Server** | `origin` (`AhmadHassan-BTed/Turnitout-core`) | `turnitout.streamlit.app` | Primary entry point & dynamic traffic balancer |
+| **Main Server (Heart)** | `origin` (`AhmadHassan-BTed/Turnitout-core`) | `turnitout.streamlit.app` | Resilient cluster anchor & active heart (offloads 85%+ direct traffic) |
 | **Worker Mirror 1** | `node1` (`Turnitout-1/Turnitout-core`) | `turnitout1.streamlit.app` | High-speed dedicated evasion worker node |
 | **Worker Mirror 2** | `node2` (`Turnitout-2/Turnitout-core`) | `turnitout2.streamlit.app` | High-speed dedicated evasion worker node |
+| **Worker Mirror 3** | `node3` (`turnitout3/Turnitout-core`) | `turnitout3.streamlit.app` | High-speed dedicated evasion worker node |
 
 - **Public Marketing & Documentation Website**:
-  Hosted at `https://github.com/AhmadHassan-BTed/Turnitout-Humanizer` (`docs/` branch deployed to GitHub Pages). Features client-side cluster load balancing in `docs/cluster-balancer.js`.
+  Hosted at `https://github.com/AhmadHassan-BTed/Turnitout-Humanizer` (`docs/` branch deployed to GitHub Pages). Features client-side cluster load balancing in `docs/cluster-balancer.js` with weighted distribution routing ~90% of traffic across the 3 worker mirrors and ~10% to the main server heart.
 
 ---
 
 ## 2. Universal Push Protocol (Deploying Live to All Nodes)
 
-> ⚠️ **RULE**: NEVER push to `origin` alone. Code changes must ALWAYS be pushed to all 3 cluster repositories so mirrors remain 100% in sync.
+> ⚠️ **RULE**: NEVER push to `origin` alone. Code changes must ALWAYS be pushed to all 4 cluster repositories so mirrors remain 100% in sync.
 
 ### Single-Command Sync
 ```bash
@@ -40,7 +41,7 @@ git push all main
 
 ### New Machine / PC Setup
 When cloning this repository on a new computer:
-1. Ensure SSH keys for `Turnitout-1` (`~/.ssh/id_ed25519_node2`) and `Turnitout-2` (`~/.ssh/id_ed25519_node3`) are present with `chmod 600`.
+1. Ensure SSH keys for `Turnitout-1` (`~/.ssh/id_ed25519_node2`) and `Turnitout-2` (`~/.ssh/id_ed25519_node3`) are present with `chmod 600`. Node 3 (`turnitout3`) uses collaborator access via GitHub credentials.
 2. Run the automated remote configuration script:
    ```bash
    ./scripts/setup_cluster_sync.sh
@@ -70,21 +71,22 @@ Users listed here **bypass all repository star, follow, and verification gates c
 - *Private Alternative:* You can also define VIPs in Streamlit Secrets (`WHITELISTED_USERS = ["username1"]`) or in Python code via `DEFAULT_WHITELISTED_USERS` in `src/textpipe/auth/verifier.py`.
 
 ### B. High-Demand Traffic Offloading (`traffic_balancing`)
-Controls whether the main server offloads ~67% of incoming unauthenticated traffic to Worker Mirrors 1 & 2:
+Controls whether the main server offloads ~85% of incoming unauthenticated direct traffic to Worker Mirrors 1, 2 & 3:
 ```json
 {
   "traffic_balancing": {
-    "enable_offload": false,
-    "offload_percentage": 67,
+    "enable_offload": true,
+    "offload_percentage": 85,
     "worker_nodes": [
       "https://turnitout1.streamlit.app/",
-      "https://turnitout2.streamlit.app/"
+      "https://turnitout2.streamlit.app/",
+      "https://turnitout3.streamlit.app/"
     ]
   }
 }
 ```
 - **Normal Operations**: Set `"enable_offload": false`. All users access the main server directly.
-- **Viral / High Demand Spikes**: Set `"enable_offload": true`. 2/3 of new visitors receive the High Demand redirect card immediately, preventing main server OOM crashes.
+- **Viral / High Demand Spikes (Active Mode)**: Set `"enable_offload": true`. 85%+ of direct visitors receive the High Demand redirect card immediately, offloading work to the 3 mirrors and preventing main server OOM crashes.
 - **Developer Preview**: You can test/preview the offload card anytime by appending `?test_card=1` to the URL regardless of the flag state.
 
 ---
