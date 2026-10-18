@@ -35,14 +35,22 @@
 ## 🌟 Access Turnitout Live Now
 
 <p align="center">
-  <img src="docs/assets/turnitout_UI.png" alt="Turnitout Logo" width="100%"/>
+  <img src="docs/assets/turnitout_UI.png" alt="Turnitout Web Interface" width="100%"/>
 </p>
-https://turnitout1.streamlit.app/
-### Hosted Web Application Mirror 1: **[turnitout.streamlit.app](https://turnitout1.streamlit.app/)**
-### Hosted Web Application Mirror 2: **[turnitout.streamlit.app](https://turnitout2.streamlit.app/)**
-### Hosted Web Application Mirror 3: **[turnitout.streamlit.app](https://turnitout.streamlit.app/)**
 
-> **100% Privacy Guarantee**: All documents and source code files are processed transiently in-memory. Zero document logging, zero server storage, zero data retention.
+<p align="center">
+  <a href="https://turnitout1.streamlit.app/" target="_blank"><img src="https://img.shields.io/badge/Server%20Node%201-Fast%20Mirror-E63946?style=for-the-badge&logo=streamlit&logoColor=white" alt="Server Node 1"/></a>
+  <a href="https://turnitout2.streamlit.app/" target="_blank"><img src="https://img.shields.io/badge/Server%20Node%202-Fast%20Mirror-2A9D8F?style=for-the-badge&logo=streamlit&logoColor=white" alt="Server Node 2"/></a>
+  <a href="https://turnitout.streamlit.app/" target="_blank"><img src="https://img.shields.io/badge/Main%20Server-turnitout.streamlit.app-1D3557?style=for-the-badge&logo=streamlit&logoColor=white" alt="Main Server"/></a>
+</p>
+
+| Cluster Mirror | Access URL | Status | Description |
+| :--- | :--- | :---: | :--- |
+| ⚡ **Server Node 1** | **[turnitout1.streamlit.app](https://turnitout1.streamlit.app/)** | 🟢 Active | High-speed dedicated cluster mirror |
+| 🚀 **Server Node 2** | **[turnitout2.streamlit.app](https://turnitout2.streamlit.app/)** | 🟢 Active | High-speed dedicated cluster mirror |
+| 🛡️ **Main Server** | **[turnitout.streamlit.app](https://turnitout.streamlit.app/)** | 🟢 Active | Primary portal & cluster dispatcher |
+
+> 🔒 **100% Privacy Guarantee**: All documents and source code files are processed transiently in-memory. Zero document logging, zero server storage, zero data retention.
 
 ---
 
