@@ -28,17 +28,29 @@
     return CLUSTER_NODES[0].url;
   }
 
+  function isExplicitMirrorLink(link, href) {
+    if (link.classList.contains('direct-mirror-link')) return true;
+    if (link.dataset && link.dataset.direct === 'true') return true;
+    const text = (link.textContent || '').trim().toLowerCase();
+    if (text.includes('mirror 1') || text.includes('mirror 2') || text.includes('mirror 3') || text.includes('mirror 4')) {
+      return true;
+    }
+    return false;
+  }
+
   function randomizeAllClusterLinks() {
     try {
       const selectors = [
-        'a[href*="streamlit.app"]',
         '.app-launch-btn',
         '.hud-cta-app-btn',
-        '.launch-streamlit-btn'
+        '.launch-streamlit-btn',
+        'a[href="https://turnitout.streamlit.app/"]'
       ];
       const links = document.querySelectorAll(selectors.join(','));
       links.forEach(function(link) {
-        link.href = getRandomClusterNode();
+        if (!isExplicitMirrorLink(link, link.getAttribute('href'))) {
+          link.href = getRandomClusterNode();
+        }
       });
     } catch (e) {
       // Fallback silently if DOM is not ready
@@ -50,10 +62,13 @@
     const link = e.target.closest('a');
     if (!link) return;
     const href = link.getAttribute('href');
+    if (isExplicitMirrorLink(link, href)) {
+      return; // Respect direct user choice
+    }
     const isAppBtn = link.classList.contains('app-launch-btn') ||
                      link.classList.contains('hud-cta-app-btn') ||
                      link.classList.contains('launch-streamlit-btn');
-    if (isAppBtn || (href && href.includes('streamlit.app'))) {
+    if (isAppBtn || (href && href === 'https://turnitout.streamlit.app/')) {
       link.href = getRandomClusterNode();
     }
   }, true);

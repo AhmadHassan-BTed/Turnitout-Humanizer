@@ -8,7 +8,7 @@
 
 Turnitout-core is a deterministic, privacy-first document humanization and AI-detection evasion engine supporting in-place processing of LaTeX (`.tex`), Word (`.docx`), Markdown (`.md`), Code (`.py`), and Plain Text.
 
-To guarantee high availability and bypass Streamlit Cloud CPU/RAM throttling during viral spikes, the application is deployed across a **4-node cluster** spanning four separate GitHub accounts and Streamlit Cloud instances:
+To guarantee high availability and bypass Streamlit Cloud CPU/RAM throttling during viral spikes, the application is deployed across a **5-node cluster** spanning five separate GitHub accounts and Streamlit Cloud instances:
 
 | Node | GitHub Repository Remote | Live URL | Purpose |
 | :--- | :--- | :--- | :--- |
@@ -16,9 +16,10 @@ To guarantee high availability and bypass Streamlit Cloud CPU/RAM throttling dur
 | **Worker Mirror 1** | `node1` (`Turnitout-1/Turnitout-core`) | `turnitout1.streamlit.app` | High-speed dedicated evasion worker node |
 | **Worker Mirror 2** | `node2` (`Turnitout-2/Turnitout-core`) | `turnitout2.streamlit.app` | High-speed dedicated evasion worker node |
 | **Worker Mirror 3** | `node3` (`turnitout3/Turnitout-core`) | `turnitout3.streamlit.app` | High-speed dedicated evasion worker node |
+| **Worker Mirror 4** | `node4` (`Turnitout4/Turnitout-core`) | `turnitout4.streamlit.app` | High-speed dedicated evasion worker node |
 
 - **Public Marketing & Documentation Website**:
-  Hosted at `https://github.com/AhmadHassan-BTed/Turnitout-Humanizer` (`docs/` branch deployed to GitHub Pages). Features client-side cluster load balancing in `docs/cluster-balancer.js` with weighted distribution routing ~90% of traffic across the 3 worker mirrors and ~10% to the main server heart.
+  Hosted at `https://github.com/AhmadHassan-BTed/Turnitout-Humanizer` (`docs/` branch deployed to GitHub Pages). Features client-side cluster load balancing in `docs/cluster-balancer.js` with weighted distribution routing ~90% of traffic across the 4 worker mirrors and ~10% to the main server heart.
 
 ---
 
