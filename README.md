@@ -37,8 +37,10 @@
 <p align="center">
   <img src="docs/assets/turnitout_UI.png" alt="Turnitout Logo" width="100%"/>
 </p>
-
-### Hosted Web Application: **[turnitout.streamlit.app](https://turnitout.streamlit.app/)**
+https://turnitout1.streamlit.app/
+### Hosted Web Application Mirror 1: **[turnitout.streamlit.app](https://turnitout1.streamlit.app/)**
+### Hosted Web Application Mirror 2: **[turnitout.streamlit.app](https://turnitout2.streamlit.app/)**
+### Hosted Web Application Mirror 3: **[turnitout.streamlit.app](https://turnitout.streamlit.app/)**
 
 > **100% Privacy Guarantee**: All documents and source code files are processed transiently in-memory. Zero document logging, zero server storage, zero data retention.
 
