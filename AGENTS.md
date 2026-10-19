@@ -8,7 +8,7 @@
 
 Turnitout-core is a deterministic, privacy-first document humanization and AI-detection evasion engine supporting in-place processing of LaTeX (`.tex`), Word (`.docx`), Markdown (`.md`), Code (`.py`), and Plain Text.
 
-To guarantee high availability and bypass Streamlit Cloud CPU/RAM throttling during viral spikes, the application is deployed across a **7-node cluster** spanning seven separate GitHub accounts and Streamlit Cloud instances:
+To guarantee high availability and bypass Streamlit Cloud CPU/RAM throttling during viral spikes, the application is deployed across a **8-node cluster** spanning seven separate GitHub accounts and Streamlit Cloud instances:
 
 | Node | GitHub Repository Remote | Live URL | Purpose |
 | :--- | :--- | :--- | :--- |
@@ -19,15 +19,16 @@ To guarantee high availability and bypass Streamlit Cloud CPU/RAM throttling dur
 | **Worker Mirror 4** | `node4` (`Turnitout4/Turnitout-core`) | `turnitout4.streamlit.app` | High-speed dedicated evasion worker node |
 | **Worker Mirror 5** | `node5` (`turnitout5/Turnitout-core`) | `turnitout5.streamlit.app` | High-speed dedicated evasion worker node |
 | **Worker Mirror 6** | `node6` (`turnitout6/Turnitout-core`) | `turnitout6.streamlit.app` | High-speed dedicated evasion worker node |
+| **Worker Mirror 7** | `node7` (`turnitout7/Turnitout-core`) | `turnitout7.streamlit.app` | High-speed dedicated evasion worker node |
 
 - **Public Marketing & Documentation Website**:
-  Hosted at `https://github.com/AhmadHassan-BTed/Turnitout-Humanizer` (`docs/` branch deployed to GitHub Pages). Features client-side cluster load balancing in `docs/cluster-balancer.js` with weighted distribution routing ~90% of traffic across the 6 worker mirrors and ~10% to the main server heart.
+  Hosted at `https://github.com/AhmadHassan-BTed/Turnitout-Humanizer` (`docs/` branch deployed to GitHub Pages). Features client-side cluster load balancing in `docs/cluster-balancer.js` with weighted distribution routing ~90% of traffic across the 7 worker mirrors and ~10% to the main server heart.
 
 ---
 
 ## 2. Universal Push Protocol (Deploying Live to All Nodes)
 
-> ⚠️ **RULE**: NEVER push to `origin` alone. Code changes must ALWAYS be pushed to all 7 cluster repositories so mirrors remain 100% in sync.
+> ⚠️ **RULE**: NEVER push to `origin` alone. Code changes must ALWAYS be pushed to all 8 cluster repositories so mirrors remain 100% in sync.
 
 ### Single-Command Sync
 ```bash
