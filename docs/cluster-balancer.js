@@ -1,18 +1,20 @@
 /**
  * Turnitout Cluster Traffic Dispatcher
  * Automatically load-balances traffic across active high-speed cluster mirrors:
- *   1. https://turnitout1.streamlit.app/ (22.5% weight)
- *   2. https://turnitout2.streamlit.app/ (22.5% weight)
- *   3. https://turnitout3.streamlit.app/ (22.5% weight)
- *   4. https://turnitout4.streamlit.app/ (22.5% weight)
- *   5. https://turnitout.streamlit.app/  (10% weight - active heart anchor)
+ *   1. https://turnitout1.streamlit.app/ (18% weight)
+ *   2. https://turnitout2.streamlit.app/ (18% weight)
+ *   3. https://turnitout3.streamlit.app/ (18% weight)
+ *   4. https://turnitout4.streamlit.app/ (18% weight)
+ *   5. https://turnitout5.streamlit.app/ (18% weight)
+ *   6. https://turnitout.streamlit.app/  (10% weight - active heart anchor)
  */
 (function() {
   const CLUSTER_NODES = [
-    { url: "https://turnitout1.streamlit.app/", weight: 22.5 },
-    { url: "https://turnitout2.streamlit.app/", weight: 22.5 },
-    { url: "https://turnitout3.streamlit.app/", weight: 22.5 },
-    { url: "https://turnitout4.streamlit.app/", weight: 22.5 },
+    { url: "https://turnitout1.streamlit.app/", weight: 18 },
+    { url: "https://turnitout2.streamlit.app/", weight: 18 },
+    { url: "https://turnitout3.streamlit.app/", weight: 18 },
+    { url: "https://turnitout4.streamlit.app/", weight: 18 },
+    { url: "https://turnitout5.streamlit.app/", weight: 18 },
     { url: "https://turnitout.streamlit.app/",  weight: 10 }
   ];
 
@@ -32,7 +34,7 @@
     if (link.classList.contains('direct-mirror-link')) return true;
     if (link.dataset && link.dataset.direct === 'true') return true;
     const text = (link.textContent || '').trim().toLowerCase();
-    if (text.includes('mirror 1') || text.includes('mirror 2') || text.includes('mirror 3') || text.includes('mirror 4')) {
+    if (text.includes('mirror 1') || text.includes('mirror 2') || text.includes('mirror 3') || text.includes('mirror 4') || text.includes('mirror 5')) {
       return true;
     }
     return false;
