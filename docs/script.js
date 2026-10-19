@@ -555,16 +555,17 @@ document.addEventListener("DOMContentLoaded", () => {
   }
 
   // ==========================================================================
-  // CLUSTER TRAFFIC DISPATCHER: Load-balance across 7 nodes (90% workers, 10% main heart)
+  // CLUSTER TRAFFIC DISPATCHER: Load-balance across 8 nodes (91% workers, 9% main heart)
   // ==========================================================================
   const CLUSTER_NODES = [
-    { url: "https://turnitout1.streamlit.app/", weight: 15 },
-    { url: "https://turnitout2.streamlit.app/", weight: 15 },
-    { url: "https://turnitout3.streamlit.app/", weight: 15 },
-    { url: "https://turnitout4.streamlit.app/", weight: 15 },
-    { url: "https://turnitout5.streamlit.app/", weight: 15 },
-    { url: "https://turnitout6.streamlit.app/", weight: 15 },
-    { url: "https://turnitout.streamlit.app/",  weight: 10 }
+    { url: "https://turnitout1.streamlit.app/", weight: 13 },
+    { url: "https://turnitout2.streamlit.app/", weight: 13 },
+    { url: "https://turnitout3.streamlit.app/", weight: 13 },
+    { url: "https://turnitout4.streamlit.app/", weight: 13 },
+    { url: "https://turnitout5.streamlit.app/", weight: 13 },
+    { url: "https://turnitout6.streamlit.app/", weight: 13 },
+    { url: "https://turnitout7.streamlit.app/", weight: 13 },
+    { url: "https://turnitout.streamlit.app/",  weight: 9 }
   ];
 
   function getRandomClusterNode() {
@@ -583,7 +584,7 @@ document.addEventListener("DOMContentLoaded", () => {
     if (link.classList.contains('direct-mirror-link')) return true;
     if (link.dataset && link.dataset.direct === 'true') return true;
     const text = (link.textContent || '').trim().toLowerCase();
-    if (text.includes('mirror 1') || text.includes('mirror 2') || text.includes('mirror 3') || text.includes('mirror 4') || text.includes('mirror 5') || text.includes('mirror 6')) {
+    if (text.includes('mirror 1') || text.includes('mirror 2') || text.includes('mirror 3') || text.includes('mirror 4') || text.includes('mirror 5') || text.includes('mirror 6') || text.includes('mirror 7')) {
       return true;
     }
     return false;
