@@ -43,6 +43,7 @@
   <a href="https://turnitout2.streamlit.app/" target="_blank"><img src="https://img.shields.io/badge/Server%20Node%202-Fast%20Mirror-2A9D8F?style=for-the-badge&logo=streamlit&logoColor=white" alt="Server Node 2"/></a>
   <a href="https://turnitout3.streamlit.app/" target="_blank"><img src="https://img.shields.io/badge/Server%20Node%203-Fast%20Mirror-E76F51?style=for-the-badge&logo=streamlit&logoColor=white" alt="Server Node 3"/></a>
   <a href="https://turnitout4.streamlit.app/" target="_blank"><img src="https://img.shields.io/badge/Server%20Node%204-Fast%20Mirror-9B5DE5?style=for-the-badge&logo=streamlit&logoColor=white" alt="Server Node 4"/></a>
+  <a href="https://turnitout5.streamlit.app/" target="_blank"><img src="https://img.shields.io/badge/Server%20Node%205-Fast%20Mirror-06D6A0?style=for-the-badge&logo=streamlit&logoColor=white" alt="Server Node 5"/></a>
   <a href="https://turnitout.streamlit.app/" target="_blank"><img src="https://img.shields.io/badge/Active%20Heart-turnitout.streamlit.app-1D3557?style=for-the-badge&logo=streamlit&logoColor=white" alt="Main Server Heart"/></a>
 </p>
 
@@ -52,6 +53,7 @@
 | 🚀 **Server Node 2**       | **[turnitout2.streamlit.app](https://turnitout2.streamlit.app/)** | 🟢 Active | High-speed dedicated cluster mirror     |
 | 🌟 **Server Node 3**       | **[turnitout3.streamlit.app](https://turnitout3.streamlit.app/)** | 🟢 Active | High-speed dedicated cluster mirror     |
 | 🔥 **Server Node 4**       | **[turnitout4.streamlit.app](https://turnitout4.streamlit.app/)** | 🟢 Active | High-speed dedicated cluster mirror     |
+| ✨ **Server Node 5**       | **[turnitout5.streamlit.app](https://turnitout5.streamlit.app/)** | 🟢 Active | High-speed dedicated cluster mirror     |
 | ❤️ **Main Server (Heart)** | **[turnitout.streamlit.app](https://turnitout.streamlit.app/)**   | 🟢 Active | Resilient cluster anchor & active heart |
 
 > 🔒 **100% Privacy Guarantee**: All documents and source code files are processed transiently in-memory. Zero document logging, zero server storage, zero data retention.
