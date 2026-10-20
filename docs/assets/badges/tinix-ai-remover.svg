@@ -1,0 +1,38 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="580" height="134" viewBox="0 0 580 134">
+  <defs>
+    <clipPath id="rounded">
+      <rect width="580" height="134" rx="26" ry="26"/>
+    </clipPath>
+  </defs>
+
+  <!-- Card background & border -->
+  <rect x="0.75" y="0.75" width="578.5" height="132.5" rx="25.25" fill="#f8fafc" stroke="#e2e8f0" stroke-width="1.2"/>
+
+  <!-- Trophy circle -->
+  <circle cx="56" cy="67" r="29" fill="#fef3c7" stroke="#fde68a" stroke-width="1.5"/>
+
+  <!-- Trophy Lucide Icon (27x27, centered at 56, 67) -->
+  <g transform="translate(42.5, 53.5) scale(1.125)">
+    <path d="M6 9H4.5a2.5 2.5 0 0 1 0-5H6" fill="none" stroke="#d97706" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+    <path d="M18 9h1.5a2.5 2.5 0 0 0 0-5H18" fill="none" stroke="#d97706" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+    <path d="M4 22h16" fill="none" stroke="#d97706" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+    <path d="M10 14.66V17c0 .55-.47.98-.97 1.21C7.85 18.75 7 20.24 7 22" fill="none" stroke="#d97706" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+    <path d="M14 14.66V17c0 .55.47.98.97 1.21C16.15 18.75 17 20.24 17 22" fill="none" stroke="#d97706" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+    <path d="M18 2H6v7a6 6 0 0 0 12 0V2Z" fill="none" stroke="#d97706" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+  </g>
+
+  <!-- Rank badge (small "1" circle at bottom right of trophy circle) -->
+  <circle cx="83" cy="93" r="12" fill="#fef3c7" stroke="#ffffff" stroke-width="2.5"/>
+  <text x="83" y="97.5" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="12" font-weight="700" fill="#d97706">1</text>
+
+  <!-- Text lines (left-aligned at x=107) -->
+  <text x="107" y="41" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="12" font-weight="700" letter-spacing="0.06em">
+    <tspan fill="#2563eb">TINIX TRENDING</tspan>
+    <tspan fill="#94a3b8">  &#183;  </tspan>
+    <tspan fill="#475569">THREAD: AI-REMOVER</tspan>
+  </text>
+
+  <text x="107" y="73" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="20" font-weight="700" fill="#0f172a">#1 Repository of the Week</text>
+
+  <text x="107" y="100" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="13.5" font-weight="400" fill="#64748b">Reached on 28/09/2026 in the topic of ai-remover</text>
+</svg>
