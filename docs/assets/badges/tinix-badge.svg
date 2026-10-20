@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 250 55" width="250" height="55" role="img" aria-label="TiniX Trending: #1 Repository of the Week">
+  <rect x="0.5" y="0.5" width="249" height="54" rx="10" fill="#ffffff" stroke="#e2e8f0" stroke-width="1"/>
+  
+  <!-- Trophy circle background -->
+  <circle cx="28" cy="27.5" r="17" fill="#fef3c7" stroke="#fde68a" stroke-width="1.2"/>
+  
+  <!-- Trophy Icon -->
+  <g transform="translate(19.5, 19) scale(0.7)">
+    <path d="M6 9H4.5a2.5 2.5 0 0 1 0-5H6" fill="none" stroke="#d97706" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+    <path d="M18 9h1.5a2.5 2.5 0 0 0 0-5H18" fill="none" stroke="#d97706" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+    <path d="M4 22h16" fill="none" stroke="#d97706" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+    <path d="M10 14.66V17c0 .55-.47.98-.97 1.21C7.85 18.75 7 20.24 7 22" fill="none" stroke="#d97706" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+    <path d="M14 14.66V17c0 .55.47.98.97 1.21C16.15 18.75 17 20.24 17 22" fill="none" stroke="#d97706" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+    <path d="M18 2H6v7a6 6 0 0 0 12 0V2Z" fill="none" stroke="#d97706" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+  </g>
+
+  <!-- Rank 1 indicator -->
+  <circle cx="39" cy="37" r="6.5" fill="#fef3c7" stroke="#ffffff" stroke-width="1.5"/>
+  <text x="39" y="40" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="8.5" font-weight="700" fill="#d97706">1</text>
+
+  <!-- Text -->
+  <text x="56" y="21" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="8.5" font-weight="700" letter-spacing="1" fill="#2563eb">TINIX TRENDING<tspan font-weight="600" letter-spacing="0" fill="#64748b"> &#183; REPO</tspan></text>
+  <text x="56" y="38" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="13" font-weight="700" fill="#0f172a">#1 Repo of the Week</text>
+</svg>
