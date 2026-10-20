@@ -3,45 +3,61 @@
 </p>
 
 <h1 align="center">Turnitout — Plagiarism & AI Footprint Removal Engine</h1>
+<p align="center">
+  <a href="https://ahmadhassan-bted.github.io/Turnitout-Humanizer/"><img src="https://img.shields.io/badge/Official%20Website-Manifesto%20%26%20Docs-crimson.svg?style=for-the-badge" alt="Official Website & Manifesto"/></a>
+  <a href="https://turnitout.streamlit.app/"><img src="https://img.shields.io/badge/Live%20App-Launch%20Turnitout-blue.svg?style=for-the-badge&logo=streamlit" alt="Launch Live App"/></a>
+  <img src="https://img.shields.io/badge/Engine-v2.6-green.svg?style=for-the-badge" alt="Engine: v2.6"/>
+  <img src="https://img.shields.io/badge/Safety-100%25%20Zero%20AI-purple.svg?style=for-the-badge" alt="Safety: 100% Zero AI"/>
+  <a href="https://wa.me/923225522383"><img src="https://img.shields.io/badge/WhatsApp-Developer%20Support-25D366.svg?style=for-the-badge&logo=whatsapp" alt="WhatsApp Support"/></a>
+</p>
+<p align="center">
+  <strong>The world's first 100% programmatic, zero-generative-AI footprint removal engine. Mathematically shatter cryptographic token trackers, purge invisible zero-width Unicode, and strip C2PA metadata. Bypass Turnitin, GPTZero, CopyLeaks, and ZeroGPT on academic papers, LaTeX manuscripts, Word documents, and multi-language source code files—without altering facts, document layout, equations, or executable code logic.</strong>
+</p>
+
+<h2>Achievements</h2>
 
 <p align="center">
   <a href="https://repo.tinix.ai/project/21e37f39-3b17-4f88-a771-6b55bd97fb1e" target="_blank" rel="noopener noreferrer"><img src="https://repo.tinix.ai/api/badge/21e37f39-3b17-4f88-a771-6b55bd97fb1e" alt="TiniX Trending | AhmadHassan-BTed/Turnitout-Humanizer" /></a>
+</p>
+
+<p align="center">
   <a href="https://trendshift.io/repositories/229188?utm_source=trendshift-badge&amp;utm_medium=badge&amp;utm_campaign=badge-trendshift-229188" target="_blank" rel="noopener noreferrer"><img src="https://trendshift.io/api/badge/trendshift/repositories/229188/daily?language=HTML" alt="AhmadHassan-BTed%2FTurnitout-Humanizer | Trendshift" width="250" height="55"/></a>
   <a href="https://trendshift.io/repositories/229188?utm_source=trendshift-badge&amp;utm_medium=badge&amp;utm_campaign=badge-trendshift-229188" target="_blank" rel="noopener noreferrer"><img src="https://trendshift.io/api/badge/trendshift/repositories/229188/weekly?language=HTML" alt="AhmadHassan-BTed%2FTurnitout-Humanizer | Trendshift" width="250" height="55"/></a>
 </p>
 
-<p align="center">
-  <a href="https://ahmadhassan-bted.github.io/Turnitout-Humanizer/"><img src="https://img.shields.io/badge/Official%20Website-Manifesto%20%26%20Docs-crimson.svg?style=for-the-badge" alt="Official Website & Manifesto"/></a>
-  <a href="https://turnitout.streamlit.app/"><img src="https://img.shields.io/badge/Live%20App-Launch%20Turnitout-blue.svg?style=for-the-badge&logo=streamlit" alt="Launch Live App"/></a>
-  <img src="https://img.shields.io/badge/Engine-v1.9.2-green.svg?style=for-the-badge" alt="Engine: v1.9.2"/>
-  <img src="https://img.shields.io/badge/Safety-100%25%20Zero%20AI-purple.svg?style=for-the-badge" alt="Safety: 100% Zero AI"/>
-  <a href="https://wa.me/923225522383"><img src="https://img.shields.io/badge/WhatsApp-Developer%20Support-25D366.svg?style=for-the-badge&logo=whatsapp" alt="WhatsApp Support"/></a>
-</p>
-
+<!-- Row 1: 1 Card -->
 <p align="center">
   <a href="https://repo.tinix.ai/en/project/ahmadhassan-bted-turnitout-humanizer-21e37f39-3b17-4f88-a771-6b55bd97fb1e" target="_blank" rel="noopener noreferrer">
     <img src="docs/assets/badges/tinix-turnitin-destroyer-dark.svg" alt="TiniX Trending — Thread: turnitin-destroyer — #1 Repository of the Week" width="580" />
   </a>
 </p>
 
+<!-- Row 2: 2 Cards -->
 <p align="center">
-  <a href="https://repo.tinix.ai/en/project/ahmadhassan-bted-turnitout-humanizer-21e37f39-3b17-4f88-a771-6b55bd97fb1e" target="_blank" rel="noopener noreferrer"><img src="docs/assets/badges/tinix-turnitin-bypass-dark.svg" alt="TiniX Trending — Thread: turnitin-bypass — #1 Repository of the Week" width="310" /></a>
-  <a href="https://repo.tinix.ai/en/project/ahmadhassan-bted-turnitout-humanizer-21e37f39-3b17-4f88-a771-6b55bd97fb1e" target="_blank" rel="noopener noreferrer"><img src="docs/assets/badges/tinix-plagerism-remover-dark.svg" alt="TiniX Trending — Thread: plagerism-remover — #1 Repository of the Week" width="310" /></a>
-  <a href="https://repo.tinix.ai/en/project/ahmadhassan-bted-turnitout-humanizer-21e37f39-3b17-4f88-a771-6b55bd97fb1e" target="_blank" rel="noopener noreferrer"><img src="docs/assets/badges/tinix-turnitin-dark.svg" alt="TiniX Trending — Thread: turnitin — #1 Repository of the Week" width="310" /></a>
-</p>
-<p align="center">
-  <a href="https://repo.tinix.ai/en/project/ahmadhassan-bted-turnitout-humanizer-21e37f39-3b17-4f88-a771-6b55bd97fb1e" target="_blank" rel="noopener noreferrer"><img src="docs/assets/badges/tinix-ai-remover-dark.svg" alt="TiniX Trending — Thread: ai-remover — #1 Repository of the Week" width="310" /></a>
-  <a href="https://repo.tinix.ai/en/project/ahmadhassan-bted-turnitout-humanizer-21e37f39-3b17-4f88-a771-6b55bd97fb1e" target="_blank" rel="noopener noreferrer"><img src="docs/assets/badges/tinix-paraphrasing-tool-dark.svg" alt="TiniX Trending — Thread: paraphrasing-tool — #1 Repository of the Week" width="310" /></a>
-  <a href="https://repo.tinix.ai/en/project/ahmadhassan-bted-turnitout-humanizer-21e37f39-3b17-4f88-a771-6b55bd97fb1e" target="_blank" rel="noopener noreferrer"><img src="docs/assets/badges/tinix-writing-assistant-dark.svg" alt="TiniX Trending — Topic: writing-assistant — #1 Repository of the Week" width="310" /></a>
-</p>
-<p align="center">
-  <a href="https://repo.tinix.ai/en/project/ahmadhassan-bted-turnitout-humanizer-21e37f39-3b17-4f88-a771-6b55bd97fb1e" target="_blank" rel="noopener noreferrer"><img src="docs/assets/badges/tinix-academic-writing-dark.svg" alt="TiniX Trending — Topic: academic-writing — #1 Repository of the Week" width="310" /></a>
-  <a href="https://repo.tinix.ai/en/project/ahmadhassan-bted-turnitout-humanizer-21e37f39-3b17-4f88-a771-6b55bd97fb1e" target="_blank" rel="noopener noreferrer"><img src="docs/assets/badges/tinix-thesis-dark.svg" alt="TiniX Trending — Topic: thesis — #1 Repository of the Week" width="310" /></a>
-  <a href="https://repo.tinix.ai/en/project/ahmadhassan-bted-turnitout-humanizer-21e37f39-3b17-4f88-a771-6b55bd97fb1e" target="_blank" rel="noopener noreferrer"><img src="docs/assets/badges/tinix-latex-dark.svg" alt="TiniX Trending — Topic: Latex — #1 Repository of the Week" width="310" /></a>
+  <a href="https://repo.tinix.ai/en/project/ahmadhassan-bted-turnitout-humanizer-21e37f39-3b17-4f88-a771-6b55bd97fb1e" target="_blank" rel="noopener noreferrer"><img src="docs/assets/badges/tinix-turnitin-bypass-dark.svg" alt="TiniX Trending — Thread: turnitin-bypass — #1 Repository of the Week" width="470" /></a>
+  <a href="https://repo.tinix.ai/en/project/ahmadhassan-bted-turnitout-humanizer-21e37f39-3b17-4f88-a771-6b55bd97fb1e" target="_blank" rel="noopener noreferrer"><img src="docs/assets/badges/tinix-plagerism-remover-dark.svg" alt="TiniX Trending — Thread: plagerism-remover — #1 Repository of the Week" width="470" /></a>
 </p>
 
+<!-- Row 3: 3 Cards -->
 <p align="center">
-  <strong>🔥 2026 THREAT ERASURE PROTOCOLS ACTIVE 🔥</strong><br>
+  <a href="https://repo.tinix.ai/en/project/ahmadhassan-bted-turnitout-humanizer-21e37f39-3b17-4f88-a771-6b55bd97fb1e" target="_blank" rel="noopener noreferrer"><img src="docs/assets/badges/tinix-turnitin-dark.svg" alt="TiniX Trending — Thread: turnitin — #1 Repository of the Week" width="310" /></a>
+  <a href="https://repo.tinix.ai/en/project/ahmadhassan-bted-turnitout-humanizer-21e37f39-3b17-4f88-a771-6b55bd97fb1e" target="_blank" rel="noopener noreferrer"><img src="docs/assets/badges/tinix-ai-remover-dark.svg" alt="TiniX Trending — Thread: ai-remover — #1 Repository of the Week" width="310" /></a>
+  <a href="https://repo.tinix.ai/en/project/ahmadhassan-bted-turnitout-humanizer-21e37f39-3b17-4f88-a771-6b55bd97fb1e" target="_blank" rel="noopener noreferrer"><img src="docs/assets/badges/tinix-paraphrasing-tool-dark.svg" alt="TiniX Trending — Thread: paraphrasing-tool — #1 Repository of the Week" width="310" /></a>
+</p>
+
+<!-- Row 4: 4 Cards -->
+<p align="center">
+  <a href="https://repo.tinix.ai/en/project/ahmadhassan-bted-turnitout-humanizer-21e37f39-3b17-4f88-a771-6b55bd97fb1e" target="_blank" rel="noopener noreferrer"><img src="docs/assets/badges/tinix-writing-assistant-dark.svg" alt="TiniX Trending — Topic: writing-assistant — #1 Repository of the Week" width="232" /></a>
+  <a href="https://repo.tinix.ai/en/project/ahmadhassan-bted-turnitout-humanizer-21e37f39-3b17-4f88-a771-6b55bd97fb1e" target="_blank" rel="noopener noreferrer"><img src="docs/assets/badges/tinix-academic-writing-dark.svg" alt="TiniX Trending — Topic: academic-writing — #1 Repository of the Week" width="232" /></a>
+  <a href="https://repo.tinix.ai/en/project/ahmadhassan-bted-turnitout-humanizer-21e37f39-3b17-4f88-a771-6b55bd97fb1e" target="_blank" rel="noopener noreferrer"><img src="docs/assets/badges/tinix-thesis-dark.svg" alt="TiniX Trending — Topic: thesis — #1 Repository of the Week" width="232" /></a>
+  <a href="https://repo.tinix.ai/en/project/ahmadhassan-bted-turnitout-humanizer-21e37f39-3b17-4f88-a771-6b55bd97fb1e" target="_blank" rel="noopener noreferrer"><img src="docs/assets/badges/tinix-latex-dark.svg" alt="TiniX Trending — Topic: Latex — #1 Repository of the Week" width="232" /></a>
+</p>
+
+---
+
+<h2> 🚨 HOW TO REMOVE AI WATERMARKS (CLAUDE, SYNTHID, CHATGPT) & BEAT THE 2026 TRACKING CRISIS 🚨</h2>
+
+<p align="center">
   <img src="https://img.shields.io/badge/Claude_Watermarks-Destroyed-red.svg?style=for-the-badge" alt="Claude Watermarks: Destroyed"/>
   <img src="https://img.shields.io/badge/SynthID_Hashes-Shattered-red.svg?style=for-the-badge" alt="SynthID Hashes: Shattered"/>
   <img src="https://img.shields.io/badge/Zero--Width_Characters-Purged-orange.svg?style=for-the-badge" alt="Zero-Width Characters: Purged"/>
@@ -49,13 +65,8 @@
   <img src="https://img.shields.io/badge/EU_AI_Act_Tracers-Bypassed-yellow.svg?style=for-the-badge" alt="EU AI Act Tracers: Bypassed"/>
 </p>
 
-<p align="center">
-  <strong>The world's first 100% programmatic, zero-generative-AI footprint removal engine. Mathematically shatter cryptographic token trackers, purge invisible zero-width Unicode, and strip C2PA metadata. Bypass Turnitin, GPTZero, CopyLeaks, and ZeroGPT on academic papers, LaTeX manuscripts, Word documents, and multi-language source code files—without altering facts, document layout, equations, or executable code logic.</strong>
-</p>
-
 ---
 
-> 🚨 **URGENT: HOW TO REMOVE AI WATERMARKS (CLAUDE, SYNTHID, CHATGPT) & BEAT THE 2026 TRACKING CRISIS** 🚨
 > _To comply with the **EU AI Act (Article 50)**, **OpenAI (ChatGPT)**, **Anthropic (Claude)**, and **Google (Gemini)** now embed multi-layered tracking: **invisible zero-width Unicode** (crashing code/triggering detectors), hidden **C2PA metadata**, and **cryptographic text watermarks like Google SynthID-Text**. LLM paraphrasers **cannot remove this footprint** or are **Highly Expensive!** Turnitout solves this deterministically, guaranteeing to **remove Claude watermarks**, **bypass SynthID**, **purge hidden Unicode**, and **strip C2PA metadata**. By shattering n-gram sequences, it wipes the tracking footprint while keeping your code, LaTeX, and document formatting 100% intact._
 
 ---
@@ -64,17 +75,6 @@
 
 <p align="center">
   <img src="docs/assets/turnitout_UI.png" alt="Turnitout Web Interface" width="100%"/>
-</p>
-
-<p align="center">
-  <a href="https://turnitout1.streamlit.app/" target="_blank"><img src="https://img.shields.io/badge/Server%20Node%201-Fast%20Mirror-E63946?style=for-the-badge&logo=streamlit&logoColor=white" alt="Server Node 1"/></a>
-  <a href="https://turnitout2.streamlit.app/" target="_blank"><img src="https://img.shields.io/badge/Server%20Node%202-Fast%20Mirror-2A9D8F?style=for-the-badge&logo=streamlit&logoColor=white" alt="Server Node 2"/></a>
-  <a href="https://turnitout3.streamlit.app/" target="_blank"><img src="https://img.shields.io/badge/Server%20Node%203-Fast%20Mirror-E76F51?style=for-the-badge&logo=streamlit&logoColor=white" alt="Server Node 3"/></a>
-  <a href="https://turnitout4.streamlit.app/" target="_blank"><img src="https://img.shields.io/badge/Server%20Node%204-Fast%20Mirror-9B5DE5?style=for-the-badge&logo=streamlit&logoColor=white" alt="Server Node 4"/></a>
-  <a href="https://turnitout5.streamlit.app/" target="_blank"><img src="https://img.shields.io/badge/Server%20Node%205-Fast%20Mirror-06D6A0?style=for-the-badge&logo=streamlit&logoColor=white" alt="Server Node 5"/></a>
-  <a href="https://turnitout6.streamlit.app/" target="_blank"><img src="https://img.shields.io/badge/Server%20Node%206-Fast%20Mirror-48CAE4?style=for-the-badge&logo=streamlit&logoColor=white" alt="Server Node 6"/></a>
-  <a href="https://turnitout7.streamlit.app/" target="_blank"><img src="https://img.shields.io/badge/Server%20Node%207-Fast%20Mirror-F15BB5?style=for-the-badge&logo=streamlit&logoColor=white" alt="Server Node 7"/></a>
-  <a href="https://turnitout.streamlit.app/" target="_blank"><img src="https://img.shields.io/badge/Active%20Heart-turnitout.streamlit.app-1D3557?style=for-the-badge&logo=streamlit&logoColor=white" alt="Main Server Heart"/></a>
 </p>
 
 | Cluster Mirror             | Access URL                                                        |  Status   | Description                             |
@@ -115,17 +115,9 @@ Commercial AI humanizers use LLMs to rewrite text, leaving **new AI footprints, 
 
 ## 🚀 Core Capabilities & Product Features
 
-```text
-┌────────────────────────────────────────────────────────────────────────────────────────────────────────┐
-│                                       TURNITOUT PRODUCT CAPABILITIES                                   │
-├───────────────────────────────┬───────────────────────────────┬───────────────────────────────┬────────┤
-│ 🚨 Watermark & Tracker Wipe   │   Code Comment Humanizer      │   Citation & Reference Gen    │    ZIP │
-│  - Shatters Claude SynthID    │  - Python, C++, Java, JS, SQL │  - IEEE [1] & APA (Author)    │  - DOCX│
-│  - Purges Zero-Width Unicode  │  - Developer Skill Personas   │  - BibTeX (.bib) Generator    │  - TEX │
-│  - Strips C2PA Metadata       │  - Single-Line Comment Safety │  - 5 Academic Taxonomies      │  - Code│
-└───────────────────────────────┴───────────────────────────────┴───────────────────────────────┴────────┘
-
-```
+| 🚨 Watermark & Tracker Wipe                                                          | 💻 Code Comment Humanizer                                                                   | 📚 Citation & Reference Gen                                                             | 📁 Supported Formats                                                                                        |
+| :----------------------------------------------------------------------------------- | :------------------------------------------------------------------------------------------ | :-------------------------------------------------------------------------------------- | :---------------------------------------------------------------------------------------------------------- |
+| • Shatters Claude & SynthID<br>• Purges Zero-Width Unicode<br>• Strips C2PA Metadata | • Python, C++, Java, JS, SQL<br>• Developer Skill Personas<br>• String-Aware Comment Safety | • IEEE `[1]` & APA `(Author)`<br>• BibTeX (`.bib`) Generator<br>• 5 Academic Taxonomies | • `.docx` (Word Documents)<br>• `.tex` (LaTeX Papers)<br>• Source Code Files<br>• Multi-file `.zip` Bundles |
 
 ### ⚡ 1. The Core Engine: Zero-AI & Mathematically Ruthless
 
@@ -165,20 +157,15 @@ Commercial AI humanizers use LLMs to rewrite text, leaving **new AI footprints, 
 
 ## 🛠️ High-Level Engine Architecture Overview
 
-```text
-┌─────────────────────────────────────────────────────────────────────────────────────────┐
-│                               TURNITOUT ENGINE ARCHITECTURE                             │
-├─────────────────────────────────────────────────────────────────────────────────────────┤
-│  [ UI Layer ]               Streamlit Multi-Page Web App & Real-Time Dashboard          │
-│  [ Authentication Layer ]   OAuth 2.0 & Triple-Layer Auth Persistence Engine            │
-│  [ Parsing Layer ]          XML DOCX Parser, LaTeX Zone Parser & Code Tokenizer         │
-│  [ Rule Transformation ]    15-Stage Pipeline (Synonym, Voice, Clause, N-Gram Audit)    │
-│  [ Rules Repository ]       4,068+ Decoupled JSON Rules & Academic Discipline Taxonomy  │
-│  [ Language Engines ]       String-Aware Rules for Python, C-Family, Shell, SQL & HTML  │
-│  [ Verification Layer ]     ZipPy Entropic Perplexity & Evasion Verification            │
-└─────────────────────────────────────────────────────────────────────────────────────────┘
-
-```
+| Architecture Layer          | Core Component & Engine Responsibilities                                                      |
+| :-------------------------- | :-------------------------------------------------------------------------------------------- |
+| 🖥️ **UI Layer**             | Streamlit Multi-Page Web Application & Real-Time Dashboard                                    |
+| 🔑 **Authentication Layer** | OAuth 2.0 & Triple-Layer Auth Persistence Engine (Cookies + LocalStorage)                     |
+| 📑 **Parsing Layer**        | XML DOCX Parser, LaTeX Zone Parser & Multi-Language Code Tokenizer                            |
+| ⚙️ **Rule Transformation**  | 15-Stage Pipeline (Linguistic Synonyms, Active/Passive Voice, Clause Reshaping, N-Gram Audit) |
+| 🗄️ **Rules Repository**     | 4,068+ Decoupled Deterministic JSON Rules & Academic Discipline Taxonomy                      |
+| 💻 **Language Engines**     | String-Aware Token Matching for Python, C-Family, Shell, SQL & HTML                           |
+| 🔍 **Verification Layer**   | ZipPy Entropic Compression Perplexity & Real-Time Evasion Scorer                              |
 
 The platform is designed around strict **asset decoupling** and **modular language rule pipelines**:
 
@@ -208,10 +195,10 @@ The platform is designed around strict **asset decoupling** and **modular langua
 
 ## 🌟 Mentions & Community Spotlights
 
-- 🐅 **[GitTiger](https://gittiger.com/user/AhmadHassan-BTed)**: Ranked **#39 globally** on GitTiger (Score: 18.9 • 2,066+ Stars • 85 Forks) • [Platform](https://gittiger.com/) • [Categories](https://gittiger.com/categories) • [Rising](https://gittiger.com/rising) • [Hidden Gems](https://gittiger.com/hidden-gems) • [Insights](https://gittiger.com/insights)
+- 🐅 **[GitTiger](https://gittiger.com/repo/AhmadHassan-BTed/Turnitout-Humanizer)**: Ranked **#39 globally** on GitTiger (Score: 18.9 • 2,066+ Stars • 85 Forks)
 - 📈 **[Trendshift](https://trendshift.io/repositories/229188)**: Featured on Daily & Weekly developer leaderboards
 - ⚡ **[TiniX AI Project Hub](https://repo.tinix.ai/en/project/ahmadhassan-bted-turnitout-humanizer-21e37f39-3b17-4f88-a771-6b55bd97fb1e)**: Verified open-source project listing
-- 📝 **[Humanio Blog Review](https://humanio.me/blog/turnitout-humanizer-review)**: *"Turnitout Humanizer Review: How It Works, Limitations, and Better Alternatives"* — technical architectural breakdown
+- 📝 **[Humanio Blog Review](https://humanio.me/blog/turnitout-humanizer-review)**: _"Turnitout Humanizer Review: How It Works, Limitations, and Better Alternatives"_ — technical architectural breakdown
 - 🎥 **Video Demonstrations & Creator Features**:
   - 👤 [AI Watermarks & Zero-Width Removal Demo — Ikram Rana (Facebook)](https://www.facebook.com/IkramRana.aiautomation/videos/strip-hidden-ai-watermarks-zero-width-tracking-characters-and-identifying-docume/1095214210169161/)
   - 📱 [TikTok Showcase Video by @gittrend.io](https://www.tiktok.com/@gittrend.io/video/7697763161134353682)
