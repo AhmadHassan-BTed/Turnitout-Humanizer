@@ -5,11 +5,39 @@
 <h1 align="center">Turnitout — Plagiarism & AI Footprint Removal Engine</h1>
 
 <p align="center">
+  <a href="https://repo.tinix.ai/project/21e37f39-3b17-4f88-a771-6b55bd97fb1e" target="_blank" rel="noopener noreferrer"><img src="https://repo.tinix.ai/api/badge/21e37f39-3b17-4f88-a771-6b55bd97fb1e" alt="TiniX Trending | AhmadHassan-BTed/Turnitout-Humanizer" /></a>
+  <a href="https://trendshift.io/repositories/229188?utm_source=trendshift-badge&amp;utm_medium=badge&amp;utm_campaign=badge-trendshift-229188" target="_blank" rel="noopener noreferrer"><img src="https://trendshift.io/api/badge/trendshift/repositories/229188/daily?language=HTML" alt="AhmadHassan-BTed%2FTurnitout-Humanizer | Trendshift" width="250" height="55"/></a>
+  <a href="https://trendshift.io/repositories/229188?utm_source=trendshift-badge&amp;utm_medium=badge&amp;utm_campaign=badge-trendshift-229188" target="_blank" rel="noopener noreferrer"><img src="https://trendshift.io/api/badge/trendshift/repositories/229188/weekly?language=HTML" alt="AhmadHassan-BTed%2FTurnitout-Humanizer | Trendshift" width="250" height="55"/></a>
+</p>
+
+<p align="center">
   <a href="https://ahmadhassan-bted.github.io/Turnitout-Humanizer/"><img src="https://img.shields.io/badge/Official%20Website-Manifesto%20%26%20Docs-crimson.svg?style=for-the-badge" alt="Official Website & Manifesto"/></a>
   <a href="https://turnitout.streamlit.app/"><img src="https://img.shields.io/badge/Live%20App-Launch%20Turnitout-blue.svg?style=for-the-badge&logo=streamlit" alt="Launch Live App"/></a>
   <img src="https://img.shields.io/badge/Engine-v1.9.2-green.svg?style=for-the-badge" alt="Engine: v1.9.2"/>
   <img src="https://img.shields.io/badge/Safety-100%25%20Zero%20AI-purple.svg?style=for-the-badge" alt="Safety: 100% Zero AI"/>
   <a href="https://wa.me/923225522383"><img src="https://img.shields.io/badge/WhatsApp-Developer%20Support-25D366.svg?style=for-the-badge&logo=whatsapp" alt="WhatsApp Support"/></a>
+</p>
+
+<p align="center">
+  <a href="https://repo.tinix.ai/en/project/ahmadhassan-bted-turnitout-humanizer-21e37f39-3b17-4f88-a771-6b55bd97fb1e" target="_blank" rel="noopener noreferrer">
+    <img src="docs/assets/badges/tinix-turnitin-destroyer-dark.svg" alt="TiniX Trending — Thread: turnitin-destroyer — #1 Repository of the Week" width="580" />
+  </a>
+</p>
+
+<p align="center">
+  <a href="https://repo.tinix.ai/en/project/ahmadhassan-bted-turnitout-humanizer-21e37f39-3b17-4f88-a771-6b55bd97fb1e" target="_blank" rel="noopener noreferrer"><img src="docs/assets/badges/tinix-turnitin-bypass-dark.svg" alt="TiniX Trending — Thread: turnitin-bypass — #1 Repository of the Week" width="310" /></a>
+  <a href="https://repo.tinix.ai/en/project/ahmadhassan-bted-turnitout-humanizer-21e37f39-3b17-4f88-a771-6b55bd97fb1e" target="_blank" rel="noopener noreferrer"><img src="docs/assets/badges/tinix-plagerism-remover-dark.svg" alt="TiniX Trending — Thread: plagerism-remover — #1 Repository of the Week" width="310" /></a>
+  <a href="https://repo.tinix.ai/en/project/ahmadhassan-bted-turnitout-humanizer-21e37f39-3b17-4f88-a771-6b55bd97fb1e" target="_blank" rel="noopener noreferrer"><img src="docs/assets/badges/tinix-turnitin-dark.svg" alt="TiniX Trending — Thread: turnitin — #1 Repository of the Week" width="310" /></a>
+</p>
+<p align="center">
+  <a href="https://repo.tinix.ai/en/project/ahmadhassan-bted-turnitout-humanizer-21e37f39-3b17-4f88-a771-6b55bd97fb1e" target="_blank" rel="noopener noreferrer"><img src="docs/assets/badges/tinix-ai-remover-dark.svg" alt="TiniX Trending — Thread: ai-remover — #1 Repository of the Week" width="310" /></a>
+  <a href="https://repo.tinix.ai/en/project/ahmadhassan-bted-turnitout-humanizer-21e37f39-3b17-4f88-a771-6b55bd97fb1e" target="_blank" rel="noopener noreferrer"><img src="docs/assets/badges/tinix-paraphrasing-tool-dark.svg" alt="TiniX Trending — Thread: paraphrasing-tool — #1 Repository of the Week" width="310" /></a>
+  <a href="https://repo.tinix.ai/en/project/ahmadhassan-bted-turnitout-humanizer-21e37f39-3b17-4f88-a771-6b55bd97fb1e" target="_blank" rel="noopener noreferrer"><img src="docs/assets/badges/tinix-writing-assistant-dark.svg" alt="TiniX Trending — Topic: writing-assistant — #1 Repository of the Week" width="310" /></a>
+</p>
+<p align="center">
+  <a href="https://repo.tinix.ai/en/project/ahmadhassan-bted-turnitout-humanizer-21e37f39-3b17-4f88-a771-6b55bd97fb1e" target="_blank" rel="noopener noreferrer"><img src="docs/assets/badges/tinix-academic-writing-dark.svg" alt="TiniX Trending — Topic: academic-writing — #1 Repository of the Week" width="310" /></a>
+  <a href="https://repo.tinix.ai/en/project/ahmadhassan-bted-turnitout-humanizer-21e37f39-3b17-4f88-a771-6b55bd97fb1e" target="_blank" rel="noopener noreferrer"><img src="docs/assets/badges/tinix-thesis-dark.svg" alt="TiniX Trending — Topic: thesis — #1 Repository of the Week" width="310" /></a>
+  <a href="https://repo.tinix.ai/en/project/ahmadhassan-bted-turnitout-humanizer-21e37f39-3b17-4f88-a771-6b55bd97fb1e" target="_blank" rel="noopener noreferrer"><img src="docs/assets/badges/tinix-latex-dark.svg" alt="TiniX Trending — Topic: Latex — #1 Repository of the Week" width="310" /></a>
 </p>
 
 <p align="center">
@@ -175,6 +203,20 @@ The platform is designed around strict **asset decoupling** and **modular langua
 - **WhatsApp Direct Developer Support**: [Chat on WhatsApp (+92 322 5522383)](https://wa.me/923225522383)
 - **Feature Requests & Bug Reporting**: [Submit a GitHub Issue](https://github.com/AhmadHassan-BTed/Turnitout-Humanizer/issues/new)
 - **Enterprise Inquiries**: [ahmadhassan.bted@gmail.com](https://www.google.com/search?q=mailto%3Aahmadhassan.bted%40gmail.com)
+
+---
+
+## 🌟 Mentions & Community Spotlights
+
+- 🐅 **[GitTiger](https://gittiger.com/user/AhmadHassan-BTed)**: Ranked **#39 globally** on GitTiger (Score: 18.9 • 2,066+ Stars • 85 Forks) • [Platform](https://gittiger.com/) • [Categories](https://gittiger.com/categories) • [Rising](https://gittiger.com/rising) • [Hidden Gems](https://gittiger.com/hidden-gems) • [Insights](https://gittiger.com/insights)
+- 📈 **[Trendshift](https://trendshift.io/repositories/229188)**: Featured on Daily & Weekly developer leaderboards
+- ⚡ **[TiniX AI Project Hub](https://repo.tinix.ai/en/project/ahmadhassan-bted-turnitout-humanizer-21e37f39-3b17-4f88-a771-6b55bd97fb1e)**: Verified open-source project listing
+- 📝 **[Humanio Blog Review](https://humanio.me/blog/turnitout-humanizer-review)**: *"Turnitout Humanizer Review: How It Works, Limitations, and Better Alternatives"* — technical architectural breakdown
+- 🎥 **Video Demonstrations & Creator Features**:
+  - 👤 [AI Watermarks & Zero-Width Removal Demo — Ikram Rana (Facebook)](https://www.facebook.com/IkramRana.aiautomation/videos/strip-hidden-ai-watermarks-zero-width-tracking-characters-and-identifying-docume/1095214210169161/)
+  - 📱 [TikTok Showcase Video by @gittrend.io](https://www.tiktok.com/@gittrend.io/video/7697763161134353682)
+  - ▶️ [Turnitout Zero-AI Bypass Demonstration (YouTube Shorts)](https://www.youtube.com/shorts/_trUDTjUE1c)
+  - 📸 **Instagram Reels Spotlights**: [Reel 1 (@DeoQCZ1zRiz)](https://www.instagram.com/reel/DeoQCZ1zRiz/) • [Reel 2 (@Den7bo-Oo7y)](https://www.instagram.com/reel/Den7bo-Oo7y/) • [Reel 3 (@DeprxI_uTRe)](https://www.instagram.com/reel/DeprxI_uTRe/) • [Reel 4 (@DeqxR63jS8I)](https://www.instagram.com/reel/DeqxR63jS8I/) • [Reel 5 (@DepASYlxUrL)](https://www.instagram.com/reel/DepASYlxUrL/) • [Reel 6 (@DeoA8fqIXgi)](https://www.instagram.com/reel/DeoA8fqIXgi/)
 
 ---
 
