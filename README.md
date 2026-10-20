@@ -16,41 +16,64 @@
 
 <h2>Achievements</h2>
 
-<p align="center">
+<!-- <p align="center">
   <a href="https://repo.tinix.ai/project/21e37f39-3b17-4f88-a771-6b55bd97fb1e" target="_blank" rel="noopener noreferrer"><img src="https://repo.tinix.ai/api/badge/21e37f39-3b17-4f88-a771-6b55bd97fb1e" alt="TiniX Trending | AhmadHassan-BTed/Turnitout-Humanizer" /></a>
-</p>
+</p> -->
 
+<!-- Row 1: Trendshift Daily + Weekly -->
 <p align="center">
-  <a href="https://trendshift.io/repositories/229188?utm_source=trendshift-badge&amp;utm_medium=badge&amp;utm_campaign=badge-trendshift-229188" target="_blank" rel="noopener noreferrer"><img src="https://trendshift.io/api/badge/trendshift/repositories/229188/daily?language=HTML" alt="AhmadHassan-BTed%2FTurnitout-Humanizer | Trendshift" width="250" height="55"/></a>
-  <a href="https://trendshift.io/repositories/229188?utm_source=trendshift-badge&amp;utm_medium=badge&amp;utm_campaign=badge-trendshift-229188" target="_blank" rel="noopener noreferrer"><img src="https://trendshift.io/api/badge/trendshift/repositories/229188/weekly?language=HTML" alt="AhmadHassan-BTed%2FTurnitout-Humanizer | Trendshift" width="250" height="55"/></a>
-</p>
-
-<!-- Row 1: 1 Card -->
-<p align="center">
-  <a href="https://repo.tinix.ai/en/project/ahmadhassan-bted-turnitout-humanizer-21e37f39-3b17-4f88-a771-6b55bd97fb1e" target="_blank" rel="noopener noreferrer">
-    <img src="docs/assets/badges/tinix-turnitin-destroyer-dark.svg" alt="TiniX Trending — Thread: turnitin-destroyer — #1 Repository of the Week" width="580" />
+  <a href="https://trendshift.io/repositories/229188?utm_source=trendshift-badge&amp;utm_medium=badge&amp;utm_campaign=badge-trendshift-229188" target="_blank" rel="noopener noreferrer">
+    <img src="https://trendshift.io/api/badge/trendshift/repositories/229188/daily?language=HTML" alt="TurnItOut Humanizer — Trendshift Daily" width="250" height="55" />
+  </a>
+  <a href="https://trendshift.io/repositories/229188?utm_source=trendshift-badge&amp;utm_medium=badge&amp;utm_campaign=badge-trendshift-229188" target="_blank" rel="noopener noreferrer">
+    <img src="https://trendshift.io/api/badge/trendshift/repositories/229188/weekly?language=HTML" alt="TurnItOut Humanizer — Trendshift Weekly" width="250" height="55" />
   </a>
 </p>
 
-<!-- Row 2: 2 Cards -->
+<!-- Row 2: TiniX -->
 <p align="center">
-  <a href="https://repo.tinix.ai/en/project/ahmadhassan-bted-turnitout-humanizer-21e37f39-3b17-4f88-a771-6b55bd97fb1e" target="_blank" rel="noopener noreferrer"><img src="docs/assets/badges/tinix-turnitin-bypass-dark.svg" alt="TiniX Trending — Thread: turnitin-bypass — #1 Repository of the Week" width="470" /></a>
-  <a href="https://repo.tinix.ai/en/project/ahmadhassan-bted-turnitout-humanizer-21e37f39-3b17-4f88-a771-6b55bd97fb1e" target="_blank" rel="noopener noreferrer"><img src="docs/assets/badges/tinix-plagerism-remover-dark.svg" alt="TiniX Trending — Thread: plagerism-remover — #1 Repository of the Week" width="470" /></a>
+  <a href="https://repo.tinix.ai/en/project/ahmadhassan-bted-turnitout-humanizer-21e37f39-3b17-4f88-a771-6b55bd97fb1e" target="_blank" rel="noopener noreferrer">
+    <img src="docs/assets/badges/tinix-turnitin-destroyer-dark.svg" alt="TiniX Trending — Turnitin Destroyer" width="400" />
+  </a>
+  <a href="https://repo.tinix.ai/en/project/ahmadhassan-bted-turnitout-humanizer-21e37f39-3b17-4f88-a771-6b55bd97fb1e" target="_blank" rel="noopener noreferrer">
+    <img src="docs/assets/badges/tinix-paraphrasing-tool-dark.svg" alt="TiniX Trending — Paraphrasing Tool" width="400" />
+  </a>
 </p>
 
-<!-- Row 3: 3 Cards -->
 <p align="center">
-  <a href="https://repo.tinix.ai/en/project/ahmadhassan-bted-turnitout-humanizer-21e37f39-3b17-4f88-a771-6b55bd97fb1e" target="_blank" rel="noopener noreferrer"><img src="docs/assets/badges/tinix-turnitin-dark.svg" alt="TiniX Trending — Thread: turnitin — #1 Repository of the Week" width="310" /></a>
-  <a href="https://repo.tinix.ai/en/project/ahmadhassan-bted-turnitout-humanizer-21e37f39-3b17-4f88-a771-6b55bd97fb1e" target="_blank" rel="noopener noreferrer"><img src="docs/assets/badges/tinix-ai-remover-dark.svg" alt="TiniX Trending — Thread: ai-remover — #1 Repository of the Week" width="310" /></a>
-  <a href="https://repo.tinix.ai/en/project/ahmadhassan-bted-turnitout-humanizer-21e37f39-3b17-4f88-a771-6b55bd97fb1e" target="_blank" rel="noopener noreferrer"><img src="docs/assets/badges/tinix-paraphrasing-tool-dark.svg" alt="TiniX Trending — Thread: paraphrasing-tool — #1 Repository of the Week" width="310" /></a>
+  <a href="https://repo.tinix.ai/en/project/ahmadhassan-bted-turnitout-humanizer-21e37f39-3b17-4f88-a771-6b55bd97fb1e" target="_blank" rel="noopener noreferrer">
+    <img src="docs/assets/badges/tinix-turnitin-bypass-dark.svg" alt="TiniX Trending — Turnitin Bypass" width="400" />
+  </a>
+  <a href="https://repo.tinix.ai/en/project/ahmadhassan-bted-turnitout-humanizer-21e37f39-3b17-4f88-a771-6b55bd97fb1e" target="_blank" rel="noopener noreferrer">
+    <img src="docs/assets/badges/tinix-plagerism-remover-dark.svg" alt="TiniX Trending — Plagiarism Remover" width="400" />
+  </a>
 </p>
 
-<!-- Row 4: 4 Cards -->
 <p align="center">
-  <a href="https://repo.tinix.ai/en/project/ahmadhassan-bted-turnitout-humanizer-21e37f39-3b17-4f88-a771-6b55bd97fb1e" target="_blank" rel="noopener noreferrer"><img src="docs/assets/badges/tinix-writing-assistant-dark.svg" alt="TiniX Trending — Topic: writing-assistant — #1 Repository of the Week" width="232" /></a>
-  <a href="https://repo.tinix.ai/en/project/ahmadhassan-bted-turnitout-humanizer-21e37f39-3b17-4f88-a771-6b55bd97fb1e" target="_blank" rel="noopener noreferrer"><img src="docs/assets/badges/tinix-academic-writing-dark.svg" alt="TiniX Trending — Topic: academic-writing — #1 Repository of the Week" width="232" /></a>
-  <a href="https://repo.tinix.ai/en/project/ahmadhassan-bted-turnitout-humanizer-21e37f39-3b17-4f88-a771-6b55bd97fb1e" target="_blank" rel="noopener noreferrer"><img src="docs/assets/badges/tinix-thesis-dark.svg" alt="TiniX Trending — Topic: thesis — #1 Repository of the Week" width="232" /></a>
-  <a href="https://repo.tinix.ai/en/project/ahmadhassan-bted-turnitout-humanizer-21e37f39-3b17-4f88-a771-6b55bd97fb1e" target="_blank" rel="noopener noreferrer"><img src="docs/assets/badges/tinix-latex-dark.svg" alt="TiniX Trending — Topic: Latex — #1 Repository of the Week" width="232" /></a>
+  <a href="https://repo.tinix.ai/en/project/ahmadhassan-bted-turnitout-humanizer-21e37f39-3b17-4f88-a771-6b55bd97fb1e" target="_blank" rel="noopener noreferrer">
+    <img src="docs/assets/badges/tinix-turnitin-dark.svg" alt="TiniX Trending — Turnitin" width="400" />
+  </a>
+  <a href="https://repo.tinix.ai/en/project/ahmadhassan-bted-turnitout-humanizer-21e37f39-3b17-4f88-a771-6b55bd97fb1e" target="_blank" rel="noopener noreferrer">
+    <img src="docs/assets/badges/tinix-ai-remover-dark.svg" alt="TiniX Trending — AI Remover" width="400" />
+  </a>
+</p>
+
+<p align="center">
+  <a href="https://repo.tinix.ai/en/project/ahmadhassan-bted-turnitout-humanizer-21e37f39-3b17-4f88-a771-6b55bd97fb1e" target="_blank" rel="noopener noreferrer">
+    <img src="docs/assets/badges/tinix-writing-assistant-dark.svg" alt="TiniX Trending — Writing Assistant" width="400" />
+  </a>
+  <a href="https://repo.tinix.ai/en/project/ahmadhassan-bted-turnitout-humanizer-21e37f39-3b17-4f88-a771-6b55bd97fb1e" target="_blank" rel="noopener noreferrer">
+    <img src="docs/assets/badges/tinix-academic-writing-dark.svg" alt="TiniX Trending — Academic Writing" width="400" />
+  </a>
+</p>
+
+<p align="center">
+  <a href="https://repo.tinix.ai/en/project/ahmadhassan-bted-turnitout-humanizer-21e37f39-3b17-4f88-a771-6b55bd97fb1e" target="_blank" rel="noopener noreferrer">
+    <img src="docs/assets/badges/tinix-thesis-dark.svg" alt="TiniX Trending — Thesis" width="400" />
+  </a>
+  <a href="https://repo.tinix.ai/en/project/ahmadhassan-bted-turnitout-humanizer-21e37f39-3b17-4f88-a771-6b55bd97fb1e" target="_blank" rel="noopener noreferrer">
+    <img src="docs/assets/badges/tinix-latex-dark.svg" alt="TiniX Trending — LaTeX" width="400" />
+  </a>
 </p>
 
 ---
@@ -64,8 +87,6 @@
   <img src="https://img.shields.io/badge/C2PA_Metadata-Stripped-orange.svg?style=for-the-badge" alt="C2PA Metadata: Stripped"/>
   <img src="https://img.shields.io/badge/EU_AI_Act_Tracers-Bypassed-yellow.svg?style=for-the-badge" alt="EU AI Act Tracers: Bypassed"/>
 </p>
-
----
 
 > _To comply with the **EU AI Act (Article 50)**, **OpenAI (ChatGPT)**, **Anthropic (Claude)**, and **Google (Gemini)** now embed multi-layered tracking: **invisible zero-width Unicode** (crashing code/triggering detectors), hidden **C2PA metadata**, and **cryptographic text watermarks like Google SynthID-Text**. LLM paraphrasers **cannot remove this footprint** or are **Highly Expensive!** Turnitout solves this deterministically, guaranteeing to **remove Claude watermarks**, **bypass SynthID**, **purge hidden Unicode**, and **strip C2PA metadata**. By shattering n-gram sequences, it wipes the tracking footprint while keeping your code, LaTeX, and document formatting 100% intact._
 
