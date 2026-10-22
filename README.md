@@ -231,8 +231,8 @@ The platform is designed around strict **asset decoupling** and **modular langua
 ## 🔒 Compliance & Security
 
 - **Privacy Policy**: [PRIVACY.md](PRIVACY.md)
-- **Terms of Service**: [TERMS.md](https://www.google.com/search?q=TERMS.md)
-- **Architecture Guidelines**: [ARCHITECTURE_RULES.md](https://www.google.com/search?q=ARCHITECTURE_RULES.md)
+- **Terms of Service**: [TERMS.md](TERMS.md)
+- **Architecture Guidelines**: [ARCHITECTURE_RULES.md](ARCHITECTURE_RULES.md)
 
 ---
 
