@@ -1,0 +1,26 @@
+name: CI Verification
+on:
+  push:
+    branches: [ main, master, feat/* ]
+  pull_request:
+    branches: [ main, master ]
+
+jobs:
+  test-and-lint:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+
+      - name: Syntax check JavaScript files
+        run: |
+          node -c docs/humanizer-engine.js
+          node -c docs/script.js
+
+      - name: Run Engine Test Suite
+        run: node tests/test_humanizer.js
