@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="google-site-verification" content="googled1934658a17ddea1" />
+  <title>Turnitout Enterprise REST API: High-Throughput AI Footprint Removal & Citation Engine</title>
+  
+  <meta name="title" content="Turnitout Enterprise REST API: High-Throughput AI Footprint Removal & Citation Engine">
+  <meta name="description" content="Integrate Turnitout's deterministic, zero-AI humanization and citation engine directly into your SaaS platform, publishing pipeline, or backend services.">
+  <meta name="keywords" content="turnitin evasion api, ai humanizer api, programmatic text humanization, bypass gptzero api, bibtex citation generator api, zero retention ai api">
+  <meta name="author" content="Ahmad Hassan">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://ahmadhassan-bted.github.io/Turnitout-Humanizer/api.html">
+
+  <!-- Open Graph / Facebook -->
+  <meta property="og:type" content="article">
+  <meta property="og:site_name" content="TURNITOUT">
+  <meta property="og:locale" content="en_US">
+  <meta property="og:url" content="https://ahmadhassan-bted.github.io/Turnitout-Humanizer/api.html">
+  <meta property="og:title" content="Turnitout Enterprise REST API">
+  <meta property="og:description" content="High-throughput programmatic AI footprint removal and smart academic citation insertion.">
+  <meta property="og:image" content="assets/logo-banner.svg">
+
+  <link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
+  <link rel="stylesheet" href="style.css">
+  
+  <style>
+    .api-badge {
+      display: inline-block;
+      padding: 4px 10px;
+      font-size: 12px;
+      font-family: var(--font-mono, monospace);
+      font-weight: 700;
+      border-radius: 4px;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+    }
+    .badge-post { background: rgba(34, 197, 94, 0.2); color: #22c55e; border: 1px solid rgba(34, 197, 94, 0.4); }
+    .badge-get { background: rgba(59, 130, 246, 0.2); color: #3b82f6; border: 1px solid rgba(59, 130, 246, 0.4); }
+    
+    .code-box {
+      background: #0f172a;
+      border: 1px solid rgba(255, 255, 255, 0.12);
+      border-radius: 8px;
+      padding: 16px 20px;
+      font-family: var(--font-mono, monospace);
+      font-size: 13.5px;
+      color: #e2e8f0;
+      overflow-x: auto;
+      margin: 16px 0 24px 0;
+      line-height: 1.5;
+    }
+    
+    .param-table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 16px 0 24px 0;
+      font-size: 14px;
+    }
+    .param-table th {
+      background: rgba(255, 255, 255, 0.05);
+      padding: 10px 12px;
+      text-align: left;
+      border-bottom: 2px solid rgba(255, 255, 255, 0.15);
+      color: #f8fafc;
+    }
+    .param-table td {
+      padding: 10px 12px;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+      color: var(--text-muted, #94a3b8);
+    }
+    .param-table tr:hover td {
+      background: rgba(255, 255, 255, 0.02);
+    }
+    
+    .contact-banner-card {
+      background: linear-gradient(135deg, rgba(30, 41, 59, 0.8) 0%, rgba(15, 23, 42, 0.95) 100%);
+      border: 1px solid rgba(245, 158, 11, 0.4);
+      border-radius: 10px;
+      padding: 24px;
+      margin: 32px 0;
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+    }
+    .btn-contact {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 10px 20px;
+      border-radius: 6px;
+      font-weight: 700;
+      font-size: 14px;
+      text-decoration: none;
+      transition: transform 0.2s ease;
+    }
+    .btn-contact:hover {
+      transform: translateY(-2px);
+    }
+    .btn-wa { background: #25D366; color: #000; }
+    .btn-mail { background: #3b82f6; color: #fff; }
+  </style>
+</head>
+<body>
+
+  <header class="top-nav">
+    <a href="index.html" class="brand-wrapper" aria-label="TURNITOUT Home">
+      <img src="assets/logo.svg" alt="TURNITOUT" class="brand-logo-img">
+      <div class="brand-tagline"># Intelligent Similarity Evasion & Multi-Algorithm Checker</div>
+    </a>
+    <nav class="nav-links">
+      <a href="index.html" class="nav-link">Home</a>
+      <a href="how-it-works.html" class="nav-link">How It Works</a>
+      <a href="api.html" class="nav-link active" style="color: #FBBF24; font-weight: 700;">Enterprise API ⚡</a>
+      <a href="changelog.html" class="nav-link">Changelog</a>
+      <a href="faq.html" class="nav-link">FAQ</a>
+    </nav>
+    <div class="nav-actions">
+      <a href="index.html" class="theme-toggle-btn">← Back to Manifesto</a>
+      <a href="https://turnitout.streamlit.app/" target="_blank" rel="noopener noreferrer" class="app-launch-btn">
+        Launch Live App <svg class="icon" viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"></polygon></svg>
+      </a>
+    </div>
+  </header>
+
+  <main class="container">
+    <div class="tape top-left"></div>
+    <div class="tape top-right"></div>
+
+    <article class="manifesto-card">
+      <div class="manifesto-header">
+        <h1 class="manifesto-title">
+          Turnitout <span class="highlight">Enterprise REST API</span>
+        </h1>
+        <span class="stamp stamp-blue">HIGH-THROUGHPUT ENGINE</span>
+      </div>
+
+      <p class="manifesto-story">
+        Integrate Turnitout's deterministic, zero-AI humanization and citation engine directly into your backend services, LMS, publishing workflows, or custom applications.
+      </p>
+
+      <!-- Contact Banner -->
+      <div class="contact-banner-card">
+        <div style="font-size: 19px; font-weight: 700; color: #FBBF24; margin-bottom: 8px;">
+          ⚡ Looking to Integrate the Enterprise API?
+        </div>
+        <p style="color: #CBD5E1; font-size: 15px; margin: 0 0 16px 0; line-height: 1.6;">
+          Turnitout's Enterprise API is hosted natively on Google Cloud with high-throughput autoscaling. Enterprise API keys and cloud endpoints are provisioned directly by <strong>Ahmad Hassan</strong>.
+        </p>
+        <div style="display: flex; gap: 14px; flex-wrap: wrap;">
+          <a href="https://wa.me/923225522383" target="_blank" class="btn-contact btn-wa">
+            💬 Chat on WhatsApp (+92 322 5522383)
+          </a>
+          <a href="mailto:ahmadhassan.bted@gmail.com" class="btn-contact btn-mail">
+            ✉️ Email: ahmadhassan.bted@gmail.com
+          </a>
+          <a href="https://github.com/AhmadHassan-BTed/Turnitout-Humanizer/blob/main/docs/ENTERPRISE_API.md" target="_blank" class="btn-contact" style="background: rgba(255,255,255,0.1); color: #fff; border: 1px solid rgba(255,255,255,0.2);">
+            📄 View Full Raw Schema on GitHub
+          </a>
+        </div>
+      </div>
+
+      <h2 class="section-heading">Why Choose the Turnitout API?</h2>
+      <ul style="font-size: 15.5px; line-height: 1.7; color: var(--text-muted, #94a3b8); margin-bottom: 30px; padding-left: 20px;">
+        <li><strong>Zero Generative AI:</strong> 100% deterministic mathematical n-gram disruption, syntax realignment, and voice transformation. Zero hallucinations, zero phantom citations.</li>
+        <li><strong>Multi-Detector Evasion:</strong> Specifically engineered to evade Turnitin, iThenticate, GPTZero, CopyLeaks, ZeroGPT, and Google SynthID tracking.</li>
+        <li><strong>Zero Data Retention:</strong> Transient in-memory processing. Text is never saved to disk, logged to databases, or used for AI training (GDPR and EU AI Act Article 50 compliant).</li>
+        <li><strong>Sub-150ms Single-Paragraph Latency:</strong> Asynchronous Python 3.14 + FastAPI + ASGI multi-worker engine scaling past 200+ words/second.</li>
+      </ul>
+
+      <h2 class="section-heading">Core Endpoints</h2>
+
+      <!-- Endpoint 1 -->
+      <div style="margin-top: 24px;">
+        <div style="display: flex; align-items: center; gap: 12px; margin-bottom: 8px;">
+          <span class="api-badge badge-post">POST</span>
+          <code style="font-size: 17px; font-weight: 700; color: #f8fafc;">/v1/humanize</code>
+        </div>
+        <p style="color: var(--text-muted); font-size: 14.5px;">
+          Humanize a plain text string. <strong><code>text: str</code> is the only required field.</strong> All advanced checklist transformations default to pre-calibrated, production-grade values.
+        </p>
+
+        <div class="code-box">
+<span style="color: #64748b;">// Minimal Request (Uses Optimal Defaults)</span>
+{
+    <span style="color: #38bdf8;">"text"</span>: <span style="color: #a5d6a7;">"Furthermore, our experimental findings demonstrate that deep learning models frequently introduce formulaic syntax across large datasets."</span>
+}
+        </div>
+
+        <div class="code-box">
+<span style="color: #64748b;">// Response (200 OK)</span>
+{
+    <span style="color: #38bdf8;">"success"</span>: <span style="color: #f472b6;">true</span>,
+    <span style="color: #38bdf8;">"humanized_text"</span>: <span style="color: #a5d6a7;">"Also, high-level computational analysis across distributed environments is reliably supported by this framework, broadly speaking. [1]"</span>,
+    <span style="color: #38bdf8;">"words_processed"</span>: <span style="color: #f472b6;">16</span>,
+    <span style="color: #38bdf8;">"modifications_count"</span>: <span style="color: #f472b6;">6</span>,
+    <span style="color: #38bdf8;">"latency_ms"</span>: <span style="color: #f472b6;">118.42</span>,
+    <span style="color: #38bdf8;">"citation_count"</span>: <span style="color: #f472b6;">1</span>,
+    <span style="color: #38bdf8;">"bib_text"</span>: <span style="color: #a5d6a7;">"% AI AUTO-FILL INSTRUCTIONS...\n@article{Smith2024,\n  ...\n}"</span>
+}
+        </div>
+      </div>
+
+      <!-- Endpoint 2 -->
+      <div style="margin-top: 36px;">
+        <div style="display: flex; align-items: center; gap: 12px; margin-bottom: 8px;">
+          <span class="api-badge badge-post">POST</span>
+          <code style="font-size: 17px; font-weight: 700; color: #f8fafc;">/v1/citations</code>
+        </div>
+        <p style="color: var(--text-muted); font-size: 14.5px;">
+          Contextual academic citation inserter & BibTeX generator. Inserts citations at claim boundaries without paraphrasing the original text, returning matching BibTeX references with self-executing AI auto-fill instruction headers.
+        </p>
+
+        <div class="code-box">
+{
+    <span style="color: #38bdf8;">"text"</span>: <span style="color: #a5d6a7;">"Machine learning architectures provide notable improvements in analyzing genomic sequences and predicting protein tertiary structures."</span>,
+    <span style="color: #38bdf8;">"citation_count"</span>: <span style="color: #f472b6;">2</span>,
+    <span style="color: #38bdf8;">"citation_format"</span>: <span style="color: #a5d6a7;">"IEEE [1]"</span>,
+    <span style="color: #38bdf8;">"discipline"</span>: <span style="color: #a5d6a7;">"biology"</span>
+}
+        </div>
+      </div>
+
+      <!-- Endpoint 3 & 4 -->
+      <div style="margin-top: 36px;">
+        <div style="display: flex; align-items: center; gap: 12px; margin-bottom: 8px;">
+          <span class="api-badge badge-get">GET</span>
+          <code style="font-size: 17px; font-weight: 700; color: #f8fafc;">/v1/quota</code>
+        </div>
+        <p style="color: var(--text-muted); font-size: 14.5px;">
+          Query current word quota, consumed balance, remaining words, and active tier configuration.
+        </p>
+
+        <div style="display: flex; align-items: center; gap: 12px; margin-top: 20px; margin-bottom: 8px;">
+          <span class="api-badge badge-get">GET</span>
+          <code style="font-size: 17px; font-weight: 700; color: #f8fafc;">/v1/health</code>
+        </div>
+        <p style="color: var(--text-muted); font-size: 14.5px;">
+          Real-time cluster readiness and liveness probe for Kubernetes and uptime monitoring.
+        </p>
+      </div>
+
+      <div style="text-align: center; margin-top: 48px;">
+        <a href="https://wa.me/923225522383" target="_blank" rel="noopener noreferrer" class="app-launch-btn" style="font-size: 17px; padding: 14px 32px;">
+          Contact Ahmad Hassan for Enterprise Keys →
+        </a>
+      </div>
+    </article>
+
+    <footer class="footer-section">
+      <p>TURNITOUT — Built by Ahmad Hassan for developers, researchers, and enterprises worldwide.</p>
+    </footer>
+  </main>
+
+  <script src="cluster-balancer.js"></script>
+</body>
+</html>
