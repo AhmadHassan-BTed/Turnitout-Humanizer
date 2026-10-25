@@ -6,6 +6,7 @@
 <p align="center">
   <a href="https://ahmadhassan-bted.github.io/Turnitout-Humanizer/"><img src="https://img.shields.io/badge/Official%20Website-Manifesto%20%26%20Docs-crimson.svg?style=for-the-badge" alt="Official Website & Manifesto"/></a>
   <a href="https://turnitout.streamlit.app/"><img src="https://img.shields.io/badge/Live%20App-Launch%20Turnitout-blue.svg?style=for-the-badge&logo=streamlit" alt="Launch Live App"/></a>
+  <a href="docs/ENTERPRISE_API.md"><img src="https://img.shields.io/badge/Enterprise%20API-REST%20Documentation-gold.svg?style=for-the-badge" alt="Enterprise API Docs"/></a>
   <img src="https://img.shields.io/badge/Engine-v2.6-green.svg?style=for-the-badge" alt="Engine: v2.6"/>
   <img src="https://img.shields.io/badge/Safety-100%25%20Zero%20AI-purple.svg?style=for-the-badge" alt="Safety: 100% Zero AI"/>
   <a href="https://wa.me/923225522383"><img src="https://img.shields.io/badge/WhatsApp-Developer%20Support-25D366.svg?style=for-the-badge&logo=whatsapp" alt="WhatsApp Support"/></a>
@@ -80,6 +81,22 @@
 ---
 
 <h2> 🚨 HOW TO REMOVE AI WATERMARKS (CLAUDE, SYNTHID, CHATGPT) & BEAT THE 2026 TRACKING CRISIS 🚨</h2>
+
+---
+
+> ### ⚡ Looking for the Turnitout Enterprise REST API?
+>
+> Integrate high-throughput, deterministic AI-evasion and smart citation generation directly into your SaaS platform, publishing pipeline, LMS, or backend infrastructure.
+> 
+> * **100% Zero-AI & Hallucination-Free:** Pure mathematical pattern disruption, voice transformation, and syntax restructuring with zero LLM hallucination risk.
+> * **Ultra-Low Latency:** Asynchronous Python 3.14 + FastAPI + ASGI multi-worker engine (< 150ms single-paragraph latency, 200+ words/sec throughput).
+> * **100% Zero-Retention Privacy:** Ephemeral in-memory execution. Uploaded text is never saved to disk, logged to databases, or used for AI training (GDPR & EU AI Act Article 50 compliant).
+> * **Production Endpoints:** High-speed humanization (`POST /v1/humanize`) and contextual academic citation insertion with self-executing BibTeX generation (`POST /v1/citations`).
+>
+> 📖 **[Read the Full Enterprise API Documentation & Schema Guide →](docs/ENTERPRISE_API.md)**  
+> 💬 **Request API Keys & Cloud Access:** Contact **Ahmad Hassan** directly on **[WhatsApp (+92 322 5522383)](https://wa.me/923225522383)** or email **[ahmadhassan.bted@gmail.com](mailto:ahmadhassan.bted@gmail.com)**.
+
+---
 
 <p align="center">
   <img src="https://img.shields.io/badge/Claude_Watermarks-Destroyed-red.svg?style=for-the-badge" alt="Claude Watermarks: Destroyed"/>
