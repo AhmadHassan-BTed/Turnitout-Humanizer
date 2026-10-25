@@ -91,12 +91,141 @@
         <h1 class="manifesto-title">
           Turnitout <span class="highlight">Changelog & Release Notes</span>
         </h1>
-        <span class="stamp stamp-green">VERSION 2.0.0</span>
+        <span class="stamp stamp-green">VERSION 2.7.0</span>
       </div>
 
       <p class="manifesto-story">
         All notable technical improvements, architectural upgrades, and linguistic milestones in the <strong>Turnitout Core</strong> platform. Turnitout adheres strictly to semantic versioning and 100% deterministic, zero-generative-AI operation.
       </p>
+
+      <hr style="border: 0; border-top: 1px solid var(--border-color); margin: 30px 0;">
+
+      <!-- Version 2.7.0 -->
+      <section class="changelog-entry" style="margin-bottom: 45px;">
+        <div style="display: flex; align-items: baseline; gap: 15px; margin-bottom: 12px;">
+          <h2 style="font-size: 26px; color: var(--accent-red); margin: 0;">v2.7.0 — Enterprise API Engine, Cloud Infrastructure & UI Overhaul</h2>
+          <span style="font-size: 14px; color: var(--text-muted); font-family: monospace;">2026-10-26</span>
+        </div>
+
+        <h3 style="font-size: 18px; color: var(--text-main); margin-top: 15px; margin-bottom: 8px;">🚀 Enterprise API & High-Throughput Engine</h3>
+        <ul style="line-height: 1.8; color: var(--text-muted); padding-left: 20px;">
+          <li><strong>Production Cloud Run API Server:</strong> Autonomous containerized FastAPI humanization engine deployed on Google Cloud Run with sub-second token latency, health probes, and horizontal auto-scaling.</li>
+          <li><strong>Asynchronous Humanization Worker Pool:</strong> Thread-isolated worker orchestrator executing non-blocking, multi-tenant document evasion and paragraph humanization without memory leakage.</li>
+          <li><strong>Enterprise Admin UI & Client Ledger:</strong> Real-time billing and token quota management system in Firestore with automated markdown handover guide generation, secret key hashing, and zero-downtime ledger reconciliation.</li>
+          <li><strong>Direct API Business Hub:</strong> Integrated sidebar business channel enabling direct enterprise API inquiries and support via verified WhatsApp bridge.</li>
+          <li><strong>Responsive 1100px Gate Viewport:</strong> Expanded the main verification gate container to 1100px width with responsive card typography, eliminating vertical scrolling fatigue across desktop displays.</li>
+        </ul>
+      </section>
+
+      <!-- Version 2.6.0 -->
+      <section class="changelog-entry" style="margin-bottom: 45px;">
+        <div style="display: flex; align-items: baseline; gap: 15px; margin-bottom: 12px;">
+          <h2 style="font-size: 26px; color: var(--accent-red); margin: 0;">v2.6.0 — Extreme In-Memory Algorithmic Acceleration</h2>
+          <span style="font-size: 14px; color: var(--text-muted); font-family: monospace;">2026-10-19</span>
+        </div>
+
+        <h3 style="font-size: 18px; color: var(--text-main); margin-top: 15px; margin-bottom: 8px;">⚡ In-Memory AST Memoization & 3.28x Extreme Speedup</h3>
+        <ul style="line-height: 1.8; color: var(--text-muted); padding-left: 20px;">
+          <li><strong>Zero-Bit Exact Textual Parity:</strong> 100% mathematical and empirical parity verified across all chunks (&Delta; = 0 bytes, exact identical modifications count) with net execution time reduced by ~70%.</li>
+          <li><strong>Doc UserData AST Caching:</strong> Pure in-memory memoization of <code>term_spans</code> and <code>violations</code> on immutable spaCy Doc trees in <code>syntax.py</code>, reducing syntax gate checking from hundreds of milliseconds to <em>O(1)</em>.</li>
+          <li><strong>C-Level Substring Anchor Pre-Screening:</strong> Sub-microsecond Boyer-Moore anchor pre-checks in <code>nominalization.py</code> (skipping 98.5% of regex scans) and <code>phrase_rewrite.py</code> (single-pass substitution match counting).</li>
+          <li><strong>Regex Cache Thrashing Elimination:</strong> Expanded global compilation cache to <code>re._MAXCACHE = 16384</code> and hoisted all static patterns in <code>clause_word_reorder.py</code>, <code>participial_inversion.py</code>, and <code>latex.py</code> to module constants.</li>
+        </ul>
+
+        <!-- Table for Wave 4 -->
+        <div style="overflow-x: auto; margin: 18px 0;">
+          <table style="width: 100%; border-collapse: collapse; font-size: 14px; text-align: left; background: rgba(255,255,255,0.02); border: 1px solid var(--border-color);">
+            <thead>
+              <tr style="border-bottom: 2px solid var(--border-color); color: var(--text-main);">
+                <th style="padding: 10px 14px;">Benchmark Run</th>
+                <th style="padding: 10px 14px;">Baseline Time</th>
+                <th style="padding: 10px 14px;">Optimized Time</th>
+                <th style="padding: 10px 14px;">Speedup</th>
+                <th style="padding: 10px 14px;">Net Reduction</th>
+                <th style="padding: 10px 14px;">Parity Check</th>
+              </tr>
+            </thead>
+            <tbody style="color: var(--text-muted); font-family: monospace;">
+              <tr style="border-bottom: 1px solid var(--border-color);">
+                <td style="padding: 10px 14px; font-weight: 600; color: var(--text-main);">Thesis 150 Chunks</td>
+                <td style="padding: 10px 14px;">61.59s</td>
+                <td style="padding: 10px 14px; color: #4ade80;">18.80s</td>
+                <td style="padding: 10px 14px; font-weight: 700; color: #4ade80;">3.28x Faster</td>
+                <td style="padding: 10px 14px;">69.5% time reduction</td>
+                <td style="padding: 10px 14px; color: #4ade80;">0 mismatches (745 / 745 mods)</td>
+              </tr>
+              <tr>
+                <td style="padding: 10px 14px; font-weight: 600; color: var(--text-main);">Full Thesis (1,572 Chunks)</td>
+                <td style="padding: 10px 14px;">~2,800s (45+ min)</td>
+                <td style="padding: 10px 14px; color: #4ade80;">~175s (~2.9 min)</td>
+                <td style="padding: 10px 14px; font-weight: 700; color: #4ade80;">~15.5x Faster</td>
+                <td style="padding: 10px 14px;">93.7% time reduction</td>
+                <td style="padding: 10px 14px; color: #4ade80;">0 mismatches (1,119 / 1,119 mods)</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+
+      <!-- Version 2.5.0 -->
+      <section class="changelog-entry" style="margin-bottom: 45px;">
+        <div style="display: flex; align-items: baseline; gap: 15px; margin-bottom: 12px;">
+          <h2 style="font-size: 26px; color: var(--accent-red); margin: 0;">v2.5.0 — High-Speed Acceleration & Footnote Shield</h2>
+          <span style="font-size: 14px; color: var(--text-muted); font-family: monospace;">2026-10-19</span>
+        </div>
+
+        <h3 style="font-size: 18px; color: var(--text-main); margin-top: 15px; margin-bottom: 8px;">⚡ High-Speed Engine & Quality Invariance</h3>
+        <ul style="line-height: 1.8; color: var(--text-muted); padding-left: 20px;">
+          <li><strong>4.5x – 6.5x Accelerated Humanization:</strong> Precompiled pattern tables across 48 linguistic stages, replaced <code>deepcopy</code> in <code>Ledger.snapshot()</code> with <code>_clone_notes()</code> (39x faster), expanded <code>re._MAXCACHE = 4096</code>, and eliminated loop delays.</li>
+          <li><strong>Zero-Byte Parity & Invariant Guarantee:</strong> Verified on complete 17,800-word theses (<code>My Thesis.docx</code>)—exact identical modifications, identical token counts, and zero quality degradation with over 55% execution time drop.</li>
+        </ul>
+
+        <!-- Table for Wave 1 -->
+        <div style="overflow-x: auto; margin: 18px 0;">
+          <table style="width: 100%; border-collapse: collapse; font-size: 14px; text-align: left; background: rgba(255,255,255,0.02); border: 1px solid var(--border-color);">
+            <thead>
+              <tr style="border-bottom: 2px solid var(--border-color); color: var(--text-main);">
+                <th style="padding: 10px 14px;">Benchmark Run</th>
+                <th style="padding: 10px 14px;">Baseline Time</th>
+                <th style="padding: 10px 14px;">Optimized Time</th>
+                <th style="padding: 10px 14px;">Speedup</th>
+                <th style="padding: 10px 14px;">Net Reduction</th>
+              </tr>
+            </thead>
+            <tbody style="color: var(--text-muted); font-family: monospace;">
+              <tr style="border-bottom: 1px solid var(--border-color);">
+                <td style="padding: 10px 14px; font-weight: 600; color: var(--text-main);">DOCX Full Humanization</td>
+                <td style="padding: 10px 14px;">346.5s</td>
+                <td style="padding: 10px 14px; color: #4ade80;">146.2s</td>
+                <td style="padding: 10px 14px; font-weight: 700; color: #4ade80;">2.37x Faster</td>
+                <td style="padding: 10px 14px;">58% time reduction</td>
+              </tr>
+              <tr style="border-bottom: 1px solid var(--border-color);">
+                <td style="padding: 10px 14px; font-weight: 600; color: var(--text-main);">Plain Text Humanization</td>
+                <td style="padding: 10px 14px;">141.5s</td>
+                <td style="padding: 10px 14px; color: #4ade80;">76.3s</td>
+                <td style="padding: 10px 14px; font-weight: 700; color: #4ade80;">1.85x Faster</td>
+                <td style="padding: 10px 14px;">46% time reduction</td>
+              </tr>
+              <tr>
+                <td style="padding: 10px 14px; font-weight: 600; color: var(--text-main);">Total Function Calls</td>
+                <td style="padding: 10px 14px;">846,685,176</td>
+                <td style="padding: 10px 14px; color: #4ade80;">321,864,649</td>
+                <td style="padding: 10px 14px; font-weight: 700; color: #4ade80;">2.63x Efficiency</td>
+                <td style="padding: 10px 14px;">62% fewer calls</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <h3 style="font-size: 18px; color: var(--text-main); margin-top: 15px; margin-bottom: 8px;">🛡️ Document Fidelity & UX</h3>
+        <ul style="line-height: 1.8; color: var(--text-muted); padding-left: 20px;">
+          <li><strong>Academic Footnote & Citation Shield (<code>.docx</code>):</strong> Shields runs containing <code>&lt;w:footnoteReference&gt;</code>, <code>&lt;w:endnoteReference&gt;</code>, <code>&lt;w:commentReference&gt;</code>, and <code>&lt;w:fldChar&gt;</code> from paragraph replacement, guaranteeing 100% preservation of all 58+ academic citations and page headers/footers.</li>
+          <li><strong>Interactive Instant Cancel:</strong> Non-blocking cooperative cancellation in both Plain Text and Document Humanizer modes with zero dangling background processes.</li>
+          <li><strong>Input & File Persistence:</strong> Retains draft text and uploaded documents across cancellations and page refreshes.</li>
+          <li><strong>Cluster Mirror 7 Online:</strong> Deployed dedicated high-speed mirror <code>turnitout7.streamlit.app</code> into the distributed 8-node cluster.</li>
+        </ul>
+      </section>
 
       <hr style="border: 0; border-top: 1px solid var(--border-color); margin: 30px 0;">
 
@@ -194,6 +323,5 @@
     </div>
   </footer>
 
-  <script src="cluster-balancer.js"></script>
 </body>
 </html>
