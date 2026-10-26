@@ -1,0 +1,406 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="google-site-verification" content="googled1934658a17ddea1" />
+  <title>Sponsor & Support Turnitout | Ahmad Hassan</title>
+  
+  <meta name="title" content="Sponsor & Support Turnitout | Ahmad Hassan">
+  <meta name="description" content="Support Ahmad Hassan's ongoing development of Turnitout and high-availability cluster infrastructure via Binance Pay, International Wire (Wise/SWIFT), and Local Transfers.">
+  <meta name="keywords" content="sponsor turnitout, support turnitout, binance pay id atta9196, ahmad hassan developer, wise transfer pakistan, ubl ameen iban, sadapay raast">
+  <meta name="author" content="Ahmad Hassan">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://ahmadhassan-bted.github.io/Turnitout-Humanizer/support.html">
+
+  <!-- Open Graph / Facebook -->
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="TURNITOUT">
+  <meta property="og:locale" content="en_US">
+  <meta property="og:url" content="https://ahmadhassan-bted.github.io/Turnitout-Humanizer/support.html">
+  <meta property="og:title" content="Sponsor & Support Turnitout | Ahmad Hassan">
+  <meta property="og:description" content="Direct global support via Binance Pay, Wise, International SWIFT, and local IBFT / Raast.">
+  <meta property="og:image" content="assets/logo-banner.svg">
+
+  <link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
+  <link rel="stylesheet" href="style.css">
+  
+  <style>
+    .support-page-container {
+      max-width: 900px;
+      margin: 40px auto 80px auto;
+      padding: 0 20px;
+    }
+    
+    .support-hero {
+      text-align: center;
+      margin-bottom: 40px;
+    }
+    
+    .support-hero-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      padding: 6px 14px;
+      background: linear-gradient(135deg, rgba(230, 57, 70, 0.15) 0%, rgba(236, 72, 153, 0.2) 100%);
+      color: #BA1A32;
+      border: 1px solid rgba(230, 57, 70, 0.35);
+      border-radius: 20px;
+      font-size: 13px;
+      font-weight: 700;
+      margin-bottom: 16px;
+    }
+    
+    body.dark-mode .support-hero-badge {
+      color: #FB7185;
+      border-color: rgba(244, 63, 94, 0.4);
+    }
+    
+    .support-hero-title {
+      font-family: var(--font-academic, serif);
+      font-size: 38px;
+      line-height: 1.25;
+      margin: 0 0 16px 0;
+      color: var(--text-ink, #2C2621);
+    }
+    
+    body.dark-mode .support-hero-title {
+      color: #ECEFF4;
+    }
+    
+    .support-hero-desc {
+      font-size: 16px;
+      line-height: 1.6;
+      max-width: 720px;
+      margin: 0 auto;
+      opacity: 0.85;
+    }
+    
+    .support-alert-box {
+      background: rgba(245, 158, 11, 0.1);
+      border: 1px solid rgba(245, 158, 11, 0.35);
+      border-radius: 12px;
+      padding: 16px 20px;
+      margin: 28px 0;
+      display: flex;
+      align-items: flex-start;
+      gap: 14px;
+      font-size: 14px;
+      line-height: 1.5;
+    }
+    
+    .support-cards-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 24px;
+      margin-top: 30px;
+    }
+    
+    @media (min-width: 768px) {
+      .support-cards-grid {
+        grid-template-columns: repeat(3, 1fr);
+      }
+    }
+    
+    .support-channel-card {
+      background: var(--bg-card, #FAF6EE);
+      border: 1px solid var(--border-rough, rgba(68, 54, 42, 0.12));
+      border-radius: 16px;
+      padding: 24px;
+      display: flex;
+      flex-direction: column;
+      box-shadow: 0 8px 24px rgba(0, 0, 0, 0.05);
+      transition: transform 0.2s, box-shadow 0.2s;
+    }
+    
+    body.dark-mode .support-channel-card {
+      background: #18181F;
+      border-color: rgba(255, 255, 255, 0.1);
+      box-shadow: 0 8px 24px rgba(0, 0, 0, 0.35);
+    }
+    
+    .support-channel-card:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 12px 32px rgba(0, 0, 0, 0.1);
+    }
+    
+    .channel-badge {
+      display: inline-block;
+      align-self: flex-start;
+      font-size: 11px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+      padding: 4px 10px;
+      border-radius: 6px;
+      margin-bottom: 14px;
+    }
+    
+    .badge-crypto { background: rgba(245, 158, 11, 0.18); color: #D97706; }
+    .badge-wire { background: rgba(59, 130, 246, 0.18); color: #2563EB; }
+    .badge-local { background: rgba(16, 185, 129, 0.18); color: #059669; }
+    
+    body.dark-mode .badge-crypto { color: #FBBF24; }
+    body.dark-mode .badge-wire { color: #60A5FA; }
+    body.dark-mode .badge-local { color: #34D399; }
+    
+    .channel-title {
+      font-size: 20px;
+      font-weight: 700;
+      margin: 0 0 8px 0;
+      font-family: var(--font-academic, serif);
+    }
+    
+    .channel-desc {
+      font-size: 13.5px;
+      opacity: 0.8;
+      line-height: 1.5;
+      margin-bottom: 18px;
+    }
+    
+    .channel-actions {
+      margin-top: auto;
+      padding-top: 16px;
+      border-top: 1px solid rgba(0,0,0,0.06);
+    }
+    
+    body.dark-mode .channel-actions {
+      border-top-color: rgba(255, 255, 255, 0.08);
+    }
+    
+    .support-qr-preview {
+      width: 100%;
+      max-width: 200px;
+      margin: 12px auto;
+      display: block;
+      border-radius: 8px;
+      background: #FFFFFF;
+      padding: 6px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Top Navigation Header -->
+  <header class="top-nav">
+    <a href="index.html" class="brand-wrapper" aria-label="TURNITOUT Home">
+      <img src="assets/logo.svg" alt="TURNITOUT" class="brand-logo-img">
+      <div class="brand-tagline"># Intelligent Similarity Evasion & Multi-Algorithm Checker</div>
+    </a>
+    <nav class="nav-links">
+      <a href="index.html" class="nav-link">Home</a>
+      <a href="how-it-works.html" class="nav-link">How It Works</a>
+      <a href="api.html" class="nav-link" style="color: #FBBF24; font-weight: 700;">Enterprise API ⚡</a>
+      <a href="changelog.html" class="nav-link">Changelog</a>
+      <a href="faq.html" class="nav-link">FAQ</a>
+      <a href="support.html" class="nav-link active" style="color: #BA1A32; font-weight: 700;">Support ❤️</a>
+    </nav>
+    <div class="nav-actions">
+      <button id="themeToggleBtn" class="theme-toggle-btn" aria-label="Toggle 3 AM Dark Mode">
+        <svg class="icon icon-moon" viewBox="0 0 24 24" width="15" height="15" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path></svg>
+        <span>Dark Mode</span>
+      </button>
+
+      <a href="https://turnitout.streamlit.app/" target="_blank" rel="noopener noreferrer" class="app-launch-btn">
+        Launch Live App <svg class="icon" viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2.2"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"></polygon></svg>
+      </a>
+    </div>
+  </header>
+
+  <main class="support-page-container">
+    <div class="support-hero">
+      <div class="support-hero-badge">
+        <span class="heart-icon">❤️</span> DIRECT DEVELOPER SPONSORSHIP
+      </div>
+      <h1 class="support-hero-title">Support Turnitout & Infrastructure</h1>
+      <p class="support-hero-desc">
+        Turnitout is built and maintained by <strong>Ahmad Hassan</strong> to provide researchers, students, and engineers with deterministic, zero-AI document humanization and evasion tools. Your sponsorship directly funds multi-region server cluster nodes, memory optimization, and continuous algorithm updates.
+      </p>
+    </div>
+
+    <div class="support-alert-box">
+      <svg class="icon" viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="#D97706" stroke-width="2" style="flex-shrink: 0; margin-top: 2px;">
+        <circle cx="12" cy="12" r="10"></circle>
+        <line x1="12" y1="8" x2="12" y2="12"></line>
+        <line x1="12" y1="16" x2="12.01" y2="16"></line>
+      </svg>
+      <div>
+        <strong>Why Direct Methods?</strong> GitHub Sponsors and Stripe are currently unavailable in Pakistan. To make international developer support fast and accessible without third-party platform cuts, you can send contributions directly via Binance Pay, Wise, or local bank transfers in under 60 seconds.
+      </div>
+    </div>
+
+    <!-- 3 Channel Cards -->
+    <div class="support-cards-grid">
+      
+      <!-- Card 1: Binance Pay (Crypto) -->
+      <div class="support-channel-card">
+        <span class="channel-badge badge-crypto">⚡ Global &bull; 0% Fees</span>
+        <h2 class="channel-title">Binance Pay (Crypto)</h2>
+        <p class="channel-desc">The fastest way for developers and researchers globally to contribute with zero foreign transaction fees.</p>
+        
+        <div class="support-field-group">
+          <div class="support-field-label">Binance Pay ID</div>
+          <div class="support-copy-row">
+            <span class="support-copy-value" id="valBinanceId">Atta9196</span>
+            <button class="btn-mini-copy" data-copy="Atta9196" title="Copy Binance Pay ID">Copy</button>
+          </div>
+        </div>
+
+        <div class="support-field-group">
+          <div class="support-field-label">Account Holder</div>
+          <div class="support-copy-row">
+            <span class="support-copy-value">Ahmad Hassan</span>
+          </div>
+        </div>
+
+        <div style="text-align: center; margin-top: 14px;">
+          <img src="assets/binance-qr.jpg" alt="Binance Pay QR Code - Atta9196" class="support-qr-preview">
+          <span style="font-size: 11.5px; opacity: 0.7;">Scan in Binance App</span>
+        </div>
+
+        <div class="channel-actions">
+          <button class="btn-mini-copy" style="width: 100%; justify-content: center; padding: 10px;" data-copy="Atta9196">
+            📋 Copy Binance Pay ID
+          </button>
+        </div>
+      </div>
+
+      <!-- Card 2: International Wire (Remitly & Wise) -->
+      <div class="support-channel-card" style="border: 2px solid rgba(59, 130, 246, 0.45); position: relative;">
+        <span class="channel-badge badge-wire" style="background: #2563EB; color: #FFFFFF;">⭐ Recommended &bull; Remitly / Wise</span>
+        <h2 class="channel-title">International Card (Remitly)</h2>
+        <p class="channel-desc">Send from any country using Debit/Credit Card, Apple Pay, Google Pay, or bank balance.</p>
+        
+        <div style="background: rgba(59, 130, 246, 0.1); border: 1px solid rgba(59, 130, 246, 0.3); border-radius: 8px; padding: 10px 12px; margin-bottom: 14px; font-size: 12.5px; line-height: 1.45;">
+          <strong>💡 Recommended:</strong> Please use <strong>Remitly</strong> (or Wise) so your card won't get cut off or declined! It transfers instantly to Pakistan bank accounts without foreign transaction headaches.
+        </div>
+
+        <div class="support-field-group">
+          <div class="support-field-label">Account Holder</div>
+          <div class="support-copy-row">
+            <span class="support-copy-value">Ahmad Hassan</span>
+            <button class="btn-mini-copy" data-copy="Ahmad Hassan">Copy</button>
+          </div>
+        </div>
+
+        <div class="support-field-group">
+          <div class="support-field-label">IBAN</div>
+          <div class="support-copy-row">
+            <span class="support-copy-value">PK07UNIL0109000387828585</span>
+            <button class="btn-mini-copy" data-copy="PK07UNIL0109000387828585">Copy</button>
+          </div>
+        </div>
+
+        <div class="support-field-group">
+          <div class="support-field-label">SWIFT / BIC Code</div>
+          <div class="support-copy-row">
+            <span class="support-copy-value">UNILPKKA</span>
+            <button class="btn-mini-copy" data-copy="UNILPKKA">Copy</button>
+          </div>
+        </div>
+
+        <div class="support-field-group">
+          <div class="support-field-label">Bank Name</div>
+          <div class="support-copy-row">
+            <span class="support-copy-value">United Bank Limited (UBL Ameen)</span>
+          </div>
+        </div>
+
+        <div class="channel-actions" style="display: flex; gap: 8px; flex-direction: column;">
+          <a href="https://www.remitly.com/" target="_blank" rel="noopener noreferrer" class="btn-mini-copy" style="width: 100%; justify-content: center; padding: 10px; text-decoration: none; background: #2563EB; font-weight: 700;">
+            🚀 Open Remitly (Recommended)
+          </a>
+          <a href="https://wise.com/" target="_blank" rel="noopener noreferrer" class="btn-mini-copy" style="width: 100%; justify-content: center; padding: 9px; text-decoration: none; background: #475569;">
+            🌐 Open Wise.com
+          </a>
+        </div>
+      </div>
+
+      <!-- Card 3: Pakistan Local (Raast & SadaPay) -->
+      <div class="support-channel-card">
+        <span class="channel-badge badge-local">🇵🇰 Pakistan Local</span>
+        <h2 class="channel-title">SadaPay & Raast IBFT</h2>
+        <p class="channel-desc">Instant 0% fee transfer for local Pakistani supporters via SadaPay wallet, Raast ID, or bank app.</p>
+        
+        <div class="support-field-group">
+          <div class="support-field-label">SadaPay Raast / Phone</div>
+          <div class="support-copy-row">
+            <span class="support-copy-value">03225522383</span>
+            <button class="btn-mini-copy" data-copy="03225522383">Copy</button>
+          </div>
+        </div>
+
+        <div class="support-field-group">
+          <div class="support-field-label">SadaPay IBAN</div>
+          <div class="support-copy-row">
+            <span class="support-copy-value">PK44SADA0000003225522383</span>
+            <button class="btn-mini-copy" data-copy="PK44SADA0000003225522383">Copy</button>
+          </div>
+        </div>
+
+        <div class="support-field-group">
+          <div class="support-field-label">UBL Ameen IBAN</div>
+          <div class="support-copy-row">
+            <span class="support-copy-value">PK07UNIL0109000387828585</span>
+            <button class="btn-mini-copy" data-copy="PK07UNIL0109000387828585">Copy</button>
+          </div>
+        </div>
+
+        <div class="channel-actions">
+          <button class="btn-mini-copy" style="width: 100%; justify-content: center; padding: 10px;" data-copy="PK44SADA0000003225522383">
+            📋 Copy SadaPay IBAN
+          </button>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- Alternative Options & Personal Contact Card -->
+    <div style="background: linear-gradient(135deg, rgba(30, 41, 59, 0.85) 0%, rgba(15, 23, 42, 0.98) 100%); border: 1px solid rgba(230, 57, 70, 0.35); border-radius: 16px; padding: 28px; margin-top: 36px; display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 20px; color: #FFFFFF; box-shadow: 0 10px 30px rgba(0,0,0,0.35);">
+      <div style="max-width: 580px;">
+        <div style="display: inline-block; background: rgba(244, 63, 94, 0.2); color: #FB7185; font-size: 11px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.5px; padding: 3px 8px; border-radius: 4px; margin-bottom: 8px;">100% Flexible</div>
+        <h3 style="margin: 0 0 8px 0; font-size: 22px; font-family: var(--font-academic, serif);">Prefer Another Alternative? I'm Readily Available! :D</h3>
+        <p style="margin: 0 0 12px 0; font-size: 14.5px; opacity: 0.9; line-height: 1.6;">
+          If you want to use <strong>PayPal</strong>, <strong>Payoneer</strong>, <strong>USDT (TRC20/BEP20)</strong>, <strong>Western Union</strong>, or any other method you prefer, just call or message me directly on WhatsApp. I'm always available to set up whatever works best for you!
+        </p>
+        <p style="margin: 0; font-size: 13.5px; opacity: 0.8;">
+          📞 <strong>Direct Phone / WhatsApp:</strong> <span style="font-family: var(--font-mono); color: #FBBF24; font-weight: 700;">+92 322 5522383</span> (Local: <span style="font-family: var(--font-mono); color: #FBBF24; font-weight: 700;">03225522383</span>)
+        </p>
+      </div>
+      <div style="display: flex; gap: 12px; flex-wrap: wrap;">
+        <a href="https://wa.me/923225522383" target="_blank" rel="noopener noreferrer" class="btn-wa-confirm" style="padding: 12px 22px; font-size: 14.5px;">
+          <svg class="icon" viewBox="0 0 24 24" width="17" height="17" fill="currentColor"><path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981z"/></svg>
+          Chat with Ahmad on WhatsApp
+        </a>
+        <button class="btn-mini-copy" data-copy="+923225522383" style="padding: 12px 18px; font-size: 14px;">
+          📋 Copy Number
+        </button>
+      </div>
+    </div>
+  </main>
+
+  <!-- Global Footer -->
+  <footer class="archive-footer-row" style="max-width: 900px; margin: 40px auto 30px auto; padding: 20px;">
+    <div>
+      <strong>TURNITOUT Project</strong> &bull; Created by <a href="https://github.com/AhmadHassan-BTed" target="_blank" rel="noopener noreferrer" style="color: inherit; text-decoration: underline;">Ahmad Hassan</a> &bull; Fractal Compute Orchestrations
+    </div>
+    <div style="display: flex; gap: 18px; flex-wrap: wrap;">
+      <a href="index.html" style="color: inherit; text-decoration: underline;">Home</a>
+      <a href="how-it-works.html" style="color: inherit; text-decoration: underline;">How It Works</a>
+      <a href="api.html" style="color: inherit; text-decoration: underline;">Enterprise API</a>
+      <a href="changelog.html" style="color: inherit; text-decoration: underline;">Changelog</a>
+      <a href="faq.html" style="color: inherit; text-decoration: underline;">FAQ</a>
+      <a href="support.html" style="color: var(--ink-red-pen, #BA1A32); text-decoration: underline; font-weight: bold;">Sponsor & Support</a>
+      <a href="https://github.com/AhmadHassan-BTed/Turnitout-Humanizer" target="_blank" rel="noopener noreferrer" style="color: inherit; text-decoration: underline;">GitHub Repository</a>
+    </div>
+  </footer>
+
+  <!-- Toast Notification Container -->
+  <div id="supportToast" class="support-toast">
+    <span>✓ Copied to clipboard!</span>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

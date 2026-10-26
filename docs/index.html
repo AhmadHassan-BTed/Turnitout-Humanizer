@@ -160,8 +160,15 @@
       <a href="compare/quillbot-alternative.html" class="nav-link">vs QuillBot</a>
       <a href="compare/stealthgpt-alternative.html" class="nav-link">vs StealthGPT</a>
       <a href="faq.html" class="nav-link">FAQ</a>
+      <a href="support.html" class="nav-link" style="color: #ec4899; font-weight: 700;">Support ❤️</a>
     </nav>
     <div class="nav-actions">
+      <!-- Direct Support Modal Trigger -->
+      <button id="openSupportModalBtn" class="nav-support-btn" title="Sponsor & Support Turnitout" aria-label="Sponsor & Support Turnitout">
+        <span class="heart-icon">❤️</span>
+        <span>Support</span>
+      </button>
+
       <!-- Perspective Switch: Look Down at Desk -->
       <button id="toggleDeskModeBtn" class="nav-perspective-btn" title="Look down at the wooden study desk, radial dial & blueprints" aria-label="Look down at study desk workspace">
         <svg class="icon" viewBox="0 0 24 24" width="15" height="15" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
@@ -1160,6 +1167,7 @@
             <a href="compare/quillbot-alternative.html" style="color: inherit; text-decoration: underline;">QuillBot Free Alternative</a>
             <a href="compare/stealthgpt-alternative.html" style="color: inherit; text-decoration: underline;">StealthGPT Free Alternative</a>
             <a href="faq.html" style="color: inherit; text-decoration: underline;">Full FAQ Hub</a>
+            <a href="support.html" style="color: var(--ink-red-pen); text-decoration: underline; font-weight: bold;">Sponsor & Support ❤️</a>
             <a href="sitemap.xml" style="color: inherit; text-decoration: underline;">XML Sitemap</a>
             <a href="llms.txt" style="color: inherit; text-decoration: underline;">LLM Training Spec (llms.txt)</a>
             <a href="https://github.com/AhmadHassan-BTed/Turnitout-Humanizer" target="_blank" rel="noopener noreferrer" style="color: var(--ink-red-pen); text-decoration: underline; font-weight: bold;">GitHub Repository (Star Us)</a>
@@ -1191,6 +1199,181 @@
   </div>
   </div>
 
+  <!-- Interactive Support & Sponsor Modal -->
+  <div id="supportModal" class="support-modal-backdrop" aria-hidden="true">
+    <div class="support-modal-card" role="dialog" aria-modal="true" aria-labelledby="supportModalTitle">
+      <div class="support-modal-header">
+        <button id="closeSupportModalBtn" class="support-modal-close" aria-label="Close Support Dialog">&times;</button>
+        <h2 id="supportModalTitle" class="support-modal-title">
+          <span class="heart-icon">❤️</span> Sponsor & Support Turnitout
+        </h2>
+        <p class="support-modal-subtitle">
+          Direct global developer support for Ahmad Hassan to keep cluster servers running and models updated.
+        </p>
+      </div>
+
+      <!-- Modal Tabs Navigation -->
+      <div class="support-tabs-nav">
+        <button class="support-tab-btn is-active" data-tab="tab-binance">
+          <span>⚡ Binance Pay</span>
+        </button>
+        <button class="support-tab-btn" data-tab="tab-remitly">
+          <span>🌍 Remitly / Wire</span>
+        </button>
+        <button class="support-tab-btn" data-tab="tab-pakistan">
+          <span>🇵🇰 SadaPay / Raast</span>
+        </button>
+        <button class="support-tab-btn" data-tab="tab-alternative">
+          <span>💬 Alternatives :D</span>
+        </button>
+      </div>
+
+      <div class="support-modal-body">
+        
+        <!-- Pane 1: Binance Pay -->
+        <div id="tab-binance" class="support-pane is-active">
+          <div class="support-info-banner">
+            ⚡ <strong>Instant & 0% Fees:</strong> Fastest way for international supporters to send crypto directly in the Binance app.
+          </div>
+          
+          <div class="support-field-group">
+            <div class="support-field-label">Binance Pay ID</div>
+            <div class="support-copy-row">
+              <span class="support-copy-value">Atta9196</span>
+              <button class="btn-mini-copy" data-copy="Atta9196">Copy</button>
+            </div>
+          </div>
+
+          <div class="support-field-group">
+            <div class="support-field-label">Account Holder</div>
+            <div class="support-copy-row">
+              <span class="support-copy-value">Ahmad Hassan</span>
+            </div>
+          </div>
+
+          <div class="support-qr-box">
+            <img src="assets/binance-qr.jpg" alt="Binance Pay QR Code - Atta9196" class="support-qr-img">
+            <span style="font-size: 12px; opacity: 0.75; margin-top: 8px;">Scan with Binance App to Pay</span>
+          </div>
+        </div>
+
+        <!-- Pane 2: Remitly / International Wire -->
+        <div id="tab-remitly" class="support-pane">
+          <div class="support-info-banner" style="background: rgba(37, 99, 235, 0.12); color: #2563EB; border-color: rgba(37, 99, 235, 0.3);">
+            ⭐ <strong>Top Recommendation:</strong> Please use <strong><a href="https://www.remitly.com/" target="_blank" rel="noopener noreferrer" style="color: inherit; text-decoration: underline;">Remitly</a></strong> (or <a href="https://wise.com/" target="_blank" rel="noopener noreferrer" style="color: inherit; text-decoration: underline;">Wise</a>) so your card won't get cut off or declined! It transfers instantly to Pakistan bank accounts without foreign transaction friction.
+          </div>
+
+          <div class="support-field-group">
+            <div class="support-field-label">Account Holder Name</div>
+            <div class="support-copy-row">
+              <span class="support-copy-value">Ahmad Hassan</span>
+              <button class="btn-mini-copy" data-copy="Ahmad Hassan">Copy</button>
+            </div>
+          </div>
+
+          <div class="support-field-group">
+            <div class="support-field-label">IBAN</div>
+            <div class="support-copy-row">
+              <span class="support-copy-value">PK07UNIL0109000387828585</span>
+              <button class="btn-mini-copy" data-copy="PK07UNIL0109000387828585">Copy</button>
+            </div>
+          </div>
+
+          <div class="support-field-group">
+            <div class="support-field-label">SWIFT / BIC Code</div>
+            <div class="support-copy-row">
+              <span class="support-copy-value">UNILPKKA</span>
+              <button class="btn-mini-copy" data-copy="UNILPKKA">Copy</button>
+            </div>
+          </div>
+
+          <div class="support-field-group">
+            <div class="support-field-label">Bank Name</div>
+            <div class="support-copy-row">
+              <span class="support-copy-value">United Bank Limited (UBL Ameen)</span>
+            </div>
+          </div>
+
+          <div style="margin-top: 14px; display: flex; gap: 8px;">
+            <a href="https://www.remitly.com/" target="_blank" rel="noopener noreferrer" class="btn-mini-copy" style="flex: 1; justify-content: center; padding: 10px; text-decoration: none; background: #2563EB; font-weight: 700;">
+              🚀 Open Remitly (Recommended)
+            </a>
+            <a href="https://wise.com/" target="_blank" rel="noopener noreferrer" class="btn-mini-copy" style="flex: 1; justify-content: center; padding: 10px; text-decoration: none; background: #475569;">
+              🌐 Open Wise
+            </a>
+          </div>
+        </div>
+
+        <!-- Pane 3: Pakistan Local -->
+        <div id="tab-pakistan" class="support-pane">
+          <div class="support-info-banner">
+            🇵🇰 <strong>Instant 0% Fee:</strong> Send directly via Raast ID, SadaPay, or local bank IBFT in Pakistan.
+          </div>
+
+          <div class="support-field-group">
+            <div class="support-field-label">SadaPay Raast / Phone</div>
+            <div class="support-copy-row">
+              <span class="support-copy-value">03225522383</span>
+              <button class="btn-mini-copy" data-copy="03225522383">Copy</button>
+            </div>
+          </div>
+
+          <div class="support-field-group">
+            <div class="support-field-label">SadaPay IBAN</div>
+            <div class="support-copy-row">
+              <span class="support-copy-value">PK44SADA0000003225522383</span>
+              <button class="btn-mini-copy" data-copy="PK44SADA0000003225522383">Copy</button>
+            </div>
+          </div>
+
+          <div class="support-field-group">
+            <div class="support-field-label">UBL Ameen IBAN</div>
+            <div class="support-copy-row">
+              <span class="support-copy-value">PK07UNIL0109000387828585</span>
+              <button class="btn-mini-copy" data-copy="PK07UNIL0109000387828585">Copy</button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Pane 4: Alternatives -->
+        <div id="tab-alternative" class="support-pane">
+          <div class="support-info-banner" style="background: rgba(244, 63, 94, 0.12); color: #BE123C; border-color: rgba(244, 63, 94, 0.35);">
+            💬 <strong>100% Flexible:</strong> Prefer PayPal, Payoneer, USDT (TRC20/BEP20), or Western Union?
+          </div>
+          <p style="font-size: 13.5px; line-height: 1.6; margin: 0 0 16px 0;">
+            I'm readily available for any other alternative you prefer :D Just call or message me directly on WhatsApp / Phone so we can set it up instantly!
+          </p>
+          <div class="support-field-group">
+            <div class="support-field-label">WhatsApp / Phone Number</div>
+            <div class="support-copy-row">
+              <span class="support-copy-value">+92 322 5522383 (03225522383)</span>
+              <button class="btn-mini-copy" data-copy="+923225522383">Copy</button>
+            </div>
+          </div>
+          <div style="margin-top: 14px;">
+            <a href="https://wa.me/923225522383" target="_blank" rel="noopener noreferrer" class="btn-wa-confirm" style="width: 100%; justify-content: center; padding: 10px; font-size: 13.5px;">
+              Chat with Ahmad on WhatsApp
+            </a>
+          </div>
+        </div>
+
+      </div>
+
+      <div class="support-modal-footer">
+        <div>
+          <a href="support.html" style="color: inherit; text-decoration: underline; font-size: 12.5px;">Open Full Support Page →</a>
+        </div>
+        <a href="https://wa.me/923225522383" target="_blank" rel="noopener noreferrer" class="btn-wa-confirm">
+          <span>Notify on WhatsApp</span>
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Toast Container -->
+  <div id="supportToast" class="support-toast">
+    <span>✓ Copied to clipboard!</span>
+  </div>
 
   <script src="cluster-balancer.js"></script>
   <script src="script.js"></script>

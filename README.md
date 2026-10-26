@@ -10,6 +10,7 @@
   <img src="https://img.shields.io/badge/Engine-v2.6-green.svg?style=for-the-badge" alt="Engine: v2.6"/>
   <img src="https://img.shields.io/badge/Safety-100%25%20Zero%20AI-purple.svg?style=for-the-badge" alt="Safety: 100% Zero AI"/>
   <a href="https://wa.me/923225522383"><img src="https://img.shields.io/badge/WhatsApp-Developer%20Support-25D366.svg?style=for-the-badge&logo=whatsapp" alt="WhatsApp Support"/></a>
+  <a href="SUPPORT.md"><img src="https://img.shields.io/badge/Sponsor%20%26%20Support-Donate%20%E2%9D%A4-ff69b4.svg?style=for-the-badge&logo=github-sponsors" alt="Sponsor & Support"/></a>
 </p>
 <p align="center">
   <strong>The world's first 100% programmatic, zero-generative-AI footprint removal engine. Mathematically shatter cryptographic token trackers, purge invisible zero-width Unicode, and strip C2PA metadata. Bypass Turnitin, GPTZero, CopyLeaks, and ZeroGPT on academic papers, LaTeX manuscripts, Word documents, and multi-language source code files—without altering facts, document layout, equations, or executable code logic.</strong>
@@ -224,11 +225,26 @@ The platform is designed around strict **asset decoupling** and **modular langua
 
 ---
 
+## 💖 Sponsor & Support the Project
+
+If Turnitout has saved you time, protected your research, or helped your stack, consider supporting ongoing development and server infrastructure costs! 
+
+Because GitHub Sponsors and Stripe do not currently support Pakistan, you can send support globally in under 60 seconds:
+
+* **⚡ Binance Pay (Crypto / Global — 0% Fees):** Pay ID `Atta9196` (Account: `Ahmad Hassan`)
+* **🌍 International Card / Bank Wire (Recommended: [Remitly](https://www.remitly.com/)):** Use **Remitly** (or [Wise](https://wise.com/)) so your card isn't declined &bull; Bank: `United Bank Limited (UBL Ameen)` &bull; IBAN: `PK07UNIL0109000387828585` &bull; BIC: `UNILPKKA`
+* **🇵🇰 Pakistan Local Transfers (Raast / IBFT):** SadaPay (`03225522383` / `PK44SADA0000003225522383`) or UBL Ameen (`2523387828585`)
+* 📱 **Prefer an alternative method (PayPal, Payoneer, USDT, Western Union)?** I'm 100% available for any other alternative you prefer :D &bull; [Chat on WhatsApp / Call: +92 322 5522383](https://wa.me/923225522383)
+
+📖 **[Read the Full Support Guide with Binance Pay QR Code →](SUPPORT.md)**
+
+---
+
 ## 🤝 Support, Enterprise Deployment & Custom Disciplines
 
 - **WhatsApp Direct Developer Support**: [Chat on WhatsApp (+92 322 5522383)](https://wa.me/923225522383)
 - **Feature Requests & Bug Reporting**: [Submit a GitHub Issue](https://github.com/AhmadHassan-BTed/Turnitout-Humanizer/issues/new)
-- **Enterprise Inquiries**: [ahmadhassan.bted@gmail.com](https://www.google.com/search?q=mailto%3Aahmadhassan.bted%40gmail.com)
+- **Enterprise Inquiries**: [ahmadhassan.bted@gmail.com](mailto:ahmadhassan.bted@gmail.com)
 
 ---
 
@@ -236,7 +252,7 @@ The platform is designed around strict **asset decoupling** and **modular langua
 
 - 🐅 **[GitTiger](https://gittiger.com/repo/AhmadHassan-BTed/Turnitout-Humanizer)**: Ranked **#39 globally** on GitTiger (Score: 18.9 • 2,066+ Stars • 85 Forks)
 - 📈 **[Trendshift](https://trendshift.io/repositories/229188)**: Featured on Daily & Weekly developer leaderboards
-- ⚡ **[TiniX AI Project Hub](https://repo.tinix.ai/en/project/ahmadhassan-bted-turnitout-humanizer-21e37f39-3b17-4f88-a771-6b55bd97fb1e)**: Verified open-source project listing
+- ⚡ **[TiniX AI Project Hub](https://repo.tinix.ai/en/project/ahmadhassan-bted-turnitout-humanizer-21e37f39-3b17-4f88-a771-6b55bd97fb1e)**: Verified AI project listing
 - 📝 **[Humanio Blog Review](https://humanio.me/blog/turnitout-humanizer-review)**: _"Turnitout Humanizer Review: How It Works, Limitations, and Better Alternatives"_ — technical architectural breakdown
 - 🎥 **Video Demonstrations & Creator Features**:
   - 👤 [AI Watermarks & Zero-Width Removal Demo — Ikram Rana (Facebook)](https://www.facebook.com/IkramRana.aiautomation/videos/strip-hidden-ai-watermarks-zero-width-tracking-characters-and-identifying-docume/1095214210169161/)
