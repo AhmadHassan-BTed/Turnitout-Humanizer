@@ -2484,9 +2484,9 @@ body.dark-mode .nav-support-btn:hover {
   background: var(--bg-card, #FAF6EE);
   color: var(--text-ink, #2C2621);
   border: 1px solid var(--border-rough, rgba(68, 54, 42, 0.15));
-  border-radius: 16px;
+  border-radius: 18px;
   width: 100%;
-  max-width: 620px;
+  max-width: 760px;
   max-height: 90vh;
   overflow-y: auto;
   box-shadow: 0 24px 60px rgba(0, 0, 0, 0.35), 0 0 0 1px rgba(255, 255, 255, 0.2) inset;
@@ -2730,13 +2730,13 @@ body.dark-mode .support-qr-box {
 }
 
 .support-qr-img {
-  max-width: 220px;
+  max-width: 320px;
   width: 100%;
   height: auto;
-  border-radius: 10px;
-  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.15);
+  border-radius: 12px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.18);
   background: #FFFFFF;
-  padding: 6px;
+  padding: 10px;
 }
 
 .support-modal-footer {

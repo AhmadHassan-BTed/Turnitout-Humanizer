@@ -7,8 +7,8 @@
   <title>Sponsor & Support Turnitout | Ahmad Hassan</title>
   
   <meta name="title" content="Sponsor & Support Turnitout | Ahmad Hassan">
-  <meta name="description" content="Support Ahmad Hassan's ongoing development of Turnitout and high-availability cluster infrastructure via Binance Pay, International Wire (Wise/SWIFT), and Local Transfers.">
-  <meta name="keywords" content="sponsor turnitout, support turnitout, binance pay id atta9196, ahmad hassan developer, wise transfer pakistan, ubl ameen iban, sadapay raast">
+  <meta name="description" content="Support Ahmad Hassan's ongoing development of Turnitout and high-availability cluster infrastructure via Binance Pay, International Wire (Remitly/Wise/SWIFT), and Local Transfers.">
+  <meta name="keywords" content="sponsor turnitout, support turnitout, binance pay id atta9196, ahmad hassan developer, remitly transfer pakistan, wise transfer, ubl ameen iban, sadapay raast">
   <meta name="author" content="Ahmad Hassan">
   <meta name="robots" content="index, follow">
   <link rel="canonical" href="https://ahmadhassan-bted.github.io/Turnitout-Humanizer/support.html">
@@ -19,17 +19,17 @@
   <meta property="og:locale" content="en_US">
   <meta property="og:url" content="https://ahmadhassan-bted.github.io/Turnitout-Humanizer/support.html">
   <meta property="og:title" content="Sponsor & Support Turnitout | Ahmad Hassan">
-  <meta property="og:description" content="Direct global support via Binance Pay, Wise, International SWIFT, and local IBFT / Raast.">
-  <meta property="og:image" content="assets/logo-banner.svg">
+  <meta property="og:description" content="Direct global support via Binance Pay, Remitly, Wise, International SWIFT, and local IBFT / Raast.">
+  <meta property="og:image" content="assets/binance-qr.jpg">
 
   <link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
   <link rel="stylesheet" href="style.css">
   
   <style>
     .support-page-container {
-      max-width: 900px;
-      margin: 40px auto 80px auto;
-      padding: 0 20px;
+      max-width: 1240px;
+      margin: 40px auto 90px auto;
+      padding: 0 24px;
     }
     
     .support-hero {
@@ -40,15 +40,16 @@
     .support-hero-badge {
       display: inline-flex;
       align-items: center;
-      gap: 6px;
-      padding: 6px 14px;
+      gap: 8px;
+      padding: 7px 18px;
       background: linear-gradient(135deg, rgba(230, 57, 70, 0.15) 0%, rgba(236, 72, 153, 0.2) 100%);
       color: #BA1A32;
       border: 1px solid rgba(230, 57, 70, 0.35);
-      border-radius: 20px;
-      font-size: 13px;
+      border-radius: 24px;
+      font-size: 13.5px;
       font-weight: 700;
-      margin-bottom: 16px;
+      letter-spacing: 0.5px;
+      margin-bottom: 18px;
     }
     
     body.dark-mode .support-hero-badge {
@@ -58,8 +59,8 @@
     
     .support-hero-title {
       font-family: var(--font-academic, serif);
-      font-size: 38px;
-      line-height: 1.25;
+      font-size: 44px;
+      line-height: 1.2;
       margin: 0 0 16px 0;
       color: var(--text-ink, #2C2621);
     }
@@ -69,114 +70,305 @@
     }
     
     .support-hero-desc {
-      font-size: 16px;
-      line-height: 1.6;
-      max-width: 720px;
+      font-size: 17.5px;
+      line-height: 1.65;
+      max-width: 820px;
       margin: 0 auto;
-      opacity: 0.85;
+      opacity: 0.88;
     }
     
     .support-alert-box {
       background: rgba(245, 158, 11, 0.1);
       border: 1px solid rgba(245, 158, 11, 0.35);
       border-radius: 12px;
-      padding: 16px 20px;
-      margin: 28px 0;
+      padding: 18px 24px;
+      margin: 32px 0 36px 0;
       display: flex;
       align-items: flex-start;
-      gap: 14px;
-      font-size: 14px;
-      line-height: 1.5;
+      gap: 16px;
+      font-size: 14.5px;
+      line-height: 1.55;
     }
     
-    .support-cards-grid {
+    /* Featured Binance Pay Wide Spotlight Card */
+    .binance-spotlight-card {
+      background: var(--bg-card, #FAF6EE);
+      border: 2px solid rgba(245, 158, 11, 0.45);
+      border-radius: 20px;
+      padding: 36px;
       display: grid;
       grid-template-columns: 1fr;
-      gap: 24px;
-      margin-top: 30px;
+      gap: 36px;
+      box-shadow: 0 16px 40px rgba(0, 0, 0, 0.08), 0 0 0 1px rgba(245, 158, 11, 0.15) inset;
+      margin-bottom: 32px;
+      align-items: center;
+      transition: transform 0.2s, box-shadow 0.2s;
     }
     
-    @media (min-width: 768px) {
-      .support-cards-grid {
-        grid-template-columns: repeat(3, 1fr);
+    @media (min-width: 900px) {
+      .binance-spotlight-card {
+        grid-template-columns: 1.15fr 0.85fr;
+      }
+    }
+    
+    body.dark-mode .binance-spotlight-card {
+      background: #181822;
+      border-color: rgba(245, 158, 11, 0.35);
+      box-shadow: 0 16px 44px rgba(0, 0, 0, 0.45), 0 0 0 1px rgba(245, 158, 11, 0.12) inset;
+    }
+    
+    .binance-spotlight-card:hover {
+      box-shadow: 0 20px 50px rgba(245, 158, 11, 0.16);
+    }
+    
+    .spotlight-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      font-size: 12px;
+      font-weight: 800;
+      text-transform: uppercase;
+      letter-spacing: 0.8px;
+      padding: 5px 12px;
+      border-radius: 6px;
+      background: rgba(245, 158, 11, 0.2);
+      color: #D97706;
+      margin-bottom: 12px;
+    }
+    
+    body.dark-mode .spotlight-badge {
+      color: #FBBF24;
+      background: rgba(245, 158, 11, 0.18);
+    }
+    
+    .spotlight-title {
+      font-family: var(--font-academic, serif);
+      font-size: 32px;
+      font-weight: 700;
+      margin: 0 0 10px 0;
+      color: var(--text-ink, #2C2621);
+    }
+    
+    body.dark-mode .spotlight-title {
+      color: #FFFFFF;
+    }
+    
+    .spotlight-desc {
+      font-size: 15px;
+      line-height: 1.6;
+      opacity: 0.85;
+      margin-bottom: 22px;
+    }
+    
+    .big-payid-box {
+      background: rgba(245, 158, 11, 0.08);
+      border: 1.5px solid rgba(245, 158, 11, 0.35);
+      border-radius: 12px;
+      padding: 16px 20px;
+      margin-bottom: 18px;
+    }
+    
+    body.dark-mode .big-payid-box {
+      background: rgba(245, 158, 11, 0.06);
+      border-color: rgba(245, 158, 11, 0.3);
+    }
+    
+    .big-payid-label {
+      font-size: 12px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.8px;
+      opacity: 0.75;
+      margin-bottom: 6px;
+    }
+    
+    .big-payid-val-row {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 16px;
+      flex-wrap: wrap;
+    }
+    
+    .big-payid-val {
+      font-family: var(--font-mono, monospace);
+      font-size: 30px;
+      font-weight: 800;
+      color: #D97706;
+      letter-spacing: 1px;
+    }
+    
+    body.dark-mode .big-payid-val {
+      color: #FBBF24;
+    }
+    
+    /* Large Prominent QR Code Frame */
+    .qr-large-frame {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      padding: 24px;
+      background: rgba(255, 255, 255, 0.95);
+      border: 2px solid rgba(245, 158, 11, 0.35);
+      border-radius: 16px;
+      box-shadow: 0 12px 36px rgba(0, 0, 0, 0.12);
+    }
+    
+    body.dark-mode .qr-large-frame {
+      background: #FFFFFF;
+      border-color: rgba(245, 158, 11, 0.5);
+      box-shadow: 0 14px 40px rgba(0, 0, 0, 0.6);
+    }
+    
+    .support-qr-large {
+      width: 100%;
+      max-width: 340px;
+      height: auto;
+      display: block;
+      border-radius: 8px;
+      background: #FFFFFF;
+    }
+    
+    .qr-caption-badge {
+      display: inline-block;
+      margin-top: 14px;
+      font-family: var(--font-ui);
+      font-size: 13.5px;
+      font-weight: 700;
+      color: #1E293B;
+      background: #F1F5F9;
+      padding: 6px 14px;
+      border-radius: 20px;
+      border: 1px solid #CBD5E1;
+    }
+    
+    /* 2-Column Grid for Wire & Local */
+    .support-cards-grid-2col {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 28px;
+      margin-top: 24px;
+    }
+    
+    @media (min-width: 860px) {
+      .support-cards-grid-2col {
+        grid-template-columns: repeat(2, 1fr);
       }
     }
     
     .support-channel-card {
       background: var(--bg-card, #FAF6EE);
-      border: 1px solid var(--border-rough, rgba(68, 54, 42, 0.12));
-      border-radius: 16px;
-      padding: 24px;
+      border: 1px solid var(--border-rough, rgba(68, 54, 42, 0.14));
+      border-radius: 18px;
+      padding: 30px;
       display: flex;
       flex-direction: column;
-      box-shadow: 0 8px 24px rgba(0, 0, 0, 0.05);
+      box-shadow: 0 10px 28px rgba(0, 0, 0, 0.05);
       transition: transform 0.2s, box-shadow 0.2s;
     }
     
     body.dark-mode .support-channel-card {
-      background: #18181F;
+      background: #181822;
       border-color: rgba(255, 255, 255, 0.1);
-      box-shadow: 0 8px 24px rgba(0, 0, 0, 0.35);
+      box-shadow: 0 10px 32px rgba(0, 0, 0, 0.35);
     }
     
     .support-channel-card:hover {
       transform: translateY(-3px);
-      box-shadow: 0 12px 32px rgba(0, 0, 0, 0.1);
+      box-shadow: 0 16px 36px rgba(0, 0, 0, 0.09);
     }
     
     .channel-badge {
       display: inline-block;
       align-self: flex-start;
-      font-size: 11px;
-      font-weight: 700;
+      font-size: 11.5px;
+      font-weight: 800;
       text-transform: uppercase;
-      letter-spacing: 0.5px;
-      padding: 4px 10px;
+      letter-spacing: 0.6px;
+      padding: 5px 12px;
       border-radius: 6px;
       margin-bottom: 14px;
     }
     
-    .badge-crypto { background: rgba(245, 158, 11, 0.18); color: #D97706; }
     .badge-wire { background: rgba(59, 130, 246, 0.18); color: #2563EB; }
     .badge-local { background: rgba(16, 185, 129, 0.18); color: #059669; }
     
-    body.dark-mode .badge-crypto { color: #FBBF24; }
     body.dark-mode .badge-wire { color: #60A5FA; }
     body.dark-mode .badge-local { color: #34D399; }
     
     .channel-title {
-      font-size: 20px;
+      font-size: 24px;
       font-weight: 700;
-      margin: 0 0 8px 0;
+      margin: 0 0 10px 0;
       font-family: var(--font-academic, serif);
     }
     
     .channel-desc {
-      font-size: 13.5px;
-      opacity: 0.8;
-      line-height: 1.5;
-      margin-bottom: 18px;
+      font-size: 14.5px;
+      opacity: 0.85;
+      line-height: 1.55;
+      margin-bottom: 20px;
     }
     
-    .channel-actions {
-      margin-top: auto;
-      padding-top: 16px;
-      border-top: 1px solid rgba(0,0,0,0.06);
+    .support-field-group {
+      margin-bottom: 14px;
     }
     
-    body.dark-mode .channel-actions {
-      border-top-color: rgba(255, 255, 255, 0.08);
+    .support-field-label {
+      font-size: 12px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+      opacity: 0.72;
+      margin-bottom: 4px;
     }
     
-    .support-qr-preview {
-      width: 100%;
-      max-width: 200px;
-      margin: 12px auto;
-      display: block;
+    .support-copy-row {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      background: rgba(0, 0, 0, 0.04);
+      border: 1px solid rgba(0, 0, 0, 0.1);
       border-radius: 8px;
-      background: #FFFFFF;
-      padding: 6px;
-      box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+      padding: 10px 14px;
+      gap: 12px;
+    }
+    
+    body.dark-mode .support-copy-row {
+      background: rgba(255, 255, 255, 0.04);
+      border-color: rgba(255, 255, 255, 0.1);
+    }
+    
+    .support-copy-value {
+      font-family: var(--font-mono, monospace);
+      font-size: 14.5px;
+      font-weight: 600;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+    }
+    
+    .btn-action-primary {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      padding: 12px 20px;
+      border-radius: 8px;
+      font-family: var(--font-ui);
+      font-size: 14px;
+      font-weight: 700;
+      text-decoration: none;
+      cursor: pointer;
+      transition: all 0.15s ease;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    }
+    
+    .btn-action-primary:hover {
+      transform: translateY(-2px);
+      filter: brightness(1.08);
+      box-shadow: 0 6px 18px rgba(0, 0, 0, 0.16);
     }
   </style>
 </head>
@@ -220,7 +412,7 @@
     </div>
 
     <div class="support-alert-box">
-      <svg class="icon" viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="#D97706" stroke-width="2" style="flex-shrink: 0; margin-top: 2px;">
+      <svg class="icon" viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="#D97706" stroke-width="2" style="flex-shrink: 0; margin-top: 2px;">
         <circle cx="12" cy="12" r="10"></circle>
         <line x1="12" y1="8" x2="12" y2="12"></line>
         <line x1="12" y1="16" x2="12.01" y2="16"></line>
@@ -230,54 +422,65 @@
       </div>
     </div>
 
-    <!-- 3 Channel Cards -->
-    <div class="support-cards-grid">
-      
-      <!-- Card 1: Binance Pay (Crypto) -->
-      <div class="support-channel-card">
-        <span class="channel-badge badge-crypto">⚡ Global &bull; 0% Fees</span>
-        <h2 class="channel-title">Binance Pay (Crypto)</h2>
-        <p class="channel-desc">The fastest way for developers and researchers globally to contribute with zero foreign transaction fees.</p>
-        
-        <div class="support-field-group">
-          <div class="support-field-label">Binance Pay ID</div>
-          <div class="support-copy-row">
-            <span class="support-copy-value" id="valBinanceId">Atta9196</span>
-            <button class="btn-mini-copy" data-copy="Atta9196" title="Copy Binance Pay ID">Copy</button>
+    <!-- FEATURED SPOTLIGHT CARD: Binance Pay (Crypto) -->
+    <div class="binance-spotlight-card">
+      <div>
+        <div class="spotlight-badge">⚡ GLOBAL &bull; 0% FEES &bull; ZERO INTERMEDIARY MARKUP</div>
+        <h2 class="spotlight-title">Binance Pay (Instant Crypto)</h2>
+        <p class="spotlight-desc">
+          The fastest and easiest way for researchers, engineers, and users worldwide to send direct contributions with <strong>zero international transaction fees</strong>.
+        </p>
+
+        <!-- Big Prominent Pay ID Display -->
+        <div class="big-payid-box">
+          <div class="big-payid-label">Binance Pay ID (Click to Copy)</div>
+          <div class="big-payid-val-row">
+            <span class="big-payid-val">Atta9196</span>
+            <button class="btn-action-primary" data-copy="Atta9196" style="background: #F0B90B; color: #000000; font-size: 15px; padding: 10px 22px;">
+              📋 Copy Pay ID
+            </button>
           </div>
         </div>
 
         <div class="support-field-group">
           <div class="support-field-label">Account Holder</div>
           <div class="support-copy-row">
-            <span class="support-copy-value">Ahmad Hassan</span>
+            <span class="support-copy-value" style="font-size: 16px;">Ahmad Hassan</span>
           </div>
         </div>
 
-        <div style="text-align: center; margin-top: 14px;">
-          <img src="assets/binance-qr.jpg" alt="Binance Pay QR Code - Atta9196" class="support-qr-preview">
-          <span style="font-size: 11.5px; opacity: 0.7;">Scan in Binance App</span>
-        </div>
-
-        <div class="channel-actions">
-          <button class="btn-mini-copy" style="width: 100%; justify-content: center; padding: 10px;" data-copy="Atta9196">
-            📋 Copy Binance Pay ID
-          </button>
+        <div style="background: rgba(0,0,0,0.03); border: 1px dashed rgba(0,0,0,0.15); border-radius: 10px; padding: 14px 18px; margin-top: 18px; font-size: 13.5px; line-height: 1.55;">
+          <strong>📲 3-Step Instant Transfer in Binance App:</strong>
+          <ol style="margin: 8px 0 0 18px; padding: 0;">
+            <li>Open the Binance App on your phone</li>
+            <li>Tap the <strong>Pay / QR Scanner icon</strong> at the top right</li>
+            <li>Scan the QR code on the right or search Pay ID <code>Atta9196</code></li>
+          </ol>
         </div>
       </div>
 
+      <!-- Large QR Code Frame -->
+      <div class="qr-large-frame">
+        <img src="assets/binance-qr.jpg" alt="Binance Pay QR Code - Atta9196" class="support-qr-large">
+        <span class="qr-caption-badge">📲 Scan with Binance App to Pay</span>
+      </div>
+    </div>
+
+    <!-- 2-COLUMN GRID: Remitly / International Wire & Pakistan Local -->
+    <div class="support-cards-grid-2col">
+      
       <!-- Card 2: International Wire (Remitly & Wise) -->
-      <div class="support-channel-card" style="border: 2px solid rgba(59, 130, 246, 0.45); position: relative;">
+      <div class="support-channel-card" style="border: 2px solid rgba(59, 130, 246, 0.45);">
         <span class="channel-badge badge-wire" style="background: #2563EB; color: #FFFFFF;">⭐ Recommended &bull; Remitly / Wise</span>
-        <h2 class="channel-title">International Card (Remitly)</h2>
-        <p class="channel-desc">Send from any country using Debit/Credit Card, Apple Pay, Google Pay, or bank balance.</p>
+        <h2 class="channel-title">International Card & Bank Wire</h2>
+        <p class="channel-desc">Send from any country worldwide using Debit/Credit Card, Apple Pay, Google Pay, or direct Bank Wire.</p>
         
-        <div style="background: rgba(59, 130, 246, 0.1); border: 1px solid rgba(59, 130, 246, 0.3); border-radius: 8px; padding: 10px 12px; margin-bottom: 14px; font-size: 12.5px; line-height: 1.45;">
+        <div style="background: rgba(59, 130, 246, 0.1); border: 1px solid rgba(59, 130, 246, 0.35); border-radius: 10px; padding: 14px 16px; margin-bottom: 20px; font-size: 13.5px; line-height: 1.5;">
           <strong>💡 Recommended:</strong> Please use <strong>Remitly</strong> (or Wise) so your card won't get cut off or declined! It transfers instantly to Pakistan bank accounts without foreign transaction headaches.
         </div>
 
         <div class="support-field-group">
-          <div class="support-field-label">Account Holder</div>
+          <div class="support-field-label">Account Holder Name</div>
           <div class="support-copy-row">
             <span class="support-copy-value">Ahmad Hassan</span>
             <button class="btn-mini-copy" data-copy="Ahmad Hassan">Copy</button>
@@ -307,11 +510,11 @@
           </div>
         </div>
 
-        <div class="channel-actions" style="display: flex; gap: 8px; flex-direction: column;">
-          <a href="https://www.remitly.com/" target="_blank" rel="noopener noreferrer" class="btn-mini-copy" style="width: 100%; justify-content: center; padding: 10px; text-decoration: none; background: #2563EB; font-weight: 700;">
+        <div style="display: flex; gap: 10px; margin-top: auto; padding-top: 18px;">
+          <a href="https://www.remitly.com/" target="_blank" rel="noopener noreferrer" class="btn-action-primary" style="flex: 1.2; background: #2563EB; color: #FFFFFF;">
             🚀 Open Remitly (Recommended)
           </a>
-          <a href="https://wise.com/" target="_blank" rel="noopener noreferrer" class="btn-mini-copy" style="width: 100%; justify-content: center; padding: 9px; text-decoration: none; background: #475569;">
+          <a href="https://wise.com/" target="_blank" rel="noopener noreferrer" class="btn-action-primary" style="flex: 0.8; background: #475569; color: #FFFFFF;">
             🌐 Open Wise.com
           </a>
         </div>
@@ -319,9 +522,9 @@
 
       <!-- Card 3: Pakistan Local (Raast & SadaPay) -->
       <div class="support-channel-card">
-        <span class="channel-badge badge-local">🇵🇰 Pakistan Local</span>
+        <span class="channel-badge badge-local">🇵🇰 Pakistan Local &bull; 0% Fee</span>
         <h2 class="channel-title">SadaPay & Raast IBFT</h2>
-        <p class="channel-desc">Instant 0% fee transfer for local Pakistani supporters via SadaPay wallet, Raast ID, or bank app.</p>
+        <p class="channel-desc">Instant 0-fee transfer for local Pakistani supporters via SadaPay wallet, Raast ID, or any mobile bank app.</p>
         
         <div class="support-field-group">
           <div class="support-field-label">SadaPay Raast / Phone</div>
@@ -347,8 +550,8 @@
           </div>
         </div>
 
-        <div class="channel-actions">
-          <button class="btn-mini-copy" style="width: 100%; justify-content: center; padding: 10px;" data-copy="PK44SADA0000003225522383">
+        <div style="margin-top: auto; padding-top: 18px;">
+          <button class="btn-action-primary" style="width: 100%; background: #059669; color: #FFFFFF;" data-copy="PK44SADA0000003225522383">
             📋 Copy SadaPay IBAN
           </button>
         </div>
@@ -357,23 +560,23 @@
     </div>
 
     <!-- Alternative Options & Personal Contact Card -->
-    <div style="background: linear-gradient(135deg, rgba(30, 41, 59, 0.85) 0%, rgba(15, 23, 42, 0.98) 100%); border: 1px solid rgba(230, 57, 70, 0.35); border-radius: 16px; padding: 28px; margin-top: 36px; display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 20px; color: #FFFFFF; box-shadow: 0 10px 30px rgba(0,0,0,0.35);">
-      <div style="max-width: 580px;">
-        <div style="display: inline-block; background: rgba(244, 63, 94, 0.2); color: #FB7185; font-size: 11px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.5px; padding: 3px 8px; border-radius: 4px; margin-bottom: 8px;">100% Flexible</div>
-        <h3 style="margin: 0 0 8px 0; font-size: 22px; font-family: var(--font-academic, serif);">Prefer Another Alternative? I'm Readily Available! :D</h3>
-        <p style="margin: 0 0 12px 0; font-size: 14.5px; opacity: 0.9; line-height: 1.6;">
+    <div style="background: linear-gradient(135deg, rgba(30, 41, 59, 0.88) 0%, rgba(15, 23, 42, 0.98) 100%); border: 1px solid rgba(230, 57, 70, 0.4); border-radius: 18px; padding: 32px; margin-top: 36px; display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 24px; color: #FFFFFF; box-shadow: 0 12px 36px rgba(0,0,0,0.4);">
+      <div style="max-width: 680px;">
+        <div style="display: inline-block; background: rgba(244, 63, 94, 0.2); color: #FB7185; font-size: 11.5px; font-weight: 800; text-transform: uppercase; letter-spacing: 0.8px; padding: 4px 10px; border-radius: 4px; margin-bottom: 10px;">100% Flexible</div>
+        <h3 style="margin: 0 0 10px 0; font-size: 26px; font-family: var(--font-academic, serif);">Prefer Another Alternative? I'm Readily Available! :D</h3>
+        <p style="margin: 0 0 14px 0; font-size: 15px; opacity: 0.92; line-height: 1.6;">
           If you want to use <strong>PayPal</strong>, <strong>Payoneer</strong>, <strong>USDT (TRC20/BEP20)</strong>, <strong>Western Union</strong>, or any other method you prefer, just call or message me directly on WhatsApp. I'm always available to set up whatever works best for you!
         </p>
-        <p style="margin: 0; font-size: 13.5px; opacity: 0.8;">
+        <p style="margin: 0; font-size: 14.5px; opacity: 0.85;">
           📞 <strong>Direct Phone / WhatsApp:</strong> <span style="font-family: var(--font-mono); color: #FBBF24; font-weight: 700;">+92 322 5522383</span> (Local: <span style="font-family: var(--font-mono); color: #FBBF24; font-weight: 700;">03225522383</span>)
         </p>
       </div>
-      <div style="display: flex; gap: 12px; flex-wrap: wrap;">
-        <a href="https://wa.me/923225522383" target="_blank" rel="noopener noreferrer" class="btn-wa-confirm" style="padding: 12px 22px; font-size: 14.5px;">
-          <svg class="icon" viewBox="0 0 24 24" width="17" height="17" fill="currentColor"><path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981z"/></svg>
+      <div style="display: flex; gap: 14px; flex-wrap: wrap;">
+        <a href="https://wa.me/923225522383" target="_blank" rel="noopener noreferrer" class="btn-action-primary" style="background: #25D366; color: #000000; font-size: 15px; padding: 14px 24px;">
+          <svg class="icon" viewBox="0 0 24 24" width="18" height="18" fill="currentColor"><path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981z"/></svg>
           Chat with Ahmad on WhatsApp
         </a>
-        <button class="btn-mini-copy" data-copy="+923225522383" style="padding: 12px 18px; font-size: 14px;">
+        <button class="btn-action-primary" data-copy="+923225522383" style="background: #3B82F6; color: #FFFFFF; font-size: 14.5px; padding: 14px 20px;">
           📋 Copy Number
         </button>
       </div>
@@ -381,7 +584,7 @@
   </main>
 
   <!-- Global Footer -->
-  <footer class="archive-footer-row" style="max-width: 900px; margin: 40px auto 30px auto; padding: 20px;">
+  <footer class="archive-footer-row" style="max-width: 1240px; margin: 40px auto 30px auto; padding: 20px;">
     <div>
       <strong>TURNITOUT Project</strong> &bull; Created by <a href="https://github.com/AhmadHassan-BTed" target="_blank" rel="noopener noreferrer" style="color: inherit; text-decoration: underline;">Ahmad Hassan</a> &bull; Fractal Compute Orchestrations
     </div>
