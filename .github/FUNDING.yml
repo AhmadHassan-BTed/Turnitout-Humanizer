@@ -1,6 +1,4 @@
-# These features will enable a "Sponsor" button on GitHub repository
+# GitHub Funding Configuration
 # https://docs.github.com/en/repositories/managing-your-repositorys-settings-and-features/customizing-your-repository/displaying-a-sponsor-button-in-your-repository
 
-custom:
-  - 'https://github.com/AhmadHassan-BTed/Turnitout-Humanizer/blob/main/SUPPORT.md'
-  - 'https://ahmadhassan-bted.github.io/Turnitout-Humanizer/support.html'
+custom: ["https://github.com/AhmadHassan-BTed/Turnitout-Humanizer/blob/main/SUPPORT.md", "https://ahmadhassan-bted.github.io/Turnitout-Humanizer/support.html"]
