@@ -18,7 +18,7 @@ The fastest and easiest way for researchers, engineers, and users worldwide to s
 <br>
 
 <p align="left">
-  <img src="docs/assets/binance-qr.jpg" width="300" alt="Binance Pay QR Code - Atta9196" style="border-radius: 12px; box-shadow: 0 4px 16px rgba(0,0,0,0.25);"/>
+  <img src="docs/assets/binance-qr.jpg" width="360" alt="Binance Pay QR Code - Atta9196" style="border-radius: 12px; box-shadow: 0 6px 24px rgba(0,0,0,0.3); max-width: 100%; height: auto;"/>
 </p>
 
 </details>
