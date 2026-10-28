@@ -28,6 +28,18 @@
     <priority>0.90</priority>
   </url>
   <url>
+    <loc>https://ahmadhassan-bted.github.io/Turnitout-Humanizer/api.html</loc>
+    <lastmod>2026-10-25</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.85</priority>
+  </url>
+  <url>
+    <loc>https://ahmadhassan-bted.github.io/Turnitout-Humanizer/word-limit-guide.html</loc>
+    <lastmod>2026-10-29</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.85</priority>
+  </url>
+  <url>
     <loc>https://ahmadhassan-bted.github.io/Turnitout-Humanizer/faq.html</loc>
     <lastmod>2026-09-24</lastmod>
     <changefreq>monthly</changefreq>
