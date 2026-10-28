@@ -176,6 +176,84 @@
       margin: 14px 0;
       border: 1px solid rgba(255,255,255,0.08);
     }
+    .knob-card {
+      background: var(--bg-card-alt);
+      border: 1px solid var(--border-rough);
+      border-radius: 8px;
+      padding: 18px 20px;
+      margin-bottom: 22px;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.02);
+    }
+    .knob-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-bottom: 12px;
+      border-bottom: 1px solid var(--border-rough);
+      padding-bottom: 10px;
+    }
+    .knob-title {
+      font-family: var(--font-ui);
+      font-size: 16.5px;
+      font-weight: 700;
+      color: var(--ballpoint-blue);
+      margin: 0;
+    }
+    .knob-impact {
+      font-family: var(--font-mono);
+      font-size: 12px;
+      padding: 3px 10px;
+      border-radius: 4px;
+      font-weight: 700;
+      letter-spacing: 0.3px;
+    }
+    .impact-zero { background: rgba(35, 134, 54, 0.14); color: #238636; border: 1px solid rgba(35, 134, 54, 0.3); }
+    .impact-mod { background: rgba(35, 72, 115, 0.12); color: var(--ballpoint-blue); border: 1px solid rgba(35, 72, 115, 0.3); }
+    .impact-expand { background: rgba(186, 26, 50, 0.12); color: var(--red-pen); border: 1px solid rgba(186, 26, 50, 0.3); }
+    .example-container {
+      margin: 14px 0 10px 0;
+    }
+    .example-box {
+      border-radius: 6px;
+      padding: 12px 16px;
+      margin-bottom: 8px;
+      font-size: 13.5px;
+      line-height: 1.6;
+    }
+    .example-before {
+      background: rgba(186, 26, 50, 0.04);
+      border: 1px solid rgba(186, 26, 50, 0.2);
+      border-left: 4px solid #BA1A32;
+    }
+    .example-after {
+      background: rgba(35, 134, 54, 0.05);
+      border: 1px solid rgba(35, 134, 54, 0.2);
+      border-left: 4px solid #238636;
+    }
+    .example-badge {
+      font-family: var(--font-ui);
+      font-size: 11px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.6px;
+      margin-bottom: 4px;
+      display: inline-block;
+    }
+    .badge-orig { color: #BA1A32; }
+    .badge-trans { color: #238636; }
+    .diff-highlight {
+      background: rgba(35, 134, 54, 0.18);
+      color: #1b6329;
+      font-weight: 600;
+      padding: 1px 4px;
+      border-radius: 3px;
+    }
+    body.dark-mode .diff-highlight {
+      background: rgba(46, 160, 67, 0.25);
+      color: #7ee787;
+    }
   </style>
 </head>
 <body>
@@ -358,91 +436,352 @@
               <div class="feature-meta">
                 <span class="tag tag-blue">Fine-Tuning</span>
                 <span class="tag tag-green">Interactive Controls</span>
+                <span class="tag tag-yellow">Live Output Previews</span>
               </div>
               <p style="font-size: 14.5px; line-height: 1.6; color: var(--text-muted); margin-bottom: 14px;">
-                Inside the expandable <strong>Advanced Transformation Settings &amp; Protected Terms</strong> panel, users can customize individual syntactic passes:
+                Inside the expandable <strong>Advanced Transformation Settings &amp; Protected Terms</strong> panel, users can customize individual syntactic passes. Below is an exhaustive breakdown of every knob, including its functional role, word count impact, and live before/after output comparisons.
               </p>
-              <table class="ref-table">
-                <thead>
-                  <tr>
-                    <th>Control Knob</th>
-                    <th>Functional Behavior (What Happens)</th>
-                    <th>Cadence / Perplexity Effect</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr>
-                    <td><strong>1. Synonym Swapping</strong></td>
-                    <td>Substitutes predictable lexical tokens with contextually aligned synonyms. Governed by the <em>Alignment Probability Slider</em> (0.50 to 1.00).</td>
-                    <td>Disrupts low-entropy n-gram chains while maintaining strict semantic equivalence.</td>
-                  </tr>
-                  <tr>
-                    <td><strong>2. Phrase Rewriting</strong></td>
-                    <td>Replaces multi-word idiomatic patterns and repetitive transitional phrases with varied natural equivalents.</td>
-                    <td>Breaks contiguous 3-gram and 4-gram frequency peaks evaluated by AI detectors.</td>
-                  </tr>
-                  <tr>
-                    <td><strong>3. Determiner Swapping</strong></td>
-                    <td>Contextually alternates demonstratives and articles (e.g., <em>"the"</em> ↔ <em>"this"</em>, <em>"these"</em> ↔ <em>"such"</em>).</td>
-                    <td>Prevents rigid determiner distribution common in machine-generated summaries.</td>
-                  </tr>
-                  <tr>
-                    <td><strong>4. Voice Transformations</strong></td>
-                    <td>Converts eligible passive constructions to active voice and vice-versa based on academic discourse conventions.</td>
-                    <td>Elevates stylistic burstiness and varies sentence grammatical subject agency.</td>
-                  </tr>
-                  <tr>
-                    <td><strong>5. Sentence Fusion</strong></td>
-                    <td>Fuses adjacent short, choppy sentences using coordinate and subordinate conjunctions.</td>
-                    <td>Increases syntactic complexity and smooths reading rhythm.</td>
-                  </tr>
-                  <tr>
-                    <td><strong>6. Transition Injection</strong></td>
-                    <td>Injects varied academic discourse markers (e.g., <em>"Furthermore"</em>, <em>"In contrast"</em>, <em>"Consequently"</em>).</td>
-                    <td>Elevates structural coherence (adds word count; disable for strict limits).</td>
-                  </tr>
-                  <tr>
-                    <td><strong>7. Clause &amp; Word Reorder</strong></td>
-                    <td>Permutes dependent clauses, introductory adverbials, and prepositional phrases to natural alternative positions.</td>
-                    <td>Shifts sentence opening rhythms with zero change to total word count.</td>
-                  </tr>
-                  <tr>
-                    <td><strong>8. Nominalization / Verbalization</strong></td>
-                    <td>Alternates between action verbs and abstract nominal forms (e.g., <em>"analyze"</em> ↔ <em>"conduct an analysis of"</em>).</td>
-                    <td>Calibrates formal academic density without introducing external vocabulary.</td>
-                  </tr>
-                  <tr>
-                    <td><strong>9. Appositive Insertion</strong></td>
-                    <td>Inserts clarifying parentheticals, acronym definitions, and appositive noun phrases.</td>
-                    <td>Mimics human explanatory prose (adds word count; disable for strict limits).</td>
-                  </tr>
-                  <tr>
-                    <td><strong>10. Discourse Rotation</strong></td>
-                    <td>Rotates paragraph-level rhetorical flow and macro-connectives according to discourse tree conventions.</td>
-                    <td>Eliminates predictable paragraph opener templates across long manuscripts.</td>
-                  </tr>
-                  <tr>
-                    <td><strong>11. Contractions Swapping</strong></td>
-                    <td>Expands contracted auxiliaries (e.g., <em>"don't"</em> ➔ <em>"do not"</em>) for formal papers, or contracts for casual tones.</td>
-                    <td>Alters token length and tone consistency.</td>
-                  </tr>
-                  <tr>
-                    <td><strong>12. N-Gram Chain Breaking</strong></td>
-                    <td>Performs a final audit of surviving 5-gram token chains against common AI sequences, applying micro-substitutions.</td>
-                    <td>Shatters hash fingerprints tested by Turnitin and Winnowing detectors.</td>
-                  </tr>
-                  <tr>
-                    <td><strong>13. Conceptual Bridging</strong></td>
-                    <td>Injects thematic transition connectors between adjacent conceptual paragraphs.</td>
-                    <td>Enhances multi-paragraph narrative cohesion (adds word count).</td>
-                  </tr>
-                  <tr>
-                    <td><strong>14. Information Reordering</strong></td>
-                    <td>Restructures sentences to shift information focus (given vs. new information principle).</td>
-                    <td>Optimizes reader focus and rhetorical cadence with zero word expansion.</td>
-                  </tr>
-                </tbody>
-              </table>
+
+              <!-- Knob 1 -->
+              <div class="knob-card">
+                <div class="knob-header">
+                  <h4 class="knob-title">1. Synonym Swapping (with Alignment Probability Slider)</h4>
+                  <span class="knob-impact impact-zero">Word Count Impact: 0 Words (1:1)</span>
+                </div>
+                <p style="font-size: 14px; line-height: 1.6; color: var(--text-muted); margin-bottom: 10px;">
+                  <strong>What It Changes:</strong> Targets statistically predictable single words overrepresented in AI text and replaces them with contextually accurate, lower-frequency synonyms without adding extra tokens. 
+                  The <strong>Synonym Alignment Probability Slider</strong> (<code>0.50</code> to <code>1.00</code>) regulates semantic precision: <code>0.90 – 0.95</code> guarantees strict formal academic fidelity with zero semantic drift; <code>0.80 – 0.85</code> offers optimal natural flow; checking <em>Randomize Alignment</em> simulates human drafting variance.
+                </p>
+                <div class="example-container">
+                  <div class="example-box example-before">
+                    <span class="example-badge badge-orig">Original AI Input</span><br>
+                    "The algorithm demonstrates substantial efficacy in mitigating network latency across distributed clusters."
+                  </div>
+                  <div class="example-box example-after">
+                    <span class="example-badge badge-trans">Transformed Output (1:1 Swap)</span><br>
+                    "The algorithm shows <span class="diff-highlight">significant effectiveness</span> in <span class="diff-highlight">reducing</span> network <span class="diff-highlight">delay</span> across distributed clusters."
+                  </div>
+                </div>
+                <p style="font-size: 13px; color: var(--text-muted); margin: 0;">
+                  <strong>Recommendation:</strong> Always keep <span class="tag tag-green">ON</span>. This is the primary foundation for breaking AI n-grams while strictly maintaining 100% word-count neutrality.
+                </p>
+              </div>
+
+              <!-- Knob 2 -->
+              <div class="knob-card">
+                <div class="knob-header">
+                  <h4 class="knob-title">2. Phrase Rewriting</h4>
+                  <span class="knob-impact impact-mod">Word Count Impact: -2 to +1 Words</span>
+                </div>
+                <p style="font-size: 14px; line-height: 1.6; color: var(--text-muted); margin-bottom: 10px;">
+                  <strong>What It Changes:</strong> Scans for hallmark multi-word AI clichés, formulaic transitional phrases, and boilerplate expressions, replacing them with direct, authentic human academic phrasing.
+                </p>
+                <div class="example-container">
+                  <div class="example-box example-before">
+                    <span class="example-badge badge-orig">Original AI Input</span><br>
+                    "In order to delve into the multifaceted dimensions of this phenomenon, it is of paramount importance to consider..."
+                  </div>
+                  <div class="example-box example-after">
+                    <span class="example-badge badge-trans">Transformed Output</span><br>
+                    "<span class="diff-highlight">To examine the various aspects</span> of this phenomenon, <span class="diff-highlight">one must consider</span>..."
+                  </div>
+                </div>
+                <p style="font-size: 13px; color: var(--text-muted); margin: 0;">
+                  <strong>Recommendation:</strong> Highly recommended <span class="tag tag-green">ON</span>. Strips recognizable AI patterns like <em>"delve into"</em>, <em>"multifaceted"</em>, and <em>"paramount importance"</em>.
+                </p>
+              </div>
+
+              <!-- Knob 3 -->
+              <div class="knob-card">
+                <div class="knob-header">
+                  <h4 class="knob-title">3. Determiner Swapping</h4>
+                  <span class="knob-impact impact-zero">Word Count Impact: 0 Words (1:1)</span>
+                </div>
+                <p style="font-size: 14px; line-height: 1.6; color: var(--text-muted); margin-bottom: 10px;">
+                  <strong>What It Changes:</strong> Contextually alternates articles (<em>"the"</em>, <em>"a"</em>) and demonstratives (<em>"this"</em>, <em>"these"</em>, <em>"such"</em>). AI models frequently start almost every sentence with <em>"The [subject]"</em>; this pass creates organic grammatical diversity.
+                </p>
+                <div class="example-container">
+                  <div class="example-box example-before">
+                    <span class="example-badge badge-orig">Original AI Input</span><br>
+                    "The experiment validates the hypothesis. The results suggest the model generalizes well across the unseen test datasets."
+                  </div>
+                  <div class="example-box example-after">
+                    <span class="example-badge badge-trans">Transformed Output</span><br>
+                    "<span class="diff-highlight">This</span> experiment validates the hypothesis. <span class="diff-highlight">These</span> results suggest the model generalizes well across <span class="diff-highlight">such</span> unseen test datasets."
+                  </div>
+                </div>
+                <p style="font-size: 13px; color: var(--text-muted); margin: 0;">
+                  <strong>Recommendation:</strong> Keep <span class="tag tag-green">ON</span>. Eliminates repetitive sentence openings with exact 1-to-1 word count preservation.
+                </p>
+              </div>
+
+              <!-- Knob 4 -->
+              <div class="knob-card">
+                <div class="knob-header">
+                  <h4 class="knob-title">4. Voice Transformations (Active ↔ Passive)</h4>
+                  <span class="knob-impact impact-mod">Word Count Impact: ± 1 to 3 Words</span>
+                </div>
+                <p style="font-size: 14px; line-height: 1.6; color: var(--text-muted); margin-bottom: 10px;">
+                  <strong>What It Changes:</strong> Converts rigid passive constructions into dynamic active voice, or converts repetitive active statements into scholarly passive constructions where objective agency is preferred.
+                </p>
+                <div class="example-container">
+                  <div class="example-box example-before">
+                    <span class="example-badge badge-orig">Original AI Input (Rigid Passive)</span><br>
+                    "A novel optimization framework was engineered by the research group to accelerate gradient descent."
+                  </div>
+                  <div class="example-box example-after">
+                    <span class="example-badge badge-trans">Transformed Output (Dynamic Active)</span><br>
+                    "<span class="diff-highlight">The research group engineered</span> a novel optimization framework to accelerate gradient descent."
+                  </div>
+                </div>
+                <p style="font-size: 13px; color: var(--text-muted); margin: 0;">
+                  <strong>Recommendation:</strong> Keep <span class="tag tag-green">ON</span> for standard humanization. Elevates stylistic burstiness.
+                </p>
+              </div>
+
+              <!-- Knob 5 -->
+              <div class="knob-card">
+                <div class="knob-header">
+                  <h4 class="knob-title">5. Sentence Fusion</h4>
+                  <span class="knob-impact impact-mod">Word Count Impact: +1 to 3 Words</span>
+                </div>
+                <p style="font-size: 14px; line-height: 1.6; color: var(--text-muted); margin-bottom: 10px;">
+                  <strong>What It Changes:</strong> Merges adjacent short, staccato sentences into cohesive compound or complex sentences using appropriate coordinating or subordinating conjunctions.
+                </p>
+                <div class="example-container">
+                  <div class="example-box example-before">
+                    <span class="example-badge badge-orig">Original AI Input (Choppy Staccato)</span><br>
+                    "The dataset contains 50,000 samples. The training process required 12 hours. The final validation loss was minimal."
+                  </div>
+                  <div class="example-box example-after">
+                    <span class="example-badge badge-trans">Transformed Output (Fused Compound)</span><br>
+                    "The dataset contains 50,000 samples, <span class="diff-highlight">and while training required 12 hours</span>, the final validation loss remained minimal."
+                  </div>
+                </div>
+                <p style="font-size: 13px; color: var(--text-muted); margin: 0;">
+                  <strong>Recommendation:</strong> Enable for fragmented AI drafts. Disable if targeting a strict exact word count limit.
+                </p>
+              </div>
+
+              <!-- Knob 6 -->
+              <div class="knob-card">
+                <div class="knob-header">
+                  <h4 class="knob-title">6. Transition Injection</h4>
+                  <span class="knob-impact impact-expand">Word Count Impact: +2 to 4 Words / Sentence</span>
+                </div>
+                <p style="font-size: 14px; line-height: 1.6; color: var(--text-muted); margin-bottom: 10px;">
+                  <strong>What It Changes:</strong> Injects authentic scholarly discourse markers and transitional signposts (e.g., <em>"Furthermore"</em>, <em>"In contrast"</em>, <em>"Consequently"</em>, <em>"To this end"</em>) to enhance flow.
+                </p>
+                <div class="example-container">
+                  <div class="example-box example-before">
+                    <span class="example-badge badge-orig">Original AI Input</span><br>
+                    "The baseline model struggled with long-range dependencies. The attention-augmented architecture maintained high accuracy."
+                  </div>
+                  <div class="example-box example-after">
+                    <span class="example-badge badge-trans">Transformed Output</span><br>
+                    "The baseline model struggled with long-range dependencies. <span class="diff-highlight">In contrast</span>, the attention-augmented architecture maintained high accuracy."
+                  </div>
+                </div>
+                <p style="font-size: 13px; color: var(--text-muted); margin: 0;">
+                  <strong>Recommendation:</strong> Excellent for essays and literature reviews. <span class="tag tag-red">DISABLE</span> if you have a rigid word limit ceiling.
+                </p>
+              </div>
+
+              <!-- Knob 7 -->
+              <div class="knob-card">
+                <div class="knob-header">
+                  <h4 class="knob-title">7. Clause &amp; Word Reorder</h4>
+                  <span class="knob-impact impact-zero">Word Count Impact: 0 Words (1:1)</span>
+                </div>
+                <p style="font-size: 14px; line-height: 1.6; color: var(--text-muted); margin-bottom: 10px;">
+                  <strong>What It Changes:</strong> Reorders dependent clauses, adverbials, and prepositional adjuncts to natural alternative positions without altering semantic meaning or document length.
+                </p>
+                <div class="example-container">
+                  <div class="example-box example-before">
+                    <span class="example-badge badge-orig">Original AI Input</span><br>
+                    "The model achieves superior convergence speeds when evaluated on GPU clusters."
+                  </div>
+                  <div class="example-box example-after">
+                    <span class="example-badge badge-trans">Transformed Output</span><br>
+                    "<span class="diff-highlight">When evaluated on GPU clusters</span>, the model achieves superior convergence speeds."
+                  </div>
+                </div>
+                <p style="font-size: 13px; color: var(--text-muted); margin: 0;">
+                  <strong>Recommendation:</strong> Always keep <span class="tag tag-green">ON</span>. Radically disrupts predictable sequence starts with zero word count inflation.
+                </p>
+              </div>
+
+              <!-- Knob 8 -->
+              <div class="knob-card">
+                <div class="knob-header">
+                  <h4 class="knob-title">8. Nominalization / Verbalization</h4>
+                  <span class="knob-impact impact-mod">Word Count Impact: ± 1 to 2 Words</span>
+                </div>
+                <p style="font-size: 14px; line-height: 1.6; color: var(--text-muted); margin-bottom: 10px;">
+                  <strong>What It Changes:</strong> Alternates between direct action verbs and abstract nominal forms (e.g., <em>"analyze"</em> ↔ <em>"conduct an analysis of"</em>, <em>"measure"</em> ↔ <em>"perform a measurement of"</em>).
+                </p>
+                <div class="example-container">
+                  <div class="example-box example-before">
+                    <span class="example-badge badge-orig">Original AI Input</span><br>
+                    "We systematically measured the latency variances across all worker nodes."
+                  </div>
+                  <div class="example-box example-after">
+                    <span class="example-badge badge-trans">Transformed Output</span><br>
+                    "We <span class="diff-highlight">conducted a systematic measurement of</span> latency variances across all worker nodes."
+                  </div>
+                </div>
+                <p style="font-size: 13px; color: var(--text-muted); margin: 0;">
+                  <strong>Recommendation:</strong> Keep <span class="tag tag-green">ON</span> for formal scientific manuscripts and academic theses.
+                </p>
+              </div>
+
+              <!-- Knob 9 -->
+              <div class="knob-card">
+                <div class="knob-header">
+                  <h4 class="knob-title">9. Appositive Insertion</h4>
+                  <span class="knob-impact impact-expand">Word Count Impact: +5 to 15 Words / Instance</span>
+                </div>
+                <p style="font-size: 14px; line-height: 1.6; color: var(--text-muted); margin-bottom: 10px;">
+                  <strong>What It Changes:</strong> Inserts clarifying parentheticals, informative noun phrases, or acronym definitions directly alongside subjects, replicating authentic human explanatory prose.
+                </p>
+                <div class="example-container">
+                  <div class="example-box example-before">
+                    <span class="example-badge badge-orig">Original AI Input</span><br>
+                    "We evaluated BERT on the SQuAD benchmark."
+                  </div>
+                  <div class="example-box example-after">
+                    <span class="example-badge badge-trans">Transformed Output</span><br>
+                    "We evaluated BERT<span class="diff-highlight">, a transformer-based language representation model,</span> on the SQuAD benchmark."
+                  </div>
+                </div>
+                <p style="font-size: 13px; color: var(--text-muted); margin: 0;">
+                  <strong>Recommendation:</strong> Excellent for deep explanatory papers. <span class="tag tag-red">DISABLE</span> if you are bound by a strict word limit ceiling.
+                </p>
+              </div>
+
+              <!-- Knob 10 -->
+              <div class="knob-card">
+                <div class="knob-header">
+                  <h4 class="knob-title">10. Discourse Rotation</h4>
+                  <span class="knob-impact impact-mod">Word Count Impact: 0 to +2 Words</span>
+                </div>
+                <p style="font-size: 14px; line-height: 1.6; color: var(--text-muted); margin-bottom: 10px;">
+                  <strong>What It Changes:</strong> Rotates macro-connectives and paragraph openers according to discourse tree taxonomies, preventing adjacent paragraphs from opening with identical rhetorical words.
+                </p>
+                <div class="example-container">
+                  <div class="example-box example-before">
+                    <span class="example-badge badge-orig">Original AI Input (Repetitive Connectors)</span><br>
+                    Paragraph 1: "Moreover, the system minimizes query overhead."<br>
+                    Paragraph 2: "Moreover, the cache structure improves latency."
+                  </div>
+                  <div class="example-box example-after">
+                    <span class="example-badge badge-trans">Transformed Output (Rotated Diversity)</span><br>
+                    Paragraph 1: "Moreover, the system minimizes query overhead."<br>
+                    Paragraph 2: "<span class="diff-highlight">Concurrently</span>, the cache structure improves latency."
+                  </div>
+                </div>
+                <p style="font-size: 13px; color: var(--text-muted); margin: 0;">
+                  <strong>Recommendation:</strong> Essential for multi-page documents, research reports, and dissertations.
+                </p>
+              </div>
+
+              <!-- Knob 11 -->
+              <div class="knob-card">
+                <div class="knob-header">
+                  <h4 class="knob-title">11. Contractions Swapping</h4>
+                  <span class="knob-impact impact-mod">Word Count Impact: +1 Word / Expansion</span>
+                </div>
+                <p style="font-size: 14px; line-height: 1.6; color: var(--text-muted); margin-bottom: 10px;">
+                  <strong>What It Changes:</strong> In academic presets, expands informal contractions into rigorous formal pairs (e.g., <em>"don't"</em> ➔ <em>"do not"</em>, <em>"can't"</em> ➔ <em>"cannot"</em>). In casual mode, contracts them for natural dialogue.
+                </p>
+                <div class="example-container">
+                  <div class="example-box example-before">
+                    <span class="example-badge badge-orig">Original AI Input (Informal Contractions)</span><br>
+                    "It's evident that the pipeline didn't encounter memory fragmentation."
+                  </div>
+                  <div class="example-box example-after">
+                    <span class="example-badge badge-trans">Transformed Output (Academic Standard)</span><br>
+                    "<span class="diff-highlight">It is</span> evident that the pipeline <span class="diff-highlight">did not</span> encounter memory fragmentation."
+                  </div>
+                </div>
+                <p style="font-size: 13px; color: var(--text-muted); margin: 0;">
+                  <strong>Recommendation:</strong> Turn on for formal academic submissions.
+                </p>
+              </div>
+
+              <!-- Knob 12 -->
+              <div class="knob-card">
+                <div class="knob-header">
+                  <h4 class="knob-title">12. N-Gram Chain Breaking</h4>
+                  <span class="knob-impact impact-zero">Word Count Impact: 0 to ±1 Word</span>
+                </div>
+                <p style="font-size: 14px; line-height: 1.6; color: var(--text-muted); margin-bottom: 10px;">
+                  <strong>What It Changes:</strong> Audits surviving 5-gram token chains against precomputed statistical AI sequences and applies targeted micro-adjustments to shatter hash fingerprints checked by Turnitin and GPTZero.
+                </p>
+                <div class="example-container">
+                  <div class="example-box example-before">
+                    <span class="example-badge badge-orig">Original AI Input (Predictable 8-Gram Chain)</span><br>
+                    "...serves as a testament to the remarkable capabilities of modern deep learning..."
+                  </div>
+                  <div class="example-box example-after">
+                    <span class="example-badge badge-trans">Transformed Output (Shattered Sequence)</span><br>
+                    "...<span class="diff-highlight">highlights the notable performance and capabilities</span> of modern deep learning..."
+                  </div>
+                </div>
+                <p style="font-size: 13px; color: var(--text-muted); margin: 0;">
+                  <strong>Recommendation:</strong> Always keep <span class="tag tag-green">ON</span>. Critical defense against Winnowing and hash fingerprint algorithms.
+                </p>
+              </div>
+
+              <!-- Knob 13 -->
+              <div class="knob-card">
+                <div class="knob-header">
+                  <h4 class="knob-title">13. Conceptual Bridging</h4>
+                  <span class="knob-impact impact-expand">Word Count Impact: +10 to 25 Words / Paragraph</span>
+                </div>
+                <p style="font-size: 14px; line-height: 1.6; color: var(--text-muted); margin-bottom: 10px;">
+                  <strong>What It Changes:</strong> Analyzes conceptual relationships between adjacent paragraphs and generates an introductory thematic bridge to smoothly link disparate arguments.
+                </p>
+                <div class="example-container">
+                  <div class="example-box example-before">
+                    <span class="example-badge badge-orig">Original AI Input (Abrupt Transition)</span><br>
+                    [End of Para 1]: "...concluding our evaluation of loss functions."<br>
+                    [Start of Para 2]: "Distributed training requires specialized hardware."
+                  </div>
+                  <div class="example-box example-after">
+                    <span class="example-badge badge-trans">Transformed Output (Smooth Thematic Bridge)</span><br>
+                    [Start of Para 2]: "<span class="diff-highlight">Building upon these loss function dynamics</span>, distributed training necessitates specialized hardware..."
+                  </div>
+                </div>
+                <p style="font-size: 13px; color: var(--text-muted); margin: 0;">
+                  <strong>Recommendation:</strong> Use for capstone theses and research manuscripts requiring high thematic narrative cohesion. <span class="tag tag-red">DISABLE</span> for strict word limits.
+                </p>
+              </div>
+
+              <!-- Knob 14 -->
+              <div class="knob-card">
+                <div class="knob-header">
+                  <h4 class="knob-title">14. Information Reordering</h4>
+                  <span class="knob-impact impact-zero">Word Count Impact: 0 Words (1:1)</span>
+                </div>
+                <p style="font-size: 14px; line-height: 1.6; color: var(--text-muted); margin-bottom: 10px;">
+                  <strong>What It Changes:</strong> Reorders sentence clauses according to the linguistic "given-before-new" principle, placing foundational context at the start and reserving the climax for key conclusions.
+                </p>
+                <div class="example-container">
+                  <div class="example-box example-before">
+                    <span class="example-badge badge-orig">Original AI Input</span><br>
+                    "Substantial throughput gains emerged when the engineers parallelized the pipeline."
+                  </div>
+                  <div class="example-box example-after">
+                    <span class="example-badge badge-trans">Transformed Output</span><br>
+                    "<span class="diff-highlight">When the engineers parallelized the pipeline</span>, substantial throughput gains emerged."
+                  </div>
+                </div>
+                <p style="font-size: 13px; color: var(--text-muted); margin: 0;">
+                  <strong>Recommendation:</strong> Keep <span class="tag tag-green">ON</span>. Optimizes reader emphasis and sentence cadence with zero word count inflation.
+                </p>
+              </div>
+
             </div>
 
             <!-- 2.4 Protected Terms -->
@@ -469,6 +808,16 @@
                   </p>
                 </div>
               </div>
+              <div class="example-container">
+                <div class="example-box example-before">
+                  <span class="example-badge badge-orig">Original AI Input</span><br>
+                  "We initialized the AdamW optimizer with a learning rate of 0.001 to train the BioBERT architecture on our custom clinical dataset."
+                </div>
+                <div class="example-box example-after">
+                  <span class="example-badge badge-trans">Transformed Output (Protected: AdamW, BioBERT, learning rate)</span><br>
+                  "We <span class="diff-highlight">configured</span> the <strong>AdamW</strong> optimizer with a <strong>learning rate</strong> of 0.001 to <span class="diff-highlight">fine-tune</span> the <strong>BioBERT</strong> architecture on our custom clinical dataset."
+                </div>
+              </div>
             </div>
 
             <!-- 2.5 Voice Matching -->
@@ -484,6 +833,16 @@
                 <li>The engine analyzes stylistic heuristics: sentence length distribution, clause depth, contraction preferences, and lexical formality.</li>
                 <li>Transformation probabilities are dynamically calibrated so the resulting output matches your authentic authorial cadence.</li>
               </ul>
+              <div class="example-container">
+                <div class="example-box example-before">
+                  <span class="example-badge badge-orig">Generic AI Output (Without Voice Calibration)</span><br>
+                  "Furthermore, it is of paramount importance to recognize that the dataset presents multifaceted challenges regarding class imbalance."
+                </div>
+                <div class="example-box example-after">
+                  <span class="example-badge badge-trans">Voice-Calibrated Output (Mimicking Direct Author Style)</span><br>
+                  "Crucially, <span class="diff-highlight">the dataset presents substantial challenges regarding class imbalance</span>."
+                </div>
+              </div>
             </div>
 
             <!-- 2.6 Telemetry -->
