@@ -1,0 +1,498 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="google-site-verification" content="googled1934658a17ddea1" />
+  <meta name="google-site-verification" content="d1934658a17ddea1" />
+  <title>Guide: How to Restrict Word Count & Strict Limits — TURNITOUT AI Humanizer</title>
+  
+  <meta name="title" content="Guide: How to Restrict Word Count & Strict Limits — TURNITOUT AI Humanizer">
+  <meta name="description" content="Step-by-step guide to locking word counts in Turnitout. Use 1:1 synonym swapping and alignment ratio to eliminate word expansion and hit strict academic limits with zero added words.">
+  <meta name="keywords" content="turnitout word count, restrict word count humanizer, keep exact word count ai bypass, synonym alignment ratio, academic word limit turnitout">
+  <meta name="author" content="Ahmad Hassan">
+  <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
+  <link rel="canonical" href="https://ahmadhassan-bted.github.io/Turnitout-Humanizer/word-limit-guide.html">
+
+  <!-- Open Graph / Facebook -->
+  <meta property="og:type" content="article">
+  <meta property="og:site_name" content="TURNITOUT">
+  <meta property="og:locale" content="en_US">
+  <meta property="og:url" content="https://ahmadhassan-bted.github.io/Turnitout-Humanizer/word-limit-guide.html">
+  <meta property="og:title" content="Guide: How to Restrict Word Count & Strict Limits — TURNITOUT">
+  <meta property="og:description" content="Learn how to configure Turnitout for strict word caps. Use 1:1 synonym swapping and alignment ratios with zero word count expansion.">
+  <meta property="og:image" content="https://ahmadhassan-bted.github.io/Turnitout-Humanizer/assets/logo-banner.svg">
+
+  <!-- Twitter Cards -->
+  <meta property="twitter:card" content="summary_large_image">
+  <meta property="twitter:url" content="https://ahmadhassan-bted.github.io/Turnitout-Humanizer/word-limit-guide.html">
+  <meta property="twitter:title" content="Guide: Word Count Control & Zero Expansion — TURNITOUT">
+  <meta property="twitter:description" content="Master Turnitout Advanced Settings to hit strict academic word limits with zero extra words added.">
+  <meta property="twitter:image" content="https://ahmadhassan-bted.github.io/Turnitout-Humanizer/assets/logo-banner.svg">
+  <meta name="twitter:creator" content="@AhmadHassan_BT">
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
+  <link rel="alternate icon" href="favicon.svg">
+  <link rel="stylesheet" href="style.css">
+
+  <style>
+    .matrix-table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 25px 0;
+      font-size: 15px;
+      font-family: var(--font-ui);
+    }
+    .matrix-table th {
+      background: rgba(35, 72, 115, 0.08);
+      color: var(--text-ink);
+      font-weight: 700;
+      padding: 12px 14px;
+      border: 1px solid var(--border-rough);
+      text-align: left;
+    }
+    .matrix-table td {
+      padding: 12px 14px;
+      border: 1px solid var(--border-rough);
+      color: var(--text-ink);
+      line-height: 1.5;
+    }
+    .matrix-table tr:nth-child(even) td {
+      background: rgba(0, 0, 0, 0.02);
+    }
+    body.dark-mode .matrix-table th {
+      background: rgba(255, 255, 255, 0.06);
+    }
+    body.dark-mode .matrix-table tr:nth-child(even) td {
+      background: rgba(255, 255, 255, 0.02);
+    }
+    .badge-safe {
+      display: inline-block;
+      padding: 3px 8px;
+      border-radius: 4px;
+      font-size: 12px;
+      font-weight: 700;
+      background: #238636;
+      color: #fff;
+    }
+    .badge-warn {
+      display: inline-block;
+      padding: 3px 8px;
+      border-radius: 4px;
+      font-size: 12px;
+      font-weight: 700;
+      background: #BA1A32;
+      color: #fff;
+    }
+    .badge-neutral {
+      display: inline-block;
+      padding: 3px 8px;
+      border-radius: 4px;
+      font-size: 12px;
+      font-weight: 700;
+      background: #234873;
+      color: #fff;
+    }
+    .step-card {
+      background: var(--bg-notebook);
+      border: 1px solid var(--border-rough);
+      border-left: 4px solid var(--ballpoint-blue);
+      border-radius: 6px;
+      padding: 18px 20px;
+      margin-bottom: 20px;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.03);
+    }
+    .step-title {
+      font-family: var(--font-ui);
+      font-size: 17px;
+      font-weight: 700;
+      color: var(--ballpoint-blue);
+      margin-bottom: 8px;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+    .slider-box {
+      background: var(--bg-card-alt);
+      border: 1px dashed var(--tape-border);
+      border-radius: 6px;
+      padding: 16px;
+      margin: 15px 0;
+    }
+    .slider-scale {
+      display: flex;
+      justify-content: space-between;
+      margin-top: 8px;
+      font-size: 13px;
+      font-family: var(--font-mono);
+      color: var(--text-muted);
+    }
+    .slider-track {
+      height: 8px;
+      background: linear-gradient(90deg, #BA1A32 0%, #F6D86B 50%, #238636 100%);
+      border-radius: 4px;
+      margin: 10px 0;
+    }
+    .callout-box {
+      background: rgba(246, 216, 107, 0.15);
+      border: 1px solid var(--highlighter);
+      border-radius: 6px;
+      padding: 16px 20px;
+      margin: 25px 0;
+      color: var(--text-ink);
+    }
+  </style>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "HowTo",
+    "name": "How to Restrict Word Count and Eliminate Expansion in Turnitout",
+    "description": "Configure Turnitout Advanced Settings to maintain strict word limits with 1:1 synonym swapping and alignment ratio adjustments.",
+    "author": {
+      "@type": "Person",
+      "name": "Ahmad Hassan",
+      "url": "https://github.com/AhmadHassan-BTed"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "Fractal Compute Orchestrations",
+      "url": "https://github.com/Fractal-Compute-Orchestrations"
+    },
+    "step": [
+      {
+        "@type": "HowToStep",
+        "name": "Open Advanced Settings",
+        "text": "In the Plagiarism & AI Remover, expand the Advanced Transformation Settings & Protected Terms accordion."
+      },
+      {
+        "@type": "HowToStep",
+        "name": "Enable 1:1 Synonym Swapping",
+        "text": "Keep Synonym Swapping checked and tune the Synonym Alignment Probability slider to 0.85 - 0.90 for tight contextual matching without adding words."
+      },
+      {
+        "@type": "HowToStep",
+        "name": "Disable Text-Expanding Toggles",
+        "text": "Uncheck Transition Injection, Appositive Insertion, Conceptual Bridging, and Contractions Swapping to prevent word count inflation."
+      },
+      {
+        "@type": "HowToStep",
+        "name": "Run Humanization and Check Telemetry",
+        "text": "Click Transform & Humanize and review the Telemetry breakdown to confirm zero net word count change."
+      }
+    ]
+  }
+  </script>
+</head>
+<body>
+
+  <header class="top-nav">
+    <a href="index.html" class="brand-wrapper" aria-label="TURNITOUT Home">
+      <img src="assets/logo.svg" alt="TURNITOUT" class="brand-logo-img">
+      <div class="brand-tagline"># Intelligent Similarity Evasion & Multi-Algorithm Checker</div>
+    </a>
+    <nav class="nav-links">
+      <a href="how-it-works.html" class="nav-link">How It Works</a>
+      <a href="api.html" class="nav-link" style="color: #FBBF24; font-weight: 700;">Enterprise API ⚡</a>
+      <a href="word-limit-guide.html" class="nav-link active">Word Limit Guide</a>
+      <a href="changelog.html" class="nav-link">Changelog</a>
+      <a href="compare/quillbot-alternative.html" class="nav-link">vs QuillBot</a>
+      <a href="compare/stealthgpt-alternative.html" class="nav-link">vs StealthGPT</a>
+      <a href="faq.html" class="nav-link">FAQ</a>
+    </nav>
+    <div class="nav-actions">
+      <a href="index.html" class="theme-toggle-btn">← Back to Manifesto</a>
+      <a href="https://turnitout.streamlit.app/" target="_blank" rel="noopener noreferrer" class="app-launch-btn">
+        Launch Live App <svg class="icon" viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"></polygon></svg>
+      </a>
+    </div>
+  </header>
+
+  <main class="container">
+    <div class="tape top-left"></div>
+    <div class="tape top-right"></div>
+
+    <article class="manifesto-card">
+      <div class="manifesto-header">
+        <h1 class="manifesto-title">
+          Controlling Word Count: <span class="highlight">Zero-Expansion Mode</span>
+        </h1>
+        <span class="stamp stamp-blue">OFFICIAL USER MANUAL</span>
+      </div>
+
+      <p class="manifesto-story">
+        Working on a university essay, journal paper, or dissertation chapter with a strict word limit? 
+        If your default transformations added 50 to 100+ words, you are not stuck. 
+        You can easily configure Turnitout to perform <strong>exact 1-to-1 word replacements with zero net words added</strong>.
+      </p>
+
+      <div class="handwritten-aside">
+        "By default, natural human writing features cadence variation and discourse connectives. Turnitout's presets include these by default. But when you have a hard word limit, you can toggle them off in seconds."
+      </div>
+
+      <!-- Quick Summary Card -->
+      <div class="callout-box">
+        <h3 style="margin-top: 0; font-family: var(--font-ui); color: var(--red-pen-dark);">
+          ⚡ The 10-Second Quick Answer
+        </h3>
+        <p style="margin-bottom: 8px; font-size: 16px; line-height: 1.6;">
+          To keep your word count <strong>100% constant (0 added words)</strong>:
+        </p>
+        <ol style="margin-left: 20px; font-size: 15px; line-height: 1.7;">
+          <li>Open <strong>Advanced Transformation Settings &amp; Protected Terms</strong>.</li>
+          <li>Keep <strong>Synonym Swapping</strong> <span class="badge-safe">ON</span> and set <strong>Synonym Alignment Probability</strong> to <strong>0.85 – 0.90</strong>.</li>
+          <li>Turn <span class="badge-warn">OFF</span> <strong>Transition Injection</strong>, <strong>Appositive Insertion</strong>, and <strong>Conceptual Bridging</strong>.</li>
+          <li>Click <strong>Transform &amp; Humanize</strong>. The engine will perform strict 1:1 substitutions without adding a single extra word.</li>
+        </ol>
+      </div>
+
+      <h2 class="section-heading" style="margin-top: 40px;">1. Why Does the Default Preset Add Words?</h2>
+      <p style="font-size: 16px; line-height: 1.7; color: var(--text-muted); margin-bottom: 20px;">
+        AI detectors (like Turnitin, GPTZero, and CopyLeaks) evaluate <strong>Burstiness</strong>—the rhythmic variation in sentence lengths across a paragraph. Uniform sentence lengths are a primary tell of LLMs.
+      </p>
+      <p style="font-size: 16px; line-height: 1.7; color: var(--text-muted); margin-bottom: 20px;">
+        To mimic human drafting cadence, Turnitout's default high-intensity presets inject natural discourse markers (e.g. <em>"In particular"</em>, <em>"Consequently"</em>), explanatory appositives (e.g. <em>", an essential metric,"</em>), and conceptual bridge clauses. 
+        Across multiple paragraphs, these helpful stylistic additions naturally expand total word volume by 10% to 20%.
+      </p>
+      <p style="font-size: 16px; line-height: 1.7; color: var(--text-muted); margin-bottom: 25px;">
+        When an assignment has a strict ceiling (e.g., exactly 2,000 words maximum), this expansion needs to be curbed. That is where <strong>Zero-Expansion Mode</strong> comes in.
+      </p>
+
+      <h2 class="section-heading">2. The Golden Key: 1-to-1 Synonym Swapping &amp; Alignment Ratio</h2>
+      <p style="font-size: 16px; line-height: 1.7; color: var(--text-muted); margin-bottom: 15px;">
+        When you run Turnitout with only <strong>Synonym Swapping</strong> enabled, the engine operates on a strict <strong>1-to-1 replacement model</strong>:
+      </p>
+      <div style="background: var(--bg-card-alt); border-left: 4px solid #238636; padding: 12px 18px; margin-bottom: 20px; font-family: var(--font-mono); font-size: 14px;">
+        1 word in target sentence ➔ 1 context-matched synonym out (Net change = 0 words)
+      </div>
+
+      <p style="font-size: 16px; line-height: 1.7; color: var(--text-muted); margin-bottom: 15px;">
+        The behavior of this replacement is governed by the <strong>Synonym Alignment Probability Slider</strong>:
+      </p>
+
+      <div class="slider-box">
+        <div style="display: flex; justify-content: space-between; align-items: center;">
+          <strong style="font-family: var(--font-ui); font-size: 15px;">Synonym Alignment Probability</strong>
+          <span style="font-family: var(--font-mono); font-weight: 700; color: var(--ballpoint-blue);">0.50 ➔ 1.00</span>
+        </div>
+        <div class="slider-track"></div>
+        <div class="slider-scale">
+          <span>0.50 (Loose / Casual)</span>
+          <span>0.70 (Balanced)</span>
+          <span>0.85 (Standard Sweet Spot)</span>
+          <span>0.95 (Strict Technical)</span>
+        </div>
+        <ul style="margin-top: 15px; font-size: 14px; line-height: 1.6; color: var(--text-ink); margin-left: 20px;">
+          <li><strong>0.90 – 0.95 (High Alignment / Strict Academic):</strong> Restricts synonym candidates to very close formal equivalents. Eliminates any semantic drift, ideal for hard sciences, legal, engineering, and medical texts.</li>
+          <li><strong>0.80 – 0.85 (Recommended Default):</strong> Provides optimal n-gram chain disruption while ensuring natural reading flow. <strong>100% word-count neutral.</strong></li>
+          <li><strong>0.70 – 0.75 (Expressive / Casual):</strong> Introduces wider vocabulary variety while still keeping word length strictly 1-to-1.</li>
+          <li><strong>Randomize Alignment (Human Variation) Checkbox:</strong> When checked, slightly varies the alignment probability per word, creating realistic human stylistic variation without adding any extra tokens.</li>
+        </ul>
+      </div>
+
+      <h2 class="section-heading" style="margin-top: 40px;">3. Complete Settings Matrix: What Adds Words vs. What Keeps It Constant</h2>
+      <p style="font-size: 16px; line-height: 1.7; color: var(--text-muted); margin-bottom: 15px;">
+        Here is the definitive guide to every toggle inside <strong>Advanced Transformation Settings &amp; Protected Terms</strong>:
+      </p>
+
+      <div style="overflow-x: auto;">
+        <table class="matrix-table">
+          <thead>
+            <tr>
+              <th>Transformation Feature</th>
+              <th>Word Count Impact</th>
+              <th>Status for Word Limit</th>
+              <th>Functional Behavior</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><strong>Synonym Swapping</strong></td>
+              <td><span class="badge-safe">0 Words (1:1)</span></td>
+              <td><span class="badge-safe">KEEP ON</span></td>
+              <td>Replaces targeted predictable words with single-word contextual synonyms.</td>
+            </tr>
+            <tr>
+              <td><strong>Clause &amp; Word Reorder</strong></td>
+              <td><span class="badge-safe">0 Words</span></td>
+              <td><span class="badge-safe">KEEP ON</span></td>
+              <td>Permutes adverbial adjuncts and dependent clauses to alter syntax without adding words.</td>
+            </tr>
+            <tr>
+              <td><strong>Determiner Swapping</strong></td>
+              <td><span class="badge-safe">0 Words</span></td>
+              <td><span class="badge-safe">KEEP ON</span></td>
+              <td>Contextually rotates articles and demonstratives (e.g. <em>"the"</em> ↔ <em>"this"</em>).</td>
+            </tr>
+            <tr>
+              <td><strong>Information Reordering</strong></td>
+              <td><span class="badge-safe">0 Words</span></td>
+              <td><span class="badge-safe">KEEP ON</span></td>
+              <td>Reorders clause focal points for rhetorical emphasis with zero word addition.</td>
+            </tr>
+            <tr>
+              <td><strong>N-Gram Chain Breaking</strong></td>
+              <td><span class="badge-safe">0 Words</span></td>
+              <td><span class="badge-safe">KEEP ON</span></td>
+              <td>Audits contiguous 5-grams and targets specific tokens to break detector hashes.</td>
+            </tr>
+            <tr>
+              <td><strong>Custom Protected Terms</strong></td>
+              <td><span class="badge-safe">0 Words</span></td>
+              <td><span class="badge-safe">RECOMMENDED</span></td>
+              <td>Guarantees vital domain keywords, formulas, and trademarks remain 100% untouched.</td>
+            </tr>
+            <tr>
+              <td><strong>Nominalization / Verbalization</strong></td>
+              <td><span class="badge-neutral">± 1-2 Words</span></td>
+              <td><span class="badge-neutral">OPTIONAL</span></td>
+              <td>Converts between action verbs and abstract nouns. Minor impact on overall count.</td>
+            </tr>
+            <tr>
+              <td><strong>Voice Transformations</strong></td>
+              <td><span class="badge-neutral">± 2-4 Words</span></td>
+              <td><span class="badge-neutral">OPTIONAL</span></td>
+              <td>Converts active to passive or vice-versa. Can slightly alter auxiliary verbs.</td>
+            </tr>
+            <tr>
+              <td><strong>Sentence Fusion</strong></td>
+              <td><span class="badge-warn">+ 1-3 Words</span></td>
+              <td><span class="badge-warn">TURN OFF</span></td>
+              <td>Merges adjacent sentences using conjunctions (e.g. <em>"and"</em>, <em>"whereas"</em>).</td>
+            </tr>
+            <tr>
+              <td><strong>Contractions Swapping</strong></td>
+              <td><span class="badge-warn">+ 1 Word / Exp</span></td>
+              <td><span class="badge-warn">TURN OFF</span></td>
+              <td>Expanding contractions (e.g. <em>"don't"</em> ➔ <em>"do not"</em>) adds one word per occurrence.</td>
+            </tr>
+            <tr>
+              <td><strong>Transition Injection</strong></td>
+              <td><span class="badge-warn">+ 2-4 Words / Sent</span></td>
+              <td><span class="badge-warn">TURN OFF</span></td>
+              <td>Injects discourse markers (e.g. <em>"Furthermore"</em>, <em>"In contrast"</em>) to vary sentence beginnings.</td>
+            </tr>
+            <tr>
+              <td><strong>Appositive Insertion</strong></td>
+              <td><span class="badge-warn">+ 5-15 Words / Inst</span></td>
+              <td><span class="badge-warn">TURN OFF</span></td>
+              <td>Inserts parenthetical descriptions and contextual expansions. Primary cause of large count increases.</td>
+            </tr>
+            <tr>
+              <td><strong>Conceptual Bridging</strong></td>
+              <td><span class="badge-warn">+ 10-25 Words / Para</span></td>
+              <td><span class="badge-warn">TURN OFF</span></td>
+              <td>Injects inter-sentence thematic connectors between disparate thoughts.</td>
+            </tr>
+            <tr>
+              <td><strong>Discourse Rotation</strong></td>
+              <td><span class="badge-warn">Variable</span></td>
+              <td><span class="badge-warn">TURN OFF</span></td>
+              <td>Rotates paragraph rhetorical transitions, which may substitute multi-word connectors.</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <h2 class="section-heading" style="margin-top: 40px;">4. Recommended Profiles for Strict Word Limits</h2>
+
+      <div class="step-card">
+        <div class="step-title">
+          <svg class="icon" viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path></svg>
+          Profile A: "Strict Zero-Expansion" (Exact Word Count Parity)
+        </div>
+        <p style="font-size: 15px; color: var(--text-muted); margin-bottom: 10px;">
+          <strong>Target:</strong> Exact word match (0 net words added). Ideal for strict word ceilings, grant proposals, and word-capped exams.
+        </p>
+        <ul style="font-size: 14px; line-height: 1.6; margin-left: 20px;">
+          <li><span class="badge-safe">ON</span> <strong>Synonym Swapping</strong> (Slider set to <code>0.85</code> or <code>0.90</code>)</li>
+          <li><span class="badge-safe">ON</span> <strong>Clause &amp; Word Reorder</strong></li>
+          <li><span class="badge-safe">ON</span> <strong>Determiner Swapping</strong></li>
+          <li><span class="badge-safe">ON</span> <strong>Information Reordering</strong></li>
+          <li><span class="badge-safe">ON</span> <strong>N-Gram Chain Breaking</strong></li>
+          <li><span class="badge-warn">OFF</span> Transition Injection, Appositive Insertion, Conceptual Bridging, Contractions Swapping, Sentence Fusion, Discourse Rotation, Voice Transformations.</li>
+        </ul>
+      </div>
+
+      <div class="step-card">
+        <div class="step-title">
+          <svg class="icon" viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 14 14"></polyline></svg>
+          Profile B: "Academic Tolerance" (Within ±2% Margin)
+        </div>
+        <p style="font-size: 15px; color: var(--text-muted); margin-bottom: 10px;">
+          <strong>Target:</strong> For essays with a standard ±10% margin where a minor shift of 15–30 words is completely acceptable.
+        </p>
+        <ul style="font-size: 14px; line-height: 1.6; margin-left: 20px;">
+          <li>Keep all Profile A settings <span class="badge-safe">ON</span>.</li>
+          <li>Enable <span class="badge-neutral">Nominalization / Verbalization</span> for academic sentence variety.</li>
+          <li>Enable <span class="badge-neutral">Voice Transformations</span> for varied active/passive dynamics.</li>
+          <li>Leave <strong>Appositive Insertion</strong> and <strong>Conceptual Bridging</strong> <span class="badge-warn">OFF</span>.</li>
+        </ul>
+      </div>
+
+      <h2 class="section-heading" style="margin-top: 40px;">5. Step-by-Step UI Guide: How to Apply in the App</h2>
+
+      <div class="step-card">
+        <div class="step-title">Step 1: Open the Live Application</div>
+        <p style="font-size: 15px; color: var(--text-muted); margin: 0;">
+          Launch any of the 8 cluster nodes (e.g., <a href="https://turnitout.streamlit.app/" target="_blank" rel="noopener noreferrer">turnitout.streamlit.app</a>) and navigate to the <strong>⚡ Plagiarism &amp; AI Remover</strong> page.
+        </p>
+      </div>
+
+      <div class="step-card">
+        <div class="step-title">Step 2: Expand Advanced Settings</div>
+        <p style="font-size: 15px; color: var(--text-muted); margin: 0;">
+          Scroll below the text input area and click on:
+          <br>
+          <code style="display: inline-block; margin-top: 6px; padding: 4px 8px; background: rgba(0,0,0,0.05); border-radius: 4px; font-weight: 700;">
+            :material/tune: Advanced Transformation Settings &amp; Protected Terms
+          </code>
+        </p>
+      </div>
+
+      <div class="step-card">
+        <div class="step-title">Step 3: Uncheck Expansion Toggles</div>
+        <p style="font-size: 15px; color: var(--text-muted); margin: 0;">
+          Uncheck <strong>Transition Injection</strong>, <strong>Appositive Insertion</strong>, and <strong>Conceptual Bridging</strong>. 
+          Make sure <strong>Synonym Swapping</strong> is checked, and position the <strong>Synonym Alignment Probability</strong> slider at <strong>0.85</strong> or higher.
+        </p>
+      </div>
+
+      <div class="step-card">
+        <div class="step-title">Step 4: Protect Domain Jargon (Optional)</div>
+        <p style="font-size: 15px; color: var(--text-muted); margin: 0;">
+          If your paper contains technical terms, proprietary names, or specific jargon, type them into the <strong>Protected Terms</strong> box separated by commas. The engine will skip them entirely during synonym replacement.
+        </p>
+      </div>
+
+      <div class="step-card">
+        <div class="step-title">Step 5: Process and Verify Telemetry</div>
+        <p style="font-size: 15px; color: var(--text-muted); margin: 0;">
+          Click <strong>Transform &amp; Humanize</strong>. Once complete, expand the <strong>Telemetry &amp; Transformation Breakdown</strong> dropdown to view the exact before and after word count statistics.
+        </p>
+      </div>
+
+      <!-- Verification callout -->
+      <div style="background: var(--bg-card-alt); border: 1px solid var(--border-rough); border-radius: 8px; padding: 24px; margin-top: 35px; text-align: center;">
+        <h3 style="margin-top: 0; font-family: var(--font-ui); color: var(--ballpoint-blue);">
+          🔍 Ready to Test Your Documents?
+        </h3>
+        <p style="font-size: 15px; color: var(--text-muted); max-width: 650px; margin: 0 auto 20px auto; line-height: 1.6;">
+          Configure your settings on the live application today with 100% zero-retention privacy and unlimited free usage across all 8 cluster mirrors.
+        </p>
+        <a href="https://turnitout.streamlit.app/" target="_blank" rel="noopener noreferrer" class="app-launch-btn" style="font-size: 16px; padding: 12px 28px; display: inline-flex; align-items: center; gap: 8px;">
+          Launch Turnitout Cluster <svg class="icon" viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"></polygon></svg>
+        </a>
+      </div>
+
+    </article>
+
+    <footer class="footer-section">
+      <p>TURNITOUT — Built by students, for students. Zero corporate paywalls, zero data retention.</p>
+    </footer>
+  </main>
+
+  <script src="cluster-balancer.js"></script>
+</body>
+</html>

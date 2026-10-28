@@ -7,6 +7,7 @@
   <a href="https://ahmadhassan-bted.github.io/Turnitout-Humanizer/"><img src="https://img.shields.io/badge/Official%20Website-Manifesto%20%26%20Docs-crimson.svg?style=for-the-badge" alt="Official Website & Manifesto"/></a>
   <a href="https://turnitout.streamlit.app/"><img src="https://img.shields.io/badge/Live%20App-Launch%20Turnitout-blue.svg?style=for-the-badge&logo=streamlit" alt="Launch Live App"/></a>
   <a href="docs/ENTERPRISE_API.md"><img src="https://img.shields.io/badge/Enterprise%20API-REST%20Documentation-gold.svg?style=for-the-badge" alt="Enterprise API Docs"/></a>
+  <a href="docs/WORD_COUNT_GUIDE.md"><img src="https://img.shields.io/badge/User%20Guide-Word%20Count%20Control-teal.svg?style=for-the-badge" alt="Word Count Control Guide"/></a>
   <img src="https://img.shields.io/badge/Engine-v2.6-green.svg?style=for-the-badge" alt="Engine: v2.6"/>
   <img src="https://img.shields.io/badge/Safety-100%25%20Zero%20AI-purple.svg?style=for-the-badge" alt="Safety: 100% Zero AI"/>
   <a href="https://wa.me/923225522383"><img src="https://img.shields.io/badge/WhatsApp-Developer%20Support-25D366.svg?style=for-the-badge&logo=whatsapp" alt="WhatsApp Support"/></a>
@@ -173,6 +174,7 @@ Commercial AI humanizers use LLMs to rewrite text, leaving **new AI footprints, 
 - **LaTeX & DOCX Safe:** Rewrites `.docx`, `.tex`, and `.md` files _in-place_. Your XML styling, fonts, tables, matrices, equations, and `\cite{}` tags are strictly protected.
 - **Section-Aware:** Humanizes your Abstract and Conclusion, but mathematically locks down your code blocks, data, and declarations.
 - **LLM Signature Assassin:** Deterministically wipes out standard AI triggers (`"delve into"`, `"pivotal role"`) and cleans em-dashes (`—`).
+- **Strict Word Limit Control (Zero-Expansion Mode):** Working under rigid word ceilings? Restrict word growth to exactly 0 added words using 1:1 Synonym Swapping and the Synonym Alignment Probability slider. See the [Word Count Control Guide](docs/WORD_COUNT_GUIDE.md).
 
 ### 💻 2. Code Comment & Docstring Humanizer
 
