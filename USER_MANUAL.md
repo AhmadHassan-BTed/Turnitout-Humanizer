@@ -115,38 +115,152 @@ Accessible via `:material/tune: Advanced Transformation Settings & Protected Ter
 └─────────────────────────────────────────────────────────────────────────────┘
 ```
 
-1. **Synonym Swapping (with Alignment Probability Slider):**  
-   Replaces predictable tokens with contextually aligned synonyms. The slider (`0.50` to `1.00`) controls semantic precision:
-   * `0.90 – 0.95`: Strict academic and technical precision (zero semantic drift).
-   * `0.80 – 0.85`: Standard recommended sweet spot for natural human flow.
-   * `0.70 – 0.75`: Creative/expressive variation.
-   * *Randomize Alignment Checkbox:* Simulates natural, imperfect human vocabulary variance without adding words.
-2. **Phrase Rewriting:**  
-   Substitutes multi-word idiomatic patterns and repetitive transitional phrases with natural human alternatives.
-3. **Determiner Swapping:**  
-   Alternates demonstratives and articles (e.g., *"the"* ↔ *"this"*, *"these"* ↔ *"such"*) to break rigid AI article distributions.
-4. **Voice Transformations:**  
-   Converts passive voice to active voice and vice-versa according to academic discourse conventions, elevating burstiness.
-5. **Sentence Fusion:**  
-   Merges adjacent short sentences using conjunctions (*"and"*, *"whereas"*), varying sentence length rhythms.
-6. **Transition Injection:**  
-   Injects natural academic discourse markers (*"Furthermore"*, *"In contrast"*, *"Consequently"*). Adds word count.
-7. **Clause & Word Reorder:**  
-   Permutes dependent clauses, introductory adverbials, and prepositional phrases without adding words.
-8. **Nominalization / Verbalization:**  
-   Converts actions between verbs and abstract nouns (e.g., *"analyze"* ↔ *"conduct an analysis of"*).
-9. **Appositive Insertion:**  
-   Inserts clarifying parentheticals, acronym definitions, and appositive noun phrases. Adds word count.
-10. **Discourse Rotation:**  
-    Rotates paragraph-level rhetorical flow and macro-connectives according to discourse tree conventions.
-11. **Contractions Swapping:**  
-    Expands contracted auxiliaries (*"don't"* ➔ *"do not"*) for formal papers, or contracts for casual tones.
-12. **N-Gram Chain Breaking:**  
-    Audits surviving 5-gram token chains against common AI sequences, applying micro-substitutions.
-13. **Conceptual Bridging:**  
-    Injects thematic transition connectors between adjacent conceptual paragraphs. Adds word count.
-14. **Information Reordering:**  
-    Restructures clauses to shift focus based on the given-versus-new information principle.
+#### 1. Synonym Swapping (with Alignment Probability Slider)
+* **Word Count Impact:** **0 Words (1:1 Parity)**
+* **What It Changes:** Replaces statistically predictable single words overrepresented in AI text with contextually accurate, lower-frequency synonyms without adding extra tokens. The slider (`0.50` to `1.00`) controls semantic precision (`0.90–0.95` strict technical fidelity; `0.80–0.85` standard natural flow).
+* **Live Output Example:**
+  ```diff
+  - Original:    "The algorithm demonstrates substantial efficacy in mitigating network latency across distributed clusters."
+  + Transformed: "The algorithm shows significant effectiveness in reducing network delay across distributed clusters."
+  ```
+* **Recommendation:** Keep **ON**. Essential for breaking AI n-grams while strictly maintaining 100% word-count neutrality.
+
+#### 2. Phrase Rewriting
+* **Word Count Impact:** -2 to +1 Words
+* **What It Changes:** Scans for telltale multi-word AI clichés, formulaic transitional phrases, and conversational fillers, replacing them with direct, authentic human academic phrasing.
+* **Live Output Example:**
+  ```diff
+  - Original:    "In order to delve into the multifaceted dimensions of this phenomenon, it is of paramount importance to consider..."
+  + Transformed: "To examine the various aspects of this phenomenon, one must consider..."
+  ```
+* **Recommendation:** Highly recommended **ON**. Strips recognizable AI patterns like *"delve into"*, *"multifaceted"*, and *"paramount importance"*.
+
+#### 3. Determiner Swapping
+* **Word Count Impact:** **0 Words (1:1 Parity)**
+* **What It Changes:** Contextually alternates articles (*"the"*, *"a"*) and demonstratives (*"this"*, *"these"*, *"such"*). Prevents sentences from uniformly opening with *"The [subject]"*.
+* **Live Output Example:**
+  ```diff
+  - Original:    "The experiment validates the hypothesis. The results suggest the model generalizes well across the unseen test datasets."
+  + Transformed: "This experiment validates the hypothesis. These results suggest the model generalizes well across such unseen test datasets."
+  ```
+* **Recommendation:** Keep **ON**. Varies sentence starts with exact 1-to-1 word count preservation.
+
+#### 4. Voice Transformations (Active ↔ Passive)
+* **Word Count Impact:** ± 1 to 3 Words
+* **What It Changes:** Converts rigid passive constructions into dynamic active voice, or converts repetitive active statements into scholarly passive constructions where objective agency is preferred.
+* **Live Output Example:**
+  ```diff
+  - Original (Passive): "A novel optimization framework was engineered by the research group to accelerate gradient descent."
+  + Transformed (Active):  "The research group engineered a novel optimization framework to accelerate gradient descent."
+  ```
+* **Recommendation:** Keep **ON** for standard humanization. Elevates stylistic burstiness.
+
+#### 5. Sentence Fusion
+* **Word Count Impact:** +1 to 3 Words
+* **What It Changes:** Merges adjacent short, staccato sentences into cohesive compound or complex sentences using coordinating or subordinating conjunctions.
+* **Live Output Example:**
+  ```diff
+  - Original (Staccato): "The dataset contains 50,000 samples. The training process required 12 hours. The final validation loss was minimal."
+  + Transformed (Fused):    "The dataset contains 50,000 samples, and while training required 12 hours, the final validation loss remained minimal."
+  ```
+* **Recommendation:** Enable for fragmented AI drafts. Disable if targeting a strict exact word count ceiling.
+
+#### 6. Transition Injection
+* **Word Count Impact:** +2 to 4 Words / Sentence
+* **What It Changes:** Injects authentic scholarly discourse markers and transitional signposts (*"Furthermore"*, *"In contrast"*, *"Consequently"*, *"To this end"*) to enhance reading rhythm.
+* **Live Output Example:**
+  ```diff
+  - Original:    "The baseline model struggled with long-range dependencies. The attention-augmented architecture maintained high accuracy."
+  + Transformed: "The baseline model struggled with long-range dependencies. In contrast, the attention-augmented architecture maintained high accuracy."
+  ```
+* **Recommendation:** Excellent for literature reviews. **Turn OFF if working under a strict word limit!**
+
+#### 7. Clause & Word Reorder
+* **Word Count Impact:** **0 Words (1:1 Parity)**
+* **What It Changes:** Reorders dependent clauses, introductory adverbials, and prepositional adjuncts to natural alternative positions without altering semantic meaning or document length.
+* **Live Output Example:**
+  ```diff
+  - Original:    "The model achieves superior convergence speeds when evaluated on GPU clusters."
+  + Transformed: "When evaluated on GPU clusters, the model achieves superior convergence speeds."
+  ```
+* **Recommendation:** Always keep **ON**. Disrupts predictable sequence starts with zero word count inflation.
+
+#### 8. Nominalization / Verbalization
+* **Word Count Impact:** ± 1 to 2 Words
+* **What It Changes:** Alternates between direct action verbs and abstract nominal forms (e.g., *"analyze"* ↔ *"conduct an analysis of"*, *"measure"* ↔ *"perform a measurement of"*).
+* **Live Output Example:**
+  ```diff
+  - Original:    "We systematically measured the latency variances across all worker nodes."
+  + Transformed: "We conducted a systematic measurement of latency variances across all worker nodes."
+  ```
+* **Recommendation:** Keep **ON** for formal scientific manuscripts and academic theses.
+
+#### 9. Appositive Insertion
+* **Word Count Impact:** +5 to 15 Words / Instance
+* **What It Changes:** Inserts clarifying parentheticals, informative noun phrases, or acronym definitions directly alongside subjects, replicating human explanatory prose.
+* **Live Output Example:**
+  ```diff
+  - Original:    "We evaluated BERT on the SQuAD benchmark."
+  + Transformed: "We evaluated BERT, a transformer-based language representation model, on the SQuAD benchmark."
+  ```
+* **Recommendation:** Great for deep explanatory papers. **Turn OFF if working under a strict word limit!**
+
+#### 10. Discourse Rotation
+* **Word Count Impact:** 0 to +2 Words
+* **What It Changes:** Rotates macro-connectives across paragraph openers according to discourse tree taxonomies, preventing adjacent paragraphs from opening with identical transitions.
+* **Live Output Example:**
+  ```diff
+  - Original (Repetitive):
+    Para 1: "Moreover, the system minimizes query overhead."
+    Para 2: "Moreover, the cache structure improves latency."
+  + Transformed (Rotated):
+    Para 1: "Moreover, the system minimizes query overhead."
+    Para 2: "Concurrently, the cache structure improves latency."
+  ```
+* **Recommendation:** Essential for multi-page documents, research reports, and dissertations.
+
+#### 11. Contractions Swapping
+* **Word Count Impact:** +1 Word / Expansion
+* **What It Changes:** In academic presets, expands informal contractions into rigorous formal pairs (*"don't"* ➔ *"do not"*). In casual mode, contracts them for natural dialogue.
+* **Live Output Example:**
+  ```diff
+  - Original:    "It's evident that the pipeline didn't encounter memory fragmentation."
+  + Transformed: "It is evident that the pipeline did not encounter memory fragmentation."
+  ```
+* **Recommendation:** Turn on for formal academic submissions.
+
+#### 12. N-Gram Chain Breaking
+* **Word Count Impact:** 0 to ±1 Word
+* **What It Changes:** Audits surviving 5-gram token chains against precomputed statistical AI sequences and applies targeted micro-adjustments to shatter hash fingerprints checked by Turnitin and GPTZero.
+* **Live Output Example:**
+  ```diff
+  - Original:    "...serves as a testament to the remarkable capabilities of modern deep learning..."
+  + Transformed: "...highlights the notable performance and capabilities of modern deep learning..."
+  ```
+* **Recommendation:** Always keep **ON**. Critical defense against Winnowing and hash fingerprint algorithms.
+
+#### 13. Conceptual Bridging
+* **Word Count Impact:** +10 to 25 Words / Paragraph
+* **What It Changes:** Analyzes conceptual relationships between adjacent paragraphs and generates an introductory thematic bridge to smoothly link disparate arguments.
+* **Live Output Example:**
+  ```diff
+  - Original (Abrupt Transition):
+    [End of Para 1]: "...concluding our evaluation of loss functions."
+    [Start of Para 2]: "Distributed training requires specialized hardware."
+  + Transformed (Smooth Thematic Bridge):
+    [Start of Para 2]: "Building upon these loss function dynamics, distributed training necessitates specialized hardware..."
+  ```
+* **Recommendation:** Excellent for capstone theses requiring narrative cohesion. **Turn OFF for strict word limits.**
+
+#### 14. Information Reordering
+* **Word Count Impact:** **0 Words (1:1 Parity)**
+* **What It Changes:** Reorders sentence clauses according to the linguistic "given-before-new" principle, placing foundational context at the start and novel discoveries at the climax.
+* **Live Output Example:**
+  ```diff
+  - Original:    "Substantial throughput gains emerged when the engineers parallelized the pipeline."
+  + Transformed: "When the engineers parallelized the pipeline, substantial throughput gains emerged."
+  ```
+* **Recommendation:** Keep **ON**. Optimizes reader emphasis and sentence cadence with zero word count inflation.
 
 ---
 
@@ -163,6 +277,13 @@ Guarantees that proprietary terms, chemical formulas, code keywords, or author n
   ["CRISPR-Cas9", "TensorFlow", "PyTorch", "Dirichlet"]
   ```
 
+* **Live Output Example:**
+  ```diff
+  - Original:    "We initialized the AdamW optimizer with a learning rate of 0.001 to train the BioBERT architecture on our custom clinical dataset."
+  + Transformed: "We configured the AdamW optimizer with a learning rate of 0.001 to fine-tune the BioBERT architecture on our custom clinical dataset."
+  ```
+  *(Note: Words around them are humanized, but `AdamW`, `learning rate`, and `BioBERT` remain 100% frozen).*
+
 ---
 
 ### 2.5 Empirical Voice Matching (Beta)
@@ -171,6 +292,12 @@ Calibrates transformation heuristics to mimic your authentic authorial cadence:
 1. Enable the toggle and upload an authentic reference sample (essay, thesis chapter, or published paper; 100+ words).
 2. The engine evaluates sentence length variance, clause depth, contraction preferences, and lexical formality.
 3. Transformation probabilities dynamically adapt to match your personal writing rhythm.
+
+* **Live Output Example:**
+  ```diff
+  - Generic Output: "Furthermore, it is of paramount importance to recognize that the dataset presents multifaceted challenges regarding class imbalance."
+  + Voice-Matched:  "Crucially, the dataset presents substantial challenges regarding class imbalance."
+  ```
 
 ---
 
