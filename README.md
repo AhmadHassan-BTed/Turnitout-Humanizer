@@ -6,6 +6,7 @@
 <p align="center">
   <a href="https://ahmadhassan-bted.github.io/Turnitout-Humanizer/"><img src="https://img.shields.io/badge/Official%20Website-Manifesto%20%26%20Docs-crimson.svg?style=for-the-badge" alt="Official Website & Manifesto"/></a>
   <a href="https://turnitout.streamlit.app/"><img src="https://img.shields.io/badge/Live%20App-Launch%20Turnitout-blue.svg?style=for-the-badge&logo=streamlit" alt="Launch Live App"/></a>
+  <a href="docs/USER_MANUAL.md"><img src="https://img.shields.io/badge/User%20Manual-Technical%20Reference-darkblue.svg?style=for-the-badge" alt="User Manual & Reference"/></a>
   <a href="docs/ENTERPRISE_API.md"><img src="https://img.shields.io/badge/Enterprise%20API-REST%20Documentation-gold.svg?style=for-the-badge" alt="Enterprise API Docs"/></a>
   <a href="docs/WORD_COUNT_GUIDE.md"><img src="https://img.shields.io/badge/User%20Guide-Word%20Count%20Control-teal.svg?style=for-the-badge" alt="Word Count Control Guide"/></a>
   <img src="https://img.shields.io/badge/Engine-v2.6-green.svg?style=for-the-badge" alt="Engine: v2.6"/>
