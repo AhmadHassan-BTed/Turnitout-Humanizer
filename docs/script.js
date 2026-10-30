@@ -160,7 +160,13 @@ document.addEventListener("DOMContentLoaded", () => {
   let currentSimState = "RAW";
   let cachedRawText = paperSheet ? paperSheet.textContent.trim() : SAMPLE_ACADEMIC;
 
-  const replacements = [
+  // Initialize modular client-side engine (100% In-Browser, Zero Network)
+  const engine = (typeof TurnitoutEngine !== 'undefined' && TurnitoutEngine.TurnitoutHumanizer)
+    ? new TurnitoutEngine.TurnitoutHumanizer()
+    : null;
+
+  // Disruption rules loaded dynamically from TurnitoutEngine
+  const fallbackRules = [
     { pattern: /\bIn conclusion,?\b/gi, replace: "To wrap up," },
     { pattern: /\bit is important to delve into\b/gi, replace: "we look closely at" },
     { pattern: /\bdelve into\b/gi, replace: "explore" },
@@ -178,6 +184,10 @@ document.addEventListener("DOMContentLoaded", () => {
     { pattern: /\bdelve deep into the multifaceted dimensions of\b/gi, replace: "examine the details of" },
     { pattern: /\bUltimately, this paradigm shift\b/gi, replace: "In the end, this shift" }
   ];
+
+  const replacements = (typeof TurnitoutEngine !== 'undefined' && TurnitoutEngine.DISRUPTION_RULES)
+    ? TurnitoutEngine.DISRUPTION_RULES.map(r => ({ pattern: r.pattern, replace: r.replacement }))
+    : fallbackRules;
 
   function resetToRaw(text, initialScore = 96) {
     cachedRawText = text;
@@ -285,9 +295,13 @@ document.addEventListener("DOMContentLoaded", () => {
 
       } else if (currentSimState === "MARKED") {
         let cleanText = cachedRawText;
-        replacements.forEach(item => {
-          cleanText = cleanText.replace(item.pattern, item.replace);
-        });
+        if (engine) {
+          cleanText = engine.humanize(cachedRawText).cleanText;
+        } else {
+          replacements.forEach(item => {
+            cleanText = cleanText.replace(item.pattern, item.replace);
+          });
+        }
 
         paperSheet.textContent = cleanText;
         humanizeBtn.innerHTML = `RESET TO RAW AI SAMPLE ${REFRESH_SVG}`;
@@ -526,16 +540,82 @@ document.addEventListener("DOMContentLoaded", () => {
       segmentedBatteryBar.innerHTML = pillsHtml;
     }
 
-    // Desk Interactive Sample Sheet Humanize Button
+    // Desk Interactive Sample Sheet Humanize Button & Controls
     const executeHumanizeBtn = document.getElementById("executeHumanizeBtn");
     const deskPaperSheet = document.getElementById("deskPaperSheet");
+    const deskCopyCleanBtn = document.getElementById("deskCopyCleanBtn");
+    const deskResetBtn = document.getElementById("deskResetBtn");
+    const deskDisruptStats = document.getElementById("deskDisruptStats");
+    const interactiveWordCount = document.getElementById("interactiveWordCount");
+
+    const INITIAL_DESK_SAMPLE = "In conclusion, it is important to delve into the comprehensive tapestry of modern neural networks. This study plays a pivotal role in illustrating that artificial intelligence stands as a testament to human innovation. Furthermore, the interplay between stochastic optimization and computational scalability provides a robust framework for subsequent empirical inquiries.";
+
+    function updateDeskWordCount() {
+      if (!deskPaperSheet || !interactiveWordCount) return;
+      const text = deskPaperSheet.textContent.trim();
+      const count = text ? (text.match(/\S+/g) || []).length : 0;
+      interactiveWordCount.textContent = `${count} words`;
+    }
+
+    if (deskPaperSheet) {
+      deskPaperSheet.addEventListener("input", updateDeskWordCount);
+    }
+
+    if (deskResetBtn && deskPaperSheet) {
+      deskResetBtn.addEventListener("click", () => {
+        deskPaperSheet.textContent = INITIAL_DESK_SAMPLE;
+        updateDeskWordCount();
+        if (deskDisruptStats) {
+          deskDisruptStats.textContent = "Reset to original sample draft.";
+          deskDisruptStats.style.color = "var(--ink-muted, #666)";
+        }
+      });
+    }
+
+    if (deskCopyCleanBtn && deskPaperSheet) {
+      deskCopyCleanBtn.addEventListener("click", () => {
+        const text = deskPaperSheet.textContent.trim();
+        if (!text) return;
+        navigator.clipboard.writeText(text).then(() => {
+          const orig = deskCopyCleanBtn.innerHTML;
+          deskCopyCleanBtn.innerHTML = `<span>COPIED!</span> ${CHECK_SVG}`;
+          setTimeout(() => { deskCopyCleanBtn.innerHTML = orig; }, 2000);
+        });
+      });
+    }
+
     if (executeHumanizeBtn && deskPaperSheet) {
       executeHumanizeBtn.addEventListener("click", () => {
         let text = deskPaperSheet.textContent.trim();
-        replacements.forEach(item => {
-          text = text.replace(item.pattern, item.replace);
-        });
-        deskPaperSheet.textContent = text;
+        if (!text) return;
+
+        let result;
+        if (engine) {
+          result = engine.humanize(text);
+          deskPaperSheet.textContent = result.cleanText;
+        } else {
+          replacements.forEach(item => {
+            text = text.replace(item.pattern, item.replace);
+          });
+          deskPaperSheet.textContent = text;
+        }
+
+        updateDeskWordCount();
+
+        // Update Dial and Metrics
+        if (dialScoreNum) {
+          dialScoreNum.textContent = "0%";
+          dialScoreNum.style.color = "var(--ink-green-safe)";
+        }
+        if (dialScoreLabel) {
+          dialScoreLabel.textContent = "AI Neutralized";
+          dialScoreLabel.style.color = "var(--ink-green-safe)";
+        }
+
+        if (deskDisruptStats && result) {
+          deskDisruptStats.innerHTML = `<span style="color:var(--ink-green-safe, #2A9D8F); font-weight:700;">✓ Disrupted ${result.patternsDisrupted} AI patterns</span> • ${result.invisiblesCleaned} invisibles scrubbed • 100% In-Browser`;
+        }
+
         executeHumanizeBtn.innerHTML = `<span>DISRUPTED & CLEAN</span> ${CHECK_SVG}`;
         setTimeout(() => {
           executeHumanizeBtn.innerHTML = `<span>DISRUPT AI PATTERNS</span> <svg class="icon" viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2.5"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"></polygon></svg>`;

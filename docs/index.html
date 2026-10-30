@@ -855,10 +855,21 @@
             <div id="deskPaperSheet" class="interactive-editable-sheet" contenteditable="true" spellcheck="false">In conclusion, it is important to delve into the comprehensive tapestry of modern neural networks. This study plays a pivotal role in illustrating that artificial intelligence stands as a testament to human innovation. Furthermore, the interplay between stochastic optimization and computational scalability provides a robust framework for subsequent empirical inquiries.</div>
           </div>
 
-          <button id="executeHumanizeBtn" class="execute-humanize-btn">
-            <span>DISRUPT AI PATTERNS</span>
-            <svg class="icon" viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2.5"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"></polygon></svg>
-          </button>
+          <div style="display: flex; gap: 8px; margin-top: 10px;">
+            <button id="executeHumanizeBtn" class="execute-humanize-btn" style="flex: 2;">
+              <span>DISRUPT AI PATTERNS</span>
+              <svg class="icon" viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2.5"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"></polygon></svg>
+            </button>
+            <button id="deskCopyCleanBtn" class="execute-humanize-btn" style="flex: 1; background: #2A9D8F; font-size: 11px;" title="Copy Clean Text to Clipboard">
+              <span>COPY CLEAN</span>
+            </button>
+            <button id="deskResetBtn" class="execute-humanize-btn" style="flex: 1; background: #6c757d; font-size: 11px;" title="Reset to Sample">
+              <span>RESET</span>
+            </button>
+          </div>
+          <div id="deskDisruptStats" style="font-family: var(--font-mono, monospace); font-size: 11px; color: var(--ink-muted, #666); margin-top: 8px; text-align: center;">
+            Ready to humanize • 100% In-Browser Engine • Zero Network Needed
+          </div>
 
           <!-- 2x2 Grid of 4 Rounded Metric Boxes (From Photo) -->
           <div class="submetric-cards-grid" style="margin-top: 16px;">
@@ -1396,6 +1407,7 @@
     <span>✓ Copied to clipboard!</span>
   </div>
 
+  <script src="humanizer-engine.js"></script>
   <script src="cluster-balancer.js"></script>
   <script src="script.js"></script>
 </body>
