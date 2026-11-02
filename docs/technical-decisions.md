@@ -85,10 +85,10 @@ This document outlines the major architectural and design decisions made in the 
 
 ---
 
-## 9. In-App Feedback Routing & Gate Bypass
-**Context**: Users encountering API rate limits or missing discipline fields need a 1-click path to report issues without being blocked by sidebar navigations.
+## 9. In-App Feedback Routing
+**Context**: Users encountering questions or requesting discipline fields need a 1-click path to report issues directly from the app.
 
-**Decision**: Implement a dedicated `feedback_ui.py` page in sidebar navigation and allow it to render even when the application is locked.
+**Decision**: Implement a dedicated `feedback_ui.py` page in sidebar navigation.
 - **Why**:
   - Eliminates user friction by providing direct in-app submission forms and GitHub Issue templates.
-  - Guarantees immediate access to support regardless of unlock status.
+  - Guarantees immediate access to support across all views.

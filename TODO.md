@@ -25,7 +25,7 @@
 ### Phase 4: UI & Navigation Integration
 - [x] `src/turnitout/ui/citation_ui.py`: Citation Inserter & BIB / JSON / LaTeX Generator page with unified `Citation Count` field (`Auto` or number input)
 - [x] `src/turnitout/ui/feedback_ui.py`: In-app Feature Request & Bug Reporter page
-- [x] `streamlit_app.py`: Top-level sidebar navigation page routing and accessible directly for feedback page
+- [x] `streamlit_app.py`: Top-level sidebar navigation page routing for feedback page
 - [x] `src/turnitout/ui/common.py`: Sidebar issue type dropdown with GitHub template URLs
 
 ### Phase 5: Verification & Automated Test Suite

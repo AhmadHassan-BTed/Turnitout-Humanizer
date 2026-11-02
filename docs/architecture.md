@@ -57,8 +57,8 @@ flowchart TD
 - Operates on a character-level placeholder engine to temporarily mask LaTeX/formatting commands.
 - Sequentially executes 16 transformation stages (Phrase Rewrites, Morphological Stemmed Synonyms, Clause Reordering, Determiner Swaps, Compound Splits, Voice Transforms, Sentence Fusion, Nominalization, Appositive Injection, Discourse Rotation).
 
-### 5. UI Layer & Gate Bypass (`turnitout.ui`)
+### 5. UI Layer (`turnitout.ui`)
 - **`humanizer_ui.py`**: Humanizer page with text areas and multi-file DOCX processing.
 - **`citation_ui.py`**: Citation Inserter & BIB / JSON / LaTeX Generator page.
-- **`feedback_ui.py`**: In-app Feature Request & Bug Reporter page (accessible directly in sidebar).
+- **`feedback_ui.py`**: In-app Feature Request & Bug Reporter page.
 - **`checker_ui.py`**: QuillBot-style stats dashboard and ZipPy AI detector.

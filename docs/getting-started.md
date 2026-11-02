@@ -39,4 +39,4 @@ streamlit run streamlit_app.py
 - **ZipPy Perplexity Engine**: Evaluates text entropy signals and shows side-by-side QuillBot-style similarity stats.
 
 ### 4. 💬 Feature Request & Bug Reporter Hub
-- **In-App Form (Direct Sidebar Access)**: Accessible at any time, directly in the sidebar. Submit feature requests, bug reports, or request new academic discipline fields with direct GitHub Issues templates.
+- **In-App Form**: Accessible directly from the sidebar. Submit feature requests, bug reports, or request new academic discipline fields with direct GitHub Issues templates.

@@ -8,7 +8,7 @@ This roadmap lists completed milestones and upcoming planned features for Turnit
 - [x] **Hierarchical Academic Discipline Taxonomy**: Categorized rules under `rules/academic/taxonomy/*` with prompt engineering metadata headers.
 - [x] **Unified Citation Count Input**: Auto-detect (`Auto`) or exact numeric entry.
 - [x] **Multi-File Batch Processing & ZIP Packaging**: In-memory stateless `.zip` archive bundling for `.docx` and reports.
-- [x] **In-App Feature Request & Bug Reporter Hub**: Dedicated page (`feedback_ui.py`) with accessible directly.
+- [x] **In-App Feature Request & Bug Reporter Hub**: Dedicated page (`feedback_ui.py`) in sidebar.
 - [x] **ZipPy Compression Perplexity & 5-Signal AI Detector**: High-speed local AI pattern detection.
 
 ---

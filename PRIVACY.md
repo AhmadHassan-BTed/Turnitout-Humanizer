@@ -13,14 +13,12 @@ At **Turnitout Core** ("we", "our", or "us"), we are committed to protecting you
 - **Zero Permanent Storage**: All text, documents (`.docx`, `.txt`), citations, and drafts submitted to Turnitout Core are processed **strictly in-memory** during your active browser session.
 - We **do not store, log, or index** your submitted manuscripts, papers, or generated outputs on any database or external server.
 
-### B. Authentication & Session Data
-
-- **Session Cookies**: We use short-lived browser cookies (`turnitout_unlocked`, `turnitout_github_username`) and URL parameters solely to keep you logged in across page reloads. We do not use advertising or tracking cookies.
+### B. Session Data
+- **Session State**: We use standard browser session storage solely to maintain your application preferences across page reloads. We do not use advertising or tracking cookies.
 
 ---
 
 ## 2. Third-Party Services
-
 
 - **No Third-Party Analytics**: We do not share, sell, or monetize any user data with third parties or telemetry providers.
 

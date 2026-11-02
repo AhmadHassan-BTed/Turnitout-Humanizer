@@ -23,7 +23,7 @@ Turnitout Core provides academic writing refinement, AI humanization, reference 
 
 ## 3. Access & Authentication
 
-- Access to the application is provided free of charge under our Open Community Mission terms.
+- Access to the application is provided free of charge for students, researchers, and developers worldwide.
 - No mandatory subscriptions, fees, or gated paywalls are required.
 
 ---

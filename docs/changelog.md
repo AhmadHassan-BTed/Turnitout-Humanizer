@@ -31,18 +31,12 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [1.4.0] - 2026-07-08
 
-### Added
-- **Detailed Application Diagnostics**: Replaced generic verification failure errors on the checklist screen with detailed, user-friendly markdown logs highlighting precisely which follow or star actions are outstanding.
-- **Useful External Links**: Unstarred repositories are now shown as direct, clickable links inside the verification failure error box, making it simple for the user to open and star them.
-
 ### Changed
 - **Conversational Style Preset Default**: Made "Conversational / Daily English" the default Style Preset instead of the academic one.
 - **Advanced UI Checkbox Alignment**: Dynamically synced checkbox values in the Advanced Options expander to match the preset defaults (automatically hiding/disabling technical options when in conversational mode).
 
 ### Fixed
 - **DOCX Formatting & Spacing Preservation**: Rewrote the paragraph-processing engine in `doc_processor.py` to use character-level sequence alignment (`difflib.SequenceMatcher`) across all descendant XML runs (including nested hyperlink and citation field runs). This fully preserves Table of Contents hyperlinks, colors, font styling, and dynamic cross-references while preventing adjacent words from merging.
-- **Streamlit State Syncing on Failure**: Added `st.rerun()` upon verification failure to ensure the checklist UI and error messages update immediately.
-- **GitHub API Rate Limit Graceful Fallback**: Modified follow status check to treat HTTP 403 (Rate Limit) errors as successful follow status so users are not blocked.
 - **Flaky Unit Test Assertion**: Fixed a flaky assertion in `test_modifier.py` to accept all valid sentence fusion connectors from the externalized JSON.
 
 ## [1.3.0] - 2026-07-07
@@ -59,8 +53,6 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Fixed
 - **Streamlit Cookie Controller Crash**: Wrapped cookie retrievals in `safe_get_cookie` handler to gracefully capture exceptions (`TypeError`) when `self.__cookies` is `None` during early async mounts on Streamlit Cloud.
-- **Excluded Fractal-PrivacyPolicy**: Modified developer repos logic to ignore repositories with `"fractal-privacypolicy"` in the name, preventing users from needing to star this repo.
-
 - **Simplified Setting Toggle Labels**: Simplified technical settings (e.g. "Nominalization", "N-gram Audit", "Appositive Explanations") to simpler terms (e.g. "Switch Verb & Noun Forms", "Smart Similarity Shield", "Add Explanatory Details") to hide pipeline implementation details.
 
 ## [1.2.0] - 2026-07-05
@@ -69,8 +61,6 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - **Streamlit Web Application**: An aesthetic web interface containing format selectors, Proportional Intensity sliders, advanced options toggles, and document processors.
 - **Tkinter Desktop GUI**: A native desktop application with split side-by-side text inputs/outputs, real-time counters, citation limiters, and custom BibTeX references viewers.
 - **Word Document (.docx) Parser**: Added fully decoupled processing of body paragraphs, tables, table cells, headers, and footers while preserving styles (bold, italics, etc.) run-by-run.
-
-
 - **Persistent Help & Feedback**: Integrated a feedback form inside the sidebar that dynamically generates pre-filled links to submit private emails or file GitHub issues.
 - **Linguistic Upgrades**: Strips LLM indicators (em-dashes `—` and en-dashes `–`) and implemented a rolling synonym FIFO buffer (size 15) to prevent repetition.
 
