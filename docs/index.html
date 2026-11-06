@@ -1,1402 +1,207 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="google-site-verification" content="googled1934658a17ddea1" />
-  <meta name="google-site-verification" content="d1934658a17ddea1" />
-  <title>TURNITOUT — Free Unlimited AI Humanizer & Turnitin Bypass (No Signup, Limitless Words)</title>
-  
-  <!-- Primary Meta Tags -->
-  <meta name="title" content="TURNITOUT ΓÇö Free AI Humanizer & Detection Evader (No Signup, Unlimited)">
-  <meta name="description" content="100% free, unlimited, rule-based AI humanizer and plagiarism remover. Mathematically neutralizes Turnitin, GPTZero, and CopyLeaks detection without using generative AI. Zero word limits, no paywalls, no signup, preserves .docx & LaTeX formatting.">
-  <meta name="keywords" content="free ai humanizer, ai humanizer free unlimited, bypass turnitin free, turnitin ai detector bypass, humanize ai text free, undetectable ai free unlimited, free ai detector bypass, ai humanizer no word limit, limitless ai humanizer, ai humanizer no signup, quillbot alternative free, stealthgpt alternative free, humanize ai essay free, zero limit ai humanizer">
-  <meta name="author" content="Ahmad Hassan">
-  <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
-  <link rel="canonical" href="https://ahmadhassan-bted.github.io/Turnitout-Humanizer/">
-
-  <!-- Open Graph / Facebook -->
-  <meta property="og:type" content="website">
-  <meta property="og:url" content="https://ahmadhassan-bted.github.io/Turnitout-Humanizer/">
-  <meta property="og:title" content="TURNITOUT ΓÇö The Free AI Humanizer Built by a Graduate">
-  <meta property="og:description" content="No subscriptions. No paywalls. No generative AI. A rule-based engine that mathematically disrupts AI detector patterns while preserving citations, formatting, and runnable code.">
-  <meta property="og:image" content="assets/logo-banner.svg">
-
-  <!-- Twitter Cards -->
-  <meta property="twitter:card" content="summary_large_image">
-  <meta property="twitter:url" content="https://ahmadhassan-bted.github.io/Turnitout-Humanizer/">
-  <meta property="twitter:title" content="TURNITOUT ΓÇö Free AI Humanizer (Zero Generative AI)">
-  <meta property="twitter:description" content="Free, unlimited, browser-based AI humanizer. Removes AI detection patterns without using AI. Built by Ahmad Hassan.">
-  <meta property="twitter:image" content="assets/logo-banner.svg">
-
-    <!-- Favicon -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#09090b">
+  <meta name="description" content="Turnitout Studio — a private, prompt-first creative workspace for exploring images, concepts, and production-ready ideas.">
+  <title>Turnitout Studio — Create beyond the blank canvas</title>
   <link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
-  <link rel="alternate icon" href="favicon.svg">
-  <!-- Stylesheet -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
-
-  <!-- Schema.org Structured Data (JSON-LD) -->
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@graph": [
-      {
-        "@type": "SoftwareApplication",
-        "name": "TURNITOUT",
-        "applicationCategory": "EducationalApplication, UtilitiesApplication",
-        "operatingSystem": "Web Browser, Windows, macOS, Linux",
-        "url": "https://turnitout.streamlit.app/",
-        "offers": {
-          "@type": "Offer",
-          "price": "0",
-          "priceCurrency": "USD",
-          "description": "100% Free Forever. No subscriptions, paywalls, or credit cards required."
-        },
-        "description": "Free, unlimited, browser-based AI humanizer that removes AI detection patterns (Turnitin, GPTZero, CopyLeaks) without using generative AI. Preserves Word and LaTeX formatting.",
-        "featureList": [
-          "Zero-Generative-AI Rule-Based Disruption",
-          "In-Place .docx and .tex Formatting Preservation",
-          "100% Executable Code Comment & Docstring Humanizer",
-          "Automatic IEEE & APA Reference Generator (BibTeX, LaTeX)",
-          "100% Local In-Memory Privacy Guarantee"
-        ],
-        "author": {
-          "@type": "Person",
-          "name": "Ahmad Hassan",
-          "url": "https://github.com/AhmadHassan-BTed"
-        },
-        "publisher": {
-          "@type": "Organization",
-          "name": "Fractal Compute Orchestrations",
-          "url": "https://github.com/Fractal-Compute-Orchestrations"
-        }
-      },
-      {
-        "@type": "FAQPage",
-        "mainEntity": [
-          {
-            "@type": "Question",
-            "name": "Is TURNITOUT really 100% free with no limits?",
-            "acceptedAnswer": {
-              "@type": "Answer",
-              "text": "Yes. TURNITOUT is 100% free with zero paywalls, zero subscriptions, and no word count restrictions. Access is provided completely open to all students, researchers, and developers."
-            }
-          },
-          {
-            "@type": "Question",
-            "name": "How does TURNITOUT humanize text without using AI?",
-            "acceptedAnswer": {
-              "@type": "Answer",
-              "text": "Commercial humanizers use LLMs to re-paraphrase, which ironically leaves new AI footprints and introduces factual hallucinations. TURNITOUT is deterministic and rule-based: it mathematically breaks contiguous n-gram sequences (3-grams, 4-grams) and rotates discourse connectives while leaving factual statements, citations, and equations untouched."
-            }
-          },
-          {
-            "@type": "Question",
-            "name": "Does TURNITOUT preserve Word (.docx) and LaTeX (.tex) formatting?",
-            "acceptedAnswer": {
-              "@type": "Answer",
-              "text": "Yes. TURNITOUT processes documents in-place. XML paragraph styling, bold/italic text, math environments ($...$), tables, headers, footers, and citation keys are strictly preserved."
-            }
-          },
-          {
-            "@type": "Question",
-            "name": "Is my research text stored or leaked?",
-            "acceptedAnswer": {
-              "@type": "Answer",
-              "text": "No. TURNITOUT processes everything locally in browser memory. Uploaded documents and code files are never saved on external servers or used to train AI models."
-            }
-          }
-        ]
-      },
-      {
-        "@type": "HowTo",
-        "name": "How to Humanize AI Text Without Generative AI",
-        "step": [
-          {
-            "@type": "HowToStep",
-            "name": "Open the live application",
-            "text": "Visit turnitout.streamlit.app to start humanizing your papers immediately with zero paywalls."
-          },
-          {
-            "@type": "HowToStep",
-            "name": "Paste text or upload document",
-            "text": "Paste your draft or upload your raw .docx, .tex, or source code files."
-          },
-          {
-            "@type": "HowToStep",
-            "name": "Select your parameters",
-            "text": "Choose your paraphrasing intensity slider and discipline taxonomy (Computer Science, Engineering, Finance, etc.)."
-          },
-          {
-            "@type": "HowToStep",
-            "name": "Run the transformation",
-            "text": "Click Humanize to execute rule-based n-gram disruption."
-          },
-          {
-            "@type": "HowToStep",
-            "name": "Download your clean document",
-            "text": "Download your in-place styled Word document or export your BibTeX reference package."
-          }
-        ]
-      }
-    ]
-  }
-  </script>
 </head>
-
 <body>
-
-
-  <!-- Top Navigation Banner (Streamlit Heritage & Perspective Switcher) -->
-  <header class="top-nav">
-    <a href="index.html" class="brand-wrapper" aria-label="TURNITOUT Home">
-      <img src="assets/logo.svg" alt="TURNITOUT" class="brand-logo-img">
-      <div class="brand-tagline"># Intelligent Similarity Evasion & Multi-Algorithm Checker</div>
-    </a>
-    <nav class="nav-links">
-      <a href="how-it-works.html" class="nav-link">How It Works</a>
-      <a href="user-manual.html" class="nav-link">User Manual 📖</a>
-      <a href="api.html" class="nav-link" style="color: #FBBF24; font-weight: 700;">Enterprise API ⚡</a>
-      <a href="word-limit-guide.html" class="nav-link">Word Limit Guide</a>
-      <a href="changelog.html" class="nav-link">Changelog</a>
-      <a href="compare/quillbot-alternative.html" class="nav-link">vs QuillBot</a>
-      <a href="compare/stealthgpt-alternative.html" class="nav-link">vs StealthGPT</a>
-      <a href="faq.html" class="nav-link">FAQ</a>
-      <a href="support.html" class="nav-link" style="color: #ec4899; font-weight: 700;">Support ❤️</a>
-    </nav>
-    <div class="nav-actions">
-      <!-- Direct Support Modal Trigger -->
-      <button id="openSupportModalBtn" class="nav-support-btn" title="Sponsor & Support Turnitout" aria-label="Sponsor & Support Turnitout">
-        <span class="heart-icon">❤️</span>
-        <span>Support</span>
-      </button>
-
-      <!-- Perspective Switch: Look Down at Desk -->
-      <button id="toggleDeskModeBtn" class="nav-perspective-btn" title="Look down at the wooden study desk, radial dial & blueprints" aria-label="Look down at study desk workspace">
-        <svg class="icon" viewBox="0 0 24 24" width="15" height="15" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
-          <polyline points="6 9 12 15 18 9"></polyline>
-          <line x1="12" y1="3" x2="12" y2="15"></line>
-        </svg>
-        <span>Look Down at Desk ↓</span>
-      </button>
-
-      <button id="themeToggleBtn" class="theme-toggle-btn" aria-label="Toggle 3 AM Dark Mode">
-        <svg class="icon icon-moon" viewBox="0 0 24 24" width="15" height="15" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path></svg>
-        <span>Study Session: 3 AM (Dark)</span>
-      </button>
-
-      <a href="https://turnitout.streamlit.app/" target="_blank" rel="noopener noreferrer" class="app-launch-btn">
-        Launch Live App <svg class="icon" viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"></polygon></svg>
+  <div class="page-shell">
+    <header class="site-header">
+      <a class="wordmark" href="index.html" aria-label="Turnitout Studio home">
+        <span class="wordmark-mark">✦</span>
+        <span>turnitout<span class="wordmark-dot">.</span></span>
       </a>
-    </div>
-  </header>
-
-
-
-  <!-- ==========================================================================
-       VIEW 1: The Scrapbook / Student Revenge Manifesto (Default Reading Mode)
-       Warm, Handcrafted, Authentic, Paper Notebook Simulator & Complete SEO Content
-       ========================================================================== -->
-  <div id="manifestoView" class="manifesto-view">
-<main class="container">
-
-    <!-- Enterprise REST API Callout Banner -->
-    <div class="desk-perspective-banner" style="background: linear-gradient(135deg, #1E1B4B 0%, #0F172A 100%); border: 1px solid rgba(245, 158, 11, 0.45); transform: none; margin-bottom: 20px; box-shadow: 0 4px 18px rgba(0, 0, 0, 0.35);">
-      <div class="desk-banner-inner">
-        <div class="desk-banner-tag" style="color: #FBBF24;">⚡ HIGH-THROUGHPUT ENTERPRISE REST API</div>
-        <div class="desk-banner-text">
-          <strong>Want Turnitout's deterministic engine in your backend?</strong> Integrate sub-150ms zero-AI humanization, 100% zero-retention privacy, and smart BibTeX reference generation into your SaaS platform or LMS.
-        </div>
+      <nav class="main-nav" aria-label="Primary navigation">
+        <a href="#explore">Explore</a>
+        <a href="#models">Models</a>
+        <a href="#capabilities">Capabilities</a>
+        <a href="#studio">Studio</a>
+        <a href="#enterprise">For teams</a>
+      </nav>
+      <div class="header-actions">
+        <button class="icon-button" id="themeToggle" aria-label="Toggle color theme">◐</button>
+        <a class="text-button" href="auth.html">Sign in</a>
+        <a class="button button-small button-light" href="auth.html">Start creating <span>↗</span></a>
       </div>
-      <div style="display: flex; gap: 10px; align-items: center; flex-wrap: wrap;">
-        <a href="api.html" class="desk-banner-btn" style="background-color: #FBBF24; color: #1E1B4B; text-decoration: none;">
-          <span>Explore API Docs</span>
-          <svg class="icon" viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
-        </a>
-        <a href="https://wa.me/923225522383" target="_blank" rel="noopener noreferrer" class="desk-banner-btn" style="background-color: #25D366; color: #000; text-decoration: none;">
-          <span>Contact Ahmad</span>
-        </a>
-      </div>
-    </div>
+      <button class="menu-toggle" id="menuToggle" aria-label="Open menu">☰</button>
+    </header>
 
-    <!-- Word Limit & Zero-Expansion Banner -->
-    <div class="desk-perspective-banner" style="background: linear-gradient(135deg, #064E3B 0%, #0F172A 100%); border: 1px solid rgba(52, 211, 153, 0.45); transform: none; margin-bottom: 20px; box-shadow: 0 4px 18px rgba(0, 0, 0, 0.25);">
-      <div class="desk-banner-inner">
-        <div class="desk-banner-tag" style="color: #34D399;">📏 ZERO WORD COUNT EXPANSION GUIDE</div>
-        <div class="desk-banner-text">
-          <strong>Working under strict academic word limits?</strong> Learn how to lock down settings for <strong>0 added words</strong> (exact 1:1 token parity) using 1:1 synonym swapping and alignment ratios.
-        </div>
-      </div>
-      <div style="display: flex; gap: 10px; align-items: center; flex-wrap: wrap;">
-        <a href="word-limit-guide.html" class="desk-banner-btn" style="background-color: #34D399; color: #064E3B; text-decoration: none; font-weight: 700;">
-          <span>Zero-Expansion Guide</span>
-          <svg class="icon" viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
-        </a>
-        <a href="user-manual.html" class="desk-banner-btn" style="background-color: #3B82F6; color: #FFFFFF; text-decoration: none; font-weight: 700;">
-          <span>Full User Manual</span>
-        </a>
-      </div>
-    </div>
-
-    <!-- Desk Perspective Banner: Invite to Look Down at Desk -->
-    <div class="desk-perspective-banner" id="deskPerspectiveBanner">
-      <div class="desk-banner-inner">
-        <div class="desk-banner-tag">SPATIAL STUDY WORKBENCH</div>
-        <div class="desk-banner-text">
-          <strong>Looking for the interactive study desk?</strong> Shift perspective to explore the physical wooden drafting desk with 64-ray radial dial, battery entropy gauge, and blueprints.
-        </div>
-      </div>
-      <button id="lookDownBannerBtn" class="desk-banner-btn" title="Look down at the wooden study desk canvas">
-        <span>Look Down at Desk</span>
-        <svg class="icon" viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"></polyline></svg>
-      </button>
-    </div>
-
-
-    <!-- Decorative Xerox Tape & Staples -->
-    <div class="tape top-left"></div>
-    <div class="tape top-right"></div>
-    <div class="coffee-ring" style="top: 140px; right: 40px;"></div>
-    <div class="coffee-ring" style="bottom: 220px; left: -30px;"></div>
-
-    <!-- Hero Section: The Student's Revenge Manifesto -->
-    <section class="manifesto-card">
-      <div class="staple top-left"></div>
-      
-      <div class="manifesto-header">
-        <h1 class="manifesto-title">
-          The Free AI Humanizer That <span class="highlight">Refuses to Sell Out</span>.
-        </h1>
-        <div>
-          <span class="stamp stamp-red">100% FREE FOREVER</span>
-          <span class="stamp stamp-yellow">LIMITLESS WORDS</span>
-          <span class="stamp stamp-blue">ZERO SIGNUPS</span>
-        </div>
-      </div>
-
-      <div class="manifesto-story">
-        <p>
-          I just graduated, and honestly? <strong>It was absolute hell.</strong>
-        </p>
-        <p style="margin-top: 12px;">
-          AI-assisted drafting is the modern reality of university life, but humanizing it was pure psychological exhaustion: word count limits, aggressive paywalls, $20/month subscription traps, and Turnitin STILL flagged false positives on honest students.
-        </p>
-        <p style="margin-top: 12px;">
-          So I built <strong>TURNITOUT</strong>. A complete, unmetered, zero-cost AI and similarity remover. 
-          No credit cards, no monthly fees, no trial versions, and no corporate greed.
-        </p>
-      </div>
-
-      <div class="handwritten-aside">
-        "A revenge to the university system and corporate squeezing of students ΓÇö and an enduring gift to upcoming students."
-      </div>
-
-      <p style="font-size: 17px; margin-top: 14px;">
-        <strong>Why it is genuinely different:</strong> Other commercial tools use generative AI to eliminate AIΓÇöwhich ironically leaves fresh machine signatures, hallucinates facts, breaks code syntax, and leaks your confidential drafts into training databases. 
-        <strong>TURNITOUT does NOT use AI to eliminate AI.</strong> It is 100% programmatic and rule-based, mathematically breaking the exact n-gram statistical patterns that detectors flag.
-      </p>
-
-      <div class="manifesto-badges">
-        <span class="stamp stamp-yellow">FIRST PROGRAMMATIC OF ITS KIND</span>
-        <span class="stamp stamp-red">UNLIMITED & NO WORD CAPS</span>
-        <span class="stamp stamp-blue">ZERO PAYWALLS FOREVER</span>
-        <span class="stamp stamp-red">PRESERVES .DOCX & .TEX</span>
-        <span class="stamp stamp-blue">100% LOCAL PRIVACY</span>
-      </div>
-    </section>
-
-    <!-- Section: The Interactive Notebook Simulator ("Watch It Work") -->
-    <section class="notebook-wrapper" id="interactive-demo">
-      <div class="tape center"></div>
-      
-      <div class="notebook-header">
-        <div class="notebook-label">Interactive Pattern Disruptor Demonstration</div>
-        <h2 class="notebook-title">Watch the Rule Engine Break AI Signatures Live</h2>
-      </div>
-
-      <div class="preset-buttons">
-        <span style="font-family: var(--font-typewriter); font-size: 13px; align-self: center; margin-right: 4px;">Load Sample:</span>
-        <button id="sampleAcademicBtn" class="preset-btn">
-          <svg class="icon" viewBox="0 0 24 24" width="13" height="13" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" y1="13" x2="8" y2="13"></line><line x1="16" y1="17" x2="8" y2="17"></line></svg> Academic Abstract Clich├⌐
-        </button>
-        <button id="sampleEssayBtn" class="preset-btn">
-          <svg class="icon" viewBox="0 0 24 24" width="13" height="13" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M11 4H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7"></path><path d="M18.5 2.5a2.121 2.121 0 0 1 3 3L12 15l-4 1 1-4 9.5-9.5z"></path></svg> College Essay Clich├⌐
-        </button>
-      </div>
-
-      <!-- Notebook Sheet: Blue Ruled Lines with Red Margin Line -->
-      <div id="paperSheet" class="paper-sheet" contenteditable="true" spellcheck="false">In conclusion, it is important to delve into the comprehensive tapestry of modern neural networks. This study plays a pivotal role in illustrating that artificial intelligence stands as a testament to human innovation. Furthermore, the interplay between stochastic optimization and computational scalability provides a robust framework for subsequent empirical inquiries.</div>
-
-      <div id="tutorNote" class="handwritten-aside" style="display: none; font-size: 21px; margin: 15px 0 5px 0; border-left-color: var(--ballpoint-blue); color: var(--ballpoint-blue);">
-        "Now read it out loud. Fix anything that sounds wrong. You're smarter than the detector."
-      </div>
-
-      <div class="notebook-footer">
-        <div class="detector-meter">
-          <span class="detector-label">Estimated AI Detection:</span>
-          <div class="meter-track">
-            <div id="meterFill" class="meter-fill"></div>
+    <main>
+      <section class="hero section-wrap">
+        <div class="hero-copy">
+          <div class="eyebrow"><span class="eyebrow-dot"></span> Your private creative playground</div>
+          <h1>Make the impossible feel <em>inevitable.</em></h1>
+          <p class="hero-lede">Explore images, concepts, and production-ready ideas with one simple creative workspace. No tab switching. No blank canvas anxiety.</p>
+          <div class="hero-actions">
+            <a class="button button-primary" href="auth.html">Open your studio <span>↗</span></a>
+            <a class="button button-ghost" href="#explore">See what’s possible <span>↓</span></a>
           </div>
-          <span id="meterScore" class="meter-score">96%</span>
+          <div class="proof-row">
+            <span class="avatar-stack" aria-hidden="true"><i>J</i><i>A</i><i>R</i><i>+</i></span>
+            <span>Built for curious minds who make things</span>
+          </div>
         </div>
-
-        <div class="action-buttons-group">
-          <button id="humanizeBtn" class="humanize-btn">HUMANIZE THIS PAPER ΓåÆ</button>
-          <button id="copyBtn" class="copy-btn">Copy Clean Text</button>
-          <span id="statusStamp" class="stamp stamp-red" style="display: none; transform: rotate(-5deg); margin-left: 6px;">HUMANIZED</span>
+        <div class="hero-art" aria-label="Creative generation preview">
+          <div class="glow glow-one"></div>
+          <div class="glow glow-two"></div>
+          <div class="floating-label label-top">01 / CONCEPT STUDY</div>
+          <div class="art-card art-card-back">
+            <div class="mini-grid"></div>
+            <span>FORM / LIGHT / MOTION</span>
+          </div>
+          <div class="art-card art-card-main">
+            <div class="orb orb-purple"></div>
+            <div class="orb orb-orange"></div>
+            <div class="orb orb-blue"></div>
+            <div class="art-caption"><span>Untitled exploration</span><strong>↗</strong></div>
+          </div>
+          <div class="floating-label label-bottom">GENERATED IN YOUR STUDIO</div>
         </div>
-      </div>
-
-      <!-- Callout to launch full app for full documents -->
-      <div style="margin-top: 25px; padding: 14px; background: rgba(60, 48, 38, 0.04); border-left: 3px solid var(--ballpoint-blue); font-size: 15px; border-radius: 0 4px 4px 0;">
-        <svg class="icon" viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="color: var(--ballpoint-blue); margin-right: 4px;"><circle cx="12" cy="12" r="10"></circle><line x1="12" y1="16" x2="12" y2="12"></line><line x1="12" y1="8" x2="12.01" y2="8"></line></svg>
-        <em>Working with full files?</em> The live application handles full <strong>.docx</strong> Word files, <strong>LaTeX .tex</strong> packages, multi-file <strong>source code ZIPs</strong>, and generates <strong>BibTeX citations</strong>.
-        <a href="https://turnitout.streamlit.app/" target="_blank" rel="noopener noreferrer" style="color: var(--ballpoint-blue); font-weight: bold; margin-left: 6px;">Launch full app on Streamlit ΓåÆ</a>
-      </div>
-    </section>
-
-    <!-- Section: The 4 Core Superpowers (Collage Grid) -->
-    <h2 class="section-heading">
-      <svg class="section-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="3"></circle><path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1 0 2.83 2 2 0 0 1-2.83 0l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83 0 2 2 0 0 1 0-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1-2-2 2 2 0 0 1 2-2h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 0-2.83 2 2 0 0 1 2.83 0l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 2-2 2 2 0 0 1 2 2v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 0 2 2 0 0 1 0 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 2 2 2 2 0 0 1-2 2h-.09a1.65 1.65 0 0 0-1.51 1z"></path></svg>
-      What the Engine Actually Does
-    </h2>
-    
-    <div class="features-grid">
-      <div class="feature-box">
-        <div class="tape top-left"></div>
-        <div class="feature-icon">
-          <svg class="feature-icon-svg" viewBox="0 0 24 24"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"></polygon></svg>
-        </div>
-        <h3 class="feature-title">Zero-Generative-AI Rule Engine</h3>
-        <p class="feature-desc">
-          Over 4,068+ deterministic JSON rules across conversational, academic, and technical registers. Mathematically disrupts 3-gram and 4-gram contiguous sequences and PDTB discourse markers without introducing hallucinations.
-        </p>
-      </div>
-
-      <div class="feature-box">
-        <div class="tape top-right"></div>
-        <div class="feature-icon">
-          <svg class="feature-icon-svg" viewBox="0 0 24 24"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" y1="13" x2="8" y2="13"></line><line x1="16" y1="17" x2="8" y2="17"></line></svg>
-        </div>
-        <h3 class="feature-title">In-Place .docx & .tex Formatting</h3>
-        <p class="feature-desc">
-          No more manually re-bolding headings or rebuilding tables. Turnitout humanizes your text directly inside the XML run treeΓÇökeeping math equations (<code style="font-size: 13px;">$...$</code>), citations, footnotes, and headers 100% intact.
-        </p>
-      </div>
-
-      <div class="feature-box">
-        <div class="tape top-left"></div>
-        <div class="feature-icon">
-          <svg class="feature-icon-svg" viewBox="0 0 24 24"><polyline points="16 18 22 12 16 6"></polyline><polyline points="8 6 2 12 8 18"></polyline></svg>
-        </div>
-        <h3 class="feature-title">100% Executable Code Safety</h3>
-        <p class="feature-desc">
-          Comment & docstring humanizer for Python, C/C++, Java, JS/TS, Go/Rust, Shell, and SQL. Code statements, logic, variables, and indentation remain 100% untouched and runnable. Includes Beginner, Intermediate, and Architect personas.
-        </p>
-      </div>
-
-      <div class="feature-box">
-        <div class="tape top-right"></div>
-        <div class="feature-icon">
-          <svg class="feature-icon-svg" viewBox="0 0 24 24"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"></path><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"></path></svg>
-        </div>
-        <h3 class="feature-title">Dynamic Reference & BibTeX Generator</h3>
-        <p class="feature-desc">
-          Inserts contextual IEEE numeric (<code style="font-size: 13px;">[1]</code>) or APA author-date (<code style="font-size: 13px;">(Author, 2026)</code>) in-text citations and exports companion <code style="font-size: 13px;">citations.bib</code> and JSON bibliography packages across 5 academic taxonomies.
-        </p>
-      </div>
-    </div>
-
-    <div style="text-align: center; margin: -30px 0 50px 0; font-family: var(--font-typewriter);">
-      <a href="how-it-works.html" style="color: var(--ballpoint-blue); font-size: 16px; text-decoration: underline; font-weight: bold;">
-        <svg class="icon" viewBox="0 0 24 24" width="15" height="15" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="margin-right: 4px;"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"></path><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"></path></svg> Read the full mathematical breakdown of n-gram disruption & AST parsing ΓåÆ
-      </a>
-    </div>
-
-    <!-- Section: The Stanford Study (ESL False-Positive Protection) -->
-    <section class="manifesto-card" style="margin-top: 20px;">
-      <div class="tape top-right"></div>
-      <div class="manifesto-header">
-        <h2 class="manifesto-title" style="font-size: 26px;">
-          The ESL Injustice: <span class="highlight">Why This Tool Exists</span>
-        </h2>
-        <span class="stamp stamp-blue">STANFORD RESEARCH</span>
-      </div>
-      <p style="font-size: 17.5px; line-height: 1.7;">
-        In 2023, Stanford University researchers published a landmark study revealing that <strong>commercial AI detectors falsely flag non-native English (ESL) writers up to 61.3% of the time</strong>.
-      </p>
-      <p style="font-size: 17px; margin-top: 12px; color: var(--text-muted);">
-        Because international students write with more predictable vocabulary and structured syntax, automated classifiers routinely mislabel honest academic effort as machine-generated text. 
-        TURNITOUT acts as an academic equalizer: introducing human burstiness, syntactic variety, and discourse rotation to protect innocent students from unjust disciplinary hearings.
-      </p>
-    </section>
-
-    <!-- Section: Comparison Matrix (Xerox Style) -->
-    <h2 class="section-heading">
-      <svg class="section-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="3" x2="12" y2="21"></line><path d="M5 21h14"></path><path d="M4 7l8-4 8 4"></path><path d="M1 11l3-4 3 4a3 3 0 0 1-6 0z"></path><path d="M17 11l3-4 3 4a3 3 0 0 1-6 0z"></path></svg>
-      Turnitout vs. Commercial Paywalls
-    </h2>
-
-    <div class="table-wrapper">
-      <table class="xerox-table">
-        <thead>
-          <tr>
-            <th>Feature</th>
-            <th class="col-turnitout">TURNITOUT</th>
-            <th>QuillBot</th>
-            <th>StealthGPT / Undetectable</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td><strong>Price & Subscription</strong></td>
-            <td class="col-turnitout"><strong>100% Free Forever</strong> ($0.00 — Zero Paywalls, No CC)</td>
-            <td>$19.95 / month</td>
-            <td>$14.99 ΓÇô $29.99 / month</td>
-          </tr>
-          <tr>
-            <td><strong>Word Count Limits</strong></td>
-            <td class="col-turnitout"><strong>Limitless & Unlimited</strong> (No daily or monthly caps)</td>
-            <td>Capped at 125 words free</td>
-            <td>Strict monthly token caps</td>
-          </tr>
-          <tr>
-            <td><strong>Underlying Engine</strong></td>
-            <td class="col-turnitout">100% Rule-Based (Zero AI)</td>
-            <td>Generative AI (LLM)</td>
-            <td>Generative AI (LLM)</td>
-          </tr>
-          <tr>
-            <td><strong>Factual Hallucination Risk</strong></td>
-            <td class="col-turnitout">0% (Deterministic rules)</td>
-            <td>High (AI rewrites facts)</td>
-            <td>High (AI invents citations)</td>
-          </tr>
-          <tr>
-            <td><strong>Document Formatting</strong></td>
-            <td class="col-turnitout">Preserves .docx & .tex in-place</td>
-            <td>Strips all formatting</td>
-            <td>Plain text only</td>
-          </tr>
-          <tr>
-            <td><strong>Executable Code Safety</strong></td>
-            <td class="col-turnitout">100% Runnable Guarantee</td>
-            <td>Breaks code syntax</td>
-            <td>Does not support code</td>
-          </tr>
-          <tr>
-            <td><strong>Privacy & Data Retention</strong></td>
-            <td class="col-turnitout">Local In-Memory (Zero Storage)</td>
-            <td>Logs & stores inputs</td>
-            <td>Stored on cloud servers</td>
-          </tr>
-        </tbody>
-      </table>
-    </div>
-
-    <div style="margin: -40px 0 50px 10px; font-family: var(--font-typewriter); font-size: 14.5px; display: flex; gap: 20px; flex-wrap: wrap;">
-      <span>
-        <svg class="icon" viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg> In-Depth Head-to-Head:
-      </span>
-      <a href="compare/quillbot-alternative.html" style="color: var(--ballpoint-blue); text-decoration: underline; font-weight: bold;">Turnitout vs QuillBot Full Analysis ΓåÆ</a>
-      <a href="compare/stealthgpt-alternative.html" style="color: var(--ballpoint-blue); text-decoration: underline; font-weight: bold;">Turnitout vs StealthGPT & Undetectable AI ΓåÆ</a>
-    </div>
-
-    <!-- Section: The Community Free Access Mission -->
-    <section class="pledge-card" id="community-pledge">
-      <div class="tape top-left"></div>
-      <div class="tape top-right"></div>
-      
-      <div class="manifesto-header">
-        <h2 class="manifesto-title" style="font-size: 26px;">
-          The Community Mission: <span class="highlight">100% Free & Open Access</span>
-        </h2>
-        <span class="stamp stamp-red">COMMUNITY FIRST</span>
-      </div>
-
-      <p style="font-size: 17px; line-height: 1.7;">
-        Every commercial tool wants $20/month from your student loan or allowance. 
-        <strong>TURNITOUT costs zero dollars.</strong> No paywalls, no subscriptions, and no word count restrictions.
-      </p>
-      <p style="font-size: 17px; margin-top: 10px;">
-        If Turnitout has helped your coursework or research, supporting our work on GitHub is deeply appreciated:
-      </p>
-
-      <div class="checklist-group">
-        <div class="check-item">
-          <div class="hand-box"><svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg></div>
-          <div>Follow developer account: <a href="https://github.com/AhmadHassan-BTed" target="_blank" rel="noopener noreferrer">@AhmadHassan-BTed</a></div>
-        </div>
-        <div class="check-item">
-          <div class="hand-box"><svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg></div>
-          <div>Follow organization workspace: <a href="https://github.com/Fractal-Compute-Orchestrations" target="_blank" rel="noopener noreferrer">@Fractal-Compute-Orchestrations</a></div>
-        </div>
-        <div class="check-item">
-          <div class="hand-box"><svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg></div>
-          <div>Star public project pages: <a href="https://github.com/AhmadHassan-BTed?tab=repositories" target="_blank" rel="noopener noreferrer">Developer Repos</a> & <a href="https://github.com/orgs/Fractal-Compute-Orchestrations/repositories" target="_blank" rel="noopener noreferrer">Fractal Repos</a></div>
-        </div>
-      </div>
-
-      <div style="margin-top: 25px; text-align: center;">
-        <a href="https://turnitout.streamlit.app/" target="_blank" rel="noopener noreferrer" class="app-launch-btn" style="font-size: 16px; padding: 12px 28px;">
-          Launch Live Application <svg class="icon" viewBox="0 0 24 24" width="15" height="15" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"></polygon></svg>
-        </a>
-        <div style="margin-top: 14px; display: flex; gap: 10px; justify-content: center; flex-wrap: wrap; font-size: 13px;">
-          <span style="color: var(--text-muted); display: inline-flex; align-items: center; gap: 4px;">⚡ Active Cluster Mirrors:</span>
-          <a href="https://turnitout1.streamlit.app/" target="_blank" rel="noopener noreferrer" style="color: #E63946; font-weight: 700; text-decoration: underline;">Mirror 1 (Fast)</a>
-          <span style="color: var(--text-muted);">•</span>
-          <a href="https://turnitout2.streamlit.app/" target="_blank" rel="noopener noreferrer" style="color: #2A9D8F; font-weight: 700; text-decoration: underline;">Mirror 2 (Fast)</a>
-          <span style="color: var(--text-muted);">•</span>
-          <a href="https://turnitout3.streamlit.app/" target="_blank" rel="noopener noreferrer" style="color: #E76F51; font-weight: 700; text-decoration: underline;">Mirror 3 (Fast)</a>
-          <span style="color: var(--text-muted);">•</span>
-          <a href="https://turnitout4.streamlit.app/" target="_blank" rel="noopener noreferrer" style="color: #9B5DE5; font-weight: 700; text-decoration: underline;">Mirror 4 (Fast)</a>
-          <span style="color: var(--text-muted);">•</span>
-          <a href="https://turnitout5.streamlit.app/" target="_blank" rel="noopener noreferrer" style="color: #06D6A0; font-weight: 700; text-decoration: underline;">Mirror 5 (Fast)</a>
-          <span style="color: var(--text-muted);">•</span>
-          <a href="https://turnitout6.streamlit.app/" target="_blank" rel="noopener noreferrer" style="color: #48CAE4; font-weight: 700; text-decoration: underline;">Mirror 6 (Fast)</a>
-          <span style="color: var(--text-muted);">•</span>
-          <a href="https://turnitout7.streamlit.app/" target="_blank" rel="noopener noreferrer" style="color: #F15BB5; font-weight: 700; text-decoration: underline;">Mirror 7 (Fast)</a>
-          <span style="color: var(--text-muted);">•</span>
-          <a href="https://turnitout.streamlit.app/" target="_blank" rel="noopener noreferrer" style="color: var(--ballpoint-blue); font-weight: 700; text-decoration: underline;">Main Server (Heart)</a>
-        </div>
-      </div>
-    </section>
-
-    <!-- Section: FAQ -->
-    <h2 class="section-heading">
-      <svg class="section-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3"></path><line x1="12" y1="17" x2="12.01" y2="17"></line></svg>
-      Frequently Asked Questions
-    </h2>
-
-    <div class="faq-list">
-      <div class="faq-item">
-        <h3 class="faq-question">Does TURNITOUT beat Turnitin AI detection?</h3>
-        <p class="faq-answer">
-          TURNITOUT is engineered specifically around the mathematical heuristics used by Turnitin, GPTZero, and CopyLeaks: sliding n-gram perplexity, burstiness variance, and discourse marker density. While no tool can guarantee a 0% score across every proprietary update, TURNITOUT systematically dismantles the predictable statistical signatures that trigger false alarms.
-        </p>
-      </div>
-
-      <div class="faq-item">
-        <h3 class="faq-question">Why shouldn't I just use QuillBot or another AI paraphraser?</h3>
-        <p class="faq-answer">
-          QuillBot uses generative AI to paraphrase text. Turnitin and GPTZero have specifically trained their classifiers on QuillBot outputs, meaning QuillBot-edited drafts are frequently flagged as AI. Furthermore, QuillBot destroys LaTeX equations, strips Word document styling, and caps free users at 125 words.
-        </p>
-      </div>
-
-      <div class="faq-item">
-        <h3 class="faq-question">How does the 100% Executable Code Safety guarantee work?</h3>
-        <p class="faq-answer">
-          TURNITOUT uses a character-by-character token scanner that distinguishes between natural language comments (<code style="font-size: 13px;">#</code>, <code style="font-size: 13px;">//</code>, <code style="font-size: 13px;">/* */</code>, docstrings) and runnable syntax. Code logic, functions, loops, variables, and indentation are 100% untouched. Your code runs identically before and after humanization.
-        </p>
-      </div>
-
-      <div class="faq-item">
-        <h3 class="faq-question">What if I don't have a GitHub account?</h3>
-        <p class="faq-answer">
-          Creating a GitHub account takes 30 seconds and is completely free at <a href="https://github.com/signup" target="_blank" rel="noopener noreferrer" style="color: var(--ballpoint-blue);">github.com/signup</a>. If you ever have questions or need assistance, you can message developer Ahmad directly on WhatsApp!
-        </p>
-      </div>
-    </div>
-
-    <div style="text-align: center; margin-top: 15px; margin-bottom: 50px; font-family: var(--font-typewriter);">
-      <a href="faq.html" style="color: var(--ballpoint-blue); text-decoration: underline; font-weight: bold; font-size: 15.5px;">
-        View All Frequently Asked Questions & Student Knowledge Base ΓåÆ
-      </a>
-    </div>
-
-    <!-- Footer & Developer Hotline -->
-    <footer class="footer-section">
-      <div class="footer-nav" style="margin-bottom: 25px; font-family: var(--font-typewriter); font-size: 14px; display: flex; justify-content: center; gap: 14px; flex-wrap: wrap;">
-        <a href="how-it-works.html" style="color: var(--text-ink); text-decoration: underline;">How It Works</a>
-        <span>ΓÇó</span>
-        <a href="compare/quillbot-alternative.html" style="color: var(--text-ink); text-decoration: underline;">vs QuillBot</a>
-        <span>ΓÇó</span>
-        <a href="compare/stealthgpt-alternative.html" style="color: var(--text-ink); text-decoration: underline;">vs StealthGPT</a>
-        <span>ΓÇó</span>
-        <a href="faq.html" style="color: var(--text-ink); text-decoration: underline;">Full FAQ</a>
-        <span>ΓÇó</span>
-        <a href="llms.txt" style="color: var(--text-ink); text-decoration: underline;">llms.txt (AI Crawlers)</a>
-        <span>ΓÇó</span>
-        <a href="sitemap.xml" style="color: var(--text-ink); text-decoration: underline;">sitemap.xml</a>
-      </div>
-      <div class="footer-hotline">
-        <svg class="icon" viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="color: var(--red-pen); margin-right: 4px;"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"></path></svg>
-        <strong>Facing verification or API issues?</strong><br>
-        Message Ahmad directly on WhatsApp: 
-        <a href="https://wa.me/923225522383" target="_blank" rel="noopener noreferrer">+92 322 5522383</a>
-      </div>
-      <p style="margin-bottom: 8px;">
-        TURNITOUT ΓÇö Built with pride by <a href="https://github.com/AhmadHassan-BTed" target="_blank" rel="noopener noreferrer" style="color: var(--text-ink); font-weight: bold;">Ahmad Hassan</a> & <a href="https://github.com/Fractal-Compute-Orchestrations" target="_blank" rel="noopener noreferrer" style="color: var(--text-ink); font-weight: bold;">Fractal Compute Orchestrations</a>.
-      </p>
-      <p style="font-size: 13px;">
-        100% Free Academic Tool. Educational and research use only.
-      </p>
-    </footer>
-
-  </main>
-  </div>
-
-
-
-  <!-- ==========================================================================
-       VIEW 2: Spatial Academic Desk Canvas (Look Down Mode)
-       Interactive Wooden Drafting Desk, 64-Ray Dial, Battery Entropy, Draggable Tools
-       ========================================================================== -->
-  <div id="spatialDeskView" class="spatial-desk-view" style="display: none;" aria-hidden="true">
-<header class="spatial-top-hud">
-    <div class="hud-left-group">
-      <a href="index.html" class="hud-brand-link" aria-label="TURNITOUT Home">
-        <img src="assets/logo.svg" alt="TURNITOUT" class="hud-logo-img">
-      </a>
-      <button id="lookUpBtn" class="hud-look-up-btn" title="Look back up at Manifesto Reading Paper">
-        <svg class="icon" viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
-          <polyline points="18 15 12 9 6 15"></polyline>
-          <line x1="12" y1="9" x2="12" y2="21"></line>
-        </svg>
-        <span>Look Up at Paper ↑</span>
-      </button>
-    </div>
-
-    <!-- Quick Spatial Jump Bookmarks -->
-    <div class="spatial-focus-group">
-      <button id="focusVitalsBtn" class="spatial-jump-btn active" title="Focus on Vitals Sheet">
-        <svg class="icon" viewBox="0 0 24 24" width="13" height="13" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="2"></rect><circle cx="8.5" cy="8.5" r="1.5"></circle><polyline points="21 15 16 10 5 21"></polyline></svg>
-        <span>Vitals</span>
-      </button>
-      <button id="focusThesisBtn" class="spatial-jump-btn" title="Focus on Research Thesis Manuscript">
-        <svg class="icon" viewBox="0 0 24 24" width="13" height="13" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" y1="13" x2="8" y2="13"></line><line x1="16" y1="17" x2="8" y2="17"></line></svg>
-        <span>Thesis</span>
-      </button>
-      <button id="focusArchiveBtn" class="spatial-jump-btn" title="Focus on Academic Benchmark & FAQ Archive">
-        <svg class="icon" viewBox="0 0 24 24" width="13" height="13" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"></path><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"></path></svg>
-        <span>Archive</span>
-      </button>
-      <button id="focusDeskBtn" class="spatial-jump-btn" title="Reset Camera to Full Desk View">
-        <svg class="icon" viewBox="0 0 24 24" width="13" height="13" fill="none" stroke="currentColor" stroke-width="2"><polyline points="15 3 21 3 21 9"></polyline><polyline points="9 21 3 21 3 15"></polyline><line x1="21" y1="3" x2="14" y2="10"></line><line x1="3" y1="21" x2="10" y2="14"></line></svg>
-        <span>Full Desk</span>
-      </button>
-    </div>
-
-    <!-- Right Side: Links & Live App CTA -->
-    <div class="hud-right-group">
-      <button id="hudThemeToggleBtn" class="theme-toggle-btn" aria-label="Toggle 3 AM Dark Mode" title="Toggle 3 AM Dark Mode">
-        <svg class="icon icon-moon" viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path></svg>
-        <span>3 AM (Dark)</span>
-      </button>
-      <div class="hud-doc-links">
-        <a href="how-it-works.html" class="hud-doc-link">How It Works</a>
-        <a href="compare/quillbot-alternative.html" class="hud-doc-link">vs QuillBot</a>
-        <a href="faq.html" class="hud-doc-link">FAQ</a>
-      </div>
-      <a href="https://turnitout.streamlit.app/" target="_blank" rel="noopener noreferrer" class="hud-cta-app-btn">
-        Launch Live App <svg class="icon" viewBox="0 0 24 24" width="13" height="13" fill="none" stroke="currentColor" stroke-width="2.2"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"></polygon></svg>
-      </a>
-    </div>
-  </header>
-
-  <!-- Main Viewport (Spatial Pan-and-Zoom Canvas Container) -->
-  <main id="deskViewport" class="desk-viewport">
-    
-    <!-- Atmospheric Desk Lamp Glow Overlay -->
-    <div class="desk-lamp-glow"></div>
-
-    <!-- The Infinite Spatial Desk Plane -->
-    <div id="deskWorld" class="desk-world">
-
-      <!-- 1. Engineering Grid Cutting Mat (Peeks out underneath the paper) -->
-      <div class="grid-cutting-mat">
-        <div class="mat-ruler-labels">
-          <span>0cm</span>
-          <span>10cm</span>
-          <span>20cm</span>
-          <span>30cm</span>
-          <span>40cm</span>
-          <span>50cm</span>
-          <span>60cm</span>
-          <span>70cm</span>
-          <span>80cm</span>
-          <span>90cm</span>
-          <span>100cm</span>
-        </div>
-      </div>
-
-      <!-- 2. The Main Printed Paper Sheet (Direct Skeuomorphic Recreation of Reference Photo) -->
-      <section id="mainPrintedSheet" class="main-printed-sheet">
-        
-        <!-- PANEL 1 (Left): Readiness & The Big Radial Ray Dial Gauge -->
-        <article class="printed-card">
-          <div class="card-notch-slit"></div>
-          
-          <div class="card-header-handwriting">Welcome</div>
-          <div class="card-subtitle-handwriting">Student Researcher</div>
-
-          <!-- Top Row of 5 Concentric Ring Metrics (From Reference Photo) -->
-          <div class="metric-rings-row">
-            <div class="metric-ring-item">
-              <svg class="concentric-circle-icon" viewBox="0 0 40 40">
-                <circle cx="20" cy="20" r="18" fill="none" stroke="rgba(20,20,24,0.18)" stroke-width="1.2"/>
-                <circle cx="20" cy="20" r="13" fill="none" stroke="rgba(20,20,24,0.3)" stroke-width="1.2"/>
-                <circle cx="20" cy="20" r="8" fill="none" stroke="rgba(20,20,24,0.45)" stroke-width="1.2"/>
-              </svg>
-              <span class="metric-ring-num">0%</span>
-              <span class="metric-ring-label">AI Rate</span>
-            </div>
-
-            <div class="metric-ring-item">
-              <svg class="concentric-circle-icon" viewBox="0 0 40 40">
-                <circle cx="20" cy="20" r="18" fill="none" stroke="rgba(20,20,24,0.18)" stroke-width="1.2"/>
-                <circle cx="20" cy="20" r="13" fill="none" stroke="rgba(20,20,24,0.3)" stroke-width="1.2"/>
-                <circle cx="20" cy="20" r="8" fill="none" stroke="rgba(20,20,24,0.45)" stroke-width="1.2"/>
-              </svg>
-              <span class="metric-ring-num">98</span>
-              <span class="metric-ring-label">Perplexity</span>
-            </div>
-
-            <div class="metric-ring-item">
-              <svg class="concentric-circle-icon" viewBox="0 0 40 40">
-                <circle cx="20" cy="20" r="18" fill="none" stroke="rgba(20,20,24,0.18)" stroke-width="1.2"/>
-                <circle cx="20" cy="20" r="13" fill="none" stroke="rgba(20,20,24,0.3)" stroke-width="1.2"/>
-                <circle cx="20" cy="20" r="8" fill="none" stroke="rgba(20,20,24,0.45)" stroke-width="1.2"/>
-              </svg>
-              <span class="metric-ring-num">89</span>
-              <span class="metric-ring-label">Burstiness</span>
-            </div>
-
-            <div class="metric-ring-item">
-              <svg class="concentric-circle-icon" viewBox="0 0 40 40">
-                <circle cx="20" cy="20" r="18" fill="none" stroke="rgba(20,20,24,0.18)" stroke-width="1.2"/>
-                <circle cx="20" cy="20" r="13" fill="none" stroke="rgba(20,20,24,0.3)" stroke-width="1.2"/>
-                <circle cx="20" cy="20" r="8" fill="none" stroke="rgba(20,20,24,0.45)" stroke-width="1.2"/>
-              </svg>
-              <span class="metric-ring-num">4k</span>
-              <span class="metric-ring-label">Rules</span>
-            </div>
-
-            <div class="metric-ring-item">
-              <svg class="concentric-circle-icon" viewBox="0 0 40 40">
-                <circle cx="20" cy="20" r="18" fill="none" stroke="rgba(20,20,24,0.18)" stroke-width="1.2"/>
-                <circle cx="20" cy="20" r="13" fill="none" stroke="rgba(20,20,24,0.3)" stroke-width="1.2"/>
-                <circle cx="20" cy="20" r="8" fill="none" stroke="rgba(20,20,24,0.45)" stroke-width="1.2"/>
-              </svg>
-              <span class="metric-ring-num">100%</span>
-              <span class="metric-ring-label">Safety</span>
-            </div>
-          </div>
-
-          <!-- The Big Radial Ray Dial (From Reference Photo) -->
-          <div class="big-radial-dial-container">
-            <svg id="radialRayDialSvg" class="radial-ray-svg" viewBox="0 0 250 250">
-              <!-- Radial tick rays will be injected via JS or predefined -->
-            </svg>
-
-            <!-- Center Hub -->
-            <div class="dial-center-hub">
-              <span id="dialScoreNum" class="dial-center-score">96%</span>
-              <span id="dialScoreLabel" class="dial-center-label">Detection Risk</span>
-            </div>
-
-            <button id="dialActionArrow" class="dial-action-arrow" title="Trigger Humanization Simulation">
-              <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.2"><line x1="7" y1="17" x2="17" y2="7"></line><polyline points="7 7 17 7 17 17"></polyline></svg>
-            </button>
-          </div>
-
-          <!-- Motivational Handwritten Section Below Dial -->
-          <div class="handwritten-callout-block">
-            <div class="callout-title">BRING IT ON</div>
-            <p id="dialMotivationText" class="callout-body">
-              "A zero-generative-AI pass has dismantled predictable 3-gram contiguous sequences. Turnitin, GPTZero, and CopyLeaks statistical classifiers neutralized."
-            </p>
-          </div>
-
-          <!-- Bottom 4 Circle Pills (From Photo) -->
-          <div class="card-bottom-pills">
-            <div class="bottom-pill-dot"></div>
-            <div class="bottom-pill-dot"></div>
-            <div class="bottom-pill-dot"></div>
-            <div class="bottom-pill-dot"></div>
-          </div>
-        </article>
-
-        <!-- PANEL 2 (Center): Vitals & Interactive Test Sheet -->
-        <article class="printed-card">
-          <div class="card-notch-slit"></div>
-          
-          <div class="card-header-handwriting">Vitals</div>
-          <div class="card-subtitle-handwriting">Pattern Disruption Engine</div>
-
-          <!-- Segmented Toggle Bar [ Today | Week | Month ] (From Photo) -->
-          <div class="segmented-toggle-bar">
-            <button id="sampleAcademicTab" class="toggle-segment-btn active">Academic</button>
-            <button id="sampleEssayTab" class="toggle-segment-btn">Essay</button>
-            <button id="sampleResetTab" class="toggle-segment-btn">Reset</button>
-          </div>
-
-          <!-- Linguistic Entropy / Activity Row -->
-          <div class="metric-row-header">
-            <span class="metric-row-title">Entropy Disruption</span>
-            <span id="batteryPercentText" class="metric-row-score">85%</span>
-          </div>
-
-          <!-- Horizontal Segmented Battery/Pill Bar (Exact Match from Photo) -->
-          <div id="segmentedBatteryBar" class="segmented-battery-bar">
-            <!-- 20 rounded vertical pills dynamically generated -->
-          </div>
-          <div class="battery-labels">
-            <span>0% Machine</span>
-            <span>100% Burstiness</span>
-          </div>
-
-          <!-- Interactive Text Sheet on Printed Paper -->
-          <div class="panel-interactive-box">
-            <div class="interactive-box-label">
-              <span>Interactive Draft Sample</span>
-              <span id="interactiveWordCount">48 words</span>
-            </div>
-            <div id="deskPaperSheet" class="interactive-editable-sheet" contenteditable="true" spellcheck="false">In conclusion, it is important to delve into the comprehensive tapestry of modern neural networks. This study plays a pivotal role in illustrating that artificial intelligence stands as a testament to human innovation. Furthermore, the interplay between stochastic optimization and computational scalability provides a robust framework for subsequent empirical inquiries.</div>
-          </div>
-
-          <button id="executeHumanizeBtn" class="execute-humanize-btn">
-            <span>DISRUPT AI PATTERNS</span>
-            <svg class="icon" viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2.5"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"></polygon></svg>
-          </button>
-
-          <!-- 2x2 Grid of 4 Rounded Metric Boxes (From Photo) -->
-          <div class="submetric-cards-grid" style="margin-top: 16px;">
-            <div class="submetric-box">
-              <div class="submetric-label">PDTB Discourse</div>
-              <div class="submetric-value">100% Active</div>
-            </div>
-            <div class="submetric-box">
-              <div class="submetric-label">Contiguous 4-Grams</div>
-              <div class="submetric-value">0 Flagged</div>
-            </div>
-            <div class="submetric-box">
-              <div class="submetric-label">Formatting Safe</div>
-              <div class="submetric-value">.docx & .tex</div>
-            </div>
-            <div class="submetric-box">
-              <div class="submetric-label">Local Memory</div>
-              <div class="submetric-value">0 B Stored</div>
-            </div>
-          </div>
-        </article>
-
-        <!-- PANEL 3 (Right): Sprints, Schedulers & Verification Tracker -->
-        <article class="printed-card">
-          <div class="card-notch-slit"></div>
-          
-          <div class="card-header-handwriting">Thesis & Sprints</div>
-          <div class="card-subtitle-handwriting">Coursework Verification Tracker</div>
-
-          <!-- Segmented Toggle Bar -->
-          <div class="segmented-toggle-bar">
-            <button class="toggle-segment-btn active">Tasks</button>
-            <button class="toggle-segment-btn">Taxonomy</button>
-            <button class="toggle-segment-btn">Rules</button>
-          </div>
-
-          <!-- Interactive Task List with Clickable Ink Strikethrough -->
-          <div class="planner-task-container">
-            <div class="planner-task-row is-done">
-              <div class="task-checkbox-box">
-                <svg class="task-check-svg" viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"></polyline></svg>
-              </div>
-              <span class="task-label-text">Verify 0% AI score on Turnitin Academic</span>
-            </div>
-
-            <div class="planner-task-row is-done">
-              <div class="task-checkbox-box">
-                <svg class="task-check-svg" viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"></polyline></svg>
-              </div>
-              <span class="task-label-text">Export formatted citations.bib package</span>
-            </div>
-
-            <div class="planner-task-row">
-              <div class="task-checkbox-box">
-                <svg class="task-check-svg" viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"></polyline></svg>
-              </div>
-              <span class="task-label-text">Validate in-place .docx XML run styling</span>
-            </div>
-
-            <div class="planner-task-row">
-              <div class="task-checkbox-box">
-                <svg class="task-check-svg" viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"></polyline></svg>
-              </div>
-              <span class="task-label-text">Execute Python AST comment sanitizer</span>
-            </div>
-
-            <div class="planner-task-row">
-              <div class="task-checkbox-box">
-                <svg class="task-check-svg" viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"></polyline></svg>
-              </div>
-              <span class="task-label-text">Submit Final Honors Thesis to Faculty</span>
-            </div>
-          </div>
-
-          <!-- Community Callout Card at Bottom of Panel 3 -->
-          <div class="community-pledge-box">
-            <div class="pledge-box-title">100% Free Forever</div>
-            <p class="pledge-box-desc">
-              Turnitout is 100% free with zero paywalls. Star the project on GitHub if it helped your coursework!
-            </p>
-            <a href="https://turnitout.streamlit.app/" target="_blank" rel="noopener noreferrer" class="launch-streamlit-btn">
-              <span>Launch Live Application</span>
-              <svg class="icon" viewBox="0 0 24 24" width="13" height="13" fill="none" stroke="currentColor" stroke-width="2.5"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"></polygon></svg>
-            </a>
-            <div style="margin-top: 10px; display: flex; gap: 8px; justify-content: center; flex-wrap: wrap; font-size: 12px;">
-              <a href="https://turnitout1.streamlit.app/" target="_blank" rel="noopener noreferrer" style="color: #E63946; font-weight: 700;">⚡ Mirror 1</a>
-              <span style="opacity: 0.6;">•</span>
-              <a href="https://turnitout2.streamlit.app/" target="_blank" rel="noopener noreferrer" style="color: #2A9D8F; font-weight: 700;">🚀 Mirror 2</a>
-              <span style="opacity: 0.6;">•</span>
-              <a href="https://turnitout3.streamlit.app/" target="_blank" rel="noopener noreferrer" style="color: #E76F51; font-weight: 700;">🌟 Mirror 3</a>
-              <span style="opacity: 0.6;">•</span>
-              <a href="https://turnitout4.streamlit.app/" target="_blank" rel="noopener noreferrer" style="color: #9B5DE5; font-weight: 700;">🔥 Mirror 4</a>
-              <span style="opacity: 0.6;">•</span>
-              <a href="https://turnitout5.streamlit.app/" target="_blank" rel="noopener noreferrer" style="color: #06D6A0; font-weight: 700;">✨ Mirror 5</a>
-              <span style="opacity: 0.6;">•</span>
-              <a href="https://turnitout6.streamlit.app/" target="_blank" rel="noopener noreferrer" style="color: #48CAE4; font-weight: 700;">💎 Mirror 6</a>
-              <span style="opacity: 0.6;">•</span>
-              <a href="https://turnitout7.streamlit.app/" target="_blank" rel="noopener noreferrer" style="color: #F15BB5; font-weight: 700;">🔮 Mirror 7</a>
-              <span style="opacity: 0.6;">•</span>
-              <a href="https://turnitout.streamlit.app/" target="_blank" rel="noopener noreferrer" style="color: #1D3557; font-weight: 700;">❤️ Main Heart</a>
-            </div>
-          </div>
-        </article>
-
       </section>
 
-      <!-- 3. Adjacent Printed Thesis Manuscript (Left of Main Sheet) -->
-      <section id="adjacentThesisSheet" class="adjacent-thesis-sheet">
-        <div class="thesis-header-block">
-          <div class="thesis-journal-tag">PROCEEDINGS OF COMPUTATIONAL LINGUISTICS & SIMILARITY INVERSION</div>
-          <h2 class="thesis-title-text">
-            Deterministic n-Gram Disruption in Machine-Generated Text: Mathematical Inversion of Proprietary Perplexity Classifiers
-          </h2>
-          <div class="thesis-author-text">
-            Ahmad Hassan, Fractal Compute Orchestrations
-          </div>
+      <section class="ticker" aria-label="Capabilities">
+        <div class="ticker-track">
+          <span>IMAGINE</span><b>✳</b><span>ITERATE</span><b>✳</b><span>MAKE IT REAL</span><b>✳</b><span>IMAGINE</span><b>✳</b><span>ITERATE</span><b>✳</b><span>MAKE IT REAL</span>
         </div>
+      </section>
 
-        <div class="thesis-abstract-quote">
-          <strong>Abstract:</strong> Automated AI classifiers (Turnitin, GPTZero, CopyLeaks) rely on sliding-window perplexity and burstiness distributions. In this paper, we demonstrate that deterministic n-gram disruption and PDTB 2.0 connective rotation mathematically dismantle classifier detection signatures without generative rewriting or factual hallucinations.
-        </div>
-
-        <div class="thesis-body-columns">
+      <section class="section-wrap intro-section" id="explore">
+        <div class="section-heading">
           <div>
-            <h3 style="font-size: 14px; text-transform: uppercase; letter-spacing: 1px; margin-bottom: 8px;">1. Mathematical Methodology</h3>
-            <p>
-              Classifiers assess n-gram transition entropy against large-scale probability corpora. When predictable transitions appear in contiguous sequences, perplexity reaches a minimum:
-            </p>
-            <div class="thesis-formula-box">
-              P(W) = exp( - (1/N) * sum( log P(w_i | w_1...w_i-1) ) )
-            </div>
-            <p>
-              By replacing high-frequency statistical tokens with lower-frequency deterministic synonyms, the cross-entropy spikes naturally, triggering non-AI classification.
-            </p>
+            <div class="eyebrow">01 — Explore</div>
+            <h2>One thought.<br><em>Endless directions.</em></h2>
           </div>
+          <p>Turn a rough idea into a world of possibilities. Start with a prompt, build on a reference, or remix something you already love.</p>
+        </div>
+        <div class="feature-grid">
+          <article class="feature-card feature-card-large">
+            <div class="feature-visual visual-collage"><span class="collage-word">new<br>perspectives</span><div class="collage-shape"></div><div class="collage-line"></div></div>
+            <div class="feature-card-copy"><span class="card-kicker">01 / IDEATE</span><h3>Find the spark hiding in your first idea.</h3><p>Generate variations fast, then follow the ones that make you stop scrolling.</p><a href="#studio">Start from a prompt <span>→</span></a></div>
+          </article>
+          <article class="feature-card">
+            <div class="feature-visual visual-orbit"><div class="orbit-ring"></div><div class="orbit-core">✦</div><span>YOUR<br>VISION</span></div>
+            <div class="feature-card-copy"><span class="card-kicker">02 / DIRECT</span><h3>Make the medium fit the message.</h3><p>Shape the mood with references, style, and a little creative direction.</p></div>
+          </article>
+          <article class="feature-card">
+            <div class="feature-visual visual-type"><span>MAKE<br>ROOM<br>FOR<br>WEIRD</span><i>↗</i></div>
+            <div class="feature-card-copy"><span class="card-kicker">03 / PLAY</span><h3>Keep the happy accidents.</h3><p>Save every direction, compare your favorites, and let the unexpected in.</p></div>
+          </article>
+        </div>
+      </section>
 
-          <div>
-            <h3 style="font-size: 14px; text-transform: uppercase; letter-spacing: 1px; margin-bottom: 8px;">2. Zero-AI Preservation</h3>
-            <p>
-              Traditional commercial humanizers utilize LLMs to paraphrase text, creating factual hallucinations and destroying math environments ($...$). TURNITOUT operates directly on XML run tokens, guaranteeing:
-            </p>
-            <ul style="padding-left: 18px; margin-top: 8px; font-size: 14.5px; line-height: 1.6;">
-              <li>In-place .docx and LaTeX formatting integrity</li>
-              <li>100% executable comment isolation</li>
-              <li>Complete local in-memory privacy guarantee</li>
-            </ul>
+      <section class="studio-section" id="studio">
+        <div class="studio-inner section-wrap">
+          <div class="section-heading studio-heading">
+            <div><div class="eyebrow">Your studio</div><h2>A little room<br>to <em>make things.</em></h2></div>
+            <p>Try a prompt below. This lightweight demo keeps your ideas in the browser and gives you a visual starting point.</p>
+          </div>
+          <div class="prompt-workspace">
+            <div class="workspace-toolbar"><span class="live-dot"></span><span>PRIVATE CANVAS</span><span class="toolbar-spacer"></span><button class="toolbar-button" id="clearPrompt">Clear</button><button class="toolbar-button">⋯</button></div>
+            <textarea id="promptInput" rows="3" placeholder="Describe something worth making...">A quiet brutalist home in the desert at blue hour, soft cinematic light, editorial architecture photography</textarea>
+            <div class="prompt-footer"><div class="prompt-chips"><button class="chip active" data-prompt="A quiet brutalist home in the desert at blue hour, soft cinematic light, editorial architecture photography">Architecture</button><button class="chip" data-prompt="An otherworldly botanical garden inside an abandoned train station, lush and surreal">Surreal</button><button class="chip" data-prompt="A tactile product shot of a translucent orange chair, bold shadows, gallery catalog">Product</button></div><button class="button button-primary" id="generateButton">Generate <span>✦</span></button></div>
+          </div>
+          <div class="generation-result" id="generationResult">
+            <div class="result-image"><div class="result-sun"></div><div class="result-mountain mountain-one"></div><div class="result-mountain mountain-two"></div><div class="result-house"></div><div class="result-grain"></div><span class="result-tag">PREVIEW / 001</span></div>
+            <div class="result-meta"><div><span class="card-kicker">LATEST EXPLORATION</span><h3 id="resultTitle">Desert house, blue hour</h3><p class="result-prompt" id="resultPrompt">A quiet brutalist home in the desert at blue hour</p></div><div class="result-actions"><span class="result-status">Ready to remix ↗</span><button class="button button-small button-light" id="saveGeneration">Save to project</button></div></div>
           </div>
         </div>
       </section>
 
-      <!-- 4. Canary Yellow Post-It Note Pinned to Manuscript -->
-      <aside class="postit-note-prop">
-        <div class="postit-heading">Note to Students:</div>
-        <p class="postit-text">
-          "Commercial tools charge $20/month. TURNITOUT is a gift to students and researchers. Completely free forever!"
-        </p>
-        <div class="postit-signature">— Ahmad Hassan</div>
-      </aside>
-
-      <!-- 5. Realistic Physical Stationery Props (Directly Matching the Photo) -->
-      
-      <!-- Black Mechanical Drafting Pencil (Right Side of Paper) -->
-      <div class="drafting-pencil-prop">
-        <div class="pencil-clip"></div>
-        <div class="pencil-hex-body"></div>
-        <div class="pencil-knurled-grip"></div>
-        <div class="pencil-tip-cone"></div>
-        <div class="pencil-lead"></div>
-      </div>
-
-      <!-- Architect's Triangular Scale Ruler (Top Center) -->
-      <div class="architect-ruler-prop">
-        <div class="ruler-white-ticks"></div>
-      </div>
-
-      <!-- Black Leather Journal / Moleskine (Top Right) -->
-      <div class="black-notebook-prop">
-        <div class="notebook-ribbon"></div>
-      </div>
-
-      <!-- 6. Academic Benchmark & FAQ Archive Sheet (Directly on Desk Canvas) -->
-      <article id="adjacentArchiveSheet" class="academic-archive-sheet" itemscope itemtype="https://schema.org/TechArticle">
-        <header>
-          <div class="archive-header-tag">TECHNICAL ARCHIVE // BENCHMARK SPECIFICATION & RESEARCH DOSSIER</div>
-          <h2 class="archive-main-title">
-            Comparative Benchmark: Deterministic Disruption vs Commercial LLM Wrappers
-          </h2>
-          <p class="archive-intro-desc">
-            Commercial AI humanizers charge students upwards of $20/month to re-paraphrase text using generative LLMs. This benchmark documents why deterministic n-gram disruption achieves lower detector scores without hallucination risk or monthly subscriptions.
-          </p>
-        </header>
-
-        <!-- Benchmark Matrix Table -->
-        <div class="archive-table-container">
-          <table class="archive-matrix-table" aria-label="TURNITOUT vs Commercial AI Paraphrasers Comparison Table">
-            <thead>
-              <tr>
-                <th scope="col" style="width: 22%;">Specification / Capability</th>
-                <th scope="col" class="col-turnitout" style="width: 26%;">TURNITOUT (Deterministic)</th>
-                <th scope="col" style="width: 26%;">Commercial Humanizers (StealthGPT / Undetectable)</th>
-                <th scope="col" style="width: 26%;">Legacy Rephrasers (QuillBot)</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <td><strong>Price & Subscription</strong></td>
-                <td class="col-turnitout"><strong>100% Free Forever</strong> ($0.00 — Zero Paywalls)</td>
-                <td>$15.00 – $30.00 / month (Strict paywalls)</td>
-                <td>$9.95 / month (Free tier capped at 125 words)</td>
-              </tr>
-              <tr>
-                <td><strong>Word Count Restrictions</strong></td>
-                <td class="col-turnitout"><strong>Unlimited</strong> (No daily or monthly caps)</td>
-                <td>Limited tokens (typically 10,000–25,000 words/mo)</td>
-                <td>125 words free limit (Paywall lock triggers)</td>
-              </tr>
-              <tr>
-                <td><strong>Underlying Technology</strong></td>
-                <td class="col-turnitout"><strong>Deterministic n-Gram Disruption</strong> (Zero AI generation)</td>
-                <td>Re-prompted LLM (ChatGPT API wrapper with intentional errors)</td>
-                <td>Traditional synonym lookup & statistical n-gram rephrasing</td>
-              </tr>
-              <tr>
-                <td><strong>Turnitin AI Detection Evasion</strong></td>
-                <td class="col-turnitout"><strong>High Success (0%–5% AI Score)</strong> by altering contiguous probability</td>
-                <td>Variable (High risk of secondary LLM watermarks)</td>
-                <td>Failed (Frequently flagged at 80%–100% AI similarity)</td>
-              </tr>
-              <tr>
-                <td><strong>Hallucination Risk</strong></td>
-                <td class="col-turnitout"><strong>0.00% Zero Risk</strong> (Preserves semantic facts exactly)</td>
-                <td>Severe (Generative models alter dates, names & citations)</td>
-                <td>Medium (Can shift nuances in scientific clauses)</td>
-              </tr>
-              <tr>
-                <td><strong>Academic Citation & LaTeX Safety</strong></td>
-                <td class="col-turnitout"><strong>100% Retained</strong> (Preserves math formulas & BibTeX)</td>
-                <td>Frequently Corrupted (Equations converted to plain text)</td>
-                <td>Strips formatting and inline citations</td>
-              </tr>
-              <tr>
-                <td><strong>User Privacy & Logging</strong></td>
-                <td class="col-turnitout"><strong>100% Local In-Memory</strong> (Never stored or trained on)</td>
-                <td>Stored on remote cloud servers for model evaluation</td>
-                <td>Monitored and logged in user history database</td>
-              </tr>
-            </tbody>
-          </table>
+      <section class="section-wrap models-section" id="models">
+        <div class="section-heading"><div><div class="eyebrow">02 — Your toolkit</div><h2>Bring your favorite<br><em>ways of seeing.</em></h2></div><p>Everything you need to move from the first sketch to the final frame, in one calm place.</p></div>
+        <div class="model-list">
+          <button class="model-row active"><span class="model-number">01</span><span class="model-name">Image playground</span><span class="model-description">Turn language into visual directions.</span><span class="model-arrow">↗</span></button>
+          <button class="model-row"><span class="model-number">02</span><span class="model-name">Motion studies</span><span class="model-description">Give an idea a sense of time and movement.</span><span class="model-arrow">↗</span></button>
+          <button class="model-row"><span class="model-number">03</span><span class="model-name">3D-ready thinking</span><span class="model-description">Explore objects, spaces, and worlds from every angle.</span><span class="model-arrow">↗</span></button>
+          <button class="model-row"><span class="model-number">04</span><span class="model-name">Your reference library</span><span class="model-description">Keep the things that inspire you close.</span><span class="model-arrow">↗</span></button>
         </div>
+      </section>
 
-        <!-- Stanford Study Narrative Callout -->
-        <div class="archive-study-block">
-          <h3>The Stanford University Study on AI Detection Bias</h3>
-          <p>
-            In a peer-reviewed 2023 study conducted by researchers at Stanford University (<em>"GPT Detectors are Biased Against Non-Native English Writers"</em>, Liang et al.), commercial AI detectors falsely flagged <strong>up to 61.2%</strong> of TOEFL essays written by non-native English speakers as AI-generated. The underlying reason: ESL students naturally produce essays with lower lexical diversity and more predictable syntactic transitions—precisely the markers detectors associate with machine generation. TURNITOUT was engineered to mathematically democratize writing evaluation by injecting natural structural burstiness and connective entropy, shielding international students from wrongful accusations.
-          </p>
-        </div>
-
-        <!-- 6-Question FAQ Section for SERP Featured Snippets -->
-        <section aria-labelledby="faq-archive-heading" style="margin-top: 40px;">
-          <h2 id="faq-archive-heading" class="archive-faq-heading">
-            Frequently Asked Questions Regarding AI Humanization & Turnitin Evasion
-          </h2>
-          
-          <div class="archive-faq-grid">
-            <div class="archive-faq-card">
-              <div class="archive-faq-question">Is TURNITOUT truly free with unlimited word count?</div>
-              <div class="archive-faq-answer">
-                Yes. Unlike commercial tools that lock your essay after 125 words, TURNITOUT is a free gift to students and academic researchers. There are no credit cards, no monthly subscriptions, and no hidden token limits. It is maintained free and open for the student community.
-              </div>
+      <section class="capabilities-section" id="capabilities">
+        <div class="section-wrap">
+          <div class="section-heading capabilities-heading">
+            <div>
+              <div class="eyebrow">03 — The full creative stack</div>
+              <h2>One place for<br><em>every direction.</em></h2>
             </div>
-
-            <div class="archive-faq-card">
-              <div class="archive-faq-question">How does TURNITOUT bypass Turnitin without using generative AI?</div>
-              <div class="archive-faq-answer">
-                Turnitin and GPTZero do not read text like humans; they calculate Perplexity (the statistical predictability of adjacent words) and Burstiness (sentence length variation). Commercial humanizers use another LLM to rewrite your text, leaving fresh AI fingerprints. TURNITOUT uses a deterministic rule catalog of 4,068+ structural transforms and Penn Discourse Treebank (PDTB 2.0) connective rotations to mathematically dismantle contiguous sequences without creating new machine artifacts.
-              </div>
-            </div>
-
-            <div class="archive-faq-card">
-              <div class="archive-faq-question">Why do QuillBot and StealthGPT still trigger AI detectors?</div>
-              <div class="archive-faq-answer">
-                QuillBot swaps individual synonyms while keeping overall sentence perplexity flat. StealthGPT and Undetectable AI pass your text through cheap LLM models that introduce erratic punctuation and grammar errors, which modern enterprise classifiers like Turnitin v2 easily flag as synthetic.
-              </div>
-            </div>
-
-            <div class="archive-faq-card">
-              <div class="archive-faq-question">Can I use TURNITOUT for scientific papers with formulas and citations?</div>
-              <div class="archive-faq-answer">
-                Yes. TURNITOUT features AST-level comment isolation and XML run preservation. Your LaTeX math environments ($...$), in-text citations (APA, MLA, IEEE, Chicago), and formatted tables are protected in-place and never mangled or hallucinated.
-              </div>
-            </div>
-
-            <div class="archive-faq-card">
-              <div class="archive-faq-question">Are my submitted essays or research drafts stored in a database?</div>
-              <div class="archive-faq-answer">
-                Never. Processing occurs strictly in transient memory during your active browser session. Your intellectual property is never saved to a database, never shared with third parties, and never ingested into AI training sets.
-              </div>
-            </div>
-
-            <div class="archive-faq-card">
-              <div class="archive-faq-question">What should I do if Turnitin falsely flags my human-written paper?</div>
-              <div class="archive-faq-answer">
-                Maintain an audit trail of your version history (Google Docs revision history or Word tracked changes). Explain to your instructor that AI detectors have a documented failure rate of up to 61% on non-native writing, and cite Stanford's 2023 study on detector bias. Use TURNITOUT to test and normalize your draft's perplexity before submission.
-              </div>
-            </div>
+            <p>From the first image prompt to production-ready assets, keep the whole creative process in one focused workspace.</p>
           </div>
-        </section>
-
-        <!-- QuillBot AI Content Detector Verification Banner -->
-        <div style="margin: 40px auto 25px auto; text-align: center; max-width: 720px; padding: 0 15px;">
-          <div style="background: rgba(24, 25, 32, 0.85); border: 1px solid rgba(230, 57, 70, 0.35); border-radius: 12px; padding: 16px 24px; box-shadow: 0 8px 24px rgba(0,0,0,0.4);">
-            <p style="margin: 0; font-size: 15px; color: #ECEFF4; line-height: 1.6;">
-              🔍 <strong>Check AI Score:</strong> Paste your paragraph <a href="https://quillbot.com/ai-content-detector" target="_blank" rel="noopener noreferrer" style="color: #FF6B6B; font-weight: 700; text-decoration: underline;">here on QuillBot AI Content Detector</a> to check the AI content of it.
-            </p>
+          <div class="capability-grid">
+            <article class="capability-card capability-image">
+              <div class="capability-art"><span class="capability-symbol">◌</span><span class="capability-count">01</span></div>
+              <div class="capability-copy">
+                <span class="card-kicker">IMAGE CREATION & EDITING</span>
+                <h3>Make the frame, then make it yours.</h3>
+                <p>Explore high-fidelity concepts and natural-language edits with GPT Image 2, Nano Banana, and FLUX workflows.</p>
+                <div class="capability-tags"><span>GPT Image 2</span><span>Nano Banana</span><span>FLUX</span></div>
+              </div>
+            </article>
+            <article class="capability-card capability-video">
+              <div class="capability-art"><span class="capability-symbol">▶</span><span class="capability-count">02</span></div>
+              <div class="capability-copy">
+                <span class="card-kicker">VIDEO CREATION</span>
+                <h3>Give your ideas a sense of time.</h3>
+                <p>Move from text or reference frames to cinematic motion with text-to-video and image-to-video generation.</p>
+                <div class="capability-tags"><span>Veo 3.1</span><span>Kling 3 Pro</span><span>Seedance 2.0</span></div>
+              </div>
+            </article>
+            <article class="capability-card capability-3d">
+              <div class="capability-art"><span class="capability-symbol">◇</span><span class="capability-count">03</span></div>
+              <div class="capability-copy">
+                <span class="card-kicker">3D ASSET CREATION</span>
+                <h3>Turn a reference into a real object.</h3>
+                <p>Create low-poly or high-detail meshes, then retexture them for games, scenes, and product worlds.</p>
+                <div class="capability-tags"><span>Tripo</span><span>Meshy</span><span>Hunyuan 3D</span></div>
+              </div>
+            </article>
+            <article class="capability-card capability-tools">
+              <div class="capability-copy">
+                <span class="card-kicker">CREATIVE PRODUCTION TOOLS</span>
+                <h3>Generate. Edit. Animate. Texture.</h3>
+                <p>Keep variations close, compare directions, and move an idea forward without leaving your workspace.</p>
+                <div class="tool-steps"><span>01 Generate</span><span>02 Edit</span><span>03 Animate</span><span>04 Texture</span></div>
+              </div>
+            </article>
+            <article class="capability-card capability-node">
+              <div class="node-art"><span class="node-pill node-pill-a">PROMPT</span><span class="node-pill node-pill-b">IMAGE</span><span class="node-pill node-pill-c">MOTION</span><i class="node-line line-a"></i><i class="node-line line-b"></i><i class="node-dot"></i></div>
+              <div class="capability-copy">
+                <span class="card-kicker">NODE EDITOR</span>
+                <h3>Build workflows that think with you.</h3>
+                <p>Connect creative steps on an infinite canvas and scale the process from a quick experiment to a repeatable pipeline.</p>
+              </div>
+            </article>
+            <article class="capability-card capability-cinema">
+              <div class="cinema-art"><span>SCENE 01</span><strong>cinema<br>studio</strong><i>✦</i></div>
+              <div class="capability-copy">
+                <span class="card-kicker">CINEMA STUDIO</span>
+                <h3>Set the scene before you press play.</h3>
+                <p>Compose 3D spaces and generate images or videos directly from your scene and prompt.</p>
+              </div>
+            </article>
           </div>
         </div>
+      </section>
 
-        <!-- Deep Internal Crawl Links Footer Row -->
-        <footer class="archive-footer-row">
-          <div>
-            <strong>TURNITOUT Project</strong> &bull; Created by <a href="https://github.com/AhmadHassan-BTed" target="_blank" rel="noopener noreferrer" style="color: inherit; text-decoration: underline;">Ahmad Hassan</a> &bull; Fractal Compute Orchestrations
-          </div>
-          <div style="display: flex; gap: 18px; flex-wrap: wrap;">
-            <a href="how-it-works.html" style="color: inherit; text-decoration: underline;">How It Works Specification</a>
-            <a href="changelog.html" style="color: inherit; text-decoration: underline;">Changelog & Release Notes</a>
-            <a href="compare/quillbot-alternative.html" style="color: inherit; text-decoration: underline;">QuillBot Free Alternative</a>
-            <a href="compare/stealthgpt-alternative.html" style="color: inherit; text-decoration: underline;">StealthGPT Free Alternative</a>
-            <a href="faq.html" style="color: inherit; text-decoration: underline;">Full FAQ Hub</a>
-            <a href="support.html" style="color: var(--ink-red-pen); text-decoration: underline; font-weight: bold;">Sponsor & Support ❤️</a>
-            <a href="sitemap.xml" style="color: inherit; text-decoration: underline;">XML Sitemap</a>
-            <a href="llms.txt" style="color: inherit; text-decoration: underline;">LLM Training Spec (llms.txt)</a>
-            <a href="https://github.com/AhmadHassan-BTed/Turnitout-Humanizer" target="_blank" rel="noopener noreferrer" style="color: var(--ink-red-pen); text-decoration: underline; font-weight: bold;">GitHub Repository (Star if you like it)</a>
-          </div>
-        </footer>
-      </article>
+      <section class="manifesto section-wrap" id="enterprise">
+        <div class="manifesto-card"><div class="eyebrow">For teams, too</div><h2>Make room for<br><em>better questions.</em></h2><p>A focused creative space for teams who want to explore more, share early, and ship work that still feels like them.</p><a class="button button-light" href="mailto:hello@turnitout.local">Talk to us <span>↗</span></a><div class="manifesto-mark">✳</div></div>
+        <div class="enterprise-grid">
+          <div><span class="card-kicker">TEAM WORKSPACES</span><h3>Everyone stays in sync.</h3><p>Shared folders, granular roles, admin access controls, and editor collaboration keep creative work moving without losing the thread.</p></div>
+          <div><span class="card-kicker">ENTERPRISE GOVERNANCE</span><h3>Your work stays yours.</h3><p>Centralized asset management, IP governance, private workspaces, and no cross-customer data sharing for production at scale.</p></div>
+          <div class="enterprise-metrics"><strong>35M+</strong><span>monthly generations<br>built for enterprise volume</span></div>
+        </div>
+      </section>
+    </main>
 
-    </div>
-  </main>
-
-  <!-- Floating Spatial Controls (Bottom Right: Zoom & Reset) -->
-  <div class="spatial-bottom-controls">
-    
-    <button id="lookUpFloatingBtn" class="floating-look-up-btn" title="Return to Manifesto Reading Mode">
-      <svg class="icon" viewBox="0 0 24 24" width="13" height="13" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><polyline points="18 15 12 9 6 15"></polyline></svg>
-      <span>Read Manifesto ↑</span>
-    </button>
-
-    <button id="zoomOutBtn" class="zoom-btn" title="Zoom Out (Scroll Down)">-</button>
-    <span id="zoomDisplay" class="zoom-indicator-text">100%</span>
-    <button id="zoomInBtn" class="zoom-btn" title="Zoom In (Scroll Up)">+</button>
-    <button id="resetViewBtn" class="zoom-btn" style="width: auto; padding: 0 10px; font-size: 11px;" title="Reset Camera View">Reset</button>
+    <footer class="site-footer section-wrap"><a class="wordmark" href="index.html"><span class="wordmark-mark">✦</span><span>turnitout<span class="wordmark-dot">.</span></span></a><span>Made for personal creative practice.</span><div><a href="PRIVACY.md">Privacy</a><a href="SUPPORT.md">Support</a><span>© 2026</span></div></footer>
   </div>
-
-  <!-- Floating Gesture Hint Toast -->
-  <div id="spatialToastHint" class="spatial-toast-hint">
-    <svg class="icon" viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><line x1="12" y1="16" x2="12" y2="12"></line><line x1="12" y1="8" x2="12.01" y2="8"></line></svg>
-    <span>Click & drag to pan the desk • Scroll wheel to zoom in & out</span>
-  </div>
-  </div>
-
-  <!-- Interactive Support & Sponsor Modal -->
-  <div id="supportModal" class="support-modal-backdrop" aria-hidden="true">
-    <div class="support-modal-card" role="dialog" aria-modal="true" aria-labelledby="supportModalTitle">
-      <div class="support-modal-header">
-        <button id="closeSupportModalBtn" class="support-modal-close" aria-label="Close Support Dialog">&times;</button>
-        <h2 id="supportModalTitle" class="support-modal-title">
-          <span class="heart-icon">❤️</span> Sponsor & Support Turnitout
-        </h2>
-        <p class="support-modal-subtitle">
-          Direct global developer support for Ahmad Hassan to keep cluster servers running and models updated.
-        </p>
-      </div>
-
-      <!-- Modal Tabs Navigation -->
-      <div class="support-tabs-nav">
-        <button class="support-tab-btn is-active" data-tab="tab-binance">
-          <span>⚡ Binance Pay</span>
-        </button>
-        <button class="support-tab-btn" data-tab="tab-remitly">
-          <span>🌍 Remitly / Wire</span>
-        </button>
-        <button class="support-tab-btn" data-tab="tab-pakistan">
-          <span>🇵🇰 SadaPay / Raast</span>
-        </button>
-        <button class="support-tab-btn" data-tab="tab-alternative">
-          <span>💬 Alternatives :D</span>
-        </button>
-      </div>
-
-      <div class="support-modal-body">
-        
-        <!-- Pane 1: Binance Pay -->
-        <div id="tab-binance" class="support-pane is-active">
-          <div class="support-info-banner">
-            ⚡ <strong>Instant & 0% Fees:</strong> Fastest way for international supporters to send crypto directly in the Binance app.
-          </div>
-          
-          <div class="support-field-group">
-            <div class="support-field-label">Binance Pay ID</div>
-            <div class="support-copy-row">
-              <span class="support-copy-value">Atta9196</span>
-              <button class="btn-mini-copy" data-copy="Atta9196">Copy</button>
-            </div>
-          </div>
-
-          <div class="support-field-group">
-            <div class="support-field-label">Account Holder</div>
-            <div class="support-copy-row">
-              <span class="support-copy-value">Ahmad Hassan</span>
-            </div>
-          </div>
-
-          <div class="support-qr-box">
-            <img src="assets/binance-qr.jpg" alt="Binance Pay QR Code - Atta9196" class="support-qr-img">
-            <span style="font-size: 12px; opacity: 0.75; margin-top: 8px;">Scan with Binance App to Pay</span>
-          </div>
-        </div>
-
-        <!-- Pane 2: Remitly / International Wire -->
-        <div id="tab-remitly" class="support-pane">
-          <div class="support-info-banner" style="background: rgba(37, 99, 235, 0.12); color: #2563EB; border-color: rgba(37, 99, 235, 0.3);">
-            ⭐ <strong>Top Recommendation:</strong> Please use <strong><a href="https://www.remitly.com/" target="_blank" rel="noopener noreferrer" style="color: inherit; text-decoration: underline;">Remitly</a></strong> (or <a href="https://wise.com/" target="_blank" rel="noopener noreferrer" style="color: inherit; text-decoration: underline;">Wise</a>) so your card won't get cut off or declined! It transfers instantly to Pakistan bank accounts without foreign transaction friction.
-          </div>
-
-          <div class="support-field-group">
-            <div class="support-field-label">Account Holder Name</div>
-            <div class="support-copy-row">
-              <span class="support-copy-value">Ahmad Hassan</span>
-              <button class="btn-mini-copy" data-copy="Ahmad Hassan">Copy</button>
-            </div>
-          </div>
-
-          <div class="support-field-group">
-            <div class="support-field-label">IBAN</div>
-            <div class="support-copy-row">
-              <span class="support-copy-value">PK07UNIL0109000387828585</span>
-              <button class="btn-mini-copy" data-copy="PK07UNIL0109000387828585">Copy</button>
-            </div>
-          </div>
-
-          <div class="support-field-group">
-            <div class="support-field-label">SWIFT / BIC Code</div>
-            <div class="support-copy-row">
-              <span class="support-copy-value">UNILPKKA</span>
-              <button class="btn-mini-copy" data-copy="UNILPKKA">Copy</button>
-            </div>
-          </div>
-
-          <div class="support-field-group">
-            <div class="support-field-label">Bank Name</div>
-            <div class="support-copy-row">
-              <span class="support-copy-value">United Bank Limited (UBL Ameen)</span>
-            </div>
-          </div>
-
-          <div style="margin-top: 14px; display: flex; gap: 8px;">
-            <a href="https://www.remitly.com/" target="_blank" rel="noopener noreferrer" class="btn-mini-copy" style="flex: 1; justify-content: center; padding: 10px; text-decoration: none; background: #2563EB; font-weight: 700;">
-              🚀 Open Remitly (Recommended)
-            </a>
-            <a href="https://wise.com/" target="_blank" rel="noopener noreferrer" class="btn-mini-copy" style="flex: 1; justify-content: center; padding: 10px; text-decoration: none; background: #475569;">
-              🌐 Open Wise
-            </a>
-          </div>
-        </div>
-
-        <!-- Pane 3: Pakistan Local -->
-        <div id="tab-pakistan" class="support-pane">
-          <div class="support-info-banner">
-            🇵🇰 <strong>Instant 0% Fee:</strong> Send directly via Raast ID, SadaPay, or local bank IBFT in Pakistan.
-          </div>
-
-          <div class="support-field-group">
-            <div class="support-field-label">SadaPay Raast / Phone</div>
-            <div class="support-copy-row">
-              <span class="support-copy-value">03225522383</span>
-              <button class="btn-mini-copy" data-copy="03225522383">Copy</button>
-            </div>
-          </div>
-
-          <div class="support-field-group">
-            <div class="support-field-label">SadaPay IBAN</div>
-            <div class="support-copy-row">
-              <span class="support-copy-value">PK44SADA0000003225522383</span>
-              <button class="btn-mini-copy" data-copy="PK44SADA0000003225522383">Copy</button>
-            </div>
-          </div>
-
-          <div class="support-field-group">
-            <div class="support-field-label">UBL Ameen IBAN</div>
-            <div class="support-copy-row">
-              <span class="support-copy-value">PK07UNIL0109000387828585</span>
-              <button class="btn-mini-copy" data-copy="PK07UNIL0109000387828585">Copy</button>
-            </div>
-          </div>
-        </div>
-
-        <!-- Pane 4: Alternatives -->
-        <div id="tab-alternative" class="support-pane">
-          <div class="support-info-banner" style="background: rgba(244, 63, 94, 0.12); color: #BE123C; border-color: rgba(244, 63, 94, 0.35);">
-            💬 <strong>100% Flexible:</strong> Prefer PayPal, Payoneer, USDT (TRC20/BEP20), or Western Union?
-          </div>
-          <p style="font-size: 13.5px; line-height: 1.6; margin: 0 0 16px 0;">
-            I'm readily available for any other alternative you prefer :D Just call or message me directly on WhatsApp / Phone so we can set it up instantly!
-          </p>
-          <div class="support-field-group">
-            <div class="support-field-label">WhatsApp / Phone Number</div>
-            <div class="support-copy-row">
-              <span class="support-copy-value">+92 322 5522383 (03225522383)</span>
-              <button class="btn-mini-copy" data-copy="+923225522383">Copy</button>
-            </div>
-          </div>
-          <div style="margin-top: 14px;">
-            <a href="https://wa.me/923225522383" target="_blank" rel="noopener noreferrer" class="btn-wa-confirm" style="width: 100%; justify-content: center; padding: 10px; font-size: 13.5px;">
-              Chat with Ahmad on WhatsApp
-            </a>
-          </div>
-        </div>
-
-      </div>
-
-      <div class="support-modal-footer">
-        <div>
-          <a href="support.html" style="color: inherit; text-decoration: underline; font-size: 12.5px;">Open Full Support Page →</a>
-        </div>
-        <a href="https://wa.me/923225522383" target="_blank" rel="noopener noreferrer" class="btn-wa-confirm">
-          <span>Notify on WhatsApp</span>
-        </a>
-      </div>
-    </div>
-  </div>
-
-  <!-- Toast Container -->
-  <div id="supportToast" class="support-toast">
-    <span>✓ Copied to clipboard!</span>
-  </div>
-
-  <script src="cluster-balancer.js"></script>
   <script src="script.js"></script>
 </body>
 </html>
