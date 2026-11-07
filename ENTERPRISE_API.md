@@ -184,9 +184,78 @@ For scholarly workflows where you want to insert academic citations and receive 
 
 ---
 
-### C. Check Account Balance & Quota (`GET /v1/quota`)
+### C. Multi-Format File & ZIP Humanization (`POST /v1/humanize/file`)
 
-Enables client applications to monitor word balance, usage volume, and billing tier status in real time.
+Upload raw document binaries (`.docx`, `.xlsx`, `.csv`, `.py`, `.tex`, `.pdf`, `.md`, `.txt`, `.zip`) and receive the fully humanized binary file returned directly with all XML styling, LaTeX equations, spreadsheets, AST code structure, or complete directory trees preserved in-place.
+
+Words are billed from your word quota, and the container fee is metered against your dedicated file balance ($USD) at dynamic per-MB rates.
+
+* **Route:** `POST /v1/humanize/file`
+* **Content-Type:** `multipart/form-data`
+* **Headers:** `X-API-Key: <YOUR_API_KEY>`
+* **Parameters:**
+  * `file`: Binary document file (max 30 MB).
+  * `intensity`: Float (`10.0` to `100.0`, default `70.0`).
+  * `style`: `"academic"`, `"conversational"`, `"casual"`, or `"technical"`.
+  * `format_selection`: `"Auto-Detect"`, `"DOCX"`, `"XLSX"`, `"LaTeX"`, `"Code"`, etc.
+
+#### Example Request (`cURL`)
+```bash
+curl -X POST "https://<your-cloud-endpoint>.run.app/v1/humanize/file" \
+  -H "X-API-Key: tot_live_your_api_key_here" \
+  -F "file=@dissertation.docx" \
+  -F "intensity=75.0" \
+  -F "style=academic" \
+  --output "humanized_dissertation.docx"
+```
+
+#### Response Headers (`200 OK`)
+```http
+HTTP/1.1 200 OK
+Content-Type: application/vnd.openxmlformats-officedocument.wordprocessingml.document
+Content-Disposition: attachment; filename="humanized_dissertation.docx"
+X-Turnitout-Words-Charged: 1420
+X-Turnitout-Words-Remaining: 430366
+X-Turnitout-File-Fee-Cents: 3
+X-Turnitout-File-Fee-USD: 0.03
+X-Turnitout-File-Cents-Remaining: 997
+X-Turnitout-File-Balance-Remaining-USD: 9.97
+X-Turnitout-Detected-Format: DOCX
+```
+
+---
+
+### D. Pre-Flight File Inspection & Quote (`POST /v1/humanize/file/quote`)
+
+Inspect any document or ZIP archive to preview metered size (MB), extracted prose word count, container fees, and user solvency without deducting words or funds. Free dry-run endpoint.
+
+* **Route:** `POST /v1/humanize/file/quote`
+* **Content-Type:** `multipart/form-data`
+* **Headers:** `X-API-Key: <YOUR_API_KEY>`
+
+```json
+{
+    "filename": "codebase_archive.zip",
+    "detected_format": "ZIP",
+    "file_size_bytes": 2097152,
+    "metered_mb": 2,
+    "rate_cents_per_mb": 3,
+    "file_fee_cents": 6,
+    "file_fee_usd": 0.06,
+    "prose_words": 3180,
+    "words_remaining": 430366,
+    "file_cents_remaining": 997,
+    "file_balance_remaining_usd": 9.97,
+    "can_afford": true,
+    "refusal_reason": null
+}
+```
+
+---
+
+### E. Check Account Balance & Dual Quota (`GET /v1/quota`)
+
+Enables client applications to monitor word balance, usage volume, container file balance ($USD), and remaining cents in real time.
 
 * **Route:** `GET /v1/quota`
 * **Headers:** `X-API-Key: <YOUR_API_KEY>`
@@ -199,9 +268,13 @@ Enables client applications to monitor word balance, usage volume, and billing t
     "email": "engineering@acme.edu",
     "is_active": true,
     "quota_limit": 500000,
-    "words_used": 68214,
-    "words_remaining": 431786,
+    "words_used": 69634,
+    "words_remaining": 430366,
     "rate_per_1k": 0.10,
+    "file_cents_granted": 1000,
+    "file_cents_used": 3,
+    "file_cents_remaining": 997,
+    "file_balance_usd": 9.97,
     "unlimited": false,
     "expires_at": null
 }
@@ -209,7 +282,7 @@ Enables client applications to monitor word balance, usage volume, and billing t
 
 ---
 
-### D. Cluster Health & Readiness (`GET /v1/health`)
+### F. Cluster Health & Readiness (`GET /v1/health`)
 
 Real-time liveness probe for Kubernetes ingress controllers and external uptime monitors.
 

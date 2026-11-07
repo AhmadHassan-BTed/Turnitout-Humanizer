@@ -223,14 +223,78 @@
         </div>
       </div>
 
-      <!-- Endpoint 3 & 4 -->
+      <!-- Endpoint 3: File & ZIP Processing -->
+      <div style="margin-top: 36px;">
+        <div style="display: flex; align-items: center; gap: 12px; margin-bottom: 8px;">
+          <span class="api-badge badge-post">POST</span>
+          <code style="font-size: 17px; font-weight: 700; color: #f8fafc;">/v1/humanize/file</code>
+        </div>
+        <p style="color: var(--text-muted); font-size: 14.5px;">
+          Multi-format document & entire <strong>ZIP archive</strong> in-place humanization. Accepts <code>.docx</code>, <code>.xlsx</code>, <code>.csv</code>, <code>.py</code>, <code>.tex</code>, <code>.pdf</code>, <code>.md</code>, <code>.txt</code>, and <code>.zip</code>. Preserves XML styling, spreadsheets, code logic, AST trees, LaTeX equations, and entire zip folder hierarchies. Returns the transformed binary file directly.
+        </p>
+
+        <div class="code-box">
+<span style="color: #64748b;"># Multipart Form-Data Request</span>
+curl -X POST <span style="color: #a5d6a7;">"https://&lt;your-endpoint&gt;.run.app/v1/humanize/file"</span> \
+  -H <span style="color: #a5d6a7;">"X-API-Key: tot_live_xxxxxxxxxxxxxxxx"</span> \
+  -F <span style="color: #a5d6a7;">"file=@research_paper.docx"</span> \
+  -F <span style="color: #a5d6a7;">"intensity=75.0"</span> \
+  -F <span style="color: #a5d6a7;">"style=academic"</span> \
+  --output <span style="color: #a5d6a7;">"humanized_paper.docx"</span>
+        </div>
+
+        <div class="code-box">
+<span style="color: #64748b;">// Response Headers (Binary Download 200 OK)</span>
+Content-Type: application/vnd.openxmlformats-officedocument.wordprocessingml.document
+Content-Disposition: attachment; filename="humanized_paper.docx"
+X-Turnitout-Words-Charged: 1420
+X-Turnitout-Words-Remaining: 430366
+X-Turnitout-File-Fee-Cents: 3
+X-Turnitout-File-Fee-USD: 0.03
+X-Turnitout-File-Cents-Remaining: 997
+X-Turnitout-File-Balance-Remaining-USD: 9.97
+X-Turnitout-Detected-Format: DOCX
+        </div>
+      </div>
+
+      <!-- Endpoint 4: Pre-Flight File Inspection & Quote -->
+      <div style="margin-top: 36px;">
+        <div style="display: flex; align-items: center; gap: 12px; margin-bottom: 8px;">
+          <span class="api-badge badge-post">POST</span>
+          <code style="font-size: 17px; font-weight: 700; color: #f8fafc;">/v1/humanize/file/quote</code>
+        </div>
+        <p style="color: var(--text-muted); font-size: 14.5px;">
+          Pre-flight file inspection and solvency check (free dry-run). Inspects any document or ZIP archive to preview metered megabytes, extracted prose word count, container fees, and solvency without deducting words or funds.
+        </p>
+
+        <div class="code-box">
+<span style="color: #64748b;">// Response (200 OK)</span>
+{
+    <span style="color: #38bdf8;">"filename"</span>: <span style="color: #a5d6a7;">"project_repository.zip"</span>,
+    <span style="color: #38bdf8;">"detected_format"</span>: <span style="color: #a5d6a7;">"ZIP"</span>,
+    <span style="color: #38bdf8;">"file_size_bytes"</span>: <span style="color: #f472b6;">2097152</span>,
+    <span style="color: #38bdf8;">"metered_mb"</span>: <span style="color: #f472b6;">2</span>,
+    <span style="color: #38bdf8;">"rate_cents_per_mb"</span>: <span style="color: #f472b6;">3</span>,
+    <span style="color: #38bdf8;">"file_fee_cents"</span>: <span style="color: #f472b6;">6</span>,
+    <span style="color: #38bdf8;">"file_fee_usd"</span>: <span style="color: #f472b6;">0.06</span>,
+    <span style="color: #38bdf8;">"prose_words"</span>: <span style="color: #f472b6;">3180</span>,
+    <span style="color: #38bdf8;">"words_remaining"</span>: <span style="color: #f472b6;">430366</span>,
+    <span style="color: #38bdf8;">"file_cents_remaining"</span>: <span style="color: #f472b6;">997</span>,
+    <span style="color: #38bdf8;">"file_balance_remaining_usd"</span>: <span style="color: #f472b6;">9.97</span>,
+    <span style="color: #38bdf8;">"can_afford"</span>: <span style="color: #f472b6;">true</span>,
+    <span style="color: #38bdf8;">"refusal_reason"</span>: <span style="color: #f472b6;">null</span>
+}
+        </div>
+      </div>
+
+      <!-- Endpoint 5 & 6 -->
       <div style="margin-top: 36px;">
         <div style="display: flex; align-items: center; gap: 12px; margin-bottom: 8px;">
           <span class="api-badge badge-get">GET</span>
           <code style="font-size: 17px; font-weight: 700; color: #f8fafc;">/v1/quota</code>
         </div>
         <p style="color: var(--text-muted); font-size: 14.5px;">
-          Query current word quota, consumed balance, remaining words, and active tier configuration.
+          Query dual-ledger balance: word quota, words consumed, remaining words, container file balance ($USD), and remaining file fee cents.
         </p>
 
         <div style="display: flex; align-items: center; gap: 12px; margin-top: 20px; margin-bottom: 8px;">
