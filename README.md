@@ -197,7 +197,7 @@ Commercial AI humanizers use LLMs to rewrite text, leaving **new AI footprints, 
 - **100% Private (Zero Data Retention):** Processed transiently in volatile RAM on our isolated cluster over encrypted TLS. Zero disk storage, zero databases, zero logs of your content, zero tracking, and never shared with third-party generative AI models. I don't want your data.
 - **Bulk & ZIP Support:** Drop in multiple files or a whole `.zip` repo. It processes instantly, keeps your folder hierarchy intact, and spits out a 1-click ZIP export.
 - **Granular Controls:** Dial in the exact rewrite intensity percentages and tweak the knobs yourself.
-- **ZipPy Perplexity Scoring:** Built-in entropic compression scoring lets you check the mathematical randomness of your text locally so you know you're safe before submitting.
+- **ZipPy Perplexity Scoring:** Built-in entropic compression scoring lets you check the mathematical randomness of your text in real time without sending it to third-party detectors so you know you're safe before submitting.
 - **Lightning Fast Unofficial Support:** Need a feature? Open an issue or hit my WhatsApp, and I'll literally build and ship it in a day.
 
 ---
