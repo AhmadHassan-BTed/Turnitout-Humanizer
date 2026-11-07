@@ -374,7 +374,6 @@
                 <span class="tag tag-blue">Word (.docx)</span>
                 <span class="tag tag-blue">Excel (.xlsx / .csv)</span>
                 <span class="tag tag-blue">LaTeX (.tex)</span>
-                <span class="tag tag-blue">PDF (.pdf)</span>
                 <span class="tag tag-blue">Markdown (.md)</span>
                 <span class="tag tag-blue">Plain Text (.txt)</span>
                 <span class="tag tag-blue">Code (.py)</span>
@@ -387,7 +386,6 @@
                 <li><strong>Microsoft Word (<code>.docx</code>):</strong> Traverses <code>w:p</code> (paragraphs) and modifies only inner <code>w:t</code> text runs. Formatting runs (bold, italic, font face, text highlighting, paragraph alignment, headers, footers, tables, and drawing objects) remain untouched.</li>
                 <li><strong>Excel Spreadsheets (<code>.xlsx</code> / <code>.csv</code>):</strong> Iterates through tabular text cells and comments, humanizing prose while preserving cell formulas, numbers, dates, and column structures intact.</li>
                 <li><strong>LaTeX (<code>.tex</code>):</strong> Isolates natural language body prose while mathematically protecting math modes (<code>$...$</code>, <code>\[...\]</code>), environments (<code>\begin{equation}</code>, <code>align</code>, <code>matrix</code>), citation anchors (<code>\cite{...}</code>), and document preambles.</li>
-                <li><strong>PDF Documents (<code>.pdf</code>):</strong> Extracts textual prose and delivers a clean, editable Word (<code>.docx</code>) output with complete humanization applied.</li>
                 <li><strong>Source Code (<code>.py</code>, etc.):</strong> Extracts and humanizes only natural language docstrings and comments, keeping all executable code statements, variables, and AST logic 100% operational.</li>
                 <li><strong>Batch ZIP Processing:</strong> Upload archives containing multiple documents or codebases. Turnitout processes each file in-memory and delivers a bundled ZIP export (<code>Turnitout_Humanized_Docs_&lt;TIMESTAMP&gt;.zip</code>) preserving relative path hierarchies.</li>
               </ul>

@@ -85,7 +85,6 @@ Turnitout avoids flat text extraction. Instead, it parses document Abstract Synt
   * Complex math environments: `\begin{equation}`, `\begin{align}`, `\begin{matrix}`
   * Bibliographic keys: `\cite{...}`, `\citep{...}`, `\citet{...}`
   * Preambles, custom macros, and structural commands (`\section`, `\label`, `\ref`)
-* **PDF Documents (`.pdf`):** Extracts textual prose and converts it into a clean, editable Word (`.docx`) file with complete AI-evasion transformations applied.
 * **Source Code (`.py`, `.cpp`, `.java`, `.js`, etc.):** Scans character-by-character AST and token states to humanize only natural language docstrings and comments, keeping all executable logic 100% operational.
 * **Markdown (`.md`) & Plain Text (`.txt`):** Preserves headers (`#`), blockquotes, code blocks (```), bullet hierarchies, and table pipes (`|`).
 * **Batch ZIP Packages:** Upload a `.zip` archive containing dozens of files or entire codebases. Turnitout extracts, processes, and re-packages them in-memory into `Turnitout_Humanized_Docs_<TIMESTAMP>.zip`, preserving directory folder structures.

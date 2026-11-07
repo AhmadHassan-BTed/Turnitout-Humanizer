@@ -227,7 +227,6 @@ The platform is designed around strict **asset decoupling** and **modular langua
 - **Microsoft Word**: `.docx` (XML styling, bold, italics, tables, and headers preserved in-place)
 - **Spreadsheets & Data**: `.xlsx`, `.csv` (Table cells and text columns humanized without breaking formulas)
 - **LaTeX Manuscripts**: `.tex` (Math environments `$ ... $`, `\[ ... \]`, equation blocks, and citations strictly preserved)
-- **PDF Documents**: `.pdf` (Converted to clean Word `.docx` output with extracted prose humanized)
 - **Plain Text & Markdown**: `.txt`, `.md`
 - **Source Code Files**: `.py`, `.cpp`, `.c`, `.java`, `.cs`, `.js`, `.ts`, `.go`, `.rs`, `.sh`, `.sql`, `.html`, `.css` (100% executable code preservation)
 - **Compressed Repositories & Archives**: `.zip` (Full multi-file repository hierarchies extracted, humanized, and packaged back into 1-click ZIP export)

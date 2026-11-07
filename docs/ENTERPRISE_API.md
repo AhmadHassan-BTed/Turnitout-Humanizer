@@ -186,7 +186,7 @@ For scholarly workflows where you want to insert academic citations and receive 
 
 ### C. Multi-Format File & ZIP Humanization (`POST /v1/humanize/file`)
 
-Upload raw document binaries (`.docx`, `.xlsx`, `.csv`, `.py`, `.tex`, `.pdf`, `.md`, `.txt`, `.zip`) and receive the fully humanized binary file returned directly with all XML styling, LaTeX equations, spreadsheets, AST code structure, or complete directory trees preserved in-place.
+Upload raw document binaries (`.docx`, `.xlsx`, `.csv`, `.py`, `.tex`, `.md`, `.txt`, `.zip`) and receive the fully humanized binary file returned directly with all XML styling, LaTeX equations, spreadsheets, AST code structure, or complete directory trees preserved in-place.
 
 Words are billed from your word quota, and the container fee is metered against your dedicated file balance ($USD) at dynamic per-MB rates.
 
