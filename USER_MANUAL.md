@@ -79,13 +79,16 @@ The primary workspace provides dual execution paths: interactive plaintext human
 Turnitout avoids flat text extraction. Instead, it parses document Abstract Syntax Trees and XML run streams:
 
 * **Microsoft Word (`.docx`):** Traverses paragraph runs (`w:p`) and operates exclusively on innermost text runs (`w:t`). Typography, fonts, colors, bold/italics, headers, footers, footnotes, tables, images, and track-change metadata boundaries are preserved *in-place*.
+* **Excel Spreadsheets (`.xlsx` & `.csv`):** Humanizes prose cells and commentary while strictly protecting numbers, mathematical formulas, and tabular column layouts.
 * **LaTeX Manuscripts (`.tex`):** Isolates prose blocks while mathematically locking:
   * Inline and display math: `$ ... $`, `$$ ... $$`, `\[ ... \]`
   * Complex math environments: `\begin{equation}`, `\begin{align}`, `\begin{matrix}`
   * Bibliographic keys: `\cite{...}`, `\citep{...}`, `\citet{...}`
   * Preambles, custom macros, and structural commands (`\section`, `\label`, `\ref`)
+* **PDF Documents (`.pdf`):** Extracts textual prose and converts it into a clean, editable Word (`.docx`) file with complete AI-evasion transformations applied.
+* **Source Code (`.py`, `.cpp`, `.java`, `.js`, etc.):** Scans character-by-character AST and token states to humanize only natural language docstrings and comments, keeping all executable logic 100% operational.
 * **Markdown (`.md`) & Plain Text (`.txt`):** Preserves headers (`#`), blockquotes, code blocks (```), bullet hierarchies, and table pipes (`|`).
-* **Batch ZIP Packages:** Upload a `.zip` archive containing dozens of files. Turnitout extracts, processes, and re-packages them in-memory into `Turnitout_Humanized_Docs_<TIMESTAMP>.zip`, preserving directory folder structures.
+* **Batch ZIP Packages:** Upload a `.zip` archive containing dozens of files or entire codebases. Turnitout extracts, processes, and re-packages them in-memory into `Turnitout_Humanized_Docs_<TIMESTAMP>.zip`, preserving directory folder structures.
 
 ---
 

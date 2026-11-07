@@ -98,7 +98,7 @@
 > * **100% Zero-AI & Hallucination-Free:** Pure mathematical pattern disruption, voice transformation, and syntax restructuring with zero LLM hallucination risk.
 > * **Ultra-Low Latency:** Asynchronous Python 3.14 + FastAPI + ASGI multi-worker engine (< 150ms single-paragraph latency, 200+ words/sec throughput).
 > * **100% Zero-Retention Privacy:** Ephemeral in-memory execution. Uploaded text is never saved to disk, logged to databases, or used for AI training (GDPR & EU AI Act Article 50 compliant).
-> * **Production Endpoints:** High-speed humanization (`POST /v1/humanize`) and contextual academic citation insertion with self-executing BibTeX generation (`POST /v1/citations`).
+> * **Production Endpoints:** High-speed string humanization (`POST /v1/humanize`), multi-format document & ZIP archive in-place humanization (`POST /v1/humanize/file`), pre-flight file quote probe (`POST /v1/humanize/file/quote`), and contextual academic citation insertion with self-executing BibTeX generation (`POST /v1/citations`).
 >
 > 📖 **[Read the Full Enterprise API Documentation & Schema Guide →](docs/ENTERPRISE_API.md)**  
 > 💬 **Request API Keys & Cloud Access:** Contact **Ahmad Hassan** directly on **[WhatsApp (+92 322 5522383)](https://wa.me/923225522383)** or email **[ahmadhassan.bted@gmail.com](mailto:ahmadhassan.bted@gmail.com)**.
@@ -224,11 +224,13 @@ The platform is designed around strict **asset decoupling** and **modular langua
 
 ## 📁 Supported File Formats
 
-- **Microsoft Word**: `.docx`
-- **LaTeX Manuscripts**: `.tex`
+- **Microsoft Word**: `.docx` (XML styling, bold, italics, tables, and headers preserved in-place)
+- **Spreadsheets & Data**: `.xlsx`, `.csv` (Table cells and text columns humanized without breaking formulas)
+- **LaTeX Manuscripts**: `.tex` (Math environments `$ ... $`, `\[ ... \]`, equation blocks, and citations strictly preserved)
+- **PDF Documents**: `.pdf` (Converted to clean Word `.docx` output with extracted prose humanized)
 - **Plain Text & Markdown**: `.txt`, `.md`
-- **Source Code Files**: `.py`, `.cpp`, `.c`, `.java`, `.cs`, `.js`, `.ts`, `.go`, `.rs`, `.sh`, `.sql`, `.html`, `.css`
-- **Compressed Archives**: `.zip`
+- **Source Code Files**: `.py`, `.cpp`, `.c`, `.java`, `.cs`, `.js`, `.ts`, `.go`, `.rs`, `.sh`, `.sql`, `.html`, `.css` (100% executable code preservation)
+- **Compressed Repositories & Archives**: `.zip` (Full multi-file repository hierarchies extracted, humanized, and packaged back into 1-click ZIP export)
 
 ---
 
