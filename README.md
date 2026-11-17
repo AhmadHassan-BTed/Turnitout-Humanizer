@@ -9,7 +9,7 @@
   <a href="docs/USER_MANUAL.md"><img src="https://img.shields.io/badge/User%20Manual-Technical%20Reference-darkblue.svg?style=for-the-badge" alt="User Manual & Reference"/></a>
   <a href="docs/ENTERPRISE_API.md"><img src="https://img.shields.io/badge/Enterprise%20API-REST%20Documentation-gold.svg?style=for-the-badge" alt="Enterprise API Docs"/></a>
   <a href="docs/WORD_COUNT_GUIDE.md"><img src="https://img.shields.io/badge/User%20Guide-Word%20Count%20Control-teal.svg?style=for-the-badge" alt="Word Count Control Guide"/></a>
-  <img src="https://img.shields.io/badge/Engine-v2.6-green.svg?style=for-the-badge" alt="Engine: v2.6"/>
+  <img src="https://img.shields.io/badge/Engine-v2.8-green.svg?style=for-the-badge" alt="Engine: v2.8"/>
   <img src="https://img.shields.io/badge/Safety-100%25%20Zero%20AI-purple.svg?style=for-the-badge" alt="Safety: 100% Zero AI"/>
   <a href="https://wa.me/923225522383"><img src="https://img.shields.io/badge/WhatsApp-Developer%20Support-25D366.svg?style=for-the-badge&logo=whatsapp" alt="WhatsApp Support"/></a>
   <a href="SUPPORT.md"><img src="https://img.shields.io/badge/Sponsor%20%26%20Support-Donate%20%E2%9D%A4-ff69b4.svg?style=for-the-badge&logo=github-sponsors" alt="Sponsor & Support"/></a>
@@ -186,6 +186,7 @@ Commercial AI humanizers use LLMs to rewrite text, leaving **new AI footprints, 
   - 👨‍💻 **Senior/Expert:** Heavy technical jargon ("evaluates", "spectral decomposition").
 - **Language Agnostic:** Supports Python, C/C++, Java/C#, JS/TS, Go/Rust, SQL, Bash, and HTML/CSS.
 
+
 ### 📚 3. Auto-Citation & Reference Generator
 
 - **FREE Contextual Citations:** Tell it your major, input how many references you need, and it drops them directly into your text.
@@ -219,7 +220,8 @@ The platform is designed around strict **asset decoupling** and **modular langua
 - **Zero-AI Rule Engine**: Operates using 15 specialized transformer stages without external LLM API calls.
 - **Asset Decoupling**: All linguistic synonyms, academic taxonomy fields, and phrase rewrites reside in centralized JSON rule definitions.
 - **String-Aware Token Matching**: Code parsing engines evaluate character-by-character quote states to guarantee string literals are never mistaken for comments.
-
+- **Multilingual support:** 80+ languages detection
+- 
 ---
 
 ## 📁 Supported File Formats
