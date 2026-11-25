@@ -1,0 +1,52 @@
+{
+  "name": "Turnitout: AI Humanizer",
+  "short_name": "Turnitout",
+  "description": "Free programmatic AI humanizer, code comment cleaner, and academic citation inserter for LaTeX, Word, Markdown, and Code.",
+  "start_url": "/Turnitout-Humanizer/app.html?source=twa",
+  "scope": "/Turnitout-Humanizer/",
+  "display": "standalone",
+  "orientation": "portrait-primary",
+  "background_color": "#000000",
+  "theme_color": "#000000",
+  "categories": ["education", "productivity", "utilities"],
+  "icons": [
+    {
+      "src": "https://ahmadhassan-bted.github.io/Turnitout-Humanizer/assets/icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "https://ahmadhassan-bted.github.io/Turnitout-Humanizer/assets/icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "https://ahmadhassan-bted.github.io/Turnitout-Humanizer/assets/icon-maskable.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "maskable"
+    }
+  ],
+  "shortcuts": [
+    {
+      "name": "AI Text & Doc Humanizer",
+      "short_name": "Humanizer",
+      "url": "/Turnitout-Humanizer/app.html?page=remover&source=twa",
+      "icons": [{ "src": "https://ahmadhassan-bted.github.io/Turnitout-Humanizer/assets/icon-192.png", "sizes": "192x192" }]
+    },
+    {
+      "name": "Code Comment Humanizer",
+      "short_name": "Code",
+      "url": "/Turnitout-Humanizer/app.html?page=code_humanizer&source=twa",
+      "icons": [{ "src": "https://ahmadhassan-bted.github.io/Turnitout-Humanizer/assets/icon-192.png", "sizes": "192x192" }]
+    },
+    {
+      "name": "Citation Inserter",
+      "short_name": "Citations",
+      "url": "/Turnitout-Humanizer/app.html?page=citation&source=twa",
+      "icons": [{ "src": "https://ahmadhassan-bted.github.io/Turnitout-Humanizer/assets/icon-192.png", "sizes": "192x192" }]
+    }
+  ]
+}
