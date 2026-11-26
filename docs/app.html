@@ -6,7 +6,7 @@
   <meta name="theme-color" content="#000000" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
-  <title>Turnitout — Academic Writing &amp; Citation Assistant</title>
+  <title>Turnitout - Academic Writing &amp; Citation Assistant</title>
   <link rel="manifest" href="manifest.json" />
   <link rel="icon" type="image/png" href="assets/icon-192.png" />
   <style>
@@ -108,7 +108,12 @@
       var nodes = [
         "https://turnitout.streamlit.app",
         "https://turnitout1.streamlit.app",
-        "https://turnitout2.streamlit.app"
+        "https://turnitout2.streamlit.app",
+        "https://turnitout3.streamlit.app",
+        "https://turnitout4.streamlit.app",
+        "https://turnitout5.streamlit.app",
+        "https://turnitout6.streamlit.app",
+        "https://turnitout7.streamlit.app"
       ];
       var nodeIdx = 0;
       var frame = document.getElementById("twa-frame");
@@ -118,35 +123,115 @@
 
       var params = new URLSearchParams(window.location.search);
       var pageParam = params.get("page");
+      var settled = false;
+      var loadGen = 0;
+      var slowTimer = null;
+      var revealTimer = null;
+      var frameLoaded = false;
+      var healthOk = false;
 
-      function buildUrl(base) {
-        var u = base + "/?embed=true&embed_options=dark_theme";
+      function buildUrl(base, idx) {
+        var u = base + "/?embed=true&embed_options=dark_theme&source=twa";
+        if (idx > 0) {
+          u += "&node=worker";
+        }
         if (pageParam) {
           u += "&page=" + encodeURIComponent(pageParam);
         }
         return u;
       }
 
-      var slowTimer = setTimeout(function () {
-        statusTxt.textContent = "Server is waking up...";
-        mirrorBtn.style.display = "inline-block";
-      }, 9000);
+      function revealFrame(delayMs, gen) {
+        if (settled || gen !== loadGen) return;
+        settled = true;
+        if (slowTimer) clearTimeout(slowTimer);
+        if (revealTimer) clearTimeout(revealTimer);
+        revealTimer = setTimeout(function () {
+          if (gen === loadGen) {
+            veil.classList.add("hidden");
+          }
+        }, delayMs);
+      }
+
+      function probeNode(base, timeoutMs) {
+        if (typeof AbortController === "undefined" || typeof fetch === "undefined") {
+          return Promise.resolve(true);
+        }
+        var ctrl = new AbortController();
+        var timer = setTimeout(function () { ctrl.abort(); }, timeoutMs);
+        return fetch(base + "/~/+/_stcore/health", {
+          mode: "no-cors",
+          cache: "no-store",
+          signal: ctrl.signal
+        }).then(function () {
+          clearTimeout(timer);
+          return true;
+        }).catch(function () {
+          clearTimeout(timer);
+          return false;
+        });
+      }
+
+      function connectNode(idx, autoAttempt) {
+        loadGen += 1;
+        var myGen = loadGen;
+        settled = false;
+        frameLoaded = false;
+        healthOk = false;
+        nodeIdx = idx % nodes.length;
+        veil.classList.remove("hidden");
+        if (slowTimer) clearTimeout(slowTimer);
+        if (revealTimer) clearTimeout(revealTimer);
+
+        statusTxt.textContent = nodeIdx === 0
+          ? "Connecting to Turnitout..."
+          : "Connecting to Backup Server " + nodeIdx + "...";
+        mirrorBtn.style.display = "none";
+
+        frame.src = buildUrl(nodes[nodeIdx], nodeIdx);
+
+        // Show manual fallback switcher if a node takes a while to wake up
+        slowTimer = setTimeout(function () {
+          if (myGen === loadGen && !settled) {
+            statusTxt.textContent = "Server is waking up...";
+            mirrorBtn.style.display = "inline-block";
+          }
+        }, 7000);
+
+        // Stay on turnitout.streamlit.app whenever healthy; auto-failover only on timeout/error
+        probeNode(nodes[nodeIdx], 6500).then(function (healthy) {
+          if (myGen !== loadGen) return;
+          if (healthy) {
+            healthOk = true;
+            if (frameLoaded) {
+              revealFrame(1800, myGen);
+            } else {
+              revealTimer = setTimeout(function () {
+                revealFrame(1200, myGen);
+              }, 3500);
+            }
+          } else {
+            mirrorBtn.style.display = "inline-block";
+            statusTxt.textContent = "Primary node busy, switching to fallback...";
+            if (autoAttempt < nodes.length - 1) {
+              connectNode(nodeIdx + 1, autoAttempt + 1);
+            }
+          }
+        });
+      }
 
       frame.addEventListener("load", function () {
-        clearTimeout(slowTimer);
-        setTimeout(function () {
-          veil.classList.add("hidden");
-        }, 2500);
+        frameLoaded = true;
+        if (healthOk || typeof fetch === "undefined") {
+          revealFrame(1800, loadGen);
+        }
       });
 
       mirrorBtn.addEventListener("click", function () {
-        nodeIdx = (nodeIdx + 1) % nodes.length;
-        statusTxt.textContent = "Connecting to Node " + (nodeIdx + 1) + "...";
-        mirrorBtn.style.display = "none";
-        frame.src = buildUrl(nodes[nodeIdx]);
+        connectNode(nodeIdx + 1, 0);
       });
 
-      frame.src = buildUrl(nodes[0]);
+      connectNode(0, 0);
     })();
   </script>
 </body>
